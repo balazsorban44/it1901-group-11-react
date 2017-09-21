@@ -1,0 +1,209 @@
+{
+  "bands" : {
+    "59bc02105d041286efac0960" : {
+      "albumSales" : 1693215,
+      "concerts" : [ "INEEDCONCERTS" ],
+      "genre" : "Rock",
+      "members" : [ "Hammond Robbins", "Debora Becker", "Vance Macdonald" ],
+      "monthlyListeners" : 416665,
+      "name" : "Brandywine Fleming",
+      "technicalRequirements" : [ "amet laborum", "mollit officia", "minim enim", "enim ut" ]
+    },
+    "59bc02108ebb6407fe317b7d" : {
+      "albumSales" : 4952763,
+      "concerts" : [ "INEEDCONCERTS" ],
+      "genre" : "Indie",
+      "members" : [ "Joyce Foreman", "Hendrix Holland", "Terrie Johns", "Guzman Bolton" ],
+      "monthlyListeners" : 202272,
+      "name" : "Welch Sonya",
+      "technicalRequirements" : [ "culpa anim", "dolore adipisicing", "culpa labore" ]
+    },
+    "59bc0210bbfba53daf291ab2" : {
+      "albumSales" : 7657913,
+      "concerts" : [ "INEEDCONCERTS" ],
+      "genre" : "Rock",
+      "members" : [ "Welch Calderon", "Bertie Morales", "Earnestine Hays", "Sherri Jenkins" ],
+      "monthlyListeners" : 238419,
+      "name" : "Munjor Hendricks",
+      "technicalRequirements" : [ "consequat nostrud", "ex proident", "et sunt", "ex consequat", "et nostrud" ]
+    },
+    "59bc0210df2d44289458aac0" : {
+      "albumSales" : 8176519,
+      "concerts" : [ "INEEDCONCERTS" ],
+      "genre" : "Pop",
+      "members" : [ "Michael Nicholson", "Orr Cooper", "Campbell Dorsey", "Knapp Atkins", "Angel Church" ],
+      "monthlyListeners" : 276256,
+      "name" : "Advance Natalia",
+      "technicalRequirements" : [ "dolor ullamco", "amet cillum", "fugiat duis", "deserunt esse" ]
+    }
+  },
+  "concerts" : {
+    "59bc04b271b3c31a520daeae" : {
+      "band" : "dsofiudsoifdfs",
+      "from" : 943287489793298,
+      "isAcceptedByBookingBoss" : true,
+      "isAcceptedByBookingManager" : true,
+      "participants" : 10070,
+      "staff" : [ "hiudkdfsdfdsg", "sifdufdszfiud" ],
+      "ticketPrice" : 1352,
+      "to" : 98327643287632
+    },
+    "59bc04b2b8e6f6f0dd55a2e7" : {
+      "band" : "dsofiudsoifdfs",
+      "from" : 943287489793298,
+      "isAcceptedByBookingBoss" : false,
+      "isAcceptedByBookingManager" : true,
+      "participants" : 8054,
+      "staff" : [ "hiudkdfsdfdsg", "sifdufdszfiud" ],
+      "ticketPrice" : 1656,
+      "to" : 98327643287632
+    },
+    "59bc04b2c6ee092945795f8e" : {
+      "band" : "dsofiudsoifdfs",
+      "from" : 943287489793298,
+      "isAcceptedByBookingBoss" : false,
+      "isAcceptedByBookingManager" : true,
+      "participants" : 13433,
+      "staff" : [ "hiudkdfsdfdsg", "sifdufdszfiud" ],
+      "ticketPrice" : 2221,
+      "to" : 98327643287632
+    },
+    "59bc04b2d4bb6d33232814d6" : {
+      "band" : "dsofiudsoifdfs",
+      "from" : 943287489793298,
+      "isAcceptedByBookingBoss" : false,
+      "isAcceptedByBookingManager" : true,
+      "participants" : 12286,
+      "staff" : [ "hiudkdfsdfdsg", "sifdufdszfiud" ],
+      "ticketPrice" : 628,
+      "to" : 98327643287632
+    }
+  },
+  "events" : {
+    "59bc074f14b241f49427f5ec" : {
+      "from" : 11987654,
+      "isAcceptedByBookingBoss" : true,
+      "isAcceptedByBookingManager" : false,
+      "name" : "Schwartz festival",
+      "scenes" : [ "fdsoiljfil", "dsoiudssoi" ],
+      "staff" : {
+        "manager" : [ "fdlkfsjlk" ],
+        "organiser" : [ "iekjslkjfdsd", "aeoiljrieakjd" ],
+        "technician" : [ "9roriwjeislkj", "dsalida" ]
+      },
+      "to" : 22110010
+    },
+    "59bc074f396757632e2d709a" : {
+      "from" : 49445692,
+      "isAcceptedByBookingBoss" : false,
+      "isAcceptedByBookingManager" : false,
+      "name" : "Morse festival",
+      "scenes" : [ "fdsoiljfil", "dsoiudssoi" ],
+      "staff" : {
+        "manager" : [ "fdlkfsjlk" ],
+        "organiser" : [ "iekjslkjfdsd", "aeoiljrieakjd" ],
+        "technician" : [ "9roriwjeislkj", "dsalida" ]
+      },
+      "to" : 75705902
+    },
+    "59bc074f3e98e809f6e807b2" : {
+      "from" : 52850689,
+      "isAcceptedByBookingBoss" : false,
+      "isAcceptedByBookingManager" : false,
+      "name" : "Leon festival",
+      "scenes" : [ "fdsoiljfil", "dsoiudssoi" ],
+      "staff" : {
+        "manager" : [ "fdlkfsjlk" ],
+        "organiser" : [ "iekjslkjfdsd", "aeoiljrieakjd" ],
+        "technician" : [ "9roriwjeislkj", "dsalida" ]
+      },
+      "to" : 58308699
+    },
+    "59bc074fe0ba912c14c559b4" : {
+      "from" : 80007481,
+      "isAcceptedByBookingBoss" : false,
+      "isAcceptedByBookingManager" : false,
+      "name" : "Phillips festival",
+      "scenes" : [ "fdsoiljfil", "dsoiudssoi" ],
+      "staff" : {
+        "manager" : [ "fdlkfsjlk" ],
+        "organiser" : [ "iekjslkjfdsd", "aeoiljrieakjd" ],
+        "technician" : [ "9roriwjeislkj", "dsalida" ]
+      },
+      "to" : 60689095
+    }
+  },
+  "scenes" : {
+    "59bc05c914704dafcfd2940d" : {
+      "concerts" : [ "kdsluhiukhsx", "kdsjdsikdsjd" ],
+      "name" : "Acosta"
+    },
+    "59bc05c928ecb5404678eded" : {
+      "concerts" : [ "kdsluhiukhsx", "kdsjdsikdsjd" ],
+      "name" : "Sloan"
+    },
+    "59bc05c9419d486da42570c3" : {
+      "concerts" : [ "kdsluhiukhsx", "kdsjdsikdsjd" ],
+      "name" : "Marks"
+    },
+    "59bc05c9bcd80b59f383a222" : {
+      "concerts" : [ "kdsluhiukhsx", "kdsjdsikdsjd" ],
+      "name" : "Stanton"
+    }
+  },
+  "staff" : {
+    "acceptedRoles" : [ "admin", "organizer", "bookingManager", "bookingBoss", "audioLight", "manager" ],
+    "profiles" : {
+      "13pAdrh9t4Pt7qrdDJfpzjy8Vrh1" : {
+        "img" : "joe",
+        "name" : "Joe",
+        "role" : "organizer"
+      },
+      "5sOE4NZwX5VhBtXuvoarGhvz0PP2" : {
+        "img" : "jack",
+        "name" : "Jack",
+        "role" : "audioLight"
+      },
+      "JLkzYFBWo1M1LFK2mbjEVDqGPwx2" : {
+        "img" : "admin",
+        "name" : "Stian Tøsse",
+        "role" : "admin"
+      },
+      "NvaNgKVI6rT1vh1niuuyluUeMZP2" : {
+        "img" : "admin",
+        "name" : "Mats Pedersen",
+        "role" : "admin"
+      },
+      "RluDhpq9gpPHWK5aRGHLu5PvTDA2" : {
+        "img" : "jane",
+        "name" : "Jane",
+        "role" : "bookingBoss"
+      },
+      "UNEXp3iaiSRXA2TFUVACeTSeJLz1" : {
+        "img" : "balazs_orban",
+        "name" : "Balázs Orbán",
+        "role" : "admin"
+      },
+      "YiBSLuDTjTMRfaJbtGsfkq9N7M12" : {
+        "img" : "james",
+        "name" : "James",
+        "role" : "manager"
+      },
+      "ZCcD5DwBbzgXLAGRdR28cUCdQub2" : {
+        "img" : "jessica",
+        "name" : "Jessica",
+        "role" : "bookingManager"
+      },
+      "j10rcmAzNbe8l2IVaszBTb8TGnv2" : {
+        "img" : "admin",
+        "name" : "Erik Krüger",
+        "role" : "admin"
+      },
+      "oknMeBFetOfiSJJVQ0l0st0bajA3" : {
+        "img" : "admin",
+        "name" : "Aleksander Karlsson",
+        "role" : "admin"
+      }
+    }
+  }
+}

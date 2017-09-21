@@ -1,0 +1,55 @@
+{
+  "acceptedRoles" : [ "admin", "organizer", "bookingManager", "bookingBoss", "technician", "manager" ],
+  "profiles" : {
+    "13pAdrh9t4Pt7qrdDJfpzjy8Vrh1" : {
+      "img" : "joe",
+      "name" : "Joe",
+      "role" : "organizer"
+    },
+    "5sOE4NZwX5VhBtXuvoarGhvz0PP2" : {
+      "img" : "jack",
+      "name" : "Jack",
+      "role" : "technician"
+    },
+    "JLkzYFBWo1M1LFK2mbjEVDqGPwx2" : {
+      "img" : "admin",
+      "name" : "Stian Tøsse",
+      "role" : "admin"
+    },
+    "NvaNgKVI6rT1vh1niuuyluUeMZP2" : {
+      "img" : "admin",
+      "name" : "Mats Pedersen",
+      "role" : "admin"
+    },
+    "RluDhpq9gpPHWK5aRGHLu5PvTDA2" : {
+      "img" : "jane",
+      "name" : "Jane",
+      "role" : "bookingBoss"
+    },
+    "UNEXp3iaiSRXA2TFUVACeTSeJLz1" : {
+      "img" : "admin",
+      "name" : "Balázs Orbán",
+      "role" : "admin"
+    },
+    "YiBSLuDTjTMRfaJbtGsfkq9N7M12" : {
+      "img" : "james",
+      "name" : "James",
+      "role" : "manager"
+    },
+    "ZCcD5DwBbzgXLAGRdR28cUCdQub2" : {
+      "img" : "jessica",
+      "name" : "Jessica",
+      "role" : "bookingManager"
+    },
+    "j10rcmAzNbe8l2IVaszBTb8TGnv2" : {
+      "img" : "admin",
+      "name" : "Erik Krüger",
+      "role" : "admin"
+    },
+    "oknMeBFetOfiSJJVQ0l0st0bajA3" : {
+      "img" : "admin",
+      "name" : "Aleksander Karlsson",
+      "role" : "admin"
+    }
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "59bc02105d041286efac0960" : {
+    "albumSales" : 1693215,
+    "concerts": ["INEEDCONCERTS"],
+    "genre" : "Rock",
+    "members" : [ "Hammond Robbins", "Debora Becker", "Vance Macdonald" ],
+    "monthlyListeners" : 416665,
+    "name" : "Metallica",
+    "technicalRequirements" : [ "Guitars", "Drums", "Amplifiers", "Lights" ]
+  },
+  "59bc02108ebb6407fe317b7d" : {
+    "albumSales" : 4952763,
+    "concerts": ["INEEDCONCERTS"],
+    "genre" : "Electric",
+    "members" : [ "Lana Del Rey" ],
+    "monthlyListeners" : 202272,
+    "name" : "Alan Walker",
+    "technicalRequirements" : [ "DJ Pult", "Coffee", "Hoodie", "Lights" ]
+  },
+  "59bc0dkfgbfb433drc291132" : {
+    "albumSales" : 9837432,
+    "concerts": ["INEEDCONCERTS"],
+    "genre" : "Pop",
+    "members" : [  "Chris Martin", "Guy Berryman", "Jonny Buckland", "Will Champion" ],
+    "monthlyListeners" : 398328,
+    "name" : "Coldplay",
+    "technicalRequirements" : [ "Microphone", "Drums" ]
+  },
+  "59bc0dsaoleb433drc985hj3" : {
+    "albumSales" : 34234432,
+    "concerts": ["INEEDCONCERTS"],
+    "genre" : "Pop",
+    "members" : [   "Agnetha Fältskog", "Anni-Frid Lyngstad", "Björn Ulvaeus", "Benny Andersson" ],
+    "monthlyListeners" : 233142,
+    "name" : "ABBA",
+    "technicalRequirements" : [ "Clothes", "Lights" ]
+  },
+  "59bc0210bbfba53daf291ab2" : {
+    "albumSales" : 7657913,
+    "concerts": ["INEEDCONCERTS"],
+    "genre" : "Rock",
+    "members" : [ "Lana Del Rey" ],
+    "monthlyListeners" : 238419,
+    "name" : "Lana Del Rey",
+    "technicalRequirements" : [ "Sunglasses", "Water" ]
+  },
+  "59bc102345fba5kjdsoieioe" : {
+    "albumSales" : 10000000,
+    "concerts": ["INEEDCONCERTS"],
+    "genre" : "Pop",
+    "members" : [ "Michael Jackson" ],
+    "monthlyListeners" : 99999,
+    "name" : "Michael Jackson",
+    "technicalRequirements" : [ "Sunglasses" ]
+  },
+  "59bc1r3p928ouwfba5kjdsoieioe" : {
+    "albumSales" : 43298429,
+    "concerts": ["INEEDCONCERTS"],
+    "genre" : "Classical",
+    "members" : [ "Andrea Bocelli" ],
+    "monthlyListeners" : 43298,
+    "name" : "Andrea Bocelli",
+    "technicalRequirements" : [ "Violin" ]
+  },
+  "59bc0210df2d44289458aac0" : {
+    "albumSales" : 8176519,
+    "concerts": ["INEEDCONCERTS"],
+    "genre" : "Rock",
+    "members" : [ "Michael Nicholson", "Orr Cooper", "Campbell Dorsey", "Knapp Atkins", "Angel Church" ],
+    "monthlyListeners" : 276256,
+    "name" : "Volbeat",
+    "technicalRequirements" : [ "dolor ullamco", "amet cillum", "fugiat duis", "deserunt esse" ]
+  }
+}

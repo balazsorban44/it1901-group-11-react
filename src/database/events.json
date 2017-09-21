@@ -1,0 +1,59 @@
+{
+  "59bc074f14b241f49427f5ec" : {
+    "from" : 11987654,
+    "isAcceptedByBookingBoss" : true,
+    "isAcceptedByBookingManager" : false,
+    "name" : "Schwartz festival",
+    "scenes" : [ "59bc05c914704dafcfd2940d" ],
+    "staff" : {
+      "audioLight": ["5sOE4NZwX5VhBtXuvoarGhvz0PP2"],
+      "bookingManager": ["ZCcD5DwBbzgXLAGRdR28cUCdQub2"],
+      "manager" : [ "YiBSLuDTjTMRfaJbtGsfkq9N7M12" ],
+      "organiser" : [ "13pAdrh9t4Pt7qrdDJfpzjy8Vrh1" ],
+      "audioLight" : [ "5sOE4NZwX5VhBtXuvoarGhvz0PP2" ]
+    },
+    "to" : 22110010
+  },
+  "59bc074f396757632e2d709a" : {
+    "from" : 49445692,
+    "isAcceptedByBookingBoss" : false,
+    "isAcceptedByBookingManager" : false,
+    "name" : "Morse festival",
+    "scenes" : [ "59bc05c928ecb5404678eded", "59bc05c9419d486da42570c3" ],
+    "staff" : {
+      "bookingManager": ["ZCcD5DwBbzgXLAGRdR28cUCdQub2"],
+      "manager" : [ "YiBSLuDTjTMRfaJbtGsfkq9N7M12" ],
+      "organiser" : [ "13pAdrh9t4Pt7qrdDJfpzjy8Vrh1" ],
+      "technician" : [ "5sOE4NZwX5VhBtXuvoarGhvz0PP2" ]
+    },
+    "to" : 75705902
+  },
+  "59bc074f3e98e809f6e807b2" : {
+    "from" : 52850689,
+    "isAcceptedByBookingBoss" : false,
+    "isAcceptedByBookingManager" : false,
+    "name" : "Leon festival",
+    "scenes" : [ "59bc05c9bcd80b59f383a222" ],
+    "staff" : {
+      "bookingManager": ["ZCcD5DwBbzgXLAGRdR28cUCdQub2"],
+      "manager" : [ "YiBSLuDTjTMRfaJbtGsfkq9N7M12" ],
+      "organiser" : [ "13pAdrh9t4Pt7qrdDJfpzjy8Vrh1" ],
+      "technician" : [ "5sOE4NZwX5VhBtXuvoarGhvz0PP2" ]
+    },
+    "to" : 58308699
+  },
+  "59bc074fe0ba912c14c559b4" : {
+    "from" : 80007481,
+    "isAcceptedByBookingBoss" : false,
+    "isAcceptedByBookingManager" : false,
+    "name" : "Phillips festival",
+    "scenes" : [ "59bc05c914704dafcfd2940d", "59bc05c928ecb5404678eded" ],
+    "staff" : {
+      "bookingManager": ["ZCcD5DwBbzgXLAGRdR28cUCdQub2"],
+      "manager" : [ "YiBSLuDTjTMRfaJbtGsfkq9N7M12" ],
+      "organiser" : [ "13pAdrh9t4Pt7qrdDJfpzjy8Vrh1" ],
+      "technician" : [ "5sOE4NZwX5VhBtXuvoarGhvz0PP2" ]
+    },
+    "to" : 60689095
+  }
+}

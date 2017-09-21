@@ -1,0 +1,45 @@
+/* Some guide for rules.
+ *
+ * auth !== null
+ * Basically just checks if someone is logged in or not.
+ *
+ * auth.uid
+ * The unique ID of the logged in user.
+ *
+ * 'here is the role name' == root.child('staff/profiles').child(auth.uid).child('role').val()
+ * Check if the logged in user has the specified role name.
+ *
+ * */
+ 
+{
+  "rules": {
+    "staff": {
+      "acceptedRoles": {
+        ".read": "auth !== null",
+        ".write": "'admin' == root.child('staff/profiles').child(auth.uid).child('role').val()"
+      },
+      "profiles": {
+        "$uid": {
+          ".read": "$uid == auth.uid",
+          ".write": "'admin' == root.child('staff/profiles').child(auth.uid).child('role').val()"
+        }
+      }
+    },
+    "events": {
+      ".read": "auth.uid !== null",
+      ".write": "auth.uid !== null"
+    },
+    "concerts": {
+      ".read": "auth.uid !== null",
+      ".write": "auth.uid !== null"
+    },
+    "scenes": {
+      ".read": "auth.uid !== null",
+      ".write": "auth.uid !== null"
+    },
+    "bands": {
+      ".read": "auth.uid !== null",
+      ".write": "auth.uid !== null"
+    }
+  }
+}
