@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
 import firebase from 'firebase'
-
 import Drawer from 'material-ui/Drawer'
 import MenuItem from 'material-ui/MenuItem'
 import {Tabs, Tab} from 'material-ui/Tabs'
+
+import StaffList from './StaffList'
+import ScenesList from './ScenesList'
 
 export default class Organizer extends Component {
   constructor() {
@@ -18,10 +20,27 @@ export default class Organizer extends Component {
     const scenesRef = db.child('scenes')
     const concertsRef = db.child('concerts')
     const bandsRef = db.child('bands')
+    const staffRef = db.child('staff/profiles')
+
+
     eventsRef.on('value', snap => {
       const events = snap.val()
       Object.keys(events).forEach(eventKey => {
         const event = events[eventKey]
+
+        // Fetch event staff information
+        const {staff} = event
+        Object.keys(staff).forEach(roleKey => {
+          const roleMembers = staff[roleKey]
+          staff[roleKey] = []
+          roleMembers.forEach(roleMember => {
+            staffRef.child(`${roleMember}/name`).on('value', snap => {
+              staff[roleKey].push(snap.val())
+            })
+          })
+        })
+
+        // Fetch scenes information
         const {scenes} = event
         event.scenes = {}
         scenes.forEach(sceneKey => {
@@ -36,34 +55,19 @@ export default class Organizer extends Component {
                 const bandKey = snap.val()
                 bandsRef.child(`${bandKey}/name`).on('value', snap => {
                   scene.bands.push(snap.val())
+                  this.setState({events})
                 })
               })
             })
           })
         })
       })
-      this.setState({events})
     })
+
   }
   render() {
     const {events} = this.state
-    const {user, isDrawerOpened, toggleDrawer} = this.props
-    const {uid} = user
-    let tabs = []
-
-    Object.keys(events).forEach(key => {
-      const event = events[key]
-      const {from, to, name} = event
-      tabs.push(
-        <Tab key={from} label={event.name}>
-          <div>
-            <h3>{name}</h3>
-            <date>{new Date(from).toISOString().slice(0, 10)}</date><span> - </span><date>{new Date(to).toISOString().slice(0, 10)}</date>
-          </div>
-        </Tab>
-      )
-    })
-
+    const {isDrawerOpened, toggleDrawer} = this.props
     return (
         <div>
           <Drawer
@@ -71,7 +75,20 @@ export default class Organizer extends Component {
             <MenuItem onClick={() => toggleDrawer()} primaryText="Events Overview" />
           </Drawer>
           <Tabs>
-            {tabs}
+            {Object.keys(events).map(eventKey => {
+              const event = events[eventKey]
+              const {from, to, name, staff, scenes} = event
+              return(
+                <Tab key={from} label={name}>
+                  <div>
+                    <h3>{name}</h3>
+                    <date>{new Date(from).toISOString().slice(0, 10)}</date><span> - </span><date>{new Date(to).toISOString().slice(0, 10)}</date>
+                    <StaffList staff={staff}/>
+                    <ScenesList scenes={scenes}/>
+                  </div>
+                </Tab>
+              )
+            })}
           </Tabs>
         </div>
     )
