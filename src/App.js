@@ -1,21 +1,23 @@
 import React, { Component } from 'react'
-import concert from './img/concert.jpg'
 
+import firebase from 'firebase'
+import Login from './components/Login'
 
-import darkBaseTheme from 'material-ui/styles/baseThemes/lightBaseTheme'
-import Avatar from 'material-ui/Avatar'
+import Organizer from './components/Organizer'
+import BookingBoss from './components/BookingBoss'
+import BookingManager from './components/BookingManager'
+import Technician from './components/Technician'
+import Manager from './components/Organizer'
+
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import getMuiTheme from 'material-ui/styles/getMuiTheme'
+import {green100, green500, green700} from 'material-ui/styles/colors'
 import AppBar from 'material-ui/AppBar'
-import Drawer from 'material-ui/Drawer';
-import MenuItem from 'material-ui/MenuItem';
+
 import RaisedButton from 'material-ui/RaisedButton'
-import firebase from 'firebase'
+import Avatar from 'material-ui/Avatar'
 
-import Roles from './components/Roles'
-
-
-import {green100, green500, green700} from 'material-ui/styles/colors';
+const profiles = require.context('./img/profiles')
 
 const muiTheme = getMuiTheme({
   palette: {
@@ -27,60 +29,27 @@ const muiTheme = getMuiTheme({
 })
 
 
-class App extends Component {
+export default class App extends Component {
   constructor() {
     super()
     this.state = {
-      data: {
-        events: {},
-        profiles: {},
-        scenes: {},
-        concerts: {},
-        bands: {}
-      },
-      isLoggedIn: false,
       user: null,
-      email: "",
-      password: "",
       isDrawerOpened: false
     }
   }
 
-  handleDrawerToggle() {
-    this.setState(prevState => ({
-      isDrawerOpened: !prevState.isDrawerOpened
-    }))
+  toggleDrawer() {
+    this.setState(prevState => (
+      {isDrawerOpened: !prevState.isDrawerOpened}
+    ))
   }
 
-  getCredentials(e, type) {
-    const value = e.target.value
-    if (type === "email") {
-      this.setState({email: value})
-    } else {
-      this.setState({password: value})
-    }
-
-  }
-
-  login() {
-    const {email, password} = this.state
-    firebase.auth().signInWithEmailAndPassword(email, password).then(() => {
-      this.setState({
-        email: "",
-        password: "",
-        isLoggedIn: true
-      })
-    }).catch(error => console.log(error))
-  }
 
   logout() {
     firebase.auth().signOut()
       .then(() => {
-        this.setState({
-          user: null,
-          isLoggedIn: false,
-        });
-      });
+        this.setState({user: null})
+      })
   }
 
   componentDidMount() {
@@ -88,10 +57,7 @@ class App extends Component {
       if (user) {
         const db = firebase.database().ref(`staff/profiles/${user.uid}`)
         db.on('value', snap => {
-          this.setState({
-            user: snap.val(),
-            isLoggedIn: true
-          })
+          this.setState({user: Object.assign(snap.val(), {uid: user.uid})})
         })
       }
     })
@@ -99,51 +65,43 @@ class App extends Component {
 
 
   render() {
-    const {isLoggedIn, email, password, user} = this.state
+    const {user, isDrawerOpened} = this.state
     return (
       <div className="App">
         <MuiThemeProvider muiTheme={muiTheme}>
           <div>
-            <AppBar
-              onLeftIconButtonTouchTap={() => this.handleDrawerToggle()}
-            title="Event Manager">
-            </AppBar>
-            <Drawer
-              swipeAreaWidth={100}
-              open={this.state.isDrawerOpened}>
-              {isLoggedIn &&
-                <div className="user-info">
-                  <Avatar src={`img/${user.img}.jpg`}/>
-                  <h2>{user.name}</h2>
-                </div>
-              }
-              <MenuItem>Menu Item</MenuItem>
-              <MenuItem>Menu Item 2</MenuItem>
-              {isLoggedIn && <RaisedButton onClick={() => this.logout()} label="Logout" secondary={true}/>
-              }
-            </Drawer>
-            {!isLoggedIn ?
+            {!user ?
+              <Login/>:
               <div>
-                <h2>Login</h2>
-                <input
-                  type="email"
-                  placeholder="E-mail"
-                  onChange={(e, type) => this.getCredentials(e, "email")}
-                  value={email}/>
-                <input
-                  type="password"
-                  placeholder="Password"
-                  onChange={(e, type) => this.getCredentials(e, "password")}
-                  value={password}/>
-                <RaisedButton onClick={() => this.login()} label="Login" secondary={true} />
-              </div>:
-              <Roles role={user.role}/>
+                <AppBar
+                  onLeftIconButtonTouchTap={() => this.toggleDrawer()}
+                  title="Event Manager"
+                >
+                  <div className="user-info">
+                    <h2>{user.name}</h2>
+                    <Avatar src={profiles(`./${user.img}.jpg`)}/>
+                    <RaisedButton onClick={() => this.logout()} label="Logout"/>
+                  </div>
+
+                </AppBar>
+
+                {{
+                  "organizer":
+                  <Organizer {...{user, isDrawerOpened}} toggleDrawer={() => this.toggleDrawer()}/>,
+                  "bookingBoss":
+                  <BookingBoss {...{user, isDrawerOpened}} toggleDrawer={() => this.toggleDrawer()}/>,
+                  "bookingManager":
+                  <BookingManager {...{user, isDrawerOpened}} toggleDrawer={() => this.toggleDrawer()}/>,
+                  "technician":
+                  <Technician {...{user, isDrawerOpened}} toggleDrawer={() => this.toggleDrawer()}/>,
+                  "manager":
+                  <Manager {...{user, isDrawerOpened}} toggleDrawer={() => this.toggleDrawer()}/>
+                }[user.role]}
+              </div>
             }
-            <img className="background-img" src={concert} alt=""/>
           </div>
         </MuiThemeProvider>
       </div>
-  )}
+    )
+  }
 }
-
-export default App
