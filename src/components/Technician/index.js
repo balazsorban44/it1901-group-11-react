@@ -1,54 +1,67 @@
 import React, { Component } from 'react'
-import AppBar from 'material-ui/AppBar'
+import firebase from 'firebase'
 import Drawer from 'material-ui/Drawer'
-import Avatar from 'material-ui/Avatar'
 import MenuItem from 'material-ui/MenuItem'
-import RaisedButton from 'material-ui/RaisedButton'
-
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
-import getMuiTheme from 'material-ui/styles/getMuiTheme'
-import {green100, green500, green700} from 'material-ui/styles/colors'
 
 
-const muiTheme = getMuiTheme({
-  palette: {
-    primary1Color: green500,
-    primary2Color: green700,
-    primary3Color: green100,
-    accent1Color: green700
-  },
-})
-
-
-
-const profiles = require.context('../../img/profiles');
-
+// 13.  Som lyd eller lystekniker skal jeg kunne
+// få opp en oversikt over konserter jeg skal jobbe med.
 export default class Technician extends Component {
+  constructor() {
+    super()
+    this.state = {
+      // initializing local concerts
+      concerts:{}
+    }
+  }
+
+// Fetching content from firebase
+componentDidMount(){
+  // referencing database (firebase) "ready up for connect"
+  const db = firebase.database().ref()
+  // accesing child of database = concerts
+  const concertsRef = db.child('concerts')
+  // listening to concert changes in database
+  // on(element, snapshot) "picture of database on time of function call TODO: check online for full explanation
+  concertsRef.on('value', snap => {
+  // concerts now holding the fetched data
+  // REVIEW: Restrict users acces for the data, now all Technicians can see all the conserts
+    const concerts = snap.val()
+  // Make object concerts into list concert
+    Object.keys(concerts).forEach(key => {
+      const {staff} = concerts[key]
+      // destructing an object (below is same as the one line above)
+      // const staff = concerts[key].staff
+      if (!staff.includes(this.props.user.uid)) {
+        delete concerts[key]
+      }
+    })
+    this.setState({
+      //sets this.state.concerts = to the filtered concerts. alt code concerts:concerts
+      concerts
+    })
+
+
+  })
+
+}
+
 
   render() {
-    const {user, isDrawerOpened, toggleDrawer, logout} = this.props
-    const {uid, img, name} = user
-    return (
-      <MuiThemeProvider muiTheme={muiTheme}>
-        <div>
-          <Drawer open={isDrawerOpened}>
-            <div className="user-info">
-              <Avatar src={profiles(`./${img}.jpg`)}/>
-              <h2>{name}</h2>
-            </div>
-            <MenuItem primaryText="Menu 1" />
-            <RaisedButton onClick={() => logout()} label="Logout"/>
-          </Drawer>
-          <AppBar   onLeftIconButtonTouchTap={() => toggleDrawer()}  title="Event Manager"
-          />
+    const {isDrawerOpened, toggleDrawer} = this.props
+    const {concerts} = this.state
 
-          <div>
-            <h3>
-              Technician {uid}
-            </h3>
-          </div>
+    return (
+        <div>
+        <Drawer
+          open={isDrawerOpened}>
+          <MenuItem onClick={() => toggleDrawer()} primaryText="Concerts Overview" />
+        </Drawer>
+        // NOTE:Example of rendering something to screen
+        <p>{concerts['59bc04b271b3c31a520daeae'] && concerts['59bc04b271b3c31a520daeae'].ticketPrice}</p>
         </div>
-    </MuiThemeProvider>
-    );
+    )
   }
+
+
 }
