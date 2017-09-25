@@ -29,3 +29,7 @@ body {
 .user-info img {
   margin: 0 1em
 }
+
+.event-body {
+  display: flex;
+}

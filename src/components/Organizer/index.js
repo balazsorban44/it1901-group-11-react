@@ -7,6 +7,10 @@ import {Tabs, Tab} from 'material-ui/Tabs'
 import StaffList from './StaffList'
 import ScenesList from './ScenesList'
 
+
+
+const parseDate = date => new Date(parseDate).toISOString().slice(0, 10)
+
 export default class Organizer extends Component {
   constructor() {
     super()
@@ -81,10 +85,11 @@ export default class Organizer extends Component {
               return(
                 <Tab key={from} label={name}>
                   <div>
-                    <h3>{name}</h3>
-                    <date>{new Date(from).toISOString().slice(0, 10)}</date><span> - </span><date>{new Date(to).toISOString().slice(0, 10)}</date>
-                    <StaffList staff={staff}/>
-                    <ScenesList scenes={scenes}/>
+                    <EventHeader className="event-header" {...{name, from, to}}/>
+                    <div className="event-body">
+                      <StaffList staff={staff}/>
+                      <ScenesList scenes={scenes}/>
+                    </div>
                   </div>
                 </Tab>
               )
@@ -94,3 +99,10 @@ export default class Organizer extends Component {
     )
   }
 }
+
+const EventHeader = ({name, from, to}) => (
+  <div>
+    <h3>{name}</h3>
+    <date>{parseDate(from)}</date><span> - </span><date>{parseDate(to)}</date>
+  </div>
+)
