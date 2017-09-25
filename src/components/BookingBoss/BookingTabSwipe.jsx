@@ -25,9 +25,9 @@ export default class TabsExampleSwipeable extends Component {
         <Tabs
           onChange={this.handleChange}
           value={this.state.slideIndex}>
-          <Tab label={`New bookings (${unhandledCounter})`} value={0}/>
-          <Tab label={`Accepted bookings (${acceptedCounter})`} value={1}/>
-          <Tab label={`Rejected bookings (${rejectedCounter})`} value={2}/>
+          <Tab label={`New(${unhandledCounter})`} value={0}/>
+          <Tab label={`Accepted(${acceptedCounter})`} value={1}/>
+          <Tab label={`Rejected(${rejectedCounter})`} value={2}/>
         </Tabs>
 
         <SwipeableViews

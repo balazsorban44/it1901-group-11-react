@@ -54,9 +54,10 @@ export default class BookingBoss extends Component {
         if (isAcceptedByBookingBoss==="unhandled") {
           unhandledBookings.push(
             <li key={band}>
-              <div className=" mdl-card mdl-shadow--2dp">
+              <div className="mdl-card mdl-shadow--2dp">
                 <div className="mdl-card__title mdl-card--expand">
-                  <h4>
+                  <span className="booking-bg"/>
+                  <h4 className="booking-text">
                     {bandName}<br/>
                     {parseDate(from)}<br/>
                     {ticketPrice} NOK<br/>
@@ -73,17 +74,20 @@ export default class BookingBoss extends Component {
               } else if (isAcceptedByBookingBoss) {
                 acceptedBookings.push(
                   <li key={band}>
-                    <div className=" mdl-card mdl-shadow--2dp">
+                    <div className="mdl-card mdl-shadow--2dp">
+                      <span className="booking-bg"/>
                       <div className="mdl-card__title mdl-card--expand">
-                        <h4>
+                        <h4 className="booking-text">
                           {bandName}<br/>
+                        </h4>
+                        <h5>
                           {parseDate(from)}<br/>
                           {ticketPrice} NOK<br/>
-                        </h4>
+                        </h5>
                       </div>
                       <div className="booking-footer mdl-card__actions mdl-card--border">
                         Accepted<div className="mdl-layout-spacer"></div>
-                        <i className="material-icons">done</i>
+                        <i className="material-icons green">done</i>
                       </div>
                     </div>
                   </li>)
@@ -91,9 +95,10 @@ export default class BookingBoss extends Component {
               } else {
                 rejectedBookings.push(
                   <li key={band}>
-                    <div className=" mdl-card mdl-shadow--2dp">
+                    <div className="mdl-card mdl-shadow--2dp">
                       <div className="mdl-card__title mdl-card--expand">
-                        <h4>
+                        <span className="booking-bg"/>
+                        <h4 className="booking-text">
                           {bandName}<br/>
                           {parseDate(from)}<br/>
                           {ticketPrice} NOK<br/>
@@ -101,7 +106,7 @@ export default class BookingBoss extends Component {
                       </div>
                       <div className="booking-footer mdl-card__actions mdl-card--border">
                         Rejected<div className="mdl-layout-spacer"></div>
-                        <i className="material-icons">clear</i>
+                        <i className="material-icons red">clear</i>
                       </div>
                     </div>
                   </li>)
