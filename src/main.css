@@ -2,6 +2,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  background-color: #dedede
 }
 
 
@@ -30,6 +31,18 @@ body {
   margin: 0 1em
 }
 
-.event-body {
+.event-body, .booking-list, .booking-footer {
   display: flex;
+}
+
+.booking-list {
+  list-style-type: none;
+  flex-wrap: wrap;
+}
+.booking-list li {
+  margin: 1em;
+}
+
+.booking-footer {
+  align-items: center;
 }
