@@ -2,11 +2,9 @@ import React, { Component } from 'react'
 import firebase from 'firebase'
 import Drawer from 'material-ui/Drawer'
 import MenuItem from 'material-ui/MenuItem'
-import {Tabs, Tab} from 'material-ui/Tabs'
-
+import BookingTabSwipe from './BookingTabSwipe'
 
 const parseDate = date => new Date(date).toISOString().slice(0, 10)
-
 
 export default class BookingBoss extends Component {
   constructor() {
@@ -36,6 +34,7 @@ export default class BookingBoss extends Component {
       })
     })
   }
+
   render() {
     const {isDrawerOpened, toggleDrawer} = this.props
     const {bands, concerts} = this.state
@@ -113,30 +112,12 @@ export default class BookingBoss extends Component {
     return (
         <div>
           <Drawer
+            docked={false}
             open={isDrawerOpened}>
             <MenuItem onClick={() => toggleDrawer()} primaryText="Bookings Overview" />
           </Drawer>
-          <Tabs>
-            <Tab label={`New bookings (${unhandledCounter})`}>
-              <Bookings bookings={unhandledBookings}/>
-            </Tab>
-            <Tab label={`Accepted bookings (${acceptedCounter})`}>
-              <Bookings bookings={acceptedBookings}/>
-            </Tab>
-            <Tab label={`Rejected bookings (${rejectedCounter})`}>
-              <Bookings bookings={rejectedBookings} />
-            </Tab>
-          </Tabs>
+          <BookingTabSwipe {...{unhandledCounter, unhandledBookings, acceptedCounter, acceptedBookings, rejectedCounter, rejectedBookings}}/>
         </div>
     )
   }
-}
-
-
-const Bookings = ({bookings}) => {
-  return (
-    <ul className="booking-list">
-      {bookings}
-    </ul>
-  )
 }
