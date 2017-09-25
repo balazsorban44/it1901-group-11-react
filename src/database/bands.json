@@ -70,5 +70,140 @@
     "monthlyListeners" : 276256,
     "name" : "Volbeat",
     "technicalRequirements" : [ "dolor ullamco", "amet cillum", "fugiat duis", "deserunt esse" ]
+  },
+  "59fnewhbgf234fgnnn44554f" : {
+    "albumSales" : 4673532,
+    "concerts" : ["INEEDCONCERTS"],
+    "genre" : "Rock",
+    "members" : ["Ryan Tedder", "Zach Filkins", "Brent Kutzle", "Drew Brown", "Eddie Fisher" ],
+    "monthlyListeners" : 9837233,
+    "name" : "OneRepublic",
+    "technicalRequirements" : ["Guitars", "Drums", "Microphone", "Bass", "Keyboard" ]
+  },
+  "59ebedbybe76f5e6f7efdv8" : {
+    "albumSales" : 817364572,
+    "concerts" : ["INEEDCONCERTS"],
+    "genre" : "Hiphop",
+    "members" : [ "Sir Robert Bryson Hall II" ],
+    "monthlyListeners" : 98476282,
+    "name" : "Logic",
+    "technicalRequirements" : [ "Microphone" ]
+  },
+  "59duwnunw34gth3434ggrt4" : {
+    "albumSales" : 192387465,
+    "concerts" : ["INEEDCONCERTS"],
+    "genre" : "Rap",
+    "members" : [ "Mark Lawrence Richard Jr" ],
+    "monthlyListeners" : 724682482,
+    "name" : "Witt Lowry" ,
+    "technicalRequirements" : [ "Microphone" ]
+  },
+  "59iuewnfyw7653ybfe76fef" : {
+    "albumSales" : 8374657233,
+    "concerts" : ["INEEDCONCERTS"],
+    "genre" : "Alternative Rock",
+    "members" : [ "Isaac Slade", "Joe King", "Dave Welsh", "Ben Wysocki", "Jimmy Stofer" ],
+    "monthlyListeners" : 724682,
+    "name" : "The Fray",
+    "technicalRequirements" : [ "Guitars", "Microphone", "Drums", "Bass", "Keyboard", "Violin" ]
+  },
+  "59iyurewbfu6756w4e45e5f" : {
+    "albumSales" : 1337999991337,
+    "concerts" : ["INEEDCONCERTS"],
+    "genre" : "Alternative",
+    "members" : [ "Balasz Orban", "Mats Pedersen", "Stian Tøsse" , "Aleksander Karlsson", "Erik Krüger" ],
+    "monthlyListeners" : 133799991337,
+    "name" : "Fantastic Five",
+    "technicalRequirements" : [ "Pc" ]
+  },
+  "59iuwrefuybwef7we67f6e5" : {
+    "albumSales" : 6384638,
+    "concerts" : ["INEEDCONCERTS"],
+    "genre" : "Pop Punk",
+    "members" : [ "Ryan Key", "Sean Mackin", "Ryan Mendez", "Longineu W. Parsons III" ],
+    "monthlyListeners" : 49897236,
+    "name" : "Yellowcard",
+    "technicalRequirements" : [ "Guitars", "Drums", "Microphone", "Violin", "Bass", "Keyboard" ]
+  },
+  "59w6we5ervf8r7evre86v6v" : {
+    "albumSales" : 78346,
+    "concerts" : ["INEEDCONCERTS"],
+    "genre" : "Indie Pop",
+    "members" : [ "Dan Smith", "Will Farquarson", "Kyle Simmons", "Chris Wood" ] ,
+    "monthlyListeners" : 127674839,
+    "name" : "Bastille",
+    "technicalRequirements" : [ "Guitars", "Bass", "Keyboard", "Microphone" ]
+  },
+  "59fniu7r676er58vre66v86" : {
+    "albumSales" : 8927864257,
+    "concerts" : ["INEEDCONCERTS"],
+    "genre" : "Pop",
+    "members" : [ "Justin Randall Timberlake" ],
+    "monthlyListeners" : 6367824,
+    "name" : "Justin Timberlake" ,
+    "technicalRequirements" : [ "Microphone", "Dancing Shoes" ]
+  },
+  "59wiue767we56f67v677fv7" : {
+    "albumSales" : 892657248,
+    "concerts" : ["INEEDCONCERTS"],
+    "genre" : "Alternative Rock",
+    "members" : [ "Adam Levine", "James Valentine", "Jesse Carmichael", "Micket Madden", "Matt Flynn" ],
+    "monthlyListeners" : 97463,
+    "name" : "Maroon 5" ,
+    "technicalRequirements" : [ "Microphone", "Guitars", "Keyboard", "Trumpet", "Drums" ]
+  },
+  "59ver898vb6as321sa2fvrf" : {
+    "albumSales" : 946645244,
+    "concerts" : ["INEEDCONCERTS"],
+    "genre" : "Indie Rock",
+    "members" : [ "Daniel Platzman", "Ben McKee", "Dan Reynolds", "Wayne Sermon" ] ,
+    "monthlyListeners" : 7382654,
+    "name" : "Imagine Dragons" ,
+    "technicalRequirements" : [ "Guitars" , "Microphone", "Drums", "Keyboard", "Bass" ]
+  },
+  "59jertg07857as22kfne9e" : {
+    "albumSales" : 123456,
+    "concerts" : ["INEEDCONCERTS"],
+    "genre" : "Hiphop",
+    "members" : [ "Marshall Bruce Mathers III" ],
+    "monthlyListeners" : 54321,
+    "name" : "Eminem" ,
+    "technicalRequirements" : [ "Microphone" ] 
+  },
+  "59hvbyuas8v0ngb8dfbhvvd" : {
+    "albumSales" : 92775739,
+    "concerts" : ["INEEDCONCERTS"],
+    "genre" : "Electric",
+    "members" : [ "Andrew Taggart", "Alex Pall" ] ,
+    "monthlyListeners" : 983863,
+    "name" : "Chainsmokers" ,
+    "technicalRequirements" : [ "Pc" ] 
+  },
+  "59fjnhvye32wtvac3bhj90d" : {
+    "albumSales" : 83974990,
+    "concerts" : ["INEEDCONCERTS"],
+    "genre" : "RnB" ,
+    "members" : [ "Astrid Smeplass" ],
+    "monthlyListeners" : 78643244,
+    "name" : "Astrid S",
+    "technicalRequirements" : [ "Microphone" ]
+  },
+  "59f7eg60sd7v0t79f787s6d" : {
+    "albumSales" : 9099949,
+    "concerts" : ["INEEDCONCERTS"],
+    "genre" : "RnB" ,
+    "members" : [ "Robyn Rihanna Fenty" ],
+    "monthlyListeners" : 7348657824,
+    "name" : "Rihanna",
+    "technicalRequirements" : [ "Rihanna" ]
+  },
+  "59fhe7cbehf65ewfkj8v9s" : {
+    "albumSales" : 9837468397,
+    "concerts" : ["INEEDCONCERTS"],
+    "genre" : "Pop" ,
+    "members" : [ "Edward Christopher Sheeran" ],
+    "monthlyListeners" : 972386542,
+    "name" : "Ed Sheeran" ,
+    "technicalRequirements" : [ "Microphone", "Guitars" ]
   }
 }
