@@ -9,7 +9,7 @@ import ScenesList from './ScenesList'
 
 
 
-const parseDate = date => new Date(parseDate).toISOString().slice(0, 10)
+const parseDate = date => new Date(date).toISOString().slice(0, 10)
 
 export default class Organizer extends Component {
   constructor() {
