@@ -57,7 +57,8 @@ componentDidMount(){
           open={isDrawerOpened}>
           <MenuItem onClick={() => toggleDrawer()} primaryText="Concerts Overview" />
         </Drawer>
-        // NOTE:Example of rendering something to screen
+         {//NOTE:Example of rendering something to screen
+         }
         <p>{concerts['59bc04b271b3c31a520daeae'] && concerts['59bc04b271b3c31a520daeae'].ticketPrice}</p>
         </div>
     )
