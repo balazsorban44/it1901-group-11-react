@@ -12,7 +12,7 @@ export default class Technician extends Component {
     this.state = {
       // initializing local concerts
       concerts:{},
-      openedMenuItem: "option 1"
+      openedMenuItem: "concertsOverview"
     }
   }
 
@@ -52,31 +52,33 @@ handleMenuItemClick(openedMenuItem){
 }
 
   render() {
-    const {isDrawerOpened, toggleDrawer} = this.props
+    const {isDrawerOpened} = this.props
     const {concerts} = this.state
 
-    let prin  list.forEach(function(value, i) {
-        console.log(value);
-      })
+
+    // let printThis concerts.forEach(function(value, i) {
+    //     console.log(value)
+    //   })
 
     return (
         <div className="Technicians-container">
           <Drawer open={isDrawerOpened}>
-            <MenuItem onClick={() => handleMenuItemClick()} primaryText="Concerts Overview" />
+            <MenuItem onClick={() => this.handleMenuItemClick("concertsOverview")} primaryText="Concerts Overview" />
           </Drawer>
           {// NOTE:Example of rendering something to screen
           }
+
+          {// Switch-case to toggle MenuItem
+          }
+
           {{
-            "option 1":
-            <Option1/>,
+            "concertsOverview":
+            <Option1 concerts={concerts}/>
+
           }[this.state.openedMenuItem]}
 
           {// TODO: make the proper information appear on screen
           }
-
-          <ul>
-             {}
-          </ul>
 
 
 
@@ -87,4 +89,12 @@ handleMenuItemClick(openedMenuItem){
 
 }
 
-const Option1 = () => <p>{concerts['59bc04b271b3c31a520daeae'] && concerts['59bc04b271b3c31a520daeae'].ticketPrice} Dette skal vekk etterhvert</p>
+const Option1 = ({concerts}) => {
+  //mapping happens here
+  return(
+    <div>
+      <ul>{concerts['59bc04b271b3c31a520daeae'] && concerts['59bc04b271b3c31a520daeae'].ticketPrice} Dette skal vekk etterhvert</ul>
+    </div>
+  )
+
+}
