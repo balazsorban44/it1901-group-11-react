@@ -7,7 +7,7 @@ import Organizer from './components/Organizer'
 import BookingBoss from './components/BookingBoss'
 import BookingManager from './components/BookingManager'
 import Technician from './components/Technician'
-import Manager from './components/Organizer'
+import Manager from './components/Manager'
 
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import getMuiTheme from 'material-ui/styles/getMuiTheme'
