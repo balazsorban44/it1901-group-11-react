@@ -11,7 +11,8 @@ export default class Technician extends Component {
     super()
     this.state = {
       // initializing local concerts
-      concerts:{}
+      concerts:{},
+      openedMenuItem: "option 1"
     }
   }
 
@@ -45,6 +46,10 @@ componentDidMount(){
 
 }
 
+handleMenuItemClick(openedMenuItem){
+  this.props.toggleDrawer()
+  this.setState({openedMenuItem})
+}
 
   render() {
     const {isDrawerOpened, toggleDrawer} = this.props
@@ -57,11 +62,14 @@ componentDidMount(){
     return (
         <div className="Technicians-container">
           <Drawer open={isDrawerOpened}>
-            <MenuItem onClick={() => toggleDrawer()} primaryText="Concerts Overview" />
+            <MenuItem onClick={() => handleMenuItemClick()} primaryText="Concerts Overview" />
           </Drawer>
           {// NOTE:Example of rendering something to screen
           }
-          <p>{concerts['59bc04b271b3c31a520daeae'] && concerts['59bc04b271b3c31a520daeae'].ticketPrice} Dette skal vekk etterhvert</p>
+          {{
+            "option 1":
+            <Option1/>,
+          }[this.state.openedMenuItem]}
 
           {// TODO: make the proper information appear on screen
           }
@@ -78,3 +86,5 @@ componentDidMount(){
 
 
 }
+
+const Option1 = () => <p>{concerts['59bc04b271b3c31a520daeae'] && concerts['59bc04b271b3c31a520daeae'].ticketPrice} Dette skal vekk etterhvert</p>
