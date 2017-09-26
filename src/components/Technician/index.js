@@ -23,6 +23,7 @@ componentDidMount(){
   const concertsRef = db.child('concerts')
   // listening to concert changes in database
   // on(element, snapshot) "picture of database on time of function call TODO: check online for full explanation
+
   concertsRef.on('value', snap => {
   // concerts now holding the fetched data
   // REVIEW: Restrict users acces for the data, now all Technicians can see all the conserts
@@ -40,8 +41,6 @@ componentDidMount(){
       //sets this.state.concerts = to the filtered concerts. alt code concerts:concerts
       concerts
     })
-
-
   })
 
 }
@@ -51,18 +50,31 @@ componentDidMount(){
     const {isDrawerOpened, toggleDrawer} = this.props
     const {concerts} = this.state
 
+    let prin  list.forEach(function(value, i) {
+        console.log(value);
+      })
+
     return (
-        <div>
-        <Drawer
-          open={isDrawerOpened}>
-          <MenuItem onClick={() => toggleDrawer()} primaryText="Concerts Overview" />
-        </Drawer>
-         {//NOTE:Example of rendering something to screen
-         }
-        <p>{concerts['59bc04b271b3c31a520daeae'] && concerts['59bc04b271b3c31a520daeae'].ticketPrice}</p>
+        <div className="Technicians-container">
+          <Drawer open={isDrawerOpened}>
+            <MenuItem onClick={() => toggleDrawer()} primaryText="Concerts Overview" />
+          </Drawer>
+          {// NOTE:Example of rendering something to screen
+          }
+          <p>{concerts['59bc04b271b3c31a520daeae'] && concerts['59bc04b271b3c31a520daeae'].ticketPrice} Dette skal vekk etterhvert</p>
+
+          {// TODO: make the proper information appear on screen
+          }
+
+          <ul>
+             {}
+          </ul>
+
+
+
         </div>
-    )
-  }
+
+    )}
 
 
 }
