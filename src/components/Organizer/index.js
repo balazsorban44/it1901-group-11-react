@@ -7,15 +7,14 @@ import {Tabs, Tab} from 'material-ui/Tabs'
 import StaffList from './StaffList'
 import ScenesList from './ScenesList'
 
-
-
 const parseDate = date => new Date(date).toISOString().slice(0, 10)
 
 export default class Organizer extends Component {
   constructor() {
     super()
     this.state = {
-      events: {}
+      events: {},
+      openedMenuItem: "eventsOverview"
     }
   }
   componentDidMount() {
@@ -69,36 +68,54 @@ export default class Organizer extends Component {
     })
 
   }
+
+  handleMenuItemClick(openedMenuItem) {
+    this.props.toggleDrawer()
+    this.setState({openedMenuItem})
+  }
+
   render() {
-    const {events} = this.state
-    const {isDrawerOpened, toggleDrawer} = this.props
+    const {events, openedMenuItem} = this.state
+    const {isDrawerOpened} = this.props
     return (
         <div>
           <Drawer
+            docked={false}
             open={isDrawerOpened}>
-            <MenuItem onClick={() => toggleDrawer()} primaryText="Events Overview" />
+            <MenuItem onClick={() => this.handleMenuItemClick("eventsOverview")} primaryText="Events Overview"/>
           </Drawer>
-          <Tabs>
-            {Object.keys(events).map(eventKey => {
-              const event = events[eventKey]
-              const {from, to, name, staff, scenes} = event
-              return(
-                <Tab key={from} label={name}>
-                  <div>
-                    <EventHeader className="event-header" {...{name, from, to}}/>
-                    <div className="event-body">
-                      <StaffList staff={staff}/>
-                      <ScenesList scenes={scenes}/>
-                    </div>
-                  </div>
-                </Tab>
-              )
-            })}
-          </Tabs>
+          {{
+            "eventsOverview":
+            <EventsOverview events={events}/>
+          }[openedMenuItem]}
+
         </div>
     )
   }
 }
+
+
+
+const EventsOverview = ({events}) => (
+  <Tabs>
+    {Object.keys(events).map(eventKey => {
+      const event = events[eventKey]
+      const {from, to, name, staff, scenes} = event
+      return(
+        <Tab key={from} label={name}>
+          <div>
+            <EventHeader className="event-header" {...{name, from, to}}/>
+            <div className="event-body">
+              <StaffList staff={staff}/>
+              <ScenesList scenes={scenes}/>
+            </div>
+          </div>
+        </Tab>
+      )
+    })}
+  </Tabs>
+)
+
 
 const EventHeader = ({name, from, to}) => (
   <div>
