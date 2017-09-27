@@ -16,14 +16,22 @@ h2 {
   text-align: center;
 }
 
+#login {
+  background-color: rgba(0,0,0,.5);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .background-img {
-  max-width: 100vw;
+  min-width: 100vw;
   min-height: 100vh;
+  max-height: 130vh;
   position: fixed;
   top: 0;
   left: 0;
-  z-index: -1
+  z-index: -1;
 }
 
 .user-info {
@@ -40,6 +48,12 @@ h2 {
 .event-body, .booking-list, .booking-footer {
   display: flex;
 }
+
+.event-body{
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
 
 
 .booking-list {
