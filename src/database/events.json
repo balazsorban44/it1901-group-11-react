@@ -1,16 +1,15 @@
 {
   "59bc074f14b241f49427f5ec" : {
     "from" : 11987654,
-    "isAcceptedByBookingBoss" : true,
+    "isAcceptedByBookingBoss" : false,
     "isAcceptedByBookingManager" : false,
     "name" : "Schwartz festival",
-    "scenes" : [ "59bc05c914704dafcfd2940d" ],
+    "scenes" : [ "59bc05c9419d486da42570c3", "59bc05c928ecb5404678eded" ],
     "staff" : {
-      "audioLight": ["5sOE4NZwX5VhBtXuvoarGhvz0PP2"],
-      "bookingManager": ["ZCcD5DwBbzgXLAGRdR28cUCdQub2"],
+      "audioLight" : [ "5sOE4NZwX5VhBtXuvoarGhvz0PP2", "fu7CIdFgywcjS8lSn9NL1isNsZN2" ],
+      "bookingManager" : [ "ZCcD5DwBbzgXLAGRdR28cUCdQub2" ],
       "manager" : [ "YiBSLuDTjTMRfaJbtGsfkq9N7M12" ],
-      "organiser" : [ "13pAdrh9t4Pt7qrdDJfpzjy8Vrh1" ],
-      "audioLight" : [ "5sOE4NZwX5VhBtXuvoarGhvz0PP2" ]
+      "organiser" : [ "13pAdrh9t4Pt7qrdDJfpzjy8Vrh1" ]
     },
     "to" : 22110010
   },
@@ -21,7 +20,7 @@
     "name" : "Morse festival",
     "scenes" : [ "59bc05c928ecb5404678eded", "59bc05c9419d486da42570c3" ],
     "staff" : {
-      "bookingManager": ["ZCcD5DwBbzgXLAGRdR28cUCdQub2"],
+      "bookingManager" : [ "ZCcD5DwBbzgXLAGRdR28cUCdQub2" ],
       "manager" : [ "YiBSLuDTjTMRfaJbtGsfkq9N7M12" ],
       "organiser" : [ "13pAdrh9t4Pt7qrdDJfpzjy8Vrh1" ],
       "technician" : [ "5sOE4NZwX5VhBtXuvoarGhvz0PP2" ]
@@ -35,7 +34,7 @@
     "name" : "Leon festival",
     "scenes" : [ "59bc05c9bcd80b59f383a222" ],
     "staff" : {
-      "bookingManager": ["ZCcD5DwBbzgXLAGRdR28cUCdQub2"],
+      "bookingManager" : [ "ZCcD5DwBbzgXLAGRdR28cUCdQub2" ],
       "manager" : [ "YiBSLuDTjTMRfaJbtGsfkq9N7M12" ],
       "organiser" : [ "13pAdrh9t4Pt7qrdDJfpzjy8Vrh1" ],
       "technician" : [ "5sOE4NZwX5VhBtXuvoarGhvz0PP2" ]
@@ -49,7 +48,7 @@
     "name" : "Phillips festival",
     "scenes" : [ "59bc05c914704dafcfd2940d", "59bc05c928ecb5404678eded" ],
     "staff" : {
-      "bookingManager": ["ZCcD5DwBbzgXLAGRdR28cUCdQub2"],
+      "bookingManager" : [ "ZCcD5DwBbzgXLAGRdR28cUCdQub2" ],
       "manager" : [ "YiBSLuDTjTMRfaJbtGsfkq9N7M12" ],
       "organiser" : [ "13pAdrh9t4Pt7qrdDJfpzjy8Vrh1" ],
       "technician" : [ "5sOE4NZwX5VhBtXuvoarGhvz0PP2" ]
