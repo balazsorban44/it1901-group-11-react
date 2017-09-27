@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import firebase from 'firebase'
+// import firebase from 'firebase'
 import Drawer from 'material-ui/Drawer'
 import MenuItem from 'material-ui/MenuItem'
 import TextField from 'material-ui/TextField';
@@ -17,7 +17,7 @@ export default class BookingManager extends Component {
 // Fetching content from firebase
 componentDidMount(){
   // referencing database (firebase) "ready up for connect"
-  const db = firebase.database().ref()
+  // const db = firebase.database().ref()
   // accesing child of database = concerts
 
 }
@@ -41,7 +41,7 @@ handleMenuItemClick(openedMenuItem){
           </Drawer>
 
           <make_offer name = "hei"/>
-          
+
           {{
             "MakeOffer":
             <MakeOffer/>,
