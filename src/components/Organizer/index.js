@@ -37,7 +37,7 @@ export default class Organizer extends Component {
           const roleMembers = staff[roleKey]
           staff[roleKey] = []
           roleMembers.forEach(roleMember => {
-            staffRef.child(`${roleMember}/name`).on('value', snap => {
+            staffRef.child(`${roleMember}`).on('value', snap => {
               staff[roleKey].push(snap.val())
             })
           })
@@ -106,8 +106,8 @@ const EventsOverview = ({events}) => (
           <div>
             <EventHeader className="event-header" {...{name, from, to}}/>
             <div className="event-body">
-              <StaffList staff={staff}/>
               <ScenesList scenes={scenes}/>
+              <StaffList staff={staff}/>
             </div>
           </div>
         </Tab>

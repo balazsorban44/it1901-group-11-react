@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import firebase from 'firebase'
 import Drawer from 'material-ui/Drawer'
+import Badge from 'material-ui/Badge'
 import MenuItem from 'material-ui/MenuItem'
 import BookingTabSwipe from './BookingTabSwipe'
 
@@ -44,8 +45,6 @@ export default class BookingBoss extends Component {
     let acceptedCounter = 0
     const rejectedBookings = []
     let rejectedCounter = 0
-    console.log(concerts);
-    console.log(bands);
     Object.keys(concerts).forEach(key => {
       const concert = concerts[key]
       const {band, ticketPrice, from, isAcceptedByBookingManager, isAcceptedByBookingBoss} = concert
@@ -119,7 +118,18 @@ export default class BookingBoss extends Component {
           <Drawer
             docked={false}
             open={isDrawerOpened}>
-            <MenuItem onClick={() => toggleDrawer()} primaryText="Bookings Overview" />
+            <MenuItem onClick={() => toggleDrawer()} primaryText={
+              <div>
+                Bookings Overview
+                <Badge
+                  badgeContent={unhandledCounter}
+                  secondary={true}
+                  badgeStyle={{top: 18, right: 6}}
+                />
+              </div>
+            }>
+
+            </MenuItem>
           </Drawer>
           <BookingTabSwipe {...{unhandledCounter, unhandledBookings, acceptedCounter, acceptedBookings, rejectedCounter, rejectedBookings}}/>
         </div>

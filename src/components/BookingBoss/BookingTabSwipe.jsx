@@ -20,29 +20,23 @@ export default class TabsExampleSwipeable extends Component {
 
   render() {
     const {unhandledCounter, unhandledBookings, acceptedCounter, acceptedBookings, rejectedCounter, rejectedBookings} = this.props
+    const {slideIndex} = this.state
     return (
       <div>
         <Tabs
           onChange={this.handleChange}
-          value={this.state.slideIndex}>
+          value={slideIndex}>
           <Tab label={`New(${unhandledCounter})`} value={0}/>
           <Tab label={`Accepted(${acceptedCounter})`} value={1}/>
           <Tab label={`Rejected(${rejectedCounter})`} value={2}/>
         </Tabs>
-
         <SwipeableViews
-          index={this.state.slideIndex}
+          index={slideIndex}
           onChangeIndex={this.handleChange}
         >
-          <div>
-            <Bookings bookings={unhandledBookings}/>
-          </div>
-          <div>
-            <Bookings bookings={acceptedBookings}/>
-          </div>
-          <div>
-            <Bookings bookings={rejectedBookings} />
-          </div>
+          <Bookings bookings={unhandledBookings}/>
+          <Bookings bookings={acceptedBookings}/>
+          <Bookings bookings={rejectedBookings} />
         </SwipeableViews>
       </div>
     );
