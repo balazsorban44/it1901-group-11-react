@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import firebase from 'firebase'
 import Drawer from 'material-ui/Drawer'
 import MenuItem from 'material-ui/MenuItem'
+import TextField from 'material-ui/TextField';
 
 
 export default class BookingManager extends Component {
@@ -35,17 +36,17 @@ handleMenuItemClick(openedMenuItem){
           <Drawer open={isDrawerOpened}>
             <MenuItem onClick={() => this.handleMenuItemClick("component")} primaryText="Booking Manager" />
             <MenuItem onClick={() => this.handleMenuItemClick("MakeOffer")} primaryText="Make offer" />
-            <MenuItem onClick={() => this.handleMenuItemClick("PreviousConserts")} primaryText="Previous conserts" />
+            <MenuItem onClick={() => this.handleMenuItemClick("PreviousConcerts")} primaryText="Previous concerts" />
             <MenuItem onClick={() => this.handleMenuItemClick("Search")} primaryText="Search" />
           </Drawer>
 
           <make_offer name = "hei"/>
-          <MakeOffer/>
+          
           {{
             "MakeOffer":
             <MakeOffer/>,
-            "PreviousConserts":
-            <PreviousConserts/>,
+            "PreviousConcerts":
+            <PreviousConcerts/>,
             "Search":
             <Search/>
 
@@ -58,31 +59,13 @@ handleMenuItemClick(openedMenuItem){
 const MakeOffer = () =>
       <div>
         <h1> Make offer</h1>
-
-        <form action="#">
-          <div class="mdl-textfield mdl-js-textfield">
-            <input class="mdl-textfield__input" type="text" id="sample1"/>
-            <label class="mdl-textfield__label" for="sample1">Text...</label>
-          </div>
-        </form>
-        <form action="#">
-          <div class="mdl-textfield mdl-js-textfield">
-            <input class="mdl-textfield__input" type="text" id="sample1"/>
-            <label class="mdl-textfield__label" for="sample1">Text...</label>
-          </div>
-        </form>
-
-        <form>
-          <h5>Band name</h5>
-          <input type="text" name="firstname"/>
-          <h5>Price</h5>
-          <input type="text" name="lastname"/>
-        </form>
+        <TextField hintText="Band"/><br/>
+        <TextField hintText="Price"/>
       </div>
 
 
 const Search = () =>
       <h1>Search</h1>
 
-const PreviousConserts = () =>
-      <h1>Previous consertsr</h1>
+const PreviousConcerts = () =>
+      <h1>Previous concerts</h1>
