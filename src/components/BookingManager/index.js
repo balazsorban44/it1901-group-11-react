@@ -13,7 +13,7 @@ export default class BookingManager extends Component {
     super()
     this.state = {
       // initializing local concerts
-      openedMenuItem: "MakeOffer"
+      openedMenuItem: "makeOffer"
     }
   }
 
@@ -37,18 +37,17 @@ handleMenuItemClick(openedMenuItem){
     return (
         <div>
           <Drawer open={isDrawerOpened}>
-            <MenuItem onClick={() => this.handleMenuItemClick("component")} primaryText="Booking Manager" />
-            <MenuItem onClick={() => this.handleMenuItemClick("MakeOffer")} primaryText="Make offer" />
-            <MenuItem onClick={() => this.handleMenuItemClick("PreviousConcerts")} primaryText="Previous concerts" />
-            <MenuItem onClick={() => this.handleMenuItemClick("Search")} primaryText="Search" />
+            <MenuItem onClick={() => this.handleMenuItemClick("makeOffer")} primaryText="Make offer" />
+            <MenuItem onClick={() => this.handleMenuItemClick("previousConcerts")} primaryText="Previous concerts" />
+            <MenuItem onClick={() => this.handleMenuItemClick("search")} primaryText="Search" />
           </Drawer>
 
           {{
-            "MakeOffer":
+            "makeOffer":
             <MakeOffer/>,
-            "PreviousConcerts":
+            "previousConcerts":
             <PreviousConcerts/>,
-            "Search":
+            "search":
             <Search/>
           }[openedMenuItem]}
 
@@ -61,16 +60,13 @@ const MakeOffer = () =>
         <h1> Make offer</h1>
         <TextField hintText="Band"/><br/>
         <TextField hintText="Price"/><br/>
-        <div>
         <DatePicker hintText="Date" />
-
-  </div>
         <TextField
           hintText="Message Field"
           floatingLabelText="Message"
           multiLine={true}
           rows={2}
-          /><br />
+        />
       </div>
 
 
@@ -79,12 +75,6 @@ const Search = () =>
         <h1>Search</h1>
         <TextField hintText="Search"/><br/>
       </div>
-const PreviousConcerts = () =>
-      <div>
-        <h1>Previous concerts</h1>
-        <stylesMenu/>
-      </div>
-
 
 
 
@@ -100,29 +90,50 @@ const PreviousConcerts = () =>
       },
     };
 
-const stylesMenu = () =>
-  <div>
-    <Tabs
-      onChange={this.handleChange}
-      value={this.state.slideIndex}
-    >
-      <Tab label="Tab One" value={0} />
-      <Tab label="Tab Two" value={1} />
-      <Tab label="Tab Three" value={2} />
-    </Tabs>
-    <SwipeableViews
-      index={this.state.slideIndex}
-      onChangeIndex={this.handleChange}
-    >
-      <div>
-        <h2 style={styles.headline}>Tabs with slide effect</h2>
-        Swipe to see the next slide.<br />
-      </div>
-      <div style={styles.slide}>
-        slide n°2
-      </div>
-      <div style={styles.slide}>
-        slide n°3
-      </div>
-    </SwipeableViews>
-  </div>
+class PreviousConcerts extends Component {
+
+constructor(props) {
+   super(props);
+   this.state = {
+     slideIndex: 0,
+   };
+ }
+
+ handleChange = (value) => {
+   this.setState({
+     slideIndex: value,
+   });
+ };
+
+ render() {
+   return (
+
+     <div>
+       <Tabs
+         onChange={this.handleChange}
+         value={this.state.slideIndex}
+       >
+         <Tab label="Tab One" value={0} />
+         <Tab label="Tab Two" value={1} />
+         <Tab label="Tab Three" value={2} />
+       </Tabs>
+       <SwipeableViews
+         index={this.state.slideIndex}
+         onChangeIndex={this.handleChange}
+       >
+         <div>
+           <h2 style={styles.headline}>Tabs with slide effect</h2>
+           Swipe to see the next slide.<br />
+         </div>
+         <div style={styles.slide}>
+           slide n°2
+         </div>
+         <div style={styles.slide}>
+           slide n°3
+         </div>
+       </SwipeableViews>
+     </div>
+
+   )
+ }
+}
