@@ -98,3 +98,12 @@ h2 {
 .red {
   color: red
 }
+
+.BookingManagerMakeOfferBox{
+  display: inline-block;
+  padding-bottom: 50px;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-top: 10px;
+  background: red;
+}

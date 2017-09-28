@@ -6,6 +6,8 @@ import TextField from 'material-ui/TextField';
 import DatePicker from 'material-ui/DatePicker';
 import {Tabs, Tab} from 'material-ui/Tabs';
 import SwipeableViews from 'react-swipeable-views';
+import Paper from 'material-ui/Paper';
+import SelectField from 'material-ui/SelectField';
 
 
 export default class BookingManager extends Component {
@@ -13,7 +15,7 @@ export default class BookingManager extends Component {
     super()
     this.state = {
       // initializing local concerts
-      openedMenuItem: "makeOffer"
+      openedMenuItem: "search"
     }
   }
 
@@ -37,13 +39,13 @@ handleMenuItemClick(openedMenuItem){
     return (
         <div>
           <Drawer open={isDrawerOpened}>
-            <MenuItem onClick={() => this.handleMenuItemClick("makeOffer")} primaryText="Make offer" />
+            <MenuItem onClick={() => this.handleMenuItemClick("newBooking")} primaryText="New booking" />
             <MenuItem onClick={() => this.handleMenuItemClick("previousConcerts")} primaryText="Previous concerts" />
             <MenuItem onClick={() => this.handleMenuItemClick("search")} primaryText="Search" />
           </Drawer>
 
           {{
-            "makeOffer":
+            "newBooking":
             <MakeOffer/>,
             "previousConcerts":
             <PreviousConcerts/>,
@@ -56,7 +58,7 @@ handleMenuItemClick(openedMenuItem){
 }
 
 const MakeOffer = () =>
-      <div>
+      <Paper className = "BookingManagerMakeOfferBox">
         <h1> Make offer</h1>
         <TextField hintText="Band"/><br/>
         <TextField hintText="Price"/><br/>
@@ -65,12 +67,46 @@ const MakeOffer = () =>
           hintText="Message Field"
           floatingLabelText="Message"
           multiLine={true}
-          rows={2}
+          rows={6}
         />
-      </div>
+      </Paper>
 
+class Search extends Component{
+  constructor(props) {
+     super(props);
+     this.state = {
+       value: 1,
+     };
+   }
 
-const Search = () =>
+   handleChange = (event, index, value) => this.setState({value});
+
+   render(){
+     return(
+       <Paper className = "BookingManagerMakeOfferBox">
+         <h1>Search</h1>
+         <TextField hintText="Search for band"/><br/>
+
+         <SelectField
+         floatingLabelText="Genre"
+         value={this.state.value}
+         onChange={this.handleChange}
+         autoWidth={true}
+       >
+         <MenuItem value={1} primaryText="All genres" />
+         <MenuItem value={2} primaryText="Pop" />
+         <MenuItem value={3} primaryText="Jazz" />
+         <MenuItem value={4} primaryText="Country" />
+         <MenuItem value={5} primaryText="Classical" />
+         <MenuItem value={6} primaryText="Rock" />
+       </SelectField>
+
+       </Paper>
+     )
+   }
+}
+
+const Search2 = () =>
       <div>
         <h1>Search</h1>
         <TextField hintText="Search"/><br/>
@@ -113,9 +149,10 @@ constructor(props) {
          onChange={this.handleChange}
          value={this.state.slideIndex}
        >
-         <Tab label="Tab One" value={0} />
-         <Tab label="Tab Two" value={1} />
-         <Tab label="Tab Three" value={2} />
+         <Tab label="Rock" value={0} />
+         <Tab label="Pop" value={1} />
+         <Tab label="Hip-Hop" value={2} />
+         <Tab label="Country" value={3} />
        </Tabs>
        <SwipeableViews
          index={this.state.slideIndex}
