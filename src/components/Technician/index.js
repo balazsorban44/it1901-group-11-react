@@ -1,8 +1,12 @@
 import React, { Component } from 'react'
 import firebase from 'firebase'
 import Drawer from 'material-ui/Drawer'
+import Paper from 'material-ui/Paper'
 import MenuItem from 'material-ui/MenuItem'
+import {List, ListItem} from 'material-ui/List';
 
+// Reformats date
+const parseDate = date => new Date(date).toISOString().slice(0, 10)
 
 // 13.  Som lyd eller lystekniker skal jeg kunne få opp en oversikt over konserter jeg skal jobbe med.
 export default class Technician extends Component {
@@ -80,17 +84,15 @@ handleMenuItemClick(openedMenuItem){
             <MenuItem onClick={() => this.handleMenuItemClick("concertsOverview")} primaryText='Concerts Overview' />
           </Drawer>
 
-          {// Switch-case to toggle MenuItem
-          }
+          {/* Switch-case to toggle MenuItem */}
 
+          {/* This is the place the information will be rendered */}
           {{
             "concertsOverview":
-            <ConcertsOverview {...{concerts, bands}}/>
+
+            <ConcertsOverview{...{concerts, bands}}/>
 
           }[this.state.openedMenuItem]}
-
-          {// TODO: make the proper information appear on screen
-          }
         </div>
     )
   }
@@ -98,20 +100,70 @@ handleMenuItemClick(openedMenuItem){
 
 
 
+
+// function ConcertsOverview({concerts, bands}) {
+  // NOTE: This one or the one below? Welp, the arrow means they are the same?
+
 const ConcertsOverview = ({concerts, bands}) => {
+  const bandsList = []
+  const dateList = []
+
+
+  // Object.keys(bands).forEach(key =>{
+  //   const name = bands[key].name
+  //   const technicalRequirements = bands[key].technicalRequirements
+  //   bandsList.push(
+  //     <ListItem key={key}>
+  //       {name},{technicalRequirements}
+  //     </ListItem>
+  //
+  //   )
+  // })
+
+  Object.keys(concerts).forEach(key =>{
+    const {from, to, band} = concerts[key]
+    let name, technicalRequirements = null
+    if (bands[band]) {
+      name = bands[band].name
+      technicalRequirements = bands[band].technicalRequirements.join(", ")
+    }
+
+    dateList.push(
+      <ListItem key={key}>
+        <p>{name}</p>
+        <p>{parseDate(from)} - {parseDate(to)}</p>
+        <p>Technical requirements: {technicalRequirements}</p>
+      </ListItem>
+    )
+
+  })
+
   //mapping happens here
   // console.log(concerts);
   // console.log(bands);
 
+//   Object.keys(concerts).map(function(keyNameCon, keyIndexCon) {
+//     return keyNameCon, keyIndexCon, console.log("keyName of concerts: ", keyNameCon,"keyIndex of concerts: ", keyIndexCon)
+//   // use keyName to get current key's name
+//   // and a[keyName] to get its value
+// })
+//
+//   Object.keys(bands).map(function(keyNameBan, keyIndexBan) {
+//     return keyNameBan, keyIndexBan, console.log("keyName of bands: ", keyNameBan,"keyIndex of bands: ", keyIndexBan)
+//   // use keyName to get current key's name
+//   // and a[keyName] to get its value
+// })
+
+
   //Return statement for ConcertsOverview
   return(
-    <div>
-      <ul>
-        {JSON.stringify(bands)}
-        {JSON.stringify(concerts)}
+    <Paper>
 
-      </ul>
-    </div>
+      <List>
+        {dateList}
+      </List>
+
+    </Paper>
   )
 
 }
