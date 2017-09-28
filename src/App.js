@@ -11,7 +11,7 @@ import Manager from './components/Manager'
 
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import getMuiTheme from 'material-ui/styles/getMuiTheme'
-import {green100, green500, green700} from 'material-ui/styles/colors'
+import {amber500, amber700} from 'material-ui/styles/colors'
 import AppBar from 'material-ui/AppBar'
 
 import RaisedButton from 'material-ui/RaisedButton'
@@ -21,10 +21,10 @@ const profiles = require.context('./img/profiles')
 
 const muiTheme = getMuiTheme({
   palette: {
-    primary1Color: green500,
-    primary2Color: green700,
-    primary3Color: green100,
-    accent1Color: green700
+    primary1Color: "#f8c53b",
+    primary2Color: amber500,
+    primary3Color: amber700,
+    accent1Color: "#ea4a53"
   },
 })
 
