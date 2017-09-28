@@ -11,25 +11,10 @@
       "name" : "Jack",
       "role" : "technician"
     },
-    "JLkzYFBWo1M1LFK2mbjEVDqGPwx2" : {
-      "img" : "admin",
-      "name" : "Stian Tøsse",
-      "role" : "admin"
-    },
-    "NvaNgKVI6rT1vh1niuuyluUeMZP2" : {
-      "img" : "admin",
-      "name" : "Mats Pedersen",
-      "role" : "admin"
-    },
     "RluDhpq9gpPHWK5aRGHLu5PvTDA2" : {
       "img" : "jane",
       "name" : "Jane",
       "role" : "bookingBoss"
-    },
-    "UNEXp3iaiSRXA2TFUVACeTSeJLz1" : {
-      "img" : "admin",
-      "name" : "Balázs Orbán",
-      "role" : "admin"
     },
     "YiBSLuDTjTMRfaJbtGsfkq9N7M12" : {
       "img" : "james",
@@ -41,15 +26,10 @@
       "name" : "Jessica",
       "role" : "bookingManager"
     },
-    "j10rcmAzNbe8l2IVaszBTb8TGnv2" : {
-      "img" : "admin",
-      "name" : "Erik Krüger",
-      "role" : "admin"
-    },
-    "oknMeBFetOfiSJJVQ0l0st0bajA3" : {
-      "img" : "admin",
-      "name" : "Aleksander Karlsson",
-      "role" : "admin"
+    "fu7CIdFgywcjS8lSn9NL1isNsZN2" : {
+      "img" : "bob",
+      "name" : "Bob",
+      "role" : "technician"
     }
   }
 }

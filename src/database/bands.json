@@ -1,25 +1,25 @@
 {
   "59bc02105d041286efac0960" : {
     "albumSales" : 1693215,
-    "concerts": [ "59bc04b271b3c31a520daeae" ],
+    "concerts": [ "59bc04b271b3c31a520daeae", "59uef787dinsdiu89sdiff", "59usd7hsd78hfh7f8e32irr", "59nsdin7s87h87dfh78sduihsd" ],
     "genre" : "Rock",
     "members" : [ "Hammond Robbins", "Debora Becker", "Vance Macdonald" ],
     "monthlyListeners" : 416665,
     "name" : "Metallica",
-    "technicalRequirements" : [ "Guitars", "Drums", "Amplifiers", "Lights" ]
+    "technicalRequirements" : [ "Guitars", "Drums", "Amplifiers", "Lights", "Microphone" ]
   },
   "59bc02108ebb6407fe317b7d" : {
     "albumSales" : 4952763,
-    "concerts": [ "59bc04b2b8e6f6f0dd55a2e7" ],
+    "concerts": [ "59bc04b2b8e6f6f0dd55a2e7" , "59u8sdhb4unkjsu7sdudhsuif", "59sjnu4jjkj3ejhbh4kjk34n", "59iuhsduygyebfhbjhshdsd"],
     "genre" : "Electric",
-    "members" : [ "Lana Del Rey" ],
+    "members" : [ "Alan Walker" ],
     "monthlyListeners" : 202272,
     "name" : "Alan Walker",
     "technicalRequirements" : [ "DJ Pult", "Coffee", "Hoodie", "Lights" ]
   },
   "59bc0dkfgbfb433drc291132" : {
     "albumSales" : 9837432,
-    "concerts": [""],
+    "concerts": [ "59897df78igy3iwkbkbsjfdb", "59sdu98fhihu4bwukjbefu", "59sud97fyh7i3ubwkjebfkj", "59hsd7fih3kuwbkdbfkj4ws" ],
     "genre" : "Pop",
     "members" : [  "Chris Martin", "Guy Berryman", "Jonny Buckland", "Will Champion" ],
     "monthlyListeners" : 398328,
@@ -28,7 +28,7 @@
   },
   "59bc0dsaoleb433drc985hj3" : {
     "albumSales" : 34234432,
-    "concerts": [ "" ],
+    "concerts": [ "598u8sd7fy8iyg4ukbsukfb", "5987sdft8gi43kwjuifbkdjs", "59usdy78fgikbsudkbfkjds", "59u7sdt6gu3ikwbksdfkbds" ],
     "genre" : "Pop",
     "members" : [   "Agnetha Fältskog", "Anni-Frid Lyngstad", "Björn Ulvaeus", "Benny Andersson" ],
     "monthlyListeners" : 233142,
@@ -37,7 +37,7 @@
   },
   "59bc0210bbfba53daf291ab2" : {
     "albumSales" : 7657913,
-    "concerts": [ "59bc04b2c6ee092945795f8e" ],
+    "concerts": [ "59bc04b2c6ee092945795f8e", "59jkndfu8789d8v6sf6gt87", "59sd8u9u7s8dfsid7fukdhs", "59sd877isdhfuik4jwbbjkv" ],
     "genre" : "Rock",
     "members" : [ "Lana Del Rey" ],
     "monthlyListeners" : 238419,
@@ -46,7 +46,7 @@
   },
   "59bc102345fba5kjdsoieioe" : {
     "albumSales" : 10000000,
-    "concerts": [ "59bc04b2c6ee09dwiukshei8" ],
+    "concerts": [ "59bc04b2c6ee09dwiukshei8", "59uudnjkerukfnu78sfhiu", "59kipisocviosnlcknkdsl", "59oofspfisndvsjkejsfj" ],
     "genre" : "Pop",
     "members" : [ "Michael Jackson" ],
     "monthlyListeners" : 99999,
@@ -55,16 +55,16 @@
   },
   "59bc1r3p928ouwfba5kjdsoieioe" : {
     "albumSales" : 43298429,
-    "concerts": [ "lkfsjdoidlkj38ir3983iki4" ],
-    "genre" : "Classical",
-    "members" : [ "Andrea Bocelli" ],
+    "concerts": [ "lkfsjdoidlkj38ir3983iki4", "59uajhbjhwefhjkbkhwefkj", "59sduiiusdjhbjhsdbhjkd", "59897d78s6f67usd7f78" ],
+    "genre" : "Rap",
+    "members" : [ "Aubrey Drake Graham" ],
     "monthlyListeners" : 43298,
-    "name" : "Andrea Bocelli",
-    "technicalRequirements" : [ "Violin" ]
+    "name" : "Drake",
+    "technicalRequirements" : [ "Microphone" ]
   },
   "59bc0210df2d44289458aac0" : {
     "albumSales" : 8176519,
-    "concerts": [ "59bc04b2d4bb6d33232814d6" ],
+    "concerts": [ "59bc04b2d4bb6d33232814d6", "59jdufuikbrfkuewbfjj", "59ookdfminwekfbsmbdfhk", "59podsjfoijuosbkdfkhjbk" ],
     "genre" : "Rock",
     "members" : [ "Michael Nicholson", "Orr Cooper", "Campbell Dorsey", "Knapp Atkins", "Angel Church" ],
     "monthlyListeners" : 276256,
@@ -73,7 +73,7 @@
   },
   "59fnewhbgf234fgnnn44554f" : {
     "albumSales" : 4673532,
-    "concerts" : [ "59asytcdcfv3wgjrhb4h32jghv434" ],
+    "concerts" : [ "59bc0210df2d44289498573745", "59pdf089hisubkefb3iuwb33", "5987sdf8gy4bkhwbk3bjdbfkj", "598sd7f84gwi3bsbdfbksjdf" ],
     "genre" : "Rock",
     "members" : ["Ryan Tedder", "Zach Filkins", "Brent Kutzle", "Drew Brown", "Eddie Fisher" ],
     "monthlyListeners" : 9837233,
@@ -82,8 +82,8 @@
   },
   "59ebedbybe76f5e6f7efdv8" : {
     "albumSales" : 817364572,
-    "concerts" : [ "59sad76asdv78aer7f8hdf78v7h87d" ],
-    "genre" : "Hiphop",
+    "concerts" : [ "59sad76asdv78aer7f8hdf78v7h87d", "5998duf78igy4bkwjbefis7dhf", "597sd68f6t6tdsf76uysdjf", "599sd7f8giy3kwbeiiy3jkh" ],
+    "genre" : "Rap",
     "members" : [ "Sir Robert Bryson Hall II" ],
     "monthlyListeners" : 98476282,
     "name" : "Logic",
@@ -91,7 +91,7 @@
   },
   "59duwnunw34gth3434ggrt4" : {
     "albumSales" : 192387465,
-    "concerts" : [ "59as87dc6a5s7dva6sdsa76sdaads" ],
+    "concerts" : [ "59as87dc6a5s7dva6sdsa76sdaads", "597yds7fih4kjbduifh78dfgisukd", "59sd9fy78i3bkwjbndfkuh78", "59isd97fy78iuk3bwjkbdf7" ],
     "genre" : "Rap",
     "members" : [ "Mark Lawrence Richard Jr" ],
     "monthlyListeners" : 724682482,
@@ -100,8 +100,8 @@
   },
   "59iuewnfyw7653ybfe76fef" : {
     "albumSales" : 8374657233,
-    "concerts" : [ "596asdfiuy86sdzv67asdf788ds" ],
-    "genre" : "Alternative Rock",
+    "concerts" : [ "596asdfiuy86sdzv67asdf788ds", "59ioud7ys7dhfiukj4kbwkj3", "59d78fg8ugy4hbwhbhkjbfskdh", "59dsf7y7i3kwbkdbfkskjdbfjk" ],
+    "genre" : "Rock",
     "members" : [ "Isaac Slade", "Joe King", "Dave Welsh", "Ben Wysocki", "Jimmy Stofer" ],
     "monthlyListeners" : 724682,
     "name" : "The Fray",
@@ -109,8 +109,8 @@
   },
   "59iyurewbfu6756w4e45e5f" : {
     "albumSales" : 1337999991337,
-    "concerts" : [ "596adjhrf78sdfv87asdv78d6ae" ],
-    "genre" : "Alternative",
+    "concerts" : [ "596adjhrf78sdfv87asdv78d6ae", "5978difubkj4jkwkjjkkwkdnkj", "59udiufikwembfkjbkjfbkjds", "59iousdiufiubkbkjabjkdfbjk" ],
+    "genre" : "Rock",
     "members" : [ "Balasz Orban", "Mats Pedersen", "Stian Tøsse" , "Aleksander Karlsson", "Erik Krüger" ],
     "monthlyListeners" : 133799991337,
     "name" : "Fantastic Five",
@@ -118,8 +118,8 @@
   },
   "59iuwrefuybwef7we67f6e5" : {
     "albumSales" : 6384638,
-    "concerts" : [ "59sdi7vg65u3hbguy324iub4b2" ],
-    "genre" : "Pop Punk",
+    "concerts" : [ "59sdi7vg65u3hbguy324iub4b2", "5987dfikdbfkbkewbfkbkwkb", "59897d78fyejgfbk4bjbjkw", "59u8sd9yf87gib3jbwkjbkd" ],
+    "genre" : "Rock",
     "members" : [ "Ryan Key", "Sean Mackin", "Ryan Mendez", "Longineu W. Parsons III" ],
     "monthlyListeners" : 49897236,
     "name" : "Yellowcard",
@@ -127,8 +127,8 @@
   },
   "59w6we5ervf8r7evre86v6v" : {
     "albumSales" : 78346,
-    "concerts" : [ "59sdofuhas7gf68asd8gvia87s" ],
-    "genre" : "Indie Pop",
+    "concerts" : [ "59sdofuhas7gf68asd8gvia87s", "59oiusd778sd87fy7shiudkfj", "59dfh78f8ihsdufkhkjdsfd", "59767d67fguyhb4kjbjkwkjk" ],
+    "genre" : "Pop",
     "members" : [ "Dan Smith", "Will Farquarson", "Kyle Simmons", "Chris Wood" ] ,
     "monthlyListeners" : 127674839,
     "name" : "Bastille",
@@ -136,7 +136,7 @@
   },
   "59fniu7r676er58vre66v86" : {
     "albumSales" : 8927864257,
-    "concerts" : [ "59asiudbf7aw6efy4kiuwe78w4" ],
+    "concerts" : [ "59asiudbf7aw6efy4kiuwe78w4", "59uhiuas7878d7f7ihksdjkfbk", "59as654as5465asthv3j323", "599u8dsf6786ugyusdfgu6g6d" ],
     "genre" : "Pop",
     "members" : [ "Justin Randall Timberlake" ],
     "monthlyListeners" : 6367824,
@@ -145,8 +145,8 @@
   },
   "59wiue767we56f67v677fv7" : {
     "albumSales" : 892657248,
-    "concerts" : [ "59sdofuniuds5fc7qkj34bnth4j" ],
-    "genre" : "Alternative Rock",
+    "concerts" : [ "59sdofuniuds5fc7qkj34bnth4j", "59oidjfoiu89f9889ds8f89sd", "59sd87t8i4bkrjmmhrehke", "59iuhsd78fy78787f877s8df" ],
+    "genre" : "Rock",
     "members" : [ "Adam Levine", "James Valentine", "Jesse Carmichael", "Micket Madden", "Matt Flynn" ],
     "monthlyListeners" : 97463,
     "name" : "Maroon 5" ,
@@ -154,8 +154,8 @@
   },
   "59ver898vb6as321sa2fvrf" : {
     "albumSales" : 946645244,
-    "concerts" : [ "590erguniusdfvtg7af6a6s7d7" ],
-    "genre" : "Indie Rock",
+    "concerts" : [ "590erguniusdfvtg7af6a6s7d7", "59jd89ys78ihukefbkusbdfk", "59sdiufhisdfu7u7sd78fgyi", "59o8sdifhuisdgfbksdbf7f" ],
+    "genre" : "Rock",
     "members" : [ "Daniel Platzman", "Ben McKee", "Dan Reynolds", "Wayne Sermon" ] ,
     "monthlyListeners" : 7382654,
     "name" : "Imagine Dragons" ,
@@ -163,8 +163,8 @@
   },
   "59jertg07857as22kfne9e" : {
     "albumSales" : 123456,
-    "concerts" : [ "59alksndfu6sef78b8ees6dfee" ],
-    "genre" : "Hiphop",
+    "concerts" : [ "59alksndfu6sef78b8ees6dfee", "59vijkef78sdifhksujef7ds", "59paofpisjifois78f8idds", "59i99osjdfjhsdbjkfdsjjs" ],
+    "genre" : "Rap",
     "members" : [ "Marshall Bruce Mathers III" ],
     "monthlyListeners" : 54321,
     "name" : "Eminem" ,
@@ -172,7 +172,7 @@
   },
   "59hvbyuas8v0ngb8dfbhvvd" : {
     "albumSales" : 92775739,
-    "concerts" : [ "5976sdfisdv6v87sfv787sfs67d" ],
+    "concerts" : [ "5976sdfisdv6v87sfv787sfs67d", "59oj89dsifkuiuehfiui7s7idf", "59oids98f9889sd89f89heukf", "59d8989wef78787huk4knjnjkjds" ],
     "genre" : "Electric",
     "members" : [ "Andrew Taggart", "Alex Pall" ] ,
     "monthlyListeners" : 983863,
@@ -181,7 +181,7 @@
   },
   "59fjnhvye32wtvac3bhj90d" : {
     "albumSales" : 83974990,
-    "concerts" : [ "5927ergerg932b32nnj5n5j" ],
+    "concerts" : [ "5927ergerg932b32nnj5n5j", "59wudnkwebfubiuusfkujds", "59iodjiosidoioseiioioes", "59kkwpf8h7sd787sihudfk4" ],
     "genre" : "RnB" ,
     "members" : [ "Astrid Smeplass" ],
     "monthlyListeners" : 78643244,
@@ -190,20 +190,38 @@
   },
   "59f7eg60sd7v0t79f787s6d" : {
     "albumSales" : 9099949,
-    "concerts" : [ "598dfunir7df76vr88sf7v" ],
+    "concerts" : [ "598dfunir7df76vr88sf7v", "59mmouefh7idsf7878sdids", "59nnefishfyi7sdy9f9dss", "59jsodoi879sd7fiuksdukb" ],
     "genre" : "RnB" ,
     "members" : [ "Robyn Rihanna Fenty" ],
     "monthlyListeners" : 7348657824,
     "name" : "Rihanna",
-    "technicalRequirements" : [ "Rihanna" ]
+    "technicalRequirements" : [ "Microphone" ]
   },
   "59fhe7cbehf65ewfkj8v9s" : {
     "albumSales" : 9837468397,
-    "concerts" : [ "59fvjn4379sfbdknfskj3nf3j" ],
+    "concerts" : [ "59fvjn4379sfbdknfskj3nf3j", "59wwunkdfbnkjbesfjbjkbsek", "59sdf877887sd87f78787d7d7", "59sd889f8cxvuihiudsfhisdi" ],
     "genre" : "Pop" ,
     "members" : [ "Edward Christopher Sheeran" ],
     "monthlyListeners" : 972386542,
     "name" : "Ed Sheeran" ,
     "technicalRequirements" : [ "Microphone", "Guitars" ]
+  },
+  "5973hjfiueriufnksdjfn" : {
+    "albumSales" : 72836475,
+    "concerts" : [ "598776df8gihd78f78sfsef", "59776dsfgbhkskjfysh7f87is", "59us6d7fg8ibiukjbfiysdbf", "597s6dfgbksbfiuhsbdiyfbh" ],
+    "genre" : "Rock",
+    "members" : [ "Tyson Ritter", "Nick Wheeler", "Mike Kennerty", "Chris Gaylor" ],
+    "monthlyListeners" : 7846728,
+    "name" : "The All-American Rejects",
+    "technicalRequirements" : [ "Guitars", "Drums", "Bass", "Microphone"] 
+  },
+  "591jnkjnweknfjnejfsd" : {
+    "albumSales" : 78236754,
+    "concerts" : [ "5976dgfuyhbsdkjnfljse", "59u7s8dhf76gbiukj3jkjks", "59usd78fgiu3jkkjwbfkjsd", "59u7sdy67fguyksbkjdfnk" ],
+    "genre" : "Pop",
+    "members" : [ "Tyler Joseph", "Josh Dun" ],
+    "monthlyListeners" : 97347,
+    "name" : "Twenty One Pilots",
+    "technicalRequirements" : [ "Drums", "Microphone", "Pc"] 
   }
 }
