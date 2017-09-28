@@ -74,11 +74,22 @@ class Band extends Component{
     this.setState({requirements: value.split(', ')})
   }
 
-  addTechicalRequirement(bandId){
-    console.log(this.state.requirements)
+  addTechicalRequirement(e, bandId){
+    e.preventDefault()
+    const db = firebase.database().ref()
+    const {technicalRequirements} = this.props.band
+    console.log(technicalRequirements)
+    technicalRequirements === ['']?
+    db.child(`bands/${bandId}/technicalRequirements`).set(this.state.requirements):
+    db.child(`bands/${bandId}/technicalRequirements`).set(technicalRequirements.concat(this.state.requirements))
   }
 
-  removeTechnicalRequirement(e){
+  removeTechnicalRequirement(e, bandId, reqId){
+    e.preventDefault()
+    let {technicalRequirements} = this.props.band
+    const db = firebase.database().ref()
+    technicalRequirements.length === 1 ? technicalRequirements = [''] : technicalRequirements.splice(reqId, 1)
+    db.child(`bands/${bandId}/technicalRequirements`).set(technicalRequirements)
   }
   render(){
     const {name, technicalRequirements, members, genre} = this.props.band
@@ -99,13 +110,18 @@ class Band extends Component{
           <p>Technical requirements:</p>
           {Object.keys(technicalRequirements).map(reqKey => {
             return (
+              <div>
               <p key={reqKey}>{technicalRequirements[reqKey]}</p>
+              {technicalRequirements[reqKey] !== "" &&
+              <button onClick={(e) => this.removeTechnicalRequirement(e, this.props.bandId, reqKey)}>Remove</button>
+            }
+              </div>
             )
           })}
         </div>
         <form action="#">
           <input value={this.state.requirements.join(', ')} onChange={e => this.handleInput(e)}/>
-          <button onClick={() => this.addTechicalRequirement(this.props.bandId)}>Click</button>
+          <button onClick={(e) => this.addTechicalRequirement(e, this.props.bandId)}>Add</button>
         </form>
       </div>
     )
