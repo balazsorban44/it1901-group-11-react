@@ -1,4 +1,6 @@
 import React from 'react'
+import Paper from 'material-ui/Paper'
+import Subheader from 'material-ui/Subheader'
 
 const Scene = ({name, bands}) => {
   const bandsList = []
@@ -7,11 +9,13 @@ const Scene = ({name, bands}) => {
     bandsList.push(<li key={band}><h6>{band}</h6></li>)
   })
   return (
-    <li>
-      <h5>Scene {name}</h5>
-      <ul>
-        {bandsList}
-      </ul>
+    <li className="scene">
+      <Paper>
+        <Subheader>Scene {name}</Subheader>
+        <ul className="band-list">
+          {bandsList}
+        </ul>
+      </Paper>
     </li>
   )
 }

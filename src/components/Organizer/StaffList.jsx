@@ -1,7 +1,6 @@
 import React from 'react'
 import Avatar from 'material-ui/Avatar'
 import {List, ListItem} from 'material-ui/List'
-import Subheader from 'material-ui/Subheader'
 import Paper from 'material-ui/Paper'
 
 const profiles = require.context('../../img/profiles')
@@ -26,12 +25,14 @@ const StaffList = ({staff}) => {
   })
 
   return (
-    <Paper>
-      <List>
-        <Subheader>Staff</Subheader>
-        {staffList}
-      </List>
-    </Paper>
+    <div>
+      <h4>Staff</h4>
+      <Paper>
+        <List className="staff-list">
+          {staffList}
+        </List>
+      </Paper>
+    </div>
   )
 }
 

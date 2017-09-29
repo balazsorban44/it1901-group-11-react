@@ -6,6 +6,7 @@ body {
 }
 
 ul{
+  list-style-type: none;
   padding: 0
 }
 h2 {
@@ -50,11 +51,21 @@ h2 {
 }
 
 .event-body{
-  align-items: flex-start;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+}
+
+.staff-list, .band-list {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  min-width: 50vw
 }
 
 
+.scene {
+  margin: 1em 0
+}
 
 .booking-list {
   justify-content: center;
