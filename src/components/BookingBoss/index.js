@@ -4,8 +4,8 @@ import Drawer from 'material-ui/Drawer'
 import Badge from 'material-ui/Badge'
 import MenuItem from 'material-ui/MenuItem'
 import BookingTabSwipe from './BookingTabSwipe'
+import {parseDate} from '../../utils'
 
-const parseDate = date => new Date(date).toISOString().slice(0, 10)
 
 export default class BookingBoss extends Component {
   constructor() {

@@ -4,10 +4,7 @@ import Drawer from 'material-ui/Drawer'
 import Paper from 'material-ui/Paper'
 import MenuItem from 'material-ui/MenuItem'
 import {List, ListItem} from 'material-ui/List';
-
-// Reformats date
-const parseDate = date => new Date(date).toISOString().slice(0,10)
-const parseTime = date => new Date(date).toISOString().slice(11,16)
+import {parseDate, parseTime} from '../../utils'
 
 // 13.  Som lyd eller lystekniker skal jeg kunne få opp en oversikt over konserter jeg skal jobbe med.
 export default class Technician extends Component {
@@ -188,7 +185,7 @@ const ConcertsOverview = ({concerts, bands}) => {
       <List>
         {concertBandsList}
       </List>
-      {/*<p>mulige symbol: <i className="material-icons">grade</i> <i className="material-icons">build</i> <i className="material-icons">lightbulb_outline</i> <i className="material-icons">mic</i> <i className="material-icons">album</i> <i className="material-icons">attach_file</i> <i className="material-icons">attachment</i> <i className="material-icons">map</i> <i className="material-icons">power</i> <i className="material-icons">location_city</i> <i className="material-icons">whatshot</i> <i className="material-icons">group</i><i className="material-icons">terrain</i> <i className="material-icons">gps_fixed</i> <i className="material-icons">audiotrack</i>  
+      {/*<p>mulige symbol: <i className="material-icons">grade</i> <i className="material-icons">build</i> <i className="material-icons">lightbulb_outline</i> <i className="material-icons">mic</i> <i className="material-icons">album</i> <i className="material-icons">attach_file</i> <i className="material-icons">attachment</i> <i className="material-icons">map</i> <i className="material-icons">power</i> <i className="material-icons">location_city</i> <i className="material-icons">whatshot</i> <i className="material-icons">group</i><i className="material-icons">terrain</i> <i className="material-icons">gps_fixed</i> <i className="material-icons">audiotrack</i>
       </p>*/}
 
     </Paper>
