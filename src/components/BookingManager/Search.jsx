@@ -22,29 +22,33 @@ export default class Search extends Component{
      const bandsRef = db.child('bands')
      bandsRef.on('value', snap =>{
        const bands = snap.val()
-       this.setState({bands:bands})
+       this.setState({bands})
      })
    }
 
-   doSearch(input){
-     this.setState({input:input})
-     const bands = this.state.bands
+   doSearch(input, directValue){
+     let {bands, genres, value} = this.state
+
+     //HACK to get updated value when changing genre. State did not change fast enough 
+     if(directValue !=null){
+       value = directValue
+     }
      let bandsToOutput = []
      Object.keys(bands).forEach(key =>{
-        let str = String(bands[key].name).toLowerCase()
-        if((str.includes(input.toLowerCase()) &&(this.state.genres[this.state.value] === bands[key].genre || this.state.value === 1))){
+        const {name, genre} = bands[key]
+        if(name.toLowerCase().includes(input.toLowerCase()) &&(genres[value] === genre || value === 1)){
           bandsToOutput.push(key)
         }
       })
-    this.setState({bandsToOutput:bandsToOutput})
+    this.setState({bandsToOutput, input})
+  }
+//onChange genre dropdown list
+  handleChange = (event, index, value) => {
+    this.setState({value})
+    this.doSearch(this.state.input, value)
   }
 
-  handleChange(event, index, value){
-    this.setState({value:value})
-  }
-  onClickedBand(band){
-    this.setState({selectedBand:band})
-  }
+  onClickedBand(band){this.setState({selectedBand:band})}
 
    render(){
      return(
@@ -80,6 +84,8 @@ export default class Search extends Component{
      )
    }
 }
+
+//Info about band after band is clicked
 const BandInfo = ({bands, band}) =>{
   if(band === ""){
     return(
@@ -88,9 +94,9 @@ const BandInfo = ({bands, band}) =>{
   }else{
     return(
       <div>
-        <h4>{band.name}</h4>
+        <h5>{band.name}</h5>
         <p>Sales: {band.albumSales}</p>
-        <p>Mothly listeners: {band.monthlyListeners}</p>
+        <p>Monthly listeners: {band.monthlyListeners}</p>
       </div>
     )
   }
