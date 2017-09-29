@@ -112,6 +112,7 @@ h2 {
 
 .BookingManagerMakeOfferBox{
   display: inline-block;
+  width: 500px;
   padding-bottom: 50px;
   padding-left: 30px;
   padding-right: 30px;
