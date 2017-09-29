@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-// import firebase from 'firebase'
+import firebase from 'firebase'
 import Drawer from 'material-ui/Drawer'
 import MenuItem from 'material-ui/MenuItem'
 import TextField from 'material-ui/TextField';
@@ -14,6 +14,7 @@ export default class BookingManager extends Component {
   constructor() {
     super()
     this.state = {
+      bands:{},
       // initializing local concerts
       openedMenuItem: "search"
     }
@@ -21,6 +22,16 @@ export default class BookingManager extends Component {
 
 // Fetching content from firebase
 componentDidMount(){
+  const db = firebase.database().ref()
+  const bandsRef = db.child('bands')
+  const bands = {}
+
+  bandsRef.on('value', snap =>{
+    const bands = snap.val()
+    this.setState({bands})
+  })
+
+
   // referencing database (firebase) "ready up for connect"
   // const db = firebase.database().ref()
   // accesing child of database = concerts
@@ -35,7 +46,7 @@ handleMenuItemClick(openedMenuItem){
   render() {
     const {isDrawerOpened} = this.props
     const {openedMenuItem} = this.state
-
+    const bands = this.state.band
     return (
         <div>
           <Drawer open={isDrawerOpened}>
@@ -50,12 +61,14 @@ handleMenuItemClick(openedMenuItem){
             "previousConcerts":
             <PreviousConcerts/>,
             "search":
-            <Search/>
+            <Search{...{bands}}/>
           }[openedMenuItem]}
 
         </div>
     )}
 }
+
+
 
 const MakeOffer = () =>
       <Paper className = "BookingManagerMakeOfferBox">
@@ -71,21 +84,54 @@ const MakeOffer = () =>
         />
       </Paper>
 
+
 class Search extends Component{
   constructor(props) {
      super(props);
      this.state = {
        value: 1,
+       bands:{},
+       input:"",
+       bandsToOutput : [],
+       genres:["none", "All Genres", "Pop", "Rock", "Electric", "Rap", "RnB"]
      };
+     this.loadDb()
    }
 
-   handleChange = (event, index, value) => this.setState({value});
+
+   loadDb = () =>{
+     const db = firebase.database().ref()
+     const bandsRef = db.child('bands')
+     const bands = {}
+     bandsRef.on('value', snap =>{
+       const bands = snap.val()
+       this.setState({bands})
+     })
+   }
+
+   doSearch = (input) =>{
+     this.setState({input:input})
+     const bands = this.state.bands
+     let bandsToOutput = []
+     Object.keys(bands).forEach(key =>{
+        let str = String(bands[key].name).toLowerCase()
+        if((str.includes(input.toLowerCase()) &&(this.state.genres[this.state.value] == bands[key].genre || this.state.value == 1))){
+          bandsToOutput.push(key)
+        }
+      })
+      this.setState({bandsToOutput:bandsToOutput})
+      console.log("did searhc")
+   }
+
+   handleChange = (event, index, value) =>{
+      this.setState({value:value})
+    }
 
    render(){
      return(
        <Paper className = "BookingManagerMakeOfferBox">
          <h1>Search</h1>
-         <TextField hintText="Search for band"/><br/>
+         <TextField hintText="Search for band" onChange = {input => this.doSearch(input.target.value)}/><br/>
 
          <SelectField
          floatingLabelText="Genre"
@@ -95,25 +141,32 @@ class Search extends Component{
        >
          <MenuItem value={1} primaryText="All genres" />
          <MenuItem value={2} primaryText="Pop" />
-         <MenuItem value={3} primaryText="Jazz" />
-         <MenuItem value={4} primaryText="Country" />
-         <MenuItem value={5} primaryText="Classical" />
-         <MenuItem value={6} primaryText="Rock" />
+         <MenuItem value={3} primaryText="Rock" />
+         <MenuItem value={4} primaryText="Electric" />
+         <MenuItem value={5} primaryText="Rap" />
+         <MenuItem value={6} primaryText="RnB" />
        </SelectField>
 
+       <div>
+       <h5>Search results:</h5>
+         {Object.keys(this.state.bandsToOutput).map(memberKey => {
+           return(
+             <p key={memberKey}>{this.state.bands[this.state.bandsToOutput[memberKey]].name}</p>
+           )
+         })}
+       </div>
        </Paper>
      )
    }
 }
 
-const Search2 = () =>
-      <div>
-        <h1>Search</h1>
-        <TextField hintText="Search"/><br/>
-      </div>
 
 
 
+
+
+
+//Might not be used
   const styles = {
       headline: {
         fontSize: 24,
