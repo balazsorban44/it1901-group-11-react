@@ -2,22 +2,22 @@ import React, { Component } from 'react'
 import firebase from 'firebase'
 import MenuItem from 'material-ui/MenuItem'
 import DropDownMenu from 'material-ui/DropDownMenu';
-import {Toolbar, ToolbarGroup, ToolbarSeparator, ToolbarTitle} from 'material-ui/Toolbar';
+import {Toolbar, ToolbarGroup} from 'material-ui/Toolbar';
+import {parseDate} from '../../utils'
 
-import StaffList from './StaffList'
-import ScenesList from './ScenesList'
+import Staff from './Staff'
+import Scenes from './Scenes'
 
-const parseDate = date => new Date(date).toISOString().slice(0, 10)
 
 export default class Organizer extends Component {
   constructor() {
     super()
     this.state = {
       events: {},
-      openedMenuItem: "eventsOverview",
       value: 1
     }
   }
+
   componentDidMount() {
     const db = firebase.database().ref()
     const eventsRef = db.child('events')
@@ -25,7 +25,6 @@ export default class Organizer extends Component {
     const concertsRef = db.child('concerts')
     const bandsRef = db.child('bands')
     const staffRef = db.child('staff/profiles')
-
 
     eventsRef.on('value', snap => {
       const events = snap.val()
@@ -67,30 +66,21 @@ export default class Organizer extends Component {
         })
       })
     })
-
   }
-  handleChange = (event, index, value) => this.setState({value})
 
-  handleMenuItemClick(openedMenuItem) {
-    this.setState({openedMenuItem})
-  }
+  handleChange(event, index, value) {this.setState({value})}
 
   render() {
-    const {events, openedMenuItem, value} = this.state
-    const {isDrawerOpened} = this.props
-    const eventsMenuItems = []
-    Object.keys(events).forEach(key => {
-      const {name} = events[key]
-      eventsMenuItems.push(
-        <MenuItem key={key} value={key} primaryText={name} />
-      )
-    })
+    const {events, value} = this.state
     return (
         <div>
           <Toolbar>
             <ToolbarGroup>
               <DropDownMenu value={value} onChange={this.handleChange}>
-                {eventsMenuItems}
+                {Object.keys(events).map(key => {
+                  const {name} = events[key]
+                  return <MenuItem key={key} value={key} primaryText={name}/>
+                })}
               </DropDownMenu>
             </ToolbarGroup>
             <ToolbarGroup >
@@ -100,13 +90,12 @@ export default class Organizer extends Component {
                   `${parseDate(events[value].from)} - ${parseDate(events[value].to)}`:
                     "Loading..."
                 }
-
               </span>
             </ToolbarGroup>
           </Toolbar>
           {
             events[value] ?
-              <EventView event={events[value]}/>:
+              <EventView event={events[value]}/> :
               <div className="mdl-spinner mdl-js-spinner is-active"/>
           }
         </div>
@@ -118,9 +107,7 @@ export default class Organizer extends Component {
 
 const EventView = ({event: {name, scenes, staff}}) =>  (
   <div className="event">
-    <div className="event-body">
-      <StaffList staff={staff}/>
-      <ScenesList scenes={scenes}/>
-    </div>
+    <Staff staff={staff}/>
+    <Scenes scenes={scenes}/>
   </div>
 )
