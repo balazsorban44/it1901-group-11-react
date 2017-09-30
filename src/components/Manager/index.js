@@ -1,12 +1,10 @@
 import React, { Component } from 'react'
-import AppBar from 'material-ui/AppBar'
 import Drawer from 'material-ui/Drawer'
-import Avatar from 'material-ui/Avatar'
 import MenuItem from 'material-ui/MenuItem'
-import RaisedButton from 'material-ui/RaisedButton'
 import firebase from 'firebase'
 import {List, ListItem} from 'material-ui/List'
 import Paper from 'material-ui/Paper';
+import Band from './Band'
 
 export default class Manager extends Component {
 
@@ -25,7 +23,6 @@ export default class Manager extends Component {
   componentDidMount(){
     const db = firebase.database().ref()
     const bandsRef = db.child('bands')
-    const concertsRef = db.child('concerts')
     bandsRef.on('value', snap => {
       const bands = snap.val()
       this.setState({bands})
@@ -33,8 +30,7 @@ export default class Manager extends Component {
   }
 
   render() {
-    const {user, isDrawerOpened, toggleDrawer, logout} = this.props
-    const {uid, img, name} = user
+    const {isDrawerOpened} = this.props
     return (
       <div>
         <Drawer
@@ -54,76 +50,8 @@ const BandView = ({bands}) => (
   <Paper>
   <List>
   {Object.keys(bands).map(bandKey => {
-    const {name, genre, concerts, members, technicalRequirements} = bands[bandKey]
-    return(<ListItem key={bandKey}><Band band={bands[bandKey]} bandId={bandKey}/ ></ListItem>)
+    return(<ListItem key={bandKey}><Band band={bands[bandKey]} bandId={bandKey}/></ListItem>)
   })}
   </List>
   </Paper>
 )
-
-class Band extends Component{
-  constructor(){
-    super()
-    this.state = {
-      requirements: [""]
-    }
-  }
-
-  handleInput(e){
-    const {value} = e.target
-    this.setState({requirements: value.split(', ')})
-  }
-
-  addTechicalRequirement(e, bandId){
-    e.preventDefault()
-    const db = firebase.database().ref()
-    const {technicalRequirements} = this.props.band
-    console.log(technicalRequirements)
-    technicalRequirements === ['']?
-    db.child(`bands/${bandId}/technicalRequirements`).set(this.state.requirements):
-    db.child(`bands/${bandId}/technicalRequirements`).set(technicalRequirements.concat(this.state.requirements))
-  }
-
-  removeTechnicalRequirement(e, bandId, reqId){
-    e.preventDefault()
-    let {technicalRequirements} = this.props.band
-    const db = firebase.database().ref()
-    technicalRequirements.length === 1 ? technicalRequirements = [''] : technicalRequirements.splice(reqId, 1)
-    db.child(`bands/${bandId}/technicalRequirements`).set(technicalRequirements)
-  }
-  render(){
-    const {name, technicalRequirements, members, genre} = this.props.band
-    const bandId = this.props.bandId
-    return(
-      <div>
-        <p>Name: {name}</p>
-        <p>Genre: {genre}</p>
-        <div>
-          <p>Members:</p>
-          {Object.keys(members).map(memberKey => {
-            return(
-              <p key={memberKey}>{members[memberKey]}</p>
-            )
-          })}
-        </div>
-        <div>
-          <p>Technical requirements:</p>
-          {Object.keys(technicalRequirements).map(reqKey => {
-            return (
-              <div>
-              <p key={reqKey}>{technicalRequirements[reqKey]}</p>
-              {technicalRequirements[reqKey] !== "" &&
-              <button onClick={(e) => this.removeTechnicalRequirement(e, this.props.bandId, reqKey)}>Remove</button>
-            }
-              </div>
-            )
-          })}
-        </div>
-        <form action="#">
-          <input value={this.state.requirements.join(', ')} onChange={e => this.handleInput(e)}/>
-          <button onClick={(e) => this.addTechicalRequirement(e, this.props.bandId)}>Add</button>
-        </form>
-      </div>
-    )
-  }
-}
