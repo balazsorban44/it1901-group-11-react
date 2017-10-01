@@ -2,8 +2,6 @@ import React, { Component } from 'react'
 import Drawer from 'material-ui/Drawer'
 import MenuItem from 'material-ui/MenuItem'
 import firebase from 'firebase'
-import {List, ListItem} from 'material-ui/List'
-import Paper from 'material-ui/Paper';
 import Band from './Band'
 
 export default class Manager extends Component {
@@ -47,11 +45,11 @@ export default class Manager extends Component {
 }
 
 const BandView = ({bands}) => (
-  <Paper>
-  <List>
-  {Object.keys(bands).map(bandKey => {
-    return(<ListItem key={bandKey}><Band band={bands[bandKey]} bandId={bandKey}/></ListItem>)
-  })}
-  </List>
-  </Paper>
+  <div>
+    <ul className="band-list-manager">
+      {Object.keys(bands).map(bandKey => {
+        return(<li key={bandKey}><Band band={bands[bandKey]} bandId={bandKey}/></li>)
+      })}
+    </ul>
+  </div>
 )
