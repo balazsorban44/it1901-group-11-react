@@ -2,11 +2,14 @@ import React, { Component } from 'react'
 import firebase from 'firebase'
 import MenuItem from 'material-ui/MenuItem'
 import DropDownMenu from 'material-ui/DropDownMenu';
+import CircularProgress from 'material-ui/CircularProgress';
 import {Toolbar, ToolbarGroup} from 'material-ui/Toolbar';
 import {parseDate} from '../../utils'
 
 import Staff from './Staff'
 import Scenes from './Scenes'
+
+import '../../css/organizer.css'
 
 
 export default class Organizer extends Component {
@@ -68,7 +71,7 @@ export default class Organizer extends Component {
     })
   }
 
-  handleChange(event, index, value) {this.setState({value})}
+  handleChange = (event, index, value) => this.setState({value})
 
   render() {
     const {events, value} = this.state
@@ -77,37 +80,40 @@ export default class Organizer extends Component {
           <Toolbar>
             <ToolbarGroup>
               <DropDownMenu value={value} onChange={this.handleChange}>
-                {Object.keys(events).map(key => {
-                  const {name} = events[key]
-                  return <MenuItem key={key} value={key} primaryText={name}/>
-                })}
+                {Object.keys(events).map(key => (
+                  <MenuItem
+                    key={key}
+                    value={key}
+                    primaryText={events[key].name}
+                  />))
+                }
               </DropDownMenu>
             </ToolbarGroup>
             <ToolbarGroup >
-              <span>
-                {
-                  events[value] ?
-                  `${parseDate(events[value].from)} - ${parseDate(events[value].to)}`:
-                    "Loading..."
-                }
-              </span>
+              {
+                events[value] ? <span>{parseDate(events[value].from)} - {parseDate(events[value].to)}</span>
+                : <CircularProgress/>
+              }
             </ToolbarGroup>
           </Toolbar>
           {
-            events[value] ?
-              <EventView event={events[value]}/> :
-              <div className="mdl-spinner mdl-js-spinner is-active"/>
+            events[value] ? <EventView event={events[value]}/> : <Loading/>
           }
         </div>
     )
   }
 }
 
-
-
 const EventView = ({event: {name, scenes, staff}}) =>  (
   <div className="event">
     <Staff staff={staff}/>
     <Scenes scenes={scenes}/>
+  </div>
+)
+
+
+const Loading = () => (
+  <div className="loading">
+    <CircularProgress/>
   </div>
 )

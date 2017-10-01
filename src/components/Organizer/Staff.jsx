@@ -2,11 +2,9 @@ import React from 'react'
 import Avatar from 'material-ui/Avatar'
 import {List, ListItem} from 'material-ui/List'
 import Paper from 'material-ui/Paper'
+import {capitalize} from '../../utils'
 
 const profiles = require.context('../../img/profiles')
-
-
-const capitalize = s => (s.charAt(0).toUpperCase() + s.slice(1)).replace(/([a-z])([A-Z][a-z])/g, "$1 $2")
 
 const StaffList = ({staff}) => {
   const staffList = []
