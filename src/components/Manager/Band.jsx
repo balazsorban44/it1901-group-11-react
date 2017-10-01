@@ -6,7 +6,8 @@ class Band extends Component{
   constructor(){
     super()
     this.state = {
-      requirements: [""]
+      requirements: [""],
+      editMode: false
     }
     this.styles = {
       chip: {
@@ -19,6 +20,10 @@ class Band extends Component{
     const {value} = e.target
     this.setState({requirements: value.split(', ')})
   }
+  toggleEdit(e){
+      e.preventDefault()
+      this.setState(prevState => ({editMode: !prevState.editMode}))
+    }
 
   addTechicalRequirement(e, bandId){
     e.preventDefault()
@@ -59,7 +64,7 @@ class Band extends Component{
               {technicalRequirements[reqKey] !== "" &&
               <Chip
                 key={reqKey}
-                onRequestDelete={() => this.removeTechnicalRequirement(bandId, reqKey)}
+                onRequestDelete={this.state.editMode ? () => this.removeTechnicalRequirement(bandId, reqKey) : null}
                 style={this.styles.chip}
               >
               {technicalRequirements[reqKey]}</Chip>
@@ -68,10 +73,15 @@ class Band extends Component{
             )
           })}
         </div>
-        <form action="#">
+        {this.state.editMode &&
+          <form action="#">
           <input value={this.state.requirements.join(', ')} onChange={e => this.handleInput(e)}/>
-          <button onClick={(e) => this.addTechicalRequirement(e, bandId)}>Add</button>
-        </form>
+          <button onClick={e => this.addTechicalRequirement(e, bandId)}>Add</button>
+          </form>
+        }
+
+
+<button onClick={e => this.toggleEdit(e)}>{this.state.editMode ? "Done" : "Edit"}</button>
       </div>
     )
   }
