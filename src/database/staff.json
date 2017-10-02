@@ -1,9 +1,14 @@
 {
-  "acceptedRoles" : [ "admin", "organizer", "bookingManager", "bookingBoss", "technician", "manager" ],
+  "acceptedRoles" : ["organizer", "bookingManager", "bookingBoss", "technician", "manager" ],
   "profiles" : {
     "13pAdrh9t4Pt7qrdDJfpzjy8Vrh1" : {
       "img" : "joe",
       "name" : "Joe",
+      "role" : "organizer"
+    },
+    "uN2sZVTwlsUwBBBHUWFzDLBikB42" : {
+      "img" : "betty",
+      "name" : "Betty",
       "role" : "organizer"
     },
     "5sOE4NZwX5VhBtXuvoarGhvz0PP2" : {
@@ -16,9 +21,29 @@
       "name" : "Jane",
       "role" : "bookingBoss"
     },
+    "33gMwGSuFfUTMv9BWCAakNXF0re2" : {
+      "img" : "ben",
+      "name" : "Ben",
+      "role" : "bookingBoss"
+    },
     "YiBSLuDTjTMRfaJbtGsfkq9N7M12" : {
       "img" : "james",
       "name" : "James",
+      "role" : "manager"
+    },
+    "I90tBRUgsba4pT2c9DGiygGszhw1" : {
+      "img" : "george",
+      "name" : "George",
+      "role" : "manager"
+    },
+    "r52CRDQ5hDb1e7jTPHFYtNbNkbm2" : {
+      "img" : "jeff",
+      "name" : "Jeff",
+      "role" : "manager"
+    },
+    "ZThJHM8iAhcQxuo5MPDf6L952h13" : {
+      "img" : "jacob",
+      "name" : "Jacob",
       "role" : "manager"
     },
     "ZCcD5DwBbzgXLAGRdR28cUCdQub2" : {
@@ -26,9 +51,14 @@
       "name" : "Jessica",
       "role" : "bookingManager"
     },
-    "fu7CIdFgywcjS8lSn9NL1isNsZN2" : {
+    "m9rdtjQQUnecqe4WdM7RSRZ4ZIK2" : {
       "img" : "bob",
       "name" : "Bob",
+      "role" : "technician"
+    },
+    "AZOpCPsvtbWhk8ASWuwJbv2rts93" : {
+      "img" : "brandon",
+      "name" : "Brandon",
       "role" : "technician"
     }
   }

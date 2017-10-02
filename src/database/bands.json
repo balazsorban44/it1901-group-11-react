@@ -6,7 +6,8 @@
     "members" : [ "Hammond Robbins", "Debora Becker", "Vance Macdonald" ],
     "monthlyListeners" : 416665,
     "name" : "Metallica",
-    "technicalRequirements" : [ "Guitars", "Drums", "Amplifiers", "Lights", "Microphone" ]
+    "technicalRequirements" : [ "Guitars", "Drums", "Amplifiers", "Lights", "Microphone" ],
+    "manager": "YiBSLuDTjTMRfaJbtGsfkq9N7M12"
   },
   "59bc02108ebb6407fe317b7d" : {
     "albumSales" : 4952763,
@@ -15,7 +16,8 @@
     "members" : [ "Alan Walker" ],
     "monthlyListeners" : 202272,
     "name" : "Alan Walker",
-    "technicalRequirements" : [ "DJ Pult", "Coffee", "Hoodie", "Lights" ]
+    "technicalRequirements" : [ "DJ Pult", "Coffee", "Hoodie", "Lights" ],
+    "manager": "YiBSLuDTjTMRfaJbtGsfkq9N7M12"
   },
   "59bc0dkfgbfb433drc291132" : {
     "albumSales" : 9837432,
@@ -24,7 +26,8 @@
     "members" : [  "Chris Martin", "Guy Berryman", "Jonny Buckland", "Will Champion" ],
     "monthlyListeners" : 398328,
     "name" : "Coldplay",
-    "technicalRequirements" : [ "Microphone", "Drums" ]
+    "technicalRequirements" : [ "Microphone", "Drums" ],
+    "manager": "YiBSLuDTjTMRfaJbtGsfkq9N7M12"
   },
   "59bc0dsaoleb433drc985hj3" : {
     "albumSales" : 34234432,
@@ -33,7 +36,8 @@
     "members" : [   "Agnetha Fältskog", "Anni-Frid Lyngstad", "Björn Ulvaeus", "Benny Andersson" ],
     "monthlyListeners" : 233142,
     "name" : "ABBA",
-    "technicalRequirements" : [ "Clothes", "Lights" ]
+    "technicalRequirements" : [ "Clothes", "Lights" ],
+    "manager": "YiBSLuDTjTMRfaJbtGsfkq9N7M12"
   },
   "59bc0210bbfba53daf291ab2" : {
     "albumSales" : 7657913,
@@ -42,7 +46,8 @@
     "members" : [ "Lana Del Rey" ],
     "monthlyListeners" : 238419,
     "name" : "Lana Del Rey",
-    "technicalRequirements" : [ "Sunglasses", "Water" ]
+    "technicalRequirements" : [ "Sunglasses", "Water" ],
+    "manager": "I90tBRUgsba4pT2c9DGiygGszhw1"
   },
   "59bc102345fba5kjdsoieioe" : {
     "albumSales" : 10000000,
@@ -51,7 +56,8 @@
     "members" : [ "Michael Jackson" ],
     "monthlyListeners" : 99999,
     "name" : "Michael Jackson",
-    "technicalRequirements" : [ "Sunglasses" ]
+    "technicalRequirements" : [ "Sunglasses" ],
+    "manager": "I90tBRUgsba4pT2c9DGiygGszhw1"
   },
   "59bc1r3p928ouwfba5kjdsoieioe" : {
     "albumSales" : 43298429,
@@ -60,7 +66,8 @@
     "members" : [ "Aubrey Drake Graham" ],
     "monthlyListeners" : 43298,
     "name" : "Drake",
-    "technicalRequirements" : [ "Microphone" ]
+    "technicalRequirements" : [ "Microphone" ],
+    "manager": "I90tBRUgsba4pT2c9DGiygGszhw1"
   },
   "59bc0210df2d44289458aac0" : {
     "albumSales" : 8176519,
@@ -69,7 +76,8 @@
     "members" : [ "Michael Nicholson", "Orr Cooper", "Campbell Dorsey", "Knapp Atkins", "Angel Church" ],
     "monthlyListeners" : 276256,
     "name" : "Volbeat",
-    "technicalRequirements" : [ "dolor ullamco", "amet cillum", "fugiat duis", "deserunt esse" ]
+    "technicalRequirements" : [ "dolor ullamco", "amet cillum", "fugiat duis", "deserunt esse" ],
+    "manager": "I90tBRUgsba4pT2c9DGiygGszhw1"
   },
   "59fnewhbgf234fgnnn44554f" : {
     "albumSales" : 4673532,
@@ -78,7 +86,8 @@
     "members" : ["Ryan Tedder", "Zach Filkins", "Brent Kutzle", "Drew Brown", "Eddie Fisher" ],
     "monthlyListeners" : 9837233,
     "name" : "OneRepublic",
-    "technicalRequirements" : ["Guitars", "Drums", "Microphone", "Bass", "Keyboard" ]
+    "technicalRequirements" : ["Guitars", "Drums", "Microphone", "Bass", "Keyboard" ],
+    "manager": "I90tBRUgsba4pT2c9DGiygGszhw1"
   },
   "59ebedbybe76f5e6f7efdv8" : {
     "albumSales" : 817364572,
@@ -87,7 +96,8 @@
     "members" : [ "Sir Robert Bryson Hall II" ],
     "monthlyListeners" : 98476282,
     "name" : "Logic",
-    "technicalRequirements" : [ "Microphone" ]
+    "technicalRequirements" : [ "Microphone" ],
+    "manager": "I90tBRUgsba4pT2c9DGiygGszhw1"
   },
   "59duwnunw34gth3434ggrt4" : {
     "albumSales" : 192387465,
@@ -96,7 +106,8 @@
     "members" : [ "Mark Lawrence Richard Jr" ],
     "monthlyListeners" : 724682482,
     "name" : "Witt Lowry" ,
-    "technicalRequirements" : [ "Microphone" ]
+    "technicalRequirements" : [ "Microphone" ],
+    "manager": "r52CRDQ5hDb1e7jTPHFYtNbNkbm2"
   },
   "59iuewnfyw7653ybfe76fef" : {
     "albumSales" : 8374657233,
@@ -105,7 +116,8 @@
     "members" : [ "Isaac Slade", "Joe King", "Dave Welsh", "Ben Wysocki", "Jimmy Stofer" ],
     "monthlyListeners" : 724682,
     "name" : "The Fray",
-    "technicalRequirements" : [ "Guitars", "Microphone", "Drums", "Bass", "Keyboard", "Violin" ]
+    "technicalRequirements" : [ "Guitars", "Microphone", "Drums", "Bass", "Keyboard", "Violin" ],
+    "manager": "r52CRDQ5hDb1e7jTPHFYtNbNkbm2"
   },
   "59iyurewbfu6756w4e45e5f" : {
     "albumSales" : 1337999991337,
@@ -114,7 +126,8 @@
     "members" : [ "Balasz Orban", "Mats Pedersen", "Stian Tøsse" , "Aleksander Karlsson", "Erik Krüger" ],
     "monthlyListeners" : 133799991337,
     "name" : "Fantastic Five",
-    "technicalRequirements" : [ "Pc" ]
+    "technicalRequirements" : [ "Pc" ],
+    "manager": "r52CRDQ5hDb1e7jTPHFYtNbNkbm2"
   },
   "59iuwrefuybwef7we67f6e5" : {
     "albumSales" : 6384638,
@@ -123,7 +136,8 @@
     "members" : [ "Ryan Key", "Sean Mackin", "Ryan Mendez", "Longineu W. Parsons III" ],
     "monthlyListeners" : 49897236,
     "name" : "Yellowcard",
-    "technicalRequirements" : [ "Guitars", "Drums", "Microphone", "Violin", "Bass", "Keyboard" ]
+    "technicalRequirements" : [ "Guitars", "Drums", "Microphone", "Violin", "Bass", "Keyboard" ],
+    "manager": "r52CRDQ5hDb1e7jTPHFYtNbNkbm2"
   },
   "59w6we5ervf8r7evre86v6v" : {
     "albumSales" : 78346,
@@ -132,7 +146,8 @@
     "members" : [ "Dan Smith", "Will Farquarson", "Kyle Simmons", "Chris Wood" ] ,
     "monthlyListeners" : 127674839,
     "name" : "Bastille",
-    "technicalRequirements" : [ "Guitars", "Bass", "Keyboard", "Microphone" ]
+    "technicalRequirements" : [ "Guitars", "Bass", "Keyboard", "Microphone" ],
+    "manager": "r52CRDQ5hDb1e7jTPHFYtNbNkbm2"
   },
   "59fniu7r676er58vre66v86" : {
     "albumSales" : 8927864257,
@@ -141,7 +156,8 @@
     "members" : [ "Justin Randall Timberlake" ],
     "monthlyListeners" : 6367824,
     "name" : "Justin Timberlake" ,
-    "technicalRequirements" : [ "Microphone", "Dancing Shoes" ]
+    "technicalRequirements" : [ "Microphone", "Dancing Shoes" ],
+    "manager": "r52CRDQ5hDb1e7jTPHFYtNbNkbm2"
   },
   "59wiue767we56f67v677fv7" : {
     "albumSales" : 892657248,
@@ -150,7 +166,8 @@
     "members" : [ "Adam Levine", "James Valentine", "Jesse Carmichael", "Micket Madden", "Matt Flynn" ],
     "monthlyListeners" : 97463,
     "name" : "Maroon 5" ,
-    "technicalRequirements" : [ "Microphone", "Guitars", "Keyboard", "Trumpet", "Drums" ]
+    "technicalRequirements" : [ "Microphone", "Guitars", "Keyboard", "Trumpet", "Drums" ],
+    "manager": "r52CRDQ5hDb1e7jTPHFYtNbNkbm2"
   },
   "59ver898vb6as321sa2fvrf" : {
     "albumSales" : 946645244,
@@ -159,7 +176,8 @@
     "members" : [ "Daniel Platzman", "Ben McKee", "Dan Reynolds", "Wayne Sermon" ] ,
     "monthlyListeners" : 7382654,
     "name" : "Imagine Dragons" ,
-    "technicalRequirements" : [ "Guitars" , "Microphone", "Drums", "Keyboard", "Bass" ]
+    "technicalRequirements" : [ "Guitars" , "Microphone", "Drums", "Keyboard", "Bass" ],
+    "manager": "r52CRDQ5hDb1e7jTPHFYtNbNkbm2"
   },
   "59jertg07857as22kfne9e" : {
     "albumSales" : 123456,
@@ -168,7 +186,8 @@
     "members" : [ "Marshall Bruce Mathers III" ],
     "monthlyListeners" : 54321,
     "name" : "Eminem" ,
-    "technicalRequirements" : [ "Microphone" ] 
+    "technicalRequirements" : [ "Microphone" ] ,
+    "manager": "ZThJHM8iAhcQxuo5MPDf6L952h13"
   },
   "59hvbyuas8v0ngb8dfbhvvd" : {
     "albumSales" : 92775739,
@@ -177,7 +196,8 @@
     "members" : [ "Andrew Taggart", "Alex Pall" ] ,
     "monthlyListeners" : 983863,
     "name" : "Chainsmokers" ,
-    "technicalRequirements" : [ "Pc" ] 
+    "technicalRequirements" : [ "Pc" ] ,
+    "manager": "ZThJHM8iAhcQxuo5MPDf6L952h13"
   },
   "59fjnhvye32wtvac3bhj90d" : {
     "albumSales" : 83974990,
@@ -186,7 +206,8 @@
     "members" : [ "Astrid Smeplass" ],
     "monthlyListeners" : 78643244,
     "name" : "Astrid S",
-    "technicalRequirements" : [ "Microphone" ]
+    "technicalRequirements" : [ "Microphone" ],
+    "manager": "ZThJHM8iAhcQxuo5MPDf6L952h13"
   },
   "59f7eg60sd7v0t79f787s6d" : {
     "albumSales" : 9099949,
@@ -195,7 +216,8 @@
     "members" : [ "Robyn Rihanna Fenty" ],
     "monthlyListeners" : 7348657824,
     "name" : "Rihanna",
-    "technicalRequirements" : [ "Microphone" ]
+    "technicalRequirements" : [ "Microphone" ],
+    "manager": "ZThJHM8iAhcQxuo5MPDf6L952h13"
   },
   "59fhe7cbehf65ewfkj8v9s" : {
     "albumSales" : 9837468397,
@@ -204,7 +226,8 @@
     "members" : [ "Edward Christopher Sheeran" ],
     "monthlyListeners" : 972386542,
     "name" : "Ed Sheeran" ,
-    "technicalRequirements" : [ "Microphone", "Guitars" ]
+    "technicalRequirements" : [ "Microphone", "Guitars" ],
+    "manager": "ZThJHM8iAhcQxuo5MPDf6L952h13"
   },
   "5973hjfiueriufnksdjfn" : {
     "albumSales" : 72836475,
@@ -213,7 +236,8 @@
     "members" : [ "Tyson Ritter", "Nick Wheeler", "Mike Kennerty", "Chris Gaylor" ],
     "monthlyListeners" : 7846728,
     "name" : "The All-American Rejects",
-    "technicalRequirements" : [ "Guitars", "Drums", "Bass", "Microphone"] 
+    "technicalRequirements" : [ "Guitars", "Drums", "Bass", "Microphone"] ,
+    "manager": "ZThJHM8iAhcQxuo5MPDf6L952h13"
   },
   "591jnkjnweknfjnejfsd" : {
     "albumSales" : 78236754,
@@ -222,6 +246,7 @@
     "members" : [ "Tyler Joseph", "Josh Dun" ],
     "monthlyListeners" : 97347,
     "name" : "Twenty One Pilots",
-    "technicalRequirements" : [ "Drums", "Microphone", "Pc"] 
+    "technicalRequirements" : [ "Drums", "Microphone", "Pc"] ,
+    "manager": "ZThJHM8iAhcQxuo5MPDf6L952h13"
   }
 }
