@@ -1,5 +1,7 @@
 @import organizer/_main
 @import manager/_main
+@import booking-manager/_main
+@import booking-boss/_main
 
 body
   margin: 0
@@ -45,54 +47,3 @@ h2
   color: white
   img
     margin: 0 1em
-
-.event, .booking-list, .booking-footer
-  display: flex
-
-.event
-  flex-direction: column
-  align-items: center
-
-
-.booking-list
-  justify-content: center
-  list-style-type: none
-  flex-wrap: wrap
-  li
-    margin: .5em
-    >div
-    max-width: 200px
-    max-height: 200px
-
-
-.booking-bg
-  position: absolute
-  left: 0
-  top: 0
-  width: 100%
-  height: 100%
-  z-index: -1
-  background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url(./img/bands/default.jpg)
-  background-size: cover
-  filter: blur(2px)
-
-.booking-text
-  color: white
-
-.booking-footer
-  align-items: center
-  background: white
-
-.green
-  color: green
-.red
-  color: red
-
-.defaultPaper
-  display: inline-block
-  width: 500px
-  padding-bottom: 50px
-  padding-left: 30px
-  padding-right: 30px
-  margin-top: 10px
-  background: red
