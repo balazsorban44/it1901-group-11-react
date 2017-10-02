@@ -24,7 +24,7 @@ export default class Manager extends Component {
     bandsRef.on('value', snap => {
       const bands = snap.val()
       Object.keys(bands).forEach(bandKey => {
-        if (bands[bandKey]['manager'] != this.props.user['uid']){
+        if (bands[bandKey]['manager'] !== this.props.user['uid']){
           delete(bands[bandKey])
         }
       })
