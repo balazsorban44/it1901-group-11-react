@@ -45,7 +45,7 @@ handleMenuItemClick(openedMenuItem){
     const {openedMenuItem} = this.state
     const bands = this.state.band
     return (
-        <div>
+        <div id="booking-manager">
           <Drawer open={isDrawerOpened}>
             <MenuItem onClick={() => this.handleMenuItemClick("newBooking")} primaryText="New booking" />
             <MenuItem onClick={() => this.handleMenuItemClick("search")} primaryText="Search" />
@@ -64,7 +64,7 @@ handleMenuItemClick(openedMenuItem){
 
 
 const MakeOffer = () =>
-      <Paper className = "BookingManagerMakeOfferBox">
+      <Paper className = "make-offer">
         <h1> Make offer</h1>
         <TextField hintText="Band"/><br/>
         <TextField hintText="Price"/><br/>
