@@ -14,8 +14,7 @@
     li
       margin: .5em
       >div
-      max-width: 200px
-      max-height: 200px
+        min-height: 240px
 
 
   .booking-bg
@@ -27,15 +26,21 @@
     z-index: -1
     background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url(./img/bands/default.jpg)
     background-size: cover
-    filter: blur(2px)
 
-  .booking-text
-    color: white
+  .booking-body
+    display: flex
+    flex-direction: column
+    justify-content: center
+    padding: 0
+    h4, h5
+      color: white
+      margin: 0
 
   .booking-footer
     align-items: center
     background: white
-
+  .accept-button
+    margin-right: 1em
   .green
     color: green
   .red
