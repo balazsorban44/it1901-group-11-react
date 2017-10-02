@@ -30,7 +30,7 @@ export default class Manager extends Component {
   render() {
     const {isDrawerOpened} = this.props
     return (
-      <div>
+      <div id="manager">
         <Drawer
           open = {isDrawerOpened}>
           <MenuItem onClick={() => this.handleMenuItemClick("bandview")} primaryText="Band view"/>
@@ -46,6 +46,7 @@ export default class Manager extends Component {
 
 const BandView = ({bands}) => (
   <div>
+    <h2>My bands</h2>
     <ul className="band-list-manager">
       {Object.keys(bands).map(bandKey => {
         return(<li key={bandKey}><Band band={bands[bandKey]} bandId={bandKey}/></li>)

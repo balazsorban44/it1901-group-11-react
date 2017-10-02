@@ -24,7 +24,7 @@ const StaffList = ({staff}) => {
 
   return (
     <div>
-      <h4>Staff</h4>
+      <h4>Staff responsible for this event</h4>
       <Paper>
         <List className="staff-list">
           {staffList}

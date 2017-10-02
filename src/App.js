@@ -73,10 +73,7 @@ export default class App extends Component {
             {!user ?
               <Login/>:
               <div>
-                <AppBar
-                  onLeftIconButtonTouchTap={() => this.toggleDrawer()}
-                  title="Event Manager"
-                >
+                <AppBar onLeftIconButtonTouchTap={() => this.toggleDrawer()}>
                   <div className="user-info">
                     <h2>{user.name}</h2>
                     <Avatar src={profiles(`./${user.img}.jpg`)}/>
