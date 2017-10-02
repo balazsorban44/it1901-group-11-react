@@ -9,9 +9,6 @@ import {parseDate} from '../../utils'
 import Staff from './Staff'
 import Scenes from './Scenes'
 
-import '../../css/organizer.css'
-
-
 export default class Organizer extends Component {
   constructor() {
     super()
@@ -33,40 +30,43 @@ export default class Organizer extends Component {
       const events = snap.val()
       Object.keys(events).forEach(eventKey => {
         const event = events[eventKey]
-
-        // Fetch event staff information
-        const {staff} = event
-        Object.keys(staff).forEach(roleKey => {
-          const roleMembers = staff[roleKey]
-          staff[roleKey] = []
-          roleMembers.forEach(roleMember => {
-            staffRef.child(`${roleMember}`).on('value', snap => {
-              staff[roleKey].push(snap.val())
+        if (event.staff.organizer.includes(this.props.user.uid)) {
+            // Fetch event staff information
+          const {staff} = event
+          Object.keys(staff).forEach(roleKey => {
+            const roleMembers = staff[roleKey]
+            staff[roleKey] = []
+            roleMembers.forEach(roleMember => {
+              staffRef.child(`${roleMember}`).on('value', snap => {
+                staff[roleKey].push(snap.val())
+              })
             })
           })
-        })
 
-        // Fetch scenes information
-        const {scenes} = event
-        event.scenes = {}
-        scenes.forEach(sceneKey => {
-          scenesRef.child(sceneKey).on('value', snap => {
-            const scene = snap.val()
-            event.scenes[sceneKey] = scene
-            const {concerts} = scene
-            concerts.forEach(concertKey => {
-              delete event.scenes[sceneKey].concerts
-              scene.bands = []
-              concertsRef.child(`${concertKey}/band`).on('value', snap => {
-                const bandKey = snap.val()
-                bandsRef.child(`${bandKey}/name`).on('value', snap => {
-                  scene.bands.push(snap.val())
-                  this.setState({events, value: Object.keys(events)[0]})
+          // Fetch scenes information
+          const {scenes} = event
+          event.scenes = {}
+          scenes.forEach(sceneKey => {
+            scenesRef.child(sceneKey).on('value', snap => {
+              const scene = snap.val()
+              event.scenes[sceneKey] = scene
+              const {concerts} = scene
+              concerts.forEach(concertKey => {
+                delete event.scenes[sceneKey].concerts
+                scene.bands = []
+                concertsRef.child(`${concertKey}`).on('value', snap => {
+                  const {band, from, to} = snap.val()
+                  bandsRef.child(`${band}/name`).on('value', snap => {
+                    scene.bands.push({ name: snap.val(), from, to})
+                    this.setState({events, value: Object.keys(events)[0]})
+                  })
                 })
               })
             })
           })
-        })
+        } else {
+          delete events[eventKey]
+        }
       })
     })
   }
@@ -76,7 +76,7 @@ export default class Organizer extends Component {
   render() {
     const {events, value} = this.state
     return (
-        <div>
+        <div id="organizer">
           <Toolbar>
             <ToolbarGroup>
               <DropDownMenu value={value} onChange={this.handleChange}>
@@ -104,10 +104,10 @@ export default class Organizer extends Component {
   }
 }
 
-const EventView = ({event: {name, scenes, staff}}) =>  (
+const EventView = ({event: {name, scenes, staff, from}}) =>  (
   <div className="event">
     <Staff staff={staff}/>
-    <Scenes scenes={scenes}/>
+    <Scenes eventStart={from} scenes={scenes}/>
   </div>
 )
 
