@@ -114,7 +114,7 @@ export default class BookingBoss extends Component {
       }
     })
     return (
-        <div>
+        <div id="booking-boss">
           <Drawer
             docked={false}
             open={isDrawerOpened}>
