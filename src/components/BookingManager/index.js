@@ -57,16 +57,10 @@ handleMenuItemClick(openedMenuItem){
     )}
 }
 
-<<<<<<< HEAD
+
 const NewBooking = () =>
       <Paper className = "defaultPaper">
-        <h1>New booking</h1>
-=======
-
-const MakeOffer = () =>
-      <Paper className = "make-offer">
         <h1> Make offer</h1>
->>>>>>> 7313a4066459cc2bed87b66736e72e0616de11a7
         <TextField hintText="Band"/><br/>
         <TextField hintText="Price"/><br/>
         <DatePicker hintText="Date" />
