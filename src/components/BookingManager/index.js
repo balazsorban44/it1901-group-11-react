@@ -60,7 +60,7 @@ handleMenuItemClick(openedMenuItem){
 
 const NewBooking = () =>
       <Paper className = "defaultPaper">
-        <h1> Make offer</h1>
+        <h1> New Booking</h1>
         <TextField hintText="Band"/><br/>
         <TextField hintText="Price"/><br/>
         <DatePicker hintText="Date" />
