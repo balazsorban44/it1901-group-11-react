@@ -27,14 +27,9 @@ componentDidMount(){
     const bands = snap.val()
     this.setState({bands})
   })
-
-
-  // referencing database (firebase) "ready up for connect"
-  // const db = firebase.database().ref()
-  // accesing child of database = concerts
-
 }
 
+//change page to display after item in left menui is clicked
 handleMenuItemClick(openedMenuItem){
   this.props.toggleDrawer()
   this.setState({openedMenuItem})
@@ -53,7 +48,7 @@ handleMenuItemClick(openedMenuItem){
 
           {{
             "newBooking":
-            <MakeOffer/>,
+            <NewBooking/>,
             "search":
             <Search{...{bands}}/>
           }[openedMenuItem]}
@@ -62,10 +57,9 @@ handleMenuItemClick(openedMenuItem){
     )}
 }
 
-
-const MakeOffer = () =>
-      <Paper className = "BookingManagerMakeOfferBox">
-        <h1> Make offer</h1>
+const NewBooking = () =>
+      <Paper className = "defaultPaper">
+        <h1>New booking</h1>
         <TextField hintText="Band"/><br/>
         <TextField hintText="Price"/><br/>
         <DatePicker hintText="Date" />

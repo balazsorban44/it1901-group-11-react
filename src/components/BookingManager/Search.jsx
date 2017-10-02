@@ -33,8 +33,8 @@ export default class Search extends Component{
        this.setState({concerts})
      })
    }
-
-   doSearch(input, directValue){
+//Search for band containing strings in input and update bandsToOutput state
+   searchForBand(input, directValue){
      let {bands, genres, value} = this.state
      //HACK to get updated value when changing genre. State do not change fast enough
      if(directValue !=null){
@@ -52,14 +52,14 @@ export default class Search extends Component{
 //onChange genre dropdown list
   handleChange = (event, index, value) => {
     this.setState({value})
-    this.doSearch(this.state.input, value)
+    this.searchForBand(this.state.input, value)
   }
 
    render(){
      return(
-       <Paper className = "BookingManagerMakeOfferBox">
+       <Paper className = "defaultPaper">
          <h1>Search</h1>
-         <TextField hintText="Search for band" onChange = {input => this.doSearch(input.target.value)}/><br/>
+         <TextField hintText="Search for band" onChange = {input => this.searchForBand(input.target.value)}/><br/>
          <SelectField floatingLabelText="Genre" value={this.state.value} onChange={this.handleChange} autoWidth={true}>
           <MenuItem value={1} primaryText="All genres" />
           <MenuItem value={2} primaryText="Pop" />
@@ -82,6 +82,7 @@ export default class Search extends Component{
    }
 }
 
+//Card for every band in search results
 const BandSearchResults = ({band, concerts}) => (
   <Card>
     <CardHeader title={band.name} subtitle={band.genre} actAsExpander={true} showExpandableButton={true}
