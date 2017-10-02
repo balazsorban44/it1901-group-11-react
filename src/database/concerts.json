@@ -112,7 +112,7 @@
   "59sd877isdhfuik4jwbbjkv" : {
     "band" : "59bc0210bbfba53daf291ab2",
     "from" : 1503079200000,
-    "isAcceptedByBookingBoss" : true,
+    "isAcceptedByBookingBoss" : "unhandled",
     "isAcceptedByBookingManager" : true,
     "participants" : 9999,
     "staff" : [ "" ],
@@ -122,7 +122,7 @@
   "59bc04b2c6ee09dwiukshei8" : {
     "band" : "59bc102345fba5kjdsoieioe",
     "from" : 1503093600000,
-    "isAcceptedByBookingBoss" : true,
+    "isAcceptedByBookingBoss" : "unhandled",
     "isAcceptedByBookingManager" : true,
     "participants" : 5000,
     "staff" : [ "5sOE4NZwX5VhBtXuvoarGhvz0PP2" ],
@@ -152,7 +152,7 @@
   "59oofspfisndvsjkejsfj" : {
     "band" : "59bc102345fba5kjdsoieioe",
     "from" : 1501264800000,
-    "isAcceptedByBookingBoss" : true,
+    "isAcceptedByBookingBoss" : false,
     "isAcceptedByBookingManager" : true,
     "participants" : 8890,
     "staff" : [ "" ],
@@ -182,7 +182,7 @@
   "59ookdfminwekfbsmbdfhk" : {
     "band" : "59bc0210df2d44289458aac0",
     "from" : 1503093600000,
-    "isAcceptedByBookingBoss" : true,
+    "isAcceptedByBookingBoss" : false,
     "isAcceptedByBookingManager" : true,
     "participants" : 9000,
     "staff" : [ "" ],
@@ -192,7 +192,7 @@
   "59podsjfoijuosbkdfkhjbk" : {
     "band" : "59bc0210df2d44289458aac0",
     "from" : 1501279200000,
-    "isAcceptedByBookingBoss" : true,
+    "isAcceptedByBookingBoss" : false,
     "isAcceptedByBookingManager" : true,
     "participants" : 9500,
     "staff" : [ "" ],
@@ -202,7 +202,7 @@
   "lkfsjdoidlkj38ir3983iki4" : {
     "band" : "59bc1r3p928ouwfba5kjdsoieioe",
     "from" : 1501279200000,
-    "isAcceptedByBookingBoss" : true,
+    "isAcceptedByBookingBoss" : false,
     "isAcceptedByBookingManager" : true,
     "participants" : 13433,
     "staff" : [ "5sOE4NZwX5VhBtXuvoarGhvz0PP2" ],
@@ -232,7 +232,7 @@
   "59897d78s6f67usd7f78" : {
     "band" : "59bc1r3p928ouwfba5kjdsoieioe",
     "from" : 1503093600000,
-    "isAcceptedByBookingBoss" : true,
+    "isAcceptedByBookingBoss" : "unhandled",
     "isAcceptedByBookingManager" : true,
     "participants" : 10000,
     "staff" : [ "" ],
@@ -262,7 +262,7 @@
   "59sdf877887sd87f78787d7d7" : {
     "band" : "59fhe7cbehf65ewfkj8v9s",
     "from" : 1501279200000,
-    "isAcceptedByBookingBoss" : true,
+    "isAcceptedByBookingBoss" : "unhandled",
     "isAcceptedByBookingManager" : true,
     "participants" : 9800,
     "staff" : [ "" ],
@@ -287,7 +287,7 @@
     "participants" : 24000,
     "staff" : [ "Placeholder" ],
     "ticketPrice" : 1250,
-    "to" : 1501293600000 
+    "to" : 1501293600000
   },
   "59mmouefh7idsf7878sdids" : {
     "band" : "59f7eg60sd7v0t79f787s6d",
@@ -437,12 +437,12 @@
     "participants" : 6300,
     "staff" : [ "" ],
     "ticketPrice" : 1950,
-    "to" : 1503180000000 
+    "to" : 1503180000000
   },
   "590erguniusdfvtg7af6a6s7d7" : {
     "band" : "59ver898vb6as321sa2fvrf" ,
     "from" : 1501351200000,
-    "isAcceptedByBookingBoss" : true,
+    "isAcceptedByBookingBoss" : false,
     "isAcceptedByBookingManager" : true,
     "participants" : 5236,
     "staff" : [ "Placeholder" ],
@@ -472,7 +472,7 @@
   "59o8sdifhuisdgfbksdbf7f" : {
     "band" : "59ver898vb6as321sa2fvrf",
     "from" : 1503180000000,
-    "isAcceptedByBookingBoss" : true,
+    "isAcceptedByBookingBoss" : false,
     "isAcceptedByBookingManager" : true,
     "participants" : 6900,
     "staff" : [ "" ],
@@ -482,7 +482,7 @@
   "59sdofuniuds5fc7qkj34bnth4j" : {
     "band" : "59wiue767we56f67v677fv7" ,
     "from" : 1501365600000,
-    "isAcceptedByBookingBoss" : true,
+    "isAcceptedByBookingBoss" : false,
     "isAcceptedByBookingManager" : true,
     "participants" : 6732,
     "staff" : [ "Placeholder" ],
@@ -492,7 +492,7 @@
   "59oidjfoiu89f9889ds8f89sd" : {
     "band" : "59wiue767we56f67v677fv7",
     "from" : 1503180000000,
-    "isAcceptedByBookingBoss" : true,
+    "isAcceptedByBookingBoss" : false,
     "isAcceptedByBookingManager" : true,
     "participants" : 7000,
     "staff" : [ "" ],
@@ -522,7 +522,7 @@
   "59asiudbf7aw6efy4kiuwe78w4" : {
     "band" : "59fniu7r676er58vre66v86" ,
     "from" : 1503180000000,
-    "isAcceptedByBookingBoss" : true,
+    "isAcceptedByBookingBoss" : false,
     "isAcceptedByBookingManager" : true,
     "participants" : 12765,
     "staff" : [ "Placeholder" ],
@@ -652,7 +652,7 @@
   "5978difubkj4jkwkjjkkwkdnkj" : {
     "band" : "59iyurewbfu6756w4e45e5f",
     "from" : 1501437600000,
-    "isAcceptedByBookingBoss" : true,
+    "isAcceptedByBookingBoss" : false,
     "isAcceptedByBookingManager" : true,
     "participants" : 13337,
     "staff" : [ "" ],
@@ -662,7 +662,7 @@
   "59udiufikwembfkjbkjfbkjds" : {
     "band" : "59iyurewbfu6756w4e45e5f",
     "from" : 1503252000000,
-    "isAcceptedByBookingBoss" : true,
+    "isAcceptedByBookingBoss" : false,
     "isAcceptedByBookingManager" : true,
     "participants" : 13337,
     "staff" : [ "" ],
@@ -682,7 +682,7 @@
   "596asdfiuy86sdzv67asdf788ds" : {
     "band" : "59iuewnfyw7653ybfe76fef" ,
     "from" : 1503252000000,
-    "isAcceptedByBookingBoss" : true,
+    "isAcceptedByBookingBoss" : false,
     "isAcceptedByBookingManager" : true,
     "participants" : 6742,
     "staff" : [ "Placeholder" ],
@@ -712,7 +712,7 @@
   "59dsf7y7i3kwbkdbfkskjdbfjk" : {
     "band" : "59iuewnfyw7653ybfe76fef",
     "from" : 1501437600000,
-    "isAcceptedByBookingBoss" : true,
+    "isAcceptedByBookingBoss" : false,
     "isAcceptedByBookingManager" : true,
     "participants" : 7000,
     "staff" : [ "" ],
@@ -732,7 +732,7 @@
   "597yds7fih4kjbduifh78dfgisukd" : {
     "band" : "59duwnunw34gth3434ggrt4",
     "from" : 1501437600000,
-    "isAcceptedByBookingBoss" : true,
+    "isAcceptedByBookingBoss" : false,
     "isAcceptedByBookingManager" : true,
     "participants" : 12000,
     "staff" : [ "" ],
