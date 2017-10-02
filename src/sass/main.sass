@@ -1,0 +1,98 @@
+@import organizer/_main
+@import manager/_main
+
+body
+  margin: 0
+  padding: 0
+  font-family: sans-serif
+  background-color: #dedede
+
+ul
+  list-style-type: none
+  padding: 0
+h2
+  margin: 0
+  font-size: 1.3em
+.App
+  text-align: center
+
+.loading
+  display: flex
+  align-items: center
+  min-height: 70vh
+  justify-content: center
+
+#login
+  background-color: rgba(0,0,0,.5)
+  min-height: 100vh
+  display: flex
+  justify-content: center
+  align-items: center
+
+.background-img
+  min-width: 100vw
+  min-height: 100vh
+  max-height: 130vh
+  position: fixed
+  top: 0
+  left: 0
+  z-index: -1
+
+.user-info
+  display: flex
+  justify-content: center
+  align-items: center
+  color: white
+  img
+    margin: 0 1em
+
+.event, .booking-list, .booking-footer
+  display: flex
+
+.event
+  flex-direction: column
+  align-items: center
+
+
+.booking-list
+  justify-content: center
+  list-style-type: none
+  flex-wrap: wrap
+  li
+    margin: .5em
+    >div
+    max-width: 200px
+    max-height: 200px
+
+
+.booking-bg
+  position: absolute
+  left: 0
+  top: 0
+  width: 100%
+  height: 100%
+  z-index: -1
+  background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url(./img/bands/default.jpg)
+  background-size: cover
+  filter: blur(2px)
+
+.booking-text
+  color: white
+
+.booking-footer
+  align-items: center
+  background: white
+
+.green
+  color: green
+.red
+  color: red
+
+.BookingManagerMakeOfferBox
+  display: inline-block
+  width: 500px
+  padding-bottom: 50px
+  padding-left: 30px
+  padding-right: 30px
+  margin-top: 10px
+  background: red
