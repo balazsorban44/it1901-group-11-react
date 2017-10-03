@@ -16,7 +16,7 @@ export default class NewBooking extends Component {
       bands: {},
       bandNames: [],
       events: {},
-      open: true,
+      open: false,
       dialog: {
         message: "",
         band: "",
