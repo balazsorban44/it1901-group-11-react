@@ -42,7 +42,7 @@ handleMenuItemClick(openedMenuItem){
             <MenuItem onClick={() => this.handleMenuItemClick("newBooking")} primaryText="New booking" />
             <MenuItem onClick={() => this.handleMenuItemClick("search")} primaryText="Search" />
           </Drawer>
-          <NewBooking/>
+          <NewBooking {...{bands}}/>
           {{
             "search":
             <Search {...{bands}}/>
