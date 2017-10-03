@@ -48,12 +48,9 @@ export default class Technician extends Component {
                   concertRef.once('value').then(snapshot => {
                     let now = snapshot.val()
                     if (now.staff.includes(this.props.user.uid) && now.isAcceptedByBookingBoss === true){
-                      this.setState(prevState => ({
-                        concerts: {
-                          ... prevState.concerts,
-                          concert: now
-                        }
-                      }))
+                      let pState = this.state.concerts
+                      pState[concert] = now
+                      this.setState(concerts: pState)
                     }
 
                   })
@@ -182,7 +179,7 @@ handleMenuItemClick(openedMenuItem){
 }
 
   render() {
-console.log(this.state.concerts)
+    console.log(this.state.concerts)
 
 
     const {isDrawerOpened} = this.props
@@ -260,7 +257,6 @@ const ConcertsOverview = ({concerts, bands}) => {
     )
 
   })
-  console.log(concertBandsList.length);
 
   //mapping happens here
   // console.log(concerts);
