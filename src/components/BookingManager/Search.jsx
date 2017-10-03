@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import firebase from 'firebase'
 import Paper from 'material-ui/Paper';
 import MenuItem from 'material-ui/MenuItem'
 import TextField from 'material-ui/TextField';
@@ -20,21 +19,9 @@ export default class Search extends Component{
      };
    }
 
-   componentDidMount(){
-     const db = firebase.database().ref()
-     const bandsRef = db.child('bands')
-     const concertsRef = db.child('concerts')
-     concertsRef.on('value', snap =>{
-       const concerts = snap.val()
-       this.setState({
-         concerts
-       })
-     })
-   }
-
-   componentWillReceiveProps(nextProp) {
-     const {bands} = nextProp
-     this.setState({bands})
+   componentDidMount() {
+     const {bands, concerts} = this.props
+     this.setState({bands, concerts})
    }
 
 //Search for band containing strings in input and update bandsToOutput state

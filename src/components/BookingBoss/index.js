@@ -29,7 +29,7 @@ export default class BookingBoss extends Component {
       const events = snap.val()
       Object.keys(events).forEach(eventKey => {
         const event = events[eventKey]
-        const {location, name} = event
+        const {name} = event
         if (event.staff.bookingBoss.includes(this.props.user.uid)) {
           const {scenes} = event
           scenes.forEach(sceneKey => {

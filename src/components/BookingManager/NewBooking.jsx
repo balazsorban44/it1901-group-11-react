@@ -83,7 +83,7 @@ export default class NewBooking extends Component {
         onClick={this.submitBooking}
       />,
     ];
-    const {open, dialog: {message}, bandNames} = this.state
+    const {open, bandNames} = this.state
     return (
       <div>
         <FloatingActionButton className="new-booking-fab" onClick={this.handleOpen}>
