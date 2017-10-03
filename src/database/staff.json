@@ -11,11 +11,6 @@
       "name" : "Betty",
       "role" : "organizer"
     },
-    "5sOE4NZwX5VhBtXuvoarGhvz0PP2" : {
-      "img" : "jack",
-      "name" : "Jack",
-      "role" : "technician"
-    },
     "RluDhpq9gpPHWK5aRGHLu5PvTDA2" : {
       "img" : "jane",
       "name" : "Jane",
@@ -51,6 +46,11 @@
       "name" : "Jessica",
       "role" : "bookingManager"
     },
+    "5sOE4NZwX5VhBtXuvoarGhvz0PP2" : {
+      "img" : "jack",
+      "name" : "Jack",
+      "role" : "technician"
+    },
     "m9rdtjQQUnecqe4WdM7RSRZ4ZIK2" : {
       "img" : "bob",
       "name" : "Bob",
@@ -60,6 +60,59 @@
       "img" : "brandon",
       "name" : "Brandon",
       "role" : "technician"
-    }
+    },
+    "" : {
+      "img" : "lars",
+      "name": "Lars",
+      "role" : "technician"
+    },"" : {
+      "img" : "per",
+      "name": "Per",
+      "role" : "technician"
+    },"" : {
+      "img" : "bernt",
+      "name": "Bernt",
+      "role" : "technician"
+    },"" : {
+      "img" : "bjørn",
+      "name": "Bjørn",
+      "role" : "technician"
+    },"" : {
+      "img" : "",
+      "name": "Bård",
+      "role" : "technician"
+    },"" : {
+      "img" : "",
+      "name": "Erik",
+      "role" : "technician"
+    },"" : {
+      "img" : "",
+      "name": "Eirik",
+      "role" : "technician"
+    },"" : {
+      "img" : "",
+      "name": "Howard",
+      "role" : "technician"
+    },"" : {
+      "img" : "",
+      "name": "Veronica",
+      "role" : "technician"
+    },"" : {
+      "img" : "",
+      "name": "Marthe",
+      "role" : "technician"
+    },"" : {
+      "img" : "",
+      "name": "Birgit",
+      "role" : "technician"
+    },"" : {
+      "img" : "",
+      "name": "Chad",
+      "role" : "technician"
+    },"" : {
+      "img" : "",
+      "name": "Ida",
+      "role" : "technician"
+    },
   }
 }
