@@ -14,14 +14,65 @@ export default class Technician extends Component {
       // initializing local concerts
       concerts:{},
       bands:{},
-      // NOTE: Might not be nessecary, added to get scenes
+      // NOTE: Might not be nessecary, added to get scenes and events
       // REVIEW : Does Technician need all this information???
       scenes:{},
-      // events:{},
+      events:{},
       openedMenuItem: "concertsOverview"
     }
   }
 
+
+  componentDidMount() {
+    const db = firebase.database().ref()
+    const concertsRef = db.child('concerts')
+    const bandsRef = db.child('bands')
+    const eventsRef = db.child('events')
+    const scenesRef = db.child('scenes')
+
+    eventsRef.on('value', snap => {
+      const events = snap.val()
+      Object.keys(events).forEach(eventKey => {
+        const event = events[eventKey]
+        // TODO: Time filter, technician does not need to se earlier events
+
+        const {location, name, time} = event
+        if (event.staff.technician.includes(this.props.user.uid)) {
+          const {scenes} = event
+          scenes.forEach(sceneKey => {
+            scenesRef.child(sceneKey).on('value', snap => {
+              const {concerts} = snap.val()
+              concerts.forEach(concertKey => {
+                concertsRef.child(concertKey).on('value', snap => {
+                  const concert = snap.val()
+                  concert.eventName = name
+
+                  this.setState(prevState => ({
+                    concerts: {
+                      ...prevState.concerts,
+                      [concertKey]: concert
+                    }
+                  }))
+                })
+              })
+            })
+          })
+        }
+        else {
+          delete events[eventKey]
+        }
+      })
+    })
+
+    bandsRef.on('value', snap => {
+      this.setState({
+        bands: snap.val()
+      })
+    })
+  }
+
+
+/*
 // Fetching content from firebase
 componentDidMount(){
   // referencing database (firebase) "ready up for connect"
@@ -30,9 +81,11 @@ componentDidMount(){
   const concertsRef = db.child('concerts')
   const bandsRef = db.child('bands')
   const bands = {}
-  // NOTE: Might not be nessecary, added to get scenes
+  // NOTE: Might not be nessecary, added to get scenes and events
   const scenesRef = db.child('scenes')
-  const scenes = {}
+  const eventsRef = db.child('events')
+  // const scenes = {}
+  const events = {}
   // listening to concert changes in database
   // on(element, snapshot) "picture of database on time of function call TODO: check online for full explanation
 
@@ -59,16 +112,6 @@ componentDidMount(){
           // setState here because else it wont update.
           this.setState({bands})
         })
-
-        // NOTE: Might not be nessecary, added to get scenes
-        // REVIEW: check this
-        scenesRef.child(band).on('value', snap => {
-          scenes[band] = snap.val()
-
-          this.setState({scenes})
-
-          console.log(scenes.name);
-        })
       }
     })
 
@@ -78,7 +121,37 @@ componentDidMount(){
     })
   })
 
-}
+// scenesRef.on('value', snap => {
+//   const scenes = snap.val()
+//   Object.keys(scenes).forEach(key => {
+//     const {name} = scenes[key]
+//
+//     // REVIEW: check this, added to get scenes
+//     scenesRef.child(scene).on('value', snap => {
+//       scenes[scene] = snap.val()
+//
+//       this.setState({scenes})
+//
+//       console.log(scenes.name);
+//     })
+//     //TODO Set State
+//   }
+// }
+
+// eventsRef.on('value', snap => {
+//   Object.keys(events).forEach(key => {
+//     const {location} = events[key]
+//     // REVIEW: check this, added to get evnts
+//     eventsRef.child(band).on('value', snap => {
+//       events[event] = snap.val()
+//
+//       console.log(evnets.name);
+//     })
+//     //TODO Set State
+//   }
+// }
+
+} */
 
 handleMenuItemClick(openedMenuItem){
   this.props.toggleDrawer()
@@ -185,7 +258,14 @@ const ConcertsOverview = ({concerts, bands}) => {
       <List>
         {concertBandsList}
       </List>
-      {/*<p>mulige symbol: <i className="material-icons">grade</i> <i className="material-icons">build</i> <i className="material-icons">lightbulb_outline</i> <i className="material-icons">mic</i> <i className="material-icons">album</i> <i className="material-icons">attach_file</i> <i className="material-icons">attachment</i> <i className="material-icons">map</i> <i className="material-icons">power</i> <i className="material-icons">location_city</i> <i className="material-icons">whatshot</i> <i className="material-icons">group</i><i className="material-icons">terrain</i> <i className="material-icons">gps_fixed</i> <i className="material-icons">audiotrack</i>
+      {/*<p>mulige symbol: <i className="material-icons">grade</i>
+      <i className="material-icons">build</i> <i className="material-icons">lightbulb_outline</i>
+      <i className="material-icons">mic</i> <i className="material-icons">album</i>
+      <i className="material-icons">attach_file</i> <i className="material-icons">attachment</i>
+      <i className="material-icons">map</i> <i className="material-icons">power</i>
+      <i className="material-icons">location_city</i> <i className="material-icons">whatshot</i>
+      <i className="material-icons">group</i><i className="material-icons">terrain</i>
+      <i className="material-icons">gps_fixed</i> <i className="material-icons">audiotrack</i>
       </p>*/}
 
     </Paper>
