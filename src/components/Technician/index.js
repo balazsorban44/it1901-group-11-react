@@ -35,29 +35,52 @@ export default class Technician extends Component {
       Object.keys(events).forEach(eventKey => {
         const event = events[eventKey]
         // TODO: Time filter, technician does not need to se earlier events
+        if (true) {
 
-        const {location, name, time} = event
-        if (event.staff.technician.includes(this.props.user.uid)) {
-          const {scenes} = event
-          scenes.forEach(sceneKey => {
-            scenesRef.child(sceneKey).on('value', snap => {
-              const {concerts} = snap.val()
-              concerts.forEach(concertKey => {
-                concertsRef.child(concertKey).on('value', snap => {
-                  const concert = snap.val()
-                  concert.eventName = name
-
-                  this.setState(prevState => ({
-                    concerts: {
-                      ...prevState.concerts,
-                      [concertKey]: concert
+          const {location, name, to, from} = event
+          if (event.staff.technician.includes(this.props.user.uid)) {
+            const {scenes} = event
+            scenes.forEach(sceneKey => {
+              scenesRef.child(sceneKey).on('value', snap => {
+                const {concerts} = snap.val()
+                concerts.forEach(concert => {
+                  const concertRef = concertsRef.child(concert)
+                  concertRef.once('value').then(snapshot => {
+                    let now = snapshot.val()
+                    if (now.staff.includes(this.props.user.uid) && now.isAcceptedByBookingBoss === true){
+                      this.setState(prevState => ({
+                        concerts: {
+                          ... prevState.concerts,
+                          concert: now
+                        }
+                      }))
                     }
-                  }))
+
+                  })
+
+                  //REVIEW: Filter for concerts includes technician
+                  // if (concerts[concertKey].staff.includes(this.props.user.uid)) {
+                    // concertsRef.child(concertKey).on('value', snap => {
+                    //   const concert = snap.val()
+                    //   concert.eventName = name
+                    //
+                    //   this.setState(prevState => ({
+                    //     concerts: {
+                    //       ...prevState.concerts,
+                    //       [concertKey]: concert
+                    //     }
+                    //   }))
+                    // })
+                  // }
                 })
               })
             })
-          })
+          }
+          else {
+            delete events[eventKey]
+          }
         }
+        //for time-filter
         else {
           delete events[eventKey]
         }
@@ -159,6 +182,9 @@ handleMenuItemClick(openedMenuItem){
 }
 
   render() {
+console.log(this.state.concerts)
+
+
     const {isDrawerOpened} = this.props
     // REVIEW: the scenes
     const {concerts, bands, scenes} = this.state
@@ -191,6 +217,7 @@ handleMenuItemClick(openedMenuItem){
 
 const ConcertsOverview = ({concerts, bands}) => {
   const concertBandsList = []
+
 
 
   // Object.keys(bands).forEach(key =>{
@@ -233,6 +260,7 @@ const ConcertsOverview = ({concerts, bands}) => {
     )
 
   })
+  console.log(concertBandsList.length);
 
   //mapping happens here
   // console.log(concerts);
