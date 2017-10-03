@@ -24,15 +24,19 @@ export default class Search extends Component{
      const db = firebase.database().ref()
      const bandsRef = db.child('bands')
      const concertsRef = db.child('concerts')
-     bandsRef.on('value', snap =>{
-       const bands = snap.val()
-       this.setState({bands})
-     })
      concertsRef.on('value', snap =>{
        const concerts = snap.val()
-       this.setState({concerts})
+       this.setState({
+         concerts
+       })
      })
    }
+   
+   componentWillReceiveProps(nextProp) {
+     const {bands} = nextProp
+     this.setState({bands})
+   }
+
 //Search for band containing strings in input and update bandsToOutput state
    searchForBand(input, directValue){
      let {bands, genres, value} = this.state

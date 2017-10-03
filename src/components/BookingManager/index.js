@@ -35,8 +35,7 @@ handleMenuItemClick(openedMenuItem){
 
   render() {
     const {isDrawerOpened} = this.props
-    const {openedMenuItem} = this.state
-    const bands = this.state.band
+    const {openedMenuItem, bands} = this.state
     return (
         <div id="booking-manager">
           <Drawer open={isDrawerOpened}>
@@ -46,7 +45,7 @@ handleMenuItemClick(openedMenuItem){
           <NewBooking/>
           {{
             "search":
-            <Search{...{bands}}/>
+            <Search {...{bands}}/>
           }[openedMenuItem]}
 
         </div>
