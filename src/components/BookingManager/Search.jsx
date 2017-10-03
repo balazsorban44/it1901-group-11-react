@@ -31,7 +31,7 @@ export default class Search extends Component{
        })
      })
    }
-   
+
    componentWillReceiveProps(nextProp) {
      const {bands} = nextProp
      this.setState({bands})
@@ -77,7 +77,6 @@ export default class Search extends Component{
              const band = this.state.bands[this.state.bandsToOutput[memberKey]]
              const key = this.state.bandsToOutput[memberKey]
            const concerts = this.state.concerts
-           //TODO fix unique key warning
            return(<BandSearchResults concerts = {concerts} band = {band} key={key}/>)
         })}
        </div>
