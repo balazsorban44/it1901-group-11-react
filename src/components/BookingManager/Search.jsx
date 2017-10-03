@@ -61,17 +61,17 @@ export default class Search extends Component{
          <h1>Search</h1>
          <TextField hintText="Search for band" onChange = {input => this.searchForBand(input.target.value)}/><br/>
          <SelectField floatingLabelText="Genre" value={this.state.value} onChange={this.handleChange} autoWidth={true}>
-          <MenuItem value={1} primaryText="All genres" />
-          <MenuItem value={2} primaryText="Pop" />
-          <MenuItem value={3} primaryText="Rock" />
-          <MenuItem value={4} primaryText="Electric" />
-          <MenuItem value={5} primaryText="Rap" />
-          <MenuItem value={6} primaryText="RnB" />
+           <MenuItem value={1} primaryText="All genres" />
+           <MenuItem value={2} primaryText="Pop" />
+           <MenuItem value={3} primaryText="Rock" />
+           <MenuItem value={4} primaryText="Electric" />
+           <MenuItem value={5} primaryText="Rap" />
+           <MenuItem value={6} primaryText="RnB" />
          </SelectField>
-       <div>
-        {Object.keys(this.state.bandsToOutput).map(memberKey => {
-           const band = this.state.bands[this.state.bandsToOutput[memberKey]]
-           const key = this.state.bandsToOutput[memberKey]
+         <div>
+           {Object.keys(this.state.bandsToOutput).map(memberKey => {
+             const band = this.state.bands[this.state.bandsToOutput[memberKey]]
+             const key = this.state.bandsToOutput[memberKey]
            const concerts = this.state.concerts
            //TODO fix unique key warning
            return(<BandSearchResults concerts = {concerts} band = {band} key={key}/>)
@@ -92,15 +92,17 @@ const BandSearchResults = ({band, concerts}) => (
       <p>Monthly listeners: {band.monthlyListeners}</p>
       <p>Previous concerts: </p>
       {Object.keys(band.concerts).map(keyd =>{
-            const concert = concerts[band.concerts[keyd]]
-            if(typeof concert === 'undefined'){
-              return(<div></div>)
-            }
-            return(
-              <div key = {band.concerts[keyd]}>
-                <p>{parseDate(concert.from)} Tickets sold: {concert.participants}</p>
-              </div>
-            )})}
+        const concert = concerts[band.concerts[keyd]]
+        if (!concert) {
+          return <div key={Math.random()}></div>
+        } else {
+          return(
+            <div key = {band.concerts[keyd]}>
+              <p>{parseDate(concert.from)} Tickets sold: {concert.participants}</p>
+            </div>
+          )}
+      }
+      )}
     </CardText>
   </Card>
 )

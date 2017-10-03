@@ -2,10 +2,8 @@ import React, { Component } from 'react'
 import firebase from 'firebase'
 import Drawer from 'material-ui/Drawer'
 import MenuItem from 'material-ui/MenuItem'
-import TextField from 'material-ui/TextField';
-import DatePicker from 'material-ui/DatePicker';
-import Paper from 'material-ui/Paper';
 import Search from './Search'
+import NewBooking from './NewBooking'
 
 
 export default class BookingManager extends Component {
@@ -45,10 +43,8 @@ handleMenuItemClick(openedMenuItem){
             <MenuItem onClick={() => this.handleMenuItemClick("newBooking")} primaryText="New booking" />
             <MenuItem onClick={() => this.handleMenuItemClick("search")} primaryText="Search" />
           </Drawer>
-
+          <NewBooking/>
           {{
-            "newBooking":
-            <NewBooking/>,
             "search":
             <Search{...{bands}}/>
           }[openedMenuItem]}
@@ -56,18 +52,3 @@ handleMenuItemClick(openedMenuItem){
         </div>
     )}
 }
-
-
-const NewBooking = () =>
-      <Paper className = "defaultPaper">
-        <h1> New Booking</h1>
-        <TextField hintText="Band"/><br/>
-        <TextField hintText="Price"/><br/>
-        <DatePicker hintText="Date" />
-        <TextField
-          hintText="Message Field"
-          floatingLabelText="Message"
-          multiLine={true}
-          rows={6}
-        />
-      </Paper>
