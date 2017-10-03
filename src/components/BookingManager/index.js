@@ -4,6 +4,7 @@ import Drawer from 'material-ui/Drawer'
 import MenuItem from 'material-ui/MenuItem'
 import Search from './Search'
 import NewBooking from './NewBooking'
+import PreviousConcerts from './PreviousConcerts'
 
 
 export default class BookingManager extends Component {
@@ -12,7 +13,7 @@ export default class BookingManager extends Component {
     this.state = {
       bands:{},
       // initializing local concerts
-      openedMenuItem: "search"
+      openedMenuItem: "previousConcerts"
     }
   }
 
@@ -41,11 +42,14 @@ handleMenuItemClick(openedMenuItem){
           <Drawer open={isDrawerOpened}>
             <MenuItem onClick={() => this.handleMenuItemClick("newBooking")} primaryText="New booking" />
             <MenuItem onClick={() => this.handleMenuItemClick("search")} primaryText="Search" />
+            <MenuItem onClick={() => this.handleMenuItemClick("previousConcerts")} primaryText="Previous concerts" />
           </Drawer>
           <NewBooking {...{bands}}/>
           {{
             "search":
-            <Search {...{bands}}/>
+            <Search {...{bands}}/>,
+            "previousConcerts":
+            <PreviousConcerts/>,
           }[openedMenuItem]}
 
         </div>
