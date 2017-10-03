@@ -47,10 +47,11 @@ export default class Technician extends Component {
                   const concertRef = concertsRef.child(concert)
                   concertRef.once('value').then(snapshot => {
                     let now = snapshot.val()
+                    now.location = location
                     if (now.staff.includes(this.props.user.uid) && now.isAcceptedByBookingBoss === true){
                       let pState = this.state.concerts
                       pState[concert] = now
-                      this.setState(concerts: pState)
+                      this.setState({concerts: pState})
                     }
 
                   })
@@ -179,8 +180,6 @@ handleMenuItemClick(openedMenuItem){
 }
 
   render() {
-    console.log(this.state.concerts)
-
 
     const {isDrawerOpened} = this.props
     // REVIEW: the scenes
@@ -214,7 +213,7 @@ handleMenuItemClick(openedMenuItem){
 
 const ConcertsOverview = ({concerts, bands}) => {
   const concertBandsList = []
-
+  console.log(concerts)
 
 
   // Object.keys(bands).forEach(key =>{
@@ -231,7 +230,7 @@ const ConcertsOverview = ({concerts, bands}) => {
 
 // TODO: get location from db, and add to list
   Object.keys(concerts).forEach(key =>{
-    const {from, to, band} = concerts[key]
+    const {from, to, band, location} = concerts[key]
 
     // NOTE: scene
     let name, technicalRequirements, sceneName = null
@@ -251,7 +250,7 @@ const ConcertsOverview = ({concerts, bands}) => {
         <p><i className="material-icons">date_range</i>{parseDate(from)} - {parseDate(to)}</p>
         <p><i className="material-icons">access_time</i>{parseTime(from)} - {parseTime(to)}</p>
         <p><i className="material-icons">settings_input_component</i> Technical requirements: {technicalRequirements}</p>
-        <p><i className="material-icons">place</i> Location: {}</p>
+        <p><i className="material-icons">place</i> Location: {location}</p>
 
       </ListItem>
     )
