@@ -11,7 +11,8 @@ export default class BookingManager extends Component {
   constructor() {
     super()
     this.state = {
-      bands:{},
+      concerts: {},
+      bands: {},
       // initializing local concerts
       openedMenuItem: "previousConcerts"
     }
@@ -20,12 +21,50 @@ export default class BookingManager extends Component {
 // Fetching content from firebase
 componentDidMount(){
   const db = firebase.database().ref()
+  const eventsRef = db.child('events')
+  const scenesRef = db.child('scenes')
+  const concertsRef = db.child('concerts')
   const bandsRef = db.child('bands')
 
-  bandsRef.on('value', snap =>{
-    const bands = snap.val()
-    this.setState({bands})
+  eventsRef.on('value', snap => {
+    const events = snap.val()
+    Object.keys(events).forEach(eventKey => {
+      const event = events[eventKey]
+      if (event.staff.bookingManager.includes(this.props.user.uid)) {
+        const {scenes, name} = event
+        scenes.forEach(sceneKey => {
+          scenesRef.child(sceneKey).on('value', snap => {
+            const {concerts} = snap.val()
+            concerts.forEach(concertKey => {
+              concertsRef.child(concertKey).on('value', snap => {
+                let concert = snap.val()
+                const {band} = concert
+                bandsRef.child(band).on('value', snap => {
+                  const {genre} = snap.val()
+                  concert.genre = genre
+                  concert.eventName = name
+
+                  this.setState(({concerts, bands}) => ({
+                    concerts: {
+                      ...concerts,
+                      [concertKey]: concert
+                    },
+                    bands: {
+                      ...bands,
+                      [band]: snap.val()
+                    }
+                  }))
+                })
+              })
+            })
+          })
+        })
+      } else {
+        delete events[eventKey]
+      }
+    })
   })
+
 }
 
 //change page to display after item in left menui is clicked
@@ -36,7 +75,7 @@ handleMenuItemClick(openedMenuItem){
 
   render() {
     const {isDrawerOpened} = this.props
-    const {openedMenuItem, bands} = this.state
+    const {openedMenuItem, bands, concerts} = this.state
     return (
         <div id="booking-manager">
           <Drawer open={isDrawerOpened}>
@@ -47,9 +86,9 @@ handleMenuItemClick(openedMenuItem){
           <NewBooking {...{bands}}/>
           {{
             "search":
-            <Search {...{bands}}/>,
+            <Search {...{bands, concerts}}/>,
             "previousConcerts":
-            <PreviousConcerts/>,
+            <PreviousConcerts {...{concerts}}/>,
           }[openedMenuItem]}
 
         </div>
