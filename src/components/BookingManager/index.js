@@ -16,7 +16,8 @@ export default class BookingManager extends Component {
       concerts: {},
       bands: {},
       // initializing local concerts
-      openedMenuItem: "search"
+      // BUG: When search is the default openedMenuItem, search does not work.
+      openedMenuItem: "previousConcerts"
     }
   }
 
