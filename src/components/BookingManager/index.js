@@ -11,6 +11,8 @@ export default class BookingManager extends Component {
   constructor() {
     super()
     this.state = {
+      events: {},
+      scenes: {},
       concerts: {},
       bands: {},
       // initializing local concerts
@@ -32,9 +34,22 @@ componentDidMount(){
       const event = events[eventKey]
       if (event.staff.bookingManager.includes(this.props.user.uid)) {
         const {scenes, name} = event
+        this.setState(({events}) => ({
+          events: {
+            ...events,
+            [eventKey]: event
+          }
+        }))
         scenes.forEach(sceneKey => {
           scenesRef.child(sceneKey).on('value', snap => {
-            const {concerts} = snap.val()
+            const scene = snap.val()
+            const {concerts} = scene
+            this.setState(({scenes}) => ({
+              scenes: {
+                ...scenes,
+                [sceneKey]: scene
+              }
+            }))
             concerts.forEach(concertKey => {
               concertsRef.child(concertKey).on('value', snap => {
                 let concert = snap.val()
@@ -43,8 +58,7 @@ componentDidMount(){
                   const {genre} = snap.val()
                   concert.genre = genre
                   concert.eventName = name
-
-                  this.setState(({concerts, bands}) => ({
+                  this.setState(({bands, concerts}) => ({
                     concerts: {
                       ...concerts,
                       [concertKey]: concert
@@ -74,16 +88,17 @@ handleMenuItemClick(openedMenuItem){
 }
 
   render() {
+
     const {isDrawerOpened} = this.props
-    const {openedMenuItem, bands, concerts} = this.state
+    const {openedMenuItem, bands, concerts, events, scenes} = this.state
+    
     return (
         <div id="booking-manager">
           <Drawer open={isDrawerOpened}>
-            <MenuItem onClick={() => this.handleMenuItemClick("newBooking")} primaryText="New booking" />
             <MenuItem onClick={() => this.handleMenuItemClick("search")} primaryText="Search" />
             <MenuItem onClick={() => this.handleMenuItemClick("previousConcerts")} primaryText="Previous concerts" />
           </Drawer>
-          <NewBooking {...{bands}}/>
+          <NewBooking {...{bands, events, scenes}}/>
           {{
             "search":
             <Search {...{bands, concerts}}/>,

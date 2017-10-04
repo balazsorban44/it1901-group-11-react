@@ -5,8 +5,11 @@ import AutoComplete from 'material-ui/AutoComplete'
 import FlatButton from 'material-ui/FlatButton'
 import FloatingActionButton from 'material-ui/FloatingActionButton'
 import ContentAdd from 'material-ui/svg-icons/content/add'
-import DatePicker from 'material-ui/DatePicker'
-import TimePicker from 'material-ui/TimePicker';
+import DateTimePicker from 'material-ui-datetimepicker';
+import MenuItem from 'material-ui/MenuItem'
+import DropDownMenu from 'material-ui/DropDownMenu'
+
+import firebase from 'firebase'
 
 
 export default class NewBooking extends Component {
@@ -16,46 +19,92 @@ export default class NewBooking extends Component {
       bands: {},
       bandNames: [],
       events: {},
+      scenes: {},
       open: false,
       dialog: {
-        message: "",
-        band: "",
-        price: 0,
-        date: ""
+        event:  "Event",
+        eventScenes: null,
+        scene: "Scene",
+        band: null,
+        ticketPrice: null,
+        from: null,
+        to: null
       }
     }
   }
-
-  componentWillReceiveProps({bands}) {
+		
+  componentWillReceiveProps({bands, events, scenes}) {
     const bandNames = Object.keys(bands).map(key => bands[key].name)
-    this.setState({bands, bandNames})
+    this.setState({bands, events, scenes, bandNames})
   }
+
 
   handleOpen = () => {this.setState({open: true})}
 
   handleClose = () => {this.setState({open: false})}
 
-  cancelBooking = () => {
+  resetBooking = () => {
     this.handleClose()
     this.setState({dialog: {}})
   }
   submitBooking = () => {
-    console.log("Booking sent.");
+    const db = firebase.database().ref()
+    const scenesRef = db.child('scenes')
+    const concertsRef = db.child('concerts')
+    const {scene, from, to, band, ticketPrice} = this.state.dialog
+    const newConcertRef = concertsRef.push()   
+    const newConcertKey = newConcertRef.key
+    const newConcert = {
+      band,
+      from,
+      "isAcceptedByBookingBoss" : "unhandled",
+      "isAcceptedByBookingManager" : true,
+      // REVIEW: What to do with the participants?
+      "participants" : 0,
+      // REVIEW: Staff for concerts?
+      "staff" : [""],
+      ticketPrice,
+      to
+    }
+    const sceneRef = scenesRef.child(`${scene}/concerts`)
+    sceneRef.once('value').then(snap => {
+      let updatedScenes = snap.val()
+      updatedScenes.push(newConcertKey)
+      sceneRef.set(updatedScenes)
+    })
+    newConcertRef.set(newConcert).then(() => {
+      this.resetBooking()
+    })
   }
   handleChange(type, {target:{value}}) {
     this.setState(prevState => ({
       dialog: {
         ...prevState.dialog,
-        [type]: type === "price" ? parseInt(value, 10) : value
+        [type]: type === "ticketPrice" ? parseInt(value, 10) : value
       }
     }))
   }
 
-  handleDateChange = (date) => {
+  handleStartDateChange = (date) => {   
     this.setState(prevState => ({
       dialog: {
         ...prevState.dialog,
-        date: date.getTime()
+        from: date.getTime()
+      }
+    }))
+  }
+
+
+  handleEndDateChange = (e) => {
+    const hours = parseInt(e.target.value, 10)
+    let {from} = this.state.dialog
+    from = new Date(from)
+    const to = from.setHours(from.getHours() + hours)
+    
+    this.setState(prevState => ({
+      dialog: {
+        ...prevState.dialog,
+        to
       }
     }))
   }
@@ -69,7 +118,41 @@ export default class NewBooking extends Component {
       }
     }))
   }
+
+  handleEventChange = (event, index, value) => {
+    let {events, scenes} = this.state
+    let eventScenes = {}
+    Object.keys(scenes).forEach(scene => {
+      if (events[value].scenes.includes(scene)) {
+        eventScenes[scene] = scenes[scene]
+      }
+    })
+    this.setState(({dialog}) => ({
+      dialog: {
+        ...dialog,
+        event: value,
+        eventScenes
+      }
+    }))
+  }
+  handleSceneChange = (event, index, value) => {
+
+    this.setState(({dialog}) => ({
+      dialog: {
+        ...dialog,
+        scene: value
+      }
+    }))
+  }
+
   render() {
+    const {open, events, bandNames, dialog} = this.state
+    const {event, eventScenes, scene} = dialog
+
+    let canSubmit = Object.keys(dialog).map(key => dialog[key] !== null ? true : false).every((e,i,a) => e===true)
+    
+    
+    
     const actions = [
       <FlatButton
         label="Cancel"
@@ -79,11 +162,10 @@ export default class NewBooking extends Component {
       <FlatButton
         label="Submit"
         primary={true}
-        disabled={true}
+        disabled={!canSubmit}
         onClick={this.submitBooking}
       />,
-    ];
-    const {open, bandNames} = this.state
+    ]
     return (
       <div>
         <FloatingActionButton className="new-booking-fab" onClick={this.handleOpen}>
@@ -101,38 +183,44 @@ export default class NewBooking extends Component {
             maxSearchResults={7}
             onNewRequest={(chosenRequest, index) => this.handleBandChange(chosenRequest, index)}
           /><br/>
-          <AutoComplete
-            filter={AutoComplete.fuzzyFilter}
-            dataSource={bandNames}
-            floatingLabelText="Event"
-            maxSearchResults={7}
-            onNewRequest={(chosenRequest, index) => this.handleBandChange(chosenRequest, index)}
-          /><br/>
-          <AutoComplete
-            filter={AutoComplete.fuzzyFilter}
-            dataSource={bandNames}
-            floatingLabelText="Scene"
-            maxSearchResults={7}
-            onNewRequest={(chosenRequest, index) => this.handleBandChange(chosenRequest, index)}
-          /><br/>
-          <TextField
+          <DropDownMenu value={event} onChange={this.handleEventChange}>
+            <MenuItem key={0} value={"Event"} primaryText="Choose event"/>
+            {events && Object.keys(events).map(key => (
+              <MenuItem
+                key={key}
+                value={key}
+                primaryText={events[key].name}
+              />))
+            }
+          </DropDownMenu>
+          <DropDownMenu value={scene} onChange={this.handleSceneChange}>
+            <MenuItem key={0} value={"Scene"} primaryText="Choose scene"/>
+            {eventScenes && Object.keys(eventScenes).map(key => (
+              <MenuItem
+                key={key}
+                value={key}
+                primaryText={eventScenes[key].name}
+              />))
+            }
+          </DropDownMenu><br/>
+					<TextField
             hintText="Ticket price (NOK)"
-            onChange={e => this.handleChange("price", e)}
+            onChange={e => this.handleChange("ticketPrice", e)}
             type="number"
           />
           <div>
-            <DatePicker
+            <DateTimePicker
               hintText="Start date"
-              minDate={new Date()}
-              onChange={(a, date) => this.handleDateChange(date)}
+              minutesStep={5}
+              onChange={this.handleStartDateChange}
+              // TODO: Disable past dates and already booked times.
             />
-            <TimePicker
-              format="24hr"
-              hintText="Start time"
-            />
+
             <TextField
               hintText="Concert length (hours)"
               type="number"
+              min={0}
+              onChange={this.handleEndDateChange}
             />
           </div>
           {
