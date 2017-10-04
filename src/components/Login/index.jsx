@@ -1,7 +1,8 @@
 import React, {Component} from 'react'
 import concert from '../../img/concert.jpg'
 import firebase from 'firebase'
-
+import TextField from 'material-ui/TextField'
+import RaisedButton from 'material-ui/RaisedButton'
 
 export default class Login extends Component {
   constructor() {
@@ -38,32 +39,23 @@ export default class Login extends Component {
       <div id="login">
         <div className="demo-card-wide mdl-card mdl-shadow--2dp">
           <div className="mdl-card__title">
-            <h2 className="mdl-card__title-text">Login for more fun!</h2>
+            <h2 className="mdl-card__title-text">Please log in</h2>
           </div>
           <form action="#">
-            <div className="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-              <input
-                id="email"
-                className="mdl-textfield__input"
-                type="email"
-                onChange={(e, type) => this.getCredentials(e, "email")}
-                value={email}/>
-              <label className="mdl-textfield__label" htmlFor="email">E-mail</label>
-            </div>
-            <div className="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-              <input
-                id="password"
-                className="mdl-textfield__input"
-                type="password"
-                onChange={(e, type) => this.getCredentials(e, "password")}
-                value={password}/>
-              <label className="mdl-textfield__label" htmlFor="password">Password</label>
-            </div>
+            <TextField
+              floatingLabelText={"Email"}
+              type="email"
+              onChange={(e, type) => this.getCredentials(e, "email")}
+              value={email}/>
+            <TextField
+              floatingLabelText={"Password"}
+              type="password"
+              onChange={(e, type) => this.getCredentials(e, "password")}
+              value={password}/>
           </form>
 
           <div className="mdl-card__actions">
-            <button className="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" onClick={() => this.login()}>
-            Login</button>
+            <RaisedButton className="login-btn" label="Login" secondary onClick={() => this.login()}/>
           </div>
           <div className="mdl-card__menu">
             <i className="material-icons">lock</i>
