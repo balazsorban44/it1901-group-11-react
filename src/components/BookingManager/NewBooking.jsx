@@ -1,14 +1,15 @@
 import React, {Component} from 'react'
 import Dialog from 'material-ui/Dialog'
 import TextField from 'material-ui/TextField'
-import AutoComplete from 'material-ui/AutoComplete'
-import FlatButton from 'material-ui/FlatButton'
 import RaisedButton from 'material-ui/RaisedButton'
+import FlatButton from 'material-ui/FlatButton'
+import AutoComplete from 'material-ui/AutoComplete'
 import FloatingActionButton from 'material-ui/FloatingActionButton'
 import ContentAdd from 'material-ui/svg-icons/content/add'
-import DateTimePicker from 'material-ui-datetimepicker';
+import DateTimePicker from 'material-ui-datetimepicker'
 import MenuItem from 'material-ui/MenuItem'
 import DropDownMenu from 'material-ui/DropDownMenu'
+import {Step, StepLabel, Stepper, StepContent} from 'material-ui/Stepper'
 
 import firebase from 'firebase'
 
@@ -35,6 +36,7 @@ export default class NewBooking extends Component {
       events: {},
       scenes: {},
       open: false,
+      canSubmit: false,
       newConcert
     }
   }
@@ -109,22 +111,31 @@ export default class NewBooking extends Component {
     }))
   }
 
-
-  // handleEndDateChange() takes int as an input, which is the length
-  // of a concert. It is added to the from date of the concert, and
-  // then sets it to this.state.newConcert.to as a UNIX timestamp.
-  handleEndDateChange = e => {
-    const hours = parseInt(e.target.value, 10)
-    let {from} = this.state.newConcert
-    from = new Date(from)
-    const to = from.setHours(from.getHours() + hours)
-    this.setState(({newConcert}) => ({
+  handleEndDateChange = date => {
+    this.setState(prevState => ({
       newConcert: {
-        ...newConcert,
-        to
+        ...prevState.newConcert,
+        to: date.getTime()
       }
     }))
   }
+
+
+  // // handleEndDateChange() takes int as an input, which is the length
+  // // of a concert. It is added to the from date of the concert, and
+  // // then sets it to this.state.newConcert.to as a UNIX timestamp.
+  // handleEndDateChange = e => {
+  //   const hours = parseInt(e.target.value, 10)
+  //   let {from} = this.state.newConcert
+  //   from = new Date(from)
+  //   const to = from.setHours(from.getHours() + hours)
+  //   this.setState(({newConcert}) => ({
+  //     newConcert: {
+  //       ...newConcert,
+  //       to
+  //     }
+  //   }))
+  // }
 
 
   handleBandChange = (searchText, index) => {
@@ -167,31 +178,28 @@ export default class NewBooking extends Component {
     }))
   }
 
+  canSubmit() {
+    this.setState({canSubmit:true})
+  }
+
   limitAcceptedDates = date => {
     const {from, to} = this.state.newConcert.event
     return from > date.getTime() || date.getTime() > to || date < Date.now()
   }
 
   render() {
-    const {open, events, bandNames, newConcert} = this.state
-    const {eventKey, eventScenes, scene} = newConcert
-    // The submit button is disabled by default.
-    // If all the required fields are filled correctly,
-    // canSubmit becomes true
-    const canSubmit = Object.keys(newConcert)
-                            .map(key => newConcert[key] !== null ? true : false)
-                            .every((e,i,a) => e===true)
-
+    const {open, events, bandNames, newConcert, canSubmit} = this.state
 
     // The submit and cancel buttons for New Booking
     const actions = [
       <FlatButton
         label="Cancel"
-        primary
+        secondary
         onClick={this.resetBooking}
       />,
       <RaisedButton
-        label="Create request"
+        style={{marginLeft: "1em"}}
+        label="Send request"
         primary
         disabled={!canSubmit}
         onClick={this.submitBooking}
@@ -200,14 +208,15 @@ export default class NewBooking extends Component {
 
     return (
       <div>
+
         <FloatingActionButton
           className="new-booking-fab"
+          secondary
           onClick={this.handleOpen}>
           <ContentAdd/>
         </FloatingActionButton>
         <Dialog
           contentStyle={{
-            minHeight: 480,
             maxWidth: 640,
             width:"90%"
           }}
@@ -216,77 +225,198 @@ export default class NewBooking extends Component {
           actions={actions}
           modal
           open={open}>
-          <h3> New Concert</h3>
-          <div className="new-booking-field">
-            <AutoComplete
-              fullWidth
-              filter={AutoComplete.fuzzyFilter}
-              dataSource={bandNames}
-              floatingLabelText="Band"
-              maxSearchResults={7}
-              onNewRequest={this.handleBandChange}
-            />
-            <TextField
-              fullWidth
-              hintText="Ticket price (NOK)"
-              onChange={this.handleTicketPriceChange}
-              type="number"
-            />
-          </div>
-          <div className="new-booking-dropdowns">
-            <DropDownMenu value={eventKey} onChange={this.handleEventChange}>
-              <MenuItem key={0} value={"Event"} primaryText="Event"/>
-              {events && Object.keys(events).map(key => (
-                <MenuItem
-                  key={key}
-                  value={key}
-                  primaryText={events[key].name}
-                />))
-              }
-            </DropDownMenu>
-            <DropDownMenu value={scene} onChange={this.handleSceneChange}>
-              <MenuItem key={0} value={"Scene"} primaryText="Scene"/>
-              {eventScenes && Object.keys(eventScenes).map(key => (
-                <MenuItem
-                  key={key}
-                  value={key}
-                  primaryText={eventScenes[key].name}
-                />))
-              }
-            </DropDownMenu>
-          </div>
+          <h4> New Concert</h4>
 
-          <div className="new-booking-field">
-            <label htmlFor="start-date">Start date: </label>
-            <DateTimePicker
-              id="start-date"
-              format='YYYY-MM-DD hh:mm'
-              showCurrentDateByDefault
-              hintText="Start date"
-              minutesStep={5}
-              clearIcon={null}
-              onChange={this.handleStartDateChange}
-              shouldDisableDate={this.limitAcceptedDates}
-            />
-            <TextField
-              fullWidth
-              hintText="Concert length (hours)"
-              type="number"
-              min={0}
-              onChange={this.handleEndDateChange}
-            />
-          </div>
-          {
-            // REVIEW: Do we need a message field?
-            /* <TextField
-            onChange={e => this.handleChange("message", e)}
-            hintText="Message Field"
-            floatingLabelText="Message"
-            multiLine={true}
-            rows={6}
-            value={message}
-          /> */}
+          <VerticalLinearStepper
+            {...{bandNames, newConcert, events}}
+            handleBandChange={this.handleBandChange}
+            handleTicketPriceChange={this.handleTicketPriceChange}
+            handleEventChange={this.handleEventChange}
+            handleSceneChange={this.handleSceneChange}
+            handleStartDateChange={this.handleStartDateChange}
+            handleEndDateChange={this.handleEndDateChange}
+            limitAcceptedDates={this.limitAcceptedDates}
+            canSubmit={() => this.canSubmit()}/>
         </Dialog>
+      </div>
+    )
+  }
+}
+
+
+class VerticalLinearStepper extends Component {
+  constructor() {
+    super()
+    this.state = {
+      stepIndex: 0,
+    }
+  }
+
+  handleNext = () => {
+    const {stepIndex} = this.state
+    this.setState({
+      stepIndex: stepIndex + 1,
+      finished: stepIndex >= 5,
+    })
+    stepIndex === 4 && this.props.canSubmit()
+  }
+
+  handlePrev = () => {
+    const {stepIndex} = this.state
+    if (stepIndex > 0) {
+      this.setState({stepIndex: stepIndex - 1})
+    }
+  }
+
+  renderStepActions(step) {
+    const {stepIndex} = this.state
+    return (
+      <div style={{margin: '12px 0'}}>
+        {stepIndex < 5 &&
+          <RaisedButton
+            label={'Next'}
+            disableTouchRipple
+            disableFocusRipple
+            primary
+            onClick={this.handleNext}
+            style={{marginRight: 12}}
+          />
+        }
+        {step > 0 && (
+          <FlatButton
+            label="Back"
+            disabled={stepIndex === 0}
+            disableTouchRipple
+            disableFocusRipple
+            onClick={this.handlePrev}
+          />
+        )}
+      </div>
+    )
+  }
+
+
+
+  render() {
+    const {stepIndex} = this.state
+    const {
+      bandNames, newConcert, events,
+      handleBandChange, handleTicketPriceChange,
+      handleEventChange, handleSceneChange,
+      handleStartDateChange, handleEndDateChange, limitAcceptedDates
+    } = this.props
+    const {eventKey, eventScenes, scene} = newConcert
+    return (
+      <div>
+        <Stepper activeStep={stepIndex} orientation="vertical">
+          <Step>
+            <StepLabel icon={<i className="material-icons">star</i>}>Select a band</StepLabel>
+            <StepContent>
+              <p>Which band you want to book a concert for?</p>
+              <AutoComplete
+                filter={AutoComplete.fuzzyFilter}
+                dataSource={bandNames}
+                floatingLabelText="Band"
+                maxSearchResults={7}
+                onNewRequest={handleBandChange}
+              />
+              {this.renderStepActions(0)}
+            </StepContent>
+          </Step>
+          <Step>
+            <StepLabel icon={<i className="material-icons">monetization_on</i>}>Set ticket price</StepLabel>
+            <StepContent>
+              <p>What should be the price of a ticket?</p>
+              <TextField
+                hintText="(NOK)"
+                onChange={handleTicketPriceChange}
+                type="number"
+              />
+              {this.renderStepActions(1)}
+            </StepContent>
+          </Step>
+          <Step>
+            <StepLabel icon={<i className="material-icons">event</i>}>Select an event</StepLabel>
+            <StepContent>
+              <p>On which event do you want the band to play?</p>
+              <DropDownMenu
+                animated={false}
+                value={eventKey}
+                onChange={handleEventChange}>
+                <MenuItem key={0} value={"Event"} primaryText="Event"/>
+                {events && Object.keys(events).map(key => (
+                  <MenuItem
+                    key={key}
+                    value={key}
+                    primaryText={events[key].name}
+                  />))
+                }
+              </DropDownMenu>
+              {this.renderStepActions(2)}
+            </StepContent>
+          </Step>
+          <Step>
+            <StepLabel icon={<i className="material-icons">account_balance</i>}>Select a scene</StepLabel>
+            <StepContent>
+              <p>On which scene do you want the band to play?</p>
+              <DropDownMenu
+                animated={false}
+                value={scene}
+                onChange={handleSceneChange}>
+                <MenuItem key={0} value={"Scene"} primaryText="Scene"/>
+                {eventScenes && Object.keys(eventScenes).map(key => (
+                  <MenuItem
+                    key={key}
+                    value={key}
+                    primaryText={eventScenes[key].name}
+                  />))
+                }
+              </DropDownMenu>
+              {this.renderStepActions(3)}
+            </StepContent>
+          </Step>
+          <Step>
+            <StepLabel icon={<i className="material-icons">date_range</i>}>Set concert dates</StepLabel>
+            <StepContent>
+              <p>Please specify when should the band play.</p>
+              <label htmlFor="start-date">Start date: </label>
+              <DateTimePicker
+                id="start-date"
+                format='YYYY-MM-DD hh:mm'
+                hintText="Start date"
+                minutesStep={5}
+                clearIcon={null}
+                onChange={handleStartDateChange}
+                shouldDisableDate={limitAcceptedDates}
+              />
+              <label htmlFor="end-date">End date: </label>
+              <DateTimePicker
+                id="end-date"
+                format='YYYY-MM-DD hh:mm'
+                hintText="End date"
+                minutesStep={5}
+                clearIcon={null}
+                onChange={handleEndDateChange}
+                shouldDisableDate={limitAcceptedDates}
+              />
+              {/* <TextField
+
+                hintText="Concert length (hours)"
+                type="number"
+                min={0}
+                onChange={handleEndDateChange}
+              /> */}
+              {this.renderStepActions(4)}
+            </StepContent>
+          </Step>
+          <Step>
+            <StepLabel icon={<i className="material-icons">done_all</i>}>Almost done...</StepLabel>
+            <StepContent>
+              <p>Please send your booking request to the Booking Boss for approval.</p>
+              {this.renderStepActions(5)}
+            </StepContent>
+          </Step>
+        </Stepper>
       </div>
     )
   }
