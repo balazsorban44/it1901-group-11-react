@@ -16,7 +16,7 @@ export default class BookingManager extends Component {
       concerts: {},
       bands: {},
       // initializing local concerts
-      openedMenuItem: "previousConcerts"
+      openedMenuItem: "search"
     }
   }
 
@@ -91,7 +91,7 @@ handleMenuItemClick(openedMenuItem){
 
     const {isDrawerOpened} = this.props
     const {openedMenuItem, bands, concerts, events, scenes} = this.state
-    
+
     return (
         <div id="booking-manager">
           <Drawer open={isDrawerOpened}>

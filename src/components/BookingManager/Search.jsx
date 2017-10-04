@@ -49,7 +49,7 @@ export default class Search extends Component{
    render(){
      return(
        <Paper className = "defaultPaper">
-         <h1>Search</h1>
+         <h3>Search</h3>
          <TextField hintText="Search for band" onChange = {input => this.searchForBand(input.target.value)}/><br/>
          <SelectField floatingLabelText="Genre" value={this.state.value} onChange={this.handleChange} autoWidth={true}>
            <MenuItem value={1} primaryText="All genres" />
