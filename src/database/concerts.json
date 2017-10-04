@@ -55,7 +55,7 @@
     "isAcceptedByBookingBoss" : true,
     "isAcceptedByBookingManager" : true,
     "participants" : 5900,
-    "staff" : [ "" ],
+    "staff" : [ "63b80PS1SxRAB95JvGZzEcQnrbU2" ],
     "ticketPrice" : 1400,
     "to" : 1503093600000
   },
@@ -235,7 +235,7 @@
     "isAcceptedByBookingBoss" : "unhandled",
     "isAcceptedByBookingManager" : true,
     "participants" : 10000,
-    "staff" : [ "" ],
+    "staff" : [ "63b80PS1SxRAB95JvGZzEcQnrbU2" ],
     "ticketPrice" : 2150,
     "to" : 1503108000000
   },
@@ -375,7 +375,7 @@
     "isAcceptedByBookingBoss" : true,
     "isAcceptedByBookingManager" : true,
     "participants" : 9900,
-    "staff" : [ "" ],
+    "staff" : [ "63b80PS1SxRAB95JvGZzEcQnrbU2" ],
     "ticketPrice" : 1750,
     "to" : 1503180000000
   },
@@ -525,7 +525,7 @@
     "isAcceptedByBookingBoss" : false,
     "isAcceptedByBookingManager" : true,
     "participants" : 12765,
-    "staff" : [ "Placeholder" ],
+    "staff" : [ "63b80PS1SxRAB95JvGZzEcQnrbU2" ],
     "ticketPrice" : 738,
     "to" : 1503194400000
   },
@@ -685,7 +685,7 @@
     "isAcceptedByBookingBoss" : false,
     "isAcceptedByBookingManager" : true,
     "participants" : 6742,
-    "staff" : [ "Placeholder" ],
+    "staff" : [ "63b80PS1SxRAB95JvGZzEcQnrbU2" ],
     "ticketPrice" : 987,
     "to" : 1503266400000
   },
@@ -845,7 +845,7 @@
     "isAcceptedByBookingBoss" : true,
     "isAcceptedByBookingManager" : true,
     "participants" : 8600,
-    "staff" : [ "" ],
+    "staff" : [ "63b80PS1SxRAB95JvGZzEcQnrbU2" ],
     "ticketPrice" : 1250,
     "to" : 1503280800000
   },
