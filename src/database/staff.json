@@ -61,58 +61,72 @@
       "name" : "Brandon",
       "role" : "technician"
     },
-    "" : {
+
+
+    "fghj3io7t86ASLKJFKLDSKJFHØLIJ" : {
       "img" : "lars",
       "name": "Lars",
       "role" : "technician"
-    },"" : {
+    },
+    "UFYIOUSGKHJDLI3t12782nHGk3bew" : {
       "img" : "per",
       "name": "Per",
       "role" : "technician"
-    },"" : {
+    },
+    "JDKLGHe789832lhyUKJGFdgjluhDs" : {
       "img" : "bernt",
       "name": "Bernt",
       "role" : "technician"
-    },"" : {
+    },
+    "LIDGHLK379kj2hLUHKi3iybJHBDoi" : {
       "img" : "bjørn",
       "name": "Bjørn",
       "role" : "technician"
-    },"" : {
-      "img" : "",
+    },
+    "flkahi74r2yeKSAFJH3892tutiy3h" : {
+      "img" : "bård",
       "name": "Bård",
       "role" : "technician"
-    },"" : {
-      "img" : "",
+    },
+    ":JDSNFKJN32jnlk2j3hl5ljkhelkj" : {
+      "img" : "erik",
       "name": "Erik",
       "role" : "technician"
-    },"" : {
-      "img" : "",
+    },
+    "lodjgfaLKAJSF3290LKJHSF389ijø" : {
+      "img" : "eirik",
       "name": "Eirik",
       "role" : "technician"
-    },"" : {
-      "img" : "",
+    },
+    "eLDKglø3293u457klJHKDHdga3423" : {
+      "img" : "howard",
       "name": "Howard",
       "role" : "technician"
-    },"" : {
-      "img" : "",
+    },
+    "DKLJGHØDOGJLJLELK3h2939487925e" : {
+      "img" : "veronica",
       "name": "Veronica",
       "role" : "technician"
-    },"" : {
-      "img" : "",
+    },
+    "LKJLJ32j235dgfdg3dg4gw4gww3232" : {
+      "img" : "marthe",
       "name": "Marthe",
       "role" : "technician"
-    },"" : {
-      "img" : "",
+    },
+    "e8w7KJdkljhsf8928u3rplgfhlllgse" : {
+      "img" : "birgit",
       "name": "Birgit",
       "role" : "technician"
-    },"" : {
-      "img" : "",
+    },
+    "dflkgjaa3223jjj22gdy9829dhf29ey2" : {
+      "img" : "chad",
       "name": "Chad",
       "role" : "technician"
-    },"" : {
-      "img" : "",
+    },
+    "alkdhjgheih2o82938lowldgn2nenn2n" : {
+      "img" : "ida",
       "name": "Ida",
       "role" : "technician"
-    },
+    }
   }
 }
