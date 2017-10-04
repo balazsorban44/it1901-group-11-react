@@ -1,11 +1,9 @@
 import React, { Component } from 'react'
-import firebase from 'firebase'
 import Drawer from 'material-ui/Drawer'
 import Badge from 'material-ui/Badge'
-import RaisedButton from 'material-ui/RaisedButton'
 import MenuItem from 'material-ui/MenuItem'
-import BookingTabSwipe from './BookingTabSwipe'
-import {parseDate, parseTime} from '../../utils'
+import Bookings, {Booking} from './Bookings'
+import firebase from 'firebase'
 
 
 export default class BookingBoss extends Component {
@@ -113,53 +111,8 @@ export default class BookingBoss extends Component {
 
           </MenuItem>
         </Drawer>
-        <BookingTabSwipe {...{unhandledCounter, unhandledBookings, acceptedCounter, acceptedBookings, rejectedCounter, rejectedBookings}}/>
+        <Bookings {...{unhandledCounter, unhandledBookings, acceptedCounter, acceptedBookings, rejectedCounter, rejectedBookings}}/>
       </div>
     )
   }
-}
-
-
-const Booking = ({eventName, bandName, from, ticketPrice, bookingState, concertKey}) => {
-
-  const handleBooking = (concert, isAccepted) => {
-    const db = firebase.database().ref()
-    db.child(`concerts/${concert}/isAcceptedByBookingBoss`).set(isAccepted)
-  }
-
-  let bookingStateAction = <div>
-    <RaisedButton className="accept-button" label="Accept" primary onClick={(id, isAccepted) => handleBooking(concertKey, true)}/>
-    <RaisedButton label="Reject" secondary onClick={(id, isAccepted) => handleBooking(concertKey, false)}/>
-  </div>
-  let icon = "bookmark_border"
-  let color = ""
-  if (bookingState === true) {
-    bookingStateAction = "Accepted"
-    icon = "done"
-    color = "green"
-  } else if (bookingState === false) {
-    bookingStateAction = "Rejected"
-    icon = "clear"
-    color = "red"
-  }
-  return (
-    <li>
-      <div className="mdl-card mdl-shadow--2dp">
-        <div className="booking-body mdl-card__title mdl-card--expand">
-          <span className="booking-bg"/>
-          <h4>{bandName} <br/>@<br/></h4>
-          <h5>
-            {eventName} <br/>
-            {parseDate(from)} - {parseTime(from)}
-            <br/>
-            {ticketPrice} NOK
-          </h5>
-        </div>
-        <div className="booking-footer mdl-card__actions mdl-card--border">
-          {bookingStateAction}<div className="mdl-layout-spacer"></div>
-          <i className={`material-icons ${color}`}>{icon}</i>
-        </div>
-      </div>
-    </li>
-  )
 }
