@@ -16,7 +16,8 @@ import firebase from 'firebase'
 // newConcert Object collects the information required
 // to make a new booking request.
 const newConcert = {
-  event:  "Event",
+  eventKey:  "Event",
+  event: null,
   eventScenes: null,
   scene: "Scene",
   band: null,
@@ -150,7 +151,8 @@ export default class NewBooking extends Component {
     this.setState(({newConcert}) => ({
       newConcert: {
         ...newConcert,
-        event: value,
+        eventKey: value,
+        event: events[value],
         eventScenes
       }
     }))
@@ -165,10 +167,14 @@ export default class NewBooking extends Component {
     }))
   }
 
+  limitAcceptedDates = date => {
+    const {from, to} = this.state.newConcert.event
+    return from > date.getTime() || date.getTime() > to || date < Date.now()
+  }
+
   render() {
     const {open, events, bandNames, newConcert} = this.state
-    const {event, eventScenes, scene} = newConcert
-
+    const {eventKey, eventScenes, scene} = newConcert
     // The submit button is disabled by default.
     // If all the required fields are filled correctly,
     // canSubmit becomes true
@@ -201,6 +207,7 @@ export default class NewBooking extends Component {
         </FloatingActionButton>
         <Dialog
           contentStyle={{
+            minHeight: 480,
             maxWidth: 640,
             width:"90%"
           }}
@@ -227,7 +234,7 @@ export default class NewBooking extends Component {
             />
           </div>
           <div className="new-booking-dropdowns">
-            <DropDownMenu value={event} onChange={this.handleEventChange}>
+            <DropDownMenu value={eventKey} onChange={this.handleEventChange}>
               <MenuItem key={0} value={"Event"} primaryText="Event"/>
               {events && Object.keys(events).map(key => (
                 <MenuItem
@@ -259,7 +266,7 @@ export default class NewBooking extends Component {
               minutesStep={5}
               clearIcon={null}
               onChange={this.handleStartDateChange}
-              // TODO: Disable past dates and already booked times.
+              shouldDisableDate={this.limitAcceptedDates}
             />
             <TextField
               fullWidth
