@@ -7,7 +7,7 @@
       "bookingBoss": ["33gMwGSuFfUTMv9BWCAakNXF0re2"],
       "bookingManager": ["ZCcD5DwBbzgXLAGRdR28cUCdQub2"],
       "organizer" : [ "uN2sZVTwlsUwBBBHUWFzDLBikB42" ],
-      "technician" : [ "5sOE4NZwX5VhBtXuvoarGhvz0PP2", "m9rdtjQQUnecqe4WdM7RSRZ4ZIK2" ]
+      "technician" : [ "kg08ojgicAgx23e0fPca33AVx8B3"]
     },
     "to" : 1503072000000,
     "location" : "London"
@@ -20,7 +20,7 @@
       "bookingBoss": ["RluDhpq9gpPHWK5aRGHLu5PvTDA2"],
       "bookingManager" : [ "ZCcD5DwBbzgXLAGRdR28cUCdQub2" ],
       "organizer" : [ "13pAdrh9t4Pt7qrdDJfpzjy8Vrh1" ],
-      "technician" : [ "5sOE4NZwX5VhBtXuvoarGhvz0PP2" ]
+      "technician" : [ "kg08ojgicAgx23e0fPca33AVx8B3" ]
     },
     "to" : 1503280800000,
     "location" : "Oslo"
@@ -33,7 +33,7 @@
       "bookingBoss": ["RluDhpq9gpPHWK5aRGHLu5PvTDA2"],
       "bookingManager" : [ "ZCcD5DwBbzgXLAGRdR28cUCdQub2" ],
       "organizer" : [ "uN2sZVTwlsUwBBBHUWFzDLBikB42" ],
-      "technician" : [ "AZOpCPsvtbWhk8ASWuwJbv2rts93" ]
+      "technician" : [ "kg08ojgicAgx23e0fPca33AVx8B3" ]
     },
     "to" : 1510538400000,
     "location" : "Berlin"
@@ -46,7 +46,7 @@
       "bookingBoss": ["33gMwGSuFfUTMv9BWCAakNXF0re2"],
       "bookingManager" : [ "ZCcD5DwBbzgXLAGRdR28cUCdQub2" ],
       "organizer" : [ "13pAdrh9t4Pt7qrdDJfpzjy8Vrh1" ],
-      "technician" : [ "5sOE4NZwX5VhBtXuvoarGhvz0PP2", "m9rdtjQQUnecqe4WdM7RSRZ4ZIK2" ]
+      "technician" : [ "kg08ojgicAgx23e0fPca33AVx8B3", "kg08ojgicAgx23e0fPca33AVx8B3" ]
     },
     "to" : 1511748000000,
     "location" : "Trondheim"

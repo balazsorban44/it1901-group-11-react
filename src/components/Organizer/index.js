@@ -6,7 +6,7 @@ import CircularProgress from 'material-ui/CircularProgress';
 import {Toolbar, ToolbarGroup} from 'material-ui/Toolbar';
 import {parseDate} from '../../utils'
 
-import Staff from './Staff'
+import EventInfo from './EventInfo'
 import Scenes from './Scenes'
 
 export default class Organizer extends Component {
@@ -89,12 +89,6 @@ export default class Organizer extends Component {
                 }
               </DropDownMenu>
             </ToolbarGroup>
-            <ToolbarGroup >
-              {
-                events[value] ? <span>{parseDate(events[value].from)} - {parseDate(events[value].to)}</span>
-                : <CircularProgress/>
-              }
-            </ToolbarGroup>
           </Toolbar>
           {
             events[value] ? <EventView event={events[value]}/> : <Loading/>
@@ -104,12 +98,15 @@ export default class Organizer extends Component {
   }
 }
 
-const EventView = ({event: {name, scenes, staff, from}}) =>  (
-  <div className="event">
-    <Staff staff={staff}/>
-    <Scenes eventStart={from} scenes={scenes}/>
-  </div>
-)
+const EventView = ({event}) =>  {
+  const {name, scenes, staff, from} = event
+  return (
+    <div className="event">
+      <EventInfo event={event} staff={staff}/>
+      <Scenes eventStart={from} scenes={scenes}/>
+    </div>
+  )
+}
 
 
 const Loading = () => (

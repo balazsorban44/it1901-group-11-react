@@ -1,23 +1,26 @@
 import React, { Component } from 'react'
-import Paper from 'material-ui/Paper';
 import MenuItem from 'material-ui/MenuItem'
 import TextField from 'material-ui/TextField';
+import FontIcon from 'material-ui/FontIcon';
 import SelectField from 'material-ui/SelectField';
 import {Card, CardHeader, CardText} from 'material-ui/Card';
+import {Toolbar, ToolbarGroup, ToolbarTitle} from 'material-ui/Toolbar';
+
 import {parseDate} from '../../utils'
+
 
 export default class Search extends Component{
   constructor(props) {
-     super(props);
-     this.state = {
-       value: 1,
-       bands:{},
-       concerts:{},
-       input:"",
-       bandsToOutput : [],
-       genres:["none", "All Genres", "Pop", "Rock", "Electric", "Rap", "RnB"]
-     };
-   }
+    super(props);
+    this.state = {
+      value: 1,
+      bands:{},
+      concerts:{},
+      input:"",
+      bandsToOutput : [],
+      genres:["none", "All Genres", "Pop", "Rock", "Electric", "Rap", "RnB"]
+    };
+  }
 
    componentDidMount() {
      const {bands, concerts} = this.props
@@ -33,13 +36,13 @@ export default class Search extends Component{
      }
      let bandsToOutput = []
      Object.keys(bands).forEach(key =>{
-        const {name, genre} = bands[key]
-        if(name.toLowerCase().includes(input.toLowerCase()) &&(genres[value] === genre || value === 1)){
-          bandsToOutput.push(key)
-        }
-      })
-    this.setState({bandsToOutput, input})
-  }
+       const {name, genre} = bands[key]
+       if(name.toLowerCase().includes(input.toLowerCase()) &&(genres[value] === genre || value === 1)){
+         bandsToOutput.push(key)
+       }
+     })
+     this.setState({bandsToOutput, input})
+   }
 //onChange genre dropdown list
   handleChange = (event, index, value) => {
     this.setState({value})
@@ -48,33 +51,40 @@ export default class Search extends Component{
 
    render(){
      return(
-       <Paper className = "defaultPaper">
-         <h3>Search</h3>
-         <TextField hintText="Search for band" onChange = {input => this.searchForBand(input.target.value)}/><br/>
-         <SelectField floatingLabelText="Genre" value={this.state.value} onChange={this.handleChange} autoWidth={true}>
-           <MenuItem value={1} primaryText="All genres" />
-           <MenuItem value={2} primaryText="Pop" />
-           <MenuItem value={3} primaryText="Rock" />
-           <MenuItem value={4} primaryText="Electric" />
-           <MenuItem value={5} primaryText="Rap" />
-           <MenuItem value={6} primaryText="RnB" />
-         </SelectField>
-         <div>
+       <div>
+         <Toolbar>
+           <ToolbarGroup>
+             <ToolbarTitle text="" />
+             <TextField  fullWidth hintText="Search for band" onChange = {input => this.searchForBand(input.target.value)}/>
+             <FontIcon className="material-icons">search</FontIcon>
+           </ToolbarGroup>
+           <ToolbarGroup>
+             <SelectField value={this.state.value} onChange={this.handleChange} autoWidth={true}>
+               <MenuItem value={1} primaryText="All genres" />
+               <MenuItem value={2} primaryText="Pop" />
+               <MenuItem value={3} primaryText="Rock" />
+               <MenuItem value={4} primaryText="Electric" />
+               <MenuItem value={5} primaryText="Rap" />
+               <MenuItem value={6} primaryText="RnB" />
+             </SelectField>
+           </ToolbarGroup>
+         </Toolbar>
+         <div className="band-search">
            {Object.keys(this.state.bandsToOutput).map(memberKey => {
              const band = this.state.bands[this.state.bandsToOutput[memberKey]]
              const key = this.state.bandsToOutput[memberKey]
-           const concerts = this.state.concerts
-           return(<BandSearchResults concerts = {concerts} band = {band} key={key}/>)
-        })}
+             const concerts = this.state.concerts
+             return(<BandSearchResult concerts = {concerts} band = {band} key={key}/>)
+           })}
+         </div>
        </div>
-       </Paper>
      )
    }
 }
 
 //Card for every band in search results
-const BandSearchResults = ({band, concerts}) => (
-  <Card>
+const BandSearchResult = ({band, concerts}) => (
+  <Card className="band-search-result">
     <CardHeader title={band.name} subtitle={band.genre} actAsExpander={true} showExpandableButton={true}
     />
     <CardText expandable={true}>
