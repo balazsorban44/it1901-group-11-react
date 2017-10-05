@@ -93,86 +93,7 @@ export default class Technician extends Component {
   }
 
 
-/*
-// Fetching content from firebase
-componentDidMount(){
-  // referencing database (firebase) "ready up for connect"
-  const db = firebase.database().ref()
-  // accesing child of database = concerts
-  const concertsRef = db.child('concerts')
-  const bandsRef = db.child('bands')
-  const bands = {}
-  // NOTE: Might not be nessecary, added to get scenes and events
-  const scenesRef = db.child('scenes')
-  const eventsRef = db.child('events')
-  // const scenes = {}
-  const events = {}
-  // listening to concert changes in database
-  // on(element, snapshot) "picture of database on time of function call TODO: check online for full explanation
 
-  concertsRef.on('value', snap => {
-  // concerts and bands now holding the fetched data
-  // REVIEW: Restrict users acces for the data, now all Technicians can see all the conserts?
-  // NOTE: Fixed so it shows only the correct and approved concerts, but the access is still an issue.
-    const concerts = snap.val()
-  // Make object concerts into list concert
-    Object.keys(concerts).forEach(key => {
-      const {staff,isAcceptedByBookingBoss, band} = concerts[key]
-      // destructing an object (below is same as the one line above)
-      // const staff = concerts[key].staff
-
-      // Filters concerts to show only those that this user is working on.
-      if (!staff.includes(this.props.user.uid) || isAcceptedByBookingBoss !== true ) {
-        // console.log(isAcceptedByBookingBoss,staff,concerts[key])
-        delete concerts[key]
-      }
-      // If not deleted then we want the band name.
-      else {
-        bandsRef.child(band).on('value', snap => {
-          bands[band] = snap.val()
-          // setState here because else it wont update.
-          this.setState({bands})
-        })
-      }
-    })
-
-    this.setState({
-      //sets this.state.concerts = to the filtered concerts. alt code concerts:concerts
-      concerts
-    })
-  })
-
-// scenesRef.on('value', snap => {
-//   const scenes = snap.val()
-//   Object.keys(scenes).forEach(key => {
-//     const {name} = scenes[key]
-//
-//     // REVIEW: check this, added to get scenes
-//     scenesRef.child(scene).on('value', snap => {
-//       scenes[scene] = snap.val()
-//
-//       this.setState({scenes})
-//
-//       console.log(scenes.name);
-//     })
-//     //TODO Set State
-//   }
-// }
-
-// eventsRef.on('value', snap => {
-//   Object.keys(events).forEach(key => {
-//     const {location} = events[key]
-//     // REVIEW: check this, added to get evnts
-//     eventsRef.child(band).on('value', snap => {
-//       events[event] = snap.val()
-//
-//       console.log(evnets.name);
-//     })
-//     //TODO Set State
-//   }
-// }
-
-} */
 
 handleMenuItemClick(openedMenuItem){
   this.props.toggleDrawer()
@@ -216,17 +137,6 @@ const ConcertsOverview = ({concerts, bands}) => {
   console.log(concerts)
 
 
-  // Object.keys(bands).forEach(key =>{
-  //   const name = bands[key].name
-  //   const technicalRequirements = bands[key].technicalRequirements
-  //   bandsList.push(
-  //     <ListItem key={key}>
-  //       {name},{technicalRequirements}
-  //     </ListItem>
-  //
-  //   )
-  // })
-
 
 // TODO: get location from db, and add to list
   Object.keys(concerts).forEach(key =>{
@@ -257,21 +167,7 @@ const ConcertsOverview = ({concerts, bands}) => {
 
   })
 
-  //mapping happens here
-  // console.log(concerts);
-  // console.log(bands);
 
-//   Object.keys(concerts).map(function(keyNameCon, keyIndexCon) {
-//     return keyNameCon, keyIndexCon, console.log("keyName of concerts: ", keyNameCon,"keyIndex of concerts: ", keyIndexCon)
-//   // use keyName to get current key's name
-//   // and a[keyName] to get its value
-// })
-//
-//   Object.keys(bands).map(function(keyNameBan, keyIndexBan) {
-//     return keyNameBan, keyIndexBan, console.log("keyName of bands: ", keyNameBan,"keyIndex of bands: ", keyIndexBan)
-//   // use keyName to get current key's name
-//   // and a[keyName] to get its value
-// })
 
 
   //Return statement for ConcertsOverview
