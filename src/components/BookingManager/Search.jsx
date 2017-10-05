@@ -22,8 +22,7 @@ export default class Search extends Component{
     };
   }
 
-   componentDidMount() {
-     const {bands, concerts} = this.props
+   componentWillReceiveProps({bands, concerts}) {
      this.setState({bands, concerts})
    }
 
