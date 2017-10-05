@@ -30,64 +30,42 @@ export default class Technician extends Component {
     const eventsRef = db.child('events')
     const scenesRef = db.child('scenes')
 
-    eventsRef.on('value', snap => {
-      const events = snap.val()
-      Object.keys(events).forEach(eventKey => {
-        const event = events[eventKey]
-        // TODO: Time filter, technician does not need to se earlier events
-        if (true) {
-
-          const {location, name, to, from} = event
-          if (event.staff.technician.includes(this.props.user.uid)) {
-            const {scenes} = event
-            scenes.forEach(sceneKey => {
-              scenesRef.child(sceneKey).on('value', snap => {
-                const {concerts} = snap.val()
-                concerts.forEach(concert => {
-                  const concertRef = concertsRef.child(concert)
-                  concertRef.once('value').then(snapshot => {
-                    let now = snapshot.val()
-                    now.location = location
-                    if (now.staff.includes(this.props.user.uid) && now.isAcceptedByBookingBoss === true){
-                      let pState = this.state.concerts
-                      pState[concert] = now
-                      this.setState({concerts: pState})
-                    }
-
+    concertsRef.on('value', snap => {
+      const concerts = snap.val()
+      Object.keys(concerts).forEach(concertKey => {
+        const {staff, isAcceptedByBookingBoss} = concerts[concertKey]
+        if (staff.includes(this.props.user.uid) && isAcceptedByBookingBoss === true){
+          //TODO time filter
+          if (true){
+            const concert = concerts[concertKey]
+            scenesRef.on('value', snap => {
+              const scenes = snap.val()
+              Object.keys(scenes).forEach(sceneKey => {
+                if (scenes[sceneKey].concerts.includes(concertKey)){
+                  eventsRef.on('value', snap => {
+                    const events = snap.val()
+                    Object.keys(events).forEach(eventKey => {
+                      if (events[eventKey].scenes.includes(sceneKey)){
+                        concert.location = events[eventKey].location
+                        bandsRef.child(concerts[concertKey].band).on('value', snap => {
+                          const {name, technicalRequirements} = snap.val()
+                          concert.bandName = name
+                          concert.technicalRequirements = technicalRequirements
+                          let prevState = this.state.concerts
+                          prevState[concertKey] = concert
+                          this.setState({concerts: prevState})
+                        })
+                      }
+                    })
                   })
-
-                  //REVIEW: Filter for concerts includes technician
-                  // if (concerts[concertKey].staff.includes(this.props.user.uid)) {
-                    // concertsRef.child(concertKey).on('value', snap => {
-                    //   const concert = snap.val()
-                    //   concert.eventName = name
-                    //
-                    //   this.setState(prevState => ({
-                    //     concerts: {
-                    //       ...prevState.concerts,
-                    //       [concertKey]: concert
-                    //     }
-                    //   }))
-                    // })
-                  // }
-                })
+                }
               })
             })
           }
-          else {
-            delete events[eventKey]
-          }
         }
-        //for time-filter
-        else {
-          delete events[eventKey]
-        }
-      })
-    })
+        else{
 
-    bandsRef.on('value', snap => {
-      this.setState({
-        bands: snap.val()
+        }
       })
     })
   }
@@ -118,7 +96,7 @@ handleMenuItemClick(openedMenuItem){
           {{
             "concertsOverview":
 
-            <ConcertsOverview{...{concerts, bands}}/>
+            <ConcertsOverview{...{concerts}}/>
 
           }[this.state.openedMenuItem]}
         </div>
@@ -132,30 +110,22 @@ handleMenuItemClick(openedMenuItem){
 // function ConcertsOverview({concerts, bands}) {
   // NOTE: This one or the one below? Welp, the arrow means they are the same?
 
-const ConcertsOverview = ({concerts, bands}) => {
+const ConcertsOverview = ({concerts}) => {
   const concertBandsList = []
-  console.log(concerts)
 
 
 
 // TODO: get location from db, and add to list
   Object.keys(concerts).forEach(key =>{
-    const {from, to, band, location} = concerts[key]
-
-    // NOTE: scene
-    let name, technicalRequirements, sceneName = null
-
-    if (bands[band]) {
-      name = bands[band].name
-      technicalRequirements = bands[band].technicalRequirements.join(", ")
-    }
+    const {from, to, location, bandName} = concerts[key]
+    const technicalRequirements = concerts[key].technicalRequirements.join(", ")
 
     // NOTE: uncomment to log info to console
     // console.log("concerts: ", concerts,"bands: ", bands /* ,"scenes: ",scenes*/);
 
     concertBandsList.push(
       <ListItem key={key}>
-        <h2>{name}</h2>
+        <h2>{bandName}</h2>
 
         <p><i className="material-icons">date_range</i>{parseDate(from)} - {parseDate(to)}</p>
         <p><i className="material-icons">access_time</i>{parseTime(from)} - {parseTime(to)}</p>

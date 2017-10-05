@@ -1,6 +1,7 @@
 import React from 'react'
 import Paper from 'material-ui/Paper'
 import Subheader from 'material-ui/Subheader'
+import FontIcon from 'material-ui/FontIcon'
 import { Table, TableBody, TableHeader,
   TableHeaderColumn, TableRow,
   TableRowColumn
@@ -11,7 +12,7 @@ import {parseDate, parseTime} from '../../utils'
 const Scene = ({name, bands, eventStart}) => (
     <li className="scene">
       <Paper>
-        <Subheader>Scene {name}</Subheader>
+        <h6>Scene {name}</h6>
         <Table className="band-list">
           <TableHeader adjustForCheckbox={false} displaySelectAll={false}>
             <TableRow>
@@ -50,7 +51,7 @@ const Scene = ({name, bands, eventStart}) => (
 
 const ScenesList = ({scenes, eventStart}) => (
   <div>
-    <h4>Scenes</h4>
+    <h4><FontIcon style={{color: "grey"}} className="material-icons">account_balance</FontIcon></h4>
     <ul className="scenes-list">
       {Object.keys(scenes).map(key => {
         const scene = scenes[key]
