@@ -31,13 +31,13 @@ const Scene = ({name, bands, eventStart}) => (
               return (
                 <TableRow key={name} className="band">
                   <TableRowColumn>
-                    <h6>{name}</h6>
+                    <p>{name}</p>
                   </TableRowColumn>
                   <TableRowColumn>
-                    <h6 title={parseDate(from)}>{`${parseTime(from)}/${startDay}`}</h6>
+                    <p title={parseDate(from)}>{`${parseTime(from)}/${startDay}`}</p>
                   </TableRowColumn>
                   <TableRowColumn>
-                    <h6 title={parseDate(to)}>{`${parseTime(to)}/${endDay}`}</h6>
+                    <p title={parseDate(to)}>{`${parseTime(to)}/${endDay}`}</p>
                   </TableRowColumn>
                 </TableRow>
               )
