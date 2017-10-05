@@ -1,6 +1,5 @@
 import React from 'react'
 import Paper from 'material-ui/Paper'
-import Subheader from 'material-ui/Subheader'
 import FontIcon from 'material-ui/FontIcon'
 import { Table, TableBody, TableHeader,
   TableHeaderColumn, TableRow,

@@ -4,7 +4,6 @@ import MenuItem from 'material-ui/MenuItem'
 import DropDownMenu from 'material-ui/DropDownMenu';
 import CircularProgress from 'material-ui/CircularProgress';
 import {Toolbar, ToolbarGroup} from 'material-ui/Toolbar';
-import {parseDate} from '../../utils'
 
 import EventInfo from './EventInfo'
 import Scenes from './Scenes'
@@ -99,7 +98,7 @@ export default class Organizer extends Component {
 }
 
 const EventView = ({event}) =>  {
-  const {name, scenes, staff, from} = event
+  const {scenes, staff, from} = event
   return (
     <div className="event">
       <EventInfo event={event} staff={staff}/>

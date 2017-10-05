@@ -3,7 +3,6 @@ import Avatar from 'material-ui/Avatar'
 import {List, ListItem} from 'material-ui/List'
 import Paper from 'material-ui/Paper'
 import FontIcon from 'material-ui/FontIcon'
-import Subheader from 'material-ui/Subheader'
 import {capitalize, parseDate} from '../../utils'
 
 
