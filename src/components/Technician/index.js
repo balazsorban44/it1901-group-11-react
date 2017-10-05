@@ -82,7 +82,7 @@ handleMenuItemClick(openedMenuItem){
 
     const {isDrawerOpened} = this.props
     // REVIEW: the scenes
-    const {concerts, bands, scenes} = this.state
+    const {concerts} = this.state
 
     return (
         <div className='Technicians-container'>
