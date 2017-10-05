@@ -67,6 +67,7 @@ export default class App extends Component {
   render() {
     const {user, isDrawerOpened} = this.state
     return (
+
       <div className="App">
         <MuiThemeProvider muiTheme={muiTheme}>
           <div>
@@ -98,7 +99,60 @@ export default class App extends Component {
             }
           </div>
         </MuiThemeProvider>
+        <Footer/>
       </div>
     )
   }
 }
+
+
+const Footer = () => (
+  <footer className="mdl-mega-footer">
+    <div className="mdl-mega-footer__middle-section">
+
+      <div className="mdl-mega-footer__drop-down-section">
+        <h1 className="mdl-mega-footer__heading">Documentation<i className="material-icons">insert_drive_file</i></h1>
+        <ul className="mdl-mega-footer__link-list">
+          <li><a target="_blank" rel="noopener noreferrer" href="https://github.com/balazsorban44/it1901-group-11-react">GitHub</a></li>
+          <li><a target="_blank" rel="noopener noreferrer" href="https://trello.com/b/AO4STf0n/it1901-prosjekt">Trello</a></li>
+        </ul>
+      </div>
+
+      <div className="mdl-mega-footer__drop-down-section">
+        <h1 className="mdl-mega-footer__heading">Technology<i className="material-icons">build</i></h1>
+        <ul className="mdl-mega-footer__link-list">
+          <li><a target="_blank" rel="noopener noreferrer" href="https://reactjs.org/">React</a></li>
+        </ul>
+      </div>
+
+      <div className="mdl-mega-footer__drop-down-section">
+        <h1 className="mdl-mega-footer__heading">External libraries<i className="material-icons">library_books</i></h1>
+        <ul className="mdl-mega-footer__link-list">
+          <li><a target="_blank" rel="noopener noreferrer" href="http://www.material-ui.com">Material-UI</a></li>
+          <li><a target="_blank" rel="noopener noreferrer" href="https://getmdl.io/">Material Design Lite</a></li>
+        </ul>
+      </div>
+
+      <div className="mdl-mega-footer__drop-down-section">
+        <h1 className="mdl-mega-footer__heading">Team<i className="material-icons">people</i></h1>
+        <ul className="mdl-mega-footer__link-list">
+          <li><a target="_blank" rel="noopener noreferrer" href="https://balazsorban.com">Balázs Orbán</a></li>
+          <li><a target="_blank" rel="noopener noreferrer" href="https://github.com/supertosse">Stian Tøsse</a></li>
+          <li><a target="_blank" rel="noopener noreferrer" href="https://github.com/matsjp">Mats Pedersen</a></li>
+          <li><a target="_blank" rel="noopener noreferrer" href="https://github.com/AleksanderKarlsson">Aleksander Karlsson</a></li>
+          <li><a target="_blank" rel="noopener noreferrer" href="https://github.com/Hxnsa">Erik Krüger</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div className="mdl-mega-footer__bottom-section">
+      <div className="mdl-logo"><a target="_blank" rel="noopener noreferrer" href="https://eventmanager.netlify.com">Event Manager</a></div>
+      <ul className="mdl-mega-footer__link-list">
+        <li>Made with ❤ at <a target="_blank" rel="noopener noreferrer" href="https://ntnu.edu">NTNU</a></li>
+        <li>IT1901</li>
+        <li>Group 11</li>
+      </ul>
+    </div>
+  </footer>
+)
