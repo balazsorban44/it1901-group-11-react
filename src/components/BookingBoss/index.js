@@ -94,7 +94,7 @@ export default class BookingBoss extends Component {
       }
     })
     return (
-      <div id="booking-boss">
+      <div className="booking-boss role">
         <Drawer
           docked={false}
           open={isDrawerOpened}>

@@ -1,12 +1,11 @@
 import React from 'react'
 import Paper from 'material-ui/Paper'
-import FontIcon from 'material-ui/FontIcon'
 import { Table, TableBody, TableHeader,
   TableHeaderColumn, TableRow,
   TableRowColumn
 } from 'material-ui/Table'
 
-import {parseDate, parseTime} from '../../utils'
+import {parseDate, parseTime, Icon} from '../../utils'
 
 const Scene = ({name, bands, eventStart}) => (
     <li className="scene">
@@ -50,7 +49,7 @@ const Scene = ({name, bands, eventStart}) => (
 
 const ScenesList = ({scenes, eventStart}) => (
   <div>
-    <h4><FontIcon style={{color: "grey"}} className="material-icons">account_balance</FontIcon></h4>
+    <h4><Icon name="account_balance"/></h4>
     <ul className="scenes-list">
       {Object.keys(scenes).map(key => {
         const scene = scenes[key]

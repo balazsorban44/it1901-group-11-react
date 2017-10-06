@@ -1,10 +1,9 @@
 import React, { Component } from 'react'
 import firebase from 'firebase'
 import MenuItem from 'material-ui/MenuItem'
-import DropDownMenu from 'material-ui/DropDownMenu';
-import CircularProgress from 'material-ui/CircularProgress';
-import {Toolbar, ToolbarGroup} from 'material-ui/Toolbar';
-
+import DropDownMenu from 'material-ui/DropDownMenu'
+import {Toolbar, ToolbarGroup} from 'material-ui/Toolbar'
+import {Loading} from '../../utils'
 import EventInfo from './EventInfo'
 import Scenes from './Scenes'
 
@@ -75,7 +74,7 @@ export default class Organizer extends Component {
   render() {
     const {events, value} = this.state
     return (
-        <div id="organizer">
+        <div className="organizer role">
           <Toolbar>
             <ToolbarGroup>
               <DropDownMenu value={value} onChange={this.handleChange}>
@@ -106,10 +105,3 @@ const EventView = ({event}) =>  {
     </div>
   )
 }
-
-
-const Loading = () => (
-  <div className="loading">
-    <CircularProgress/>
-  </div>
-)

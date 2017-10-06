@@ -85,7 +85,7 @@ handleMenuItemClick(openedMenuItem){
     const {concerts} = this.state
 
     return (
-        <div className='Technicians-container'>
+        <div className='technician role'>
           <Drawer open={isDrawerOpened}>
             <MenuItem onClick={() => this.handleMenuItemClick("concertsOverview")} primaryText='Concerts Overview' />
           </Drawer>
