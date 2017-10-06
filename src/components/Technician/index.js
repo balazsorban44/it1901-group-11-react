@@ -4,7 +4,7 @@ import Drawer from 'material-ui/Drawer'
 import Paper from 'material-ui/Paper'
 import MenuItem from 'material-ui/MenuItem'
 import {List, ListItem} from 'material-ui/List';
-import {parseDate, parseTime} from '../../utils'
+import {parseDate, parseTime, Loading} from '../../utils'
 
 // 13.  Som lyd eller lystekniker skal jeg kunne få opp en oversikt over konserter jeg skal jobbe med.
 export default class Technician extends Component {
@@ -144,10 +144,14 @@ const ConcertsOverview = ({concerts}) => {
 
   //Return statement for ConcertsOverview
   return(
-
-      <ul className="concert-list">
-        {concertBandsList}
-      </ul>
+    <div>
+      {concertBandsList.length > 0 ?
+        <ul className="concert-list">
+          {concertBandsList}
+        </ul> :
+        <Loading/>
+      }
+    </div>
 
   )
 
