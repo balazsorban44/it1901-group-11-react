@@ -4,6 +4,7 @@ import MenuItem from 'material-ui/MenuItem'
 import {Card, CardHeader, CardText} from 'material-ui/Card';
 import {Toolbar, ToolbarGroup} from 'material-ui/Toolbar';
 import {parseDate} from '../../utils'
+import index from './index'
 
 export default class PreviousConcerts extends Component{
   constructor(props) {
@@ -11,9 +12,9 @@ export default class PreviousConcerts extends Component{
      this.state = {
        eventValue: "All events",
        genreValue:1,
-       concerts: {},
-       events : {},
-       bands: {},
+       concerts: this.props.concerts,
+       events : this.props.events,
+       bands: this.props.bands,
        genres:["none", "All Genres", "Pop", "Rock", "Electric", "Rap", "RnB"],
      };
    }
@@ -22,6 +23,8 @@ export default class PreviousConcerts extends Component{
    }
 
    componentDidMount(){
+     this.setState({genreValue: 1})
+     this.forceUpdate()
 
    }
    handleChangeEvent = (event, index, eventValue) => {this.setState({eventValue})}
@@ -57,7 +60,7 @@ export default class PreviousConcerts extends Component{
          .filter(concert => this.state.concerts[concert].eventName === this.state.eventValue || this.state.eventValue === "All events")
          .filter(concert => this.state.concerts[concert].genre === this.state.genres[this.state.genreValue] || this.state.genreValue === 1)
          .map(memberKey => {
-         return(<ConcertSearchResult bands = {this.state.bands} concert = {this.state.concerts[memberKey]} key={memberKey}/>)
+         return(<ConcertSearchResult  bands = {this.state.bands} concert = {this.state.concerts[memberKey]} key={memberKey}/>)
        })}
        </div>
      )
@@ -69,12 +72,12 @@ const ConcertSearchResult = ({concert, bands}) => {
   const bandRef = concert.band
   const band = bands[bandRef]
   return(
-    <Card className="band-search-result">
+    <Card className="concert-search">
       <CardHeader title={band.name} subtitle={band.genre} actAsExpander={true} showExpandableButton={true}/>
       <CardText expandable={true}>
       <p>From: {parseDate(concert.from)}</p>
       <p>To: {parseDate(concert.to)}</p>
-      <p>participants: {concert.participants} </p>
+      <p>Tickets sold: {concert.participants} </p>
       </CardText>
     </Card>
   )
