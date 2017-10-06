@@ -3,8 +3,7 @@ import firebase from 'firebase'
 import Drawer from 'material-ui/Drawer'
 import Paper from 'material-ui/Paper'
 import MenuItem from 'material-ui/MenuItem'
-import {List, ListItem} from 'material-ui/List';
-import {parseDate, parseTime, Loading} from '../../utils'
+import {parseDate, parseTime, Loading, Icon} from '../../utils'
 
 // 13.  Som lyd eller lystekniker skal jeg kunne få opp en oversikt over konserter jeg skal jobbe med.
 export default class Technician extends Component {
@@ -129,10 +128,10 @@ const ConcertsOverview = ({concerts}) => {
 
           <h2>{bandName}</h2>
 
-          <p><i className="material-icons">date_range</i>{parseDate(from)} - {parseDate(to)}</p>
-          <p><i className="material-icons">access_time</i>{parseTime(from)} - {parseTime(to)}</p>
-          <p><i className="material-icons">settings_input_component</i> Technical requirements: {technicalRequirements}</p>
-          <p><i className="material-icons">place</i> Location: {location}</p>
+          <p><Icon name="date_range"/>{parseDate(from)} - {parseDate(to)}</p>
+          <p><Icon name="access_time"/>{parseTime(from)} - {parseTime(to)}</p>
+          <p><Icon name="settings_input_component"/> Technical requirements: {technicalRequirements}</p>
+          <p><Icon name="place"/> Location: {location}</p>
         </Paper>
       </li>
     )
