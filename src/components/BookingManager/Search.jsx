@@ -79,7 +79,7 @@ export default class Search extends Component{
              </SelectField>
            </ToolbarGroup>
          </Toolbar>
-         <div className="band-search">
+         <div className="search">
            { bands && bandsToOutput.length > 0 ?
              bandsToOutput.map(key => (<BandSearchResult key={key} concerts={concerts} band={bands[key]}/>)) :
              <Loading/>
@@ -93,14 +93,14 @@ export default class Search extends Component{
 const BandSearchResult = ({band, concerts}) => {
 const {name, genre, albumSales, monthlyListeners} = band
   return (
-    <Card className="band-search-result">
+    <Card className="search-result">
       <CardHeader title={name} subtitle={genre} actAsExpander showExpandableButton/>
       <CardText expandable>
         <h6><Icon name="album"/> Album sales</h6>
         <p>{albumSales}</p>
         <h6><Icon name="music_note"/> Monthly listeners</h6>
         <p>{monthlyListeners}</p>
-        <h6><Icon name="history"/> Band history</h6>
+        <h6><Icon name="history"/> Previous concerts</h6>
         <Table>
           <TableHeader adjustForCheckbox={false} displaySelectAll={false}>
             <TableRow>
