@@ -4808,9 +4808,9 @@ map-stream@~0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/map-stream/-/map-stream-0.1.0.tgz#e56aa94c4c8055a16404a0674b78f215f7c8e194"
 
-material-ui-datetimepicker@^0.1.8:
-  version "0.1.8"
-  resolved "https://registry.yarnpkg.com/material-ui-datetimepicker/-/material-ui-datetimepicker-0.1.8.tgz#b51cb7a7116a0f3c95a8531d54c8f41634a23c13"
+material-ui-datetimepicker@^0.1.9:
+  version "0.1.9"
+  resolved "https://registry.yarnpkg.com/material-ui-datetimepicker/-/material-ui-datetimepicker-0.1.9.tgz#2590ba853ef953ed01f38c269720a7f1ce02390b"
   dependencies:
     install "0.10.1"
     moment "^2.0.0"
