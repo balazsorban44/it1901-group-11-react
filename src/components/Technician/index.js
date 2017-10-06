@@ -41,6 +41,7 @@ export default class Technician extends Component {
               const scenes = snap.val()
               Object.keys(scenes).forEach(sceneKey => {
                 if (scenes[sceneKey].concerts.includes(concertKey)){
+                  const sceneName = scenes[sceneKey].name
                   eventsRef.on('value', snap => {
                     const events = snap.val()
                     Object.keys(events).forEach(eventKey => {
@@ -48,6 +49,7 @@ export default class Technician extends Component {
                         concert.location = events[eventKey].location
                         bandsRef.child(concerts[concertKey].band).on('value', snap => {
                           const {name, technicalRequirements} = snap.val()
+                          concert.sceneName = sceneName
                           concert.bandName = name
                           concert.technicalRequirements = technicalRequirements
                           let prevState = this.state.concerts
@@ -116,7 +118,7 @@ const ConcertsOverview = ({concerts}) => {
 
 // TODO: get location from db, and add to list
   Object.keys(concerts).forEach(key =>{
-    const {from, to, location, bandName} = concerts[key]
+    const {from, to, location, bandName, sceneName} = concerts[key]
     const technicalRequirements = concerts[key].technicalRequirements.join(", ")
 
     // NOTE: uncomment to log info to console
@@ -131,6 +133,7 @@ const ConcertsOverview = ({concerts}) => {
           <p><Icon name="date_range"/>{parseDate(from)} - {parseDate(to)}</p>
           <p><Icon name="access_time"/>{parseTime(from)} - {parseTime(to)}</p>
           <p><Icon name="settings_input_component"/> Technical requirements: {technicalRequirements}</p>
+          <p><Icon name="account_balance"/> Scene: {sceneName}</p>
           <p><Icon name="place"/> Location: {location}</p>
         </Paper>
       </li>
