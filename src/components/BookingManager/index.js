@@ -104,7 +104,7 @@ handleMenuItemClick(openedMenuItem){
             "search":
             <Search {...{bands, concerts}}/>,
             "previousConcerts":
-            <PreviousConcerts {...{concerts, events}}/>,
+            <PreviousConcerts {...{concerts, events, bands}}/>,
           }[openedMenuItem]}
 
         </div>

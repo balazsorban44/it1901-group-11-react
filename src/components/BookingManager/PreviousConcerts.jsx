@@ -1,49 +1,81 @@
 import React, { Component } from 'react'
 import SelectField from 'material-ui/SelectField';
 import MenuItem from 'material-ui/MenuItem'
-import Paper from 'material-ui/Paper';
-
+import {Card, CardHeader, CardText} from 'material-ui/Card';
+import {Toolbar, ToolbarGroup} from 'material-ui/Toolbar';
+import {parseDate} from '../../utils'
 
 export default class PreviousConcerts extends Component{
   constructor(props) {
      super(props);
      this.state = {
+       eventValue: "All events",
+       genreValue:1,
        concerts: {},
        events : {},
+       bands: {},
+       genres:["none", "All Genres", "Pop", "Rock", "Electric", "Rap", "RnB"],
      };
    }
-   componentWillReceiveProps({concerts, events}) {
-     this.setState({concerts, events})
+   componentWillReceiveProps({concerts, events, bands}) {
+     this.setState({concerts, events, bands})
    }
 
    componentDidMount(){
 
    }
+   handleChangeEvent = (event, index, eventValue) => {this.setState({eventValue})}
+   handleChangeGenre = (event, index, genreValue) => {this.setState({genreValue}) }
 
    render(){
      return(
        <div>
-        <Paper className = "defaultPaper">
-        <h3>Previous concerts</h3>
-        <SelectField floatingLabelText="Event" value={this.state.value} onChange={this.handleChange} autoWidth={true}>
-           <MenuItem value={1} primaryText="Event 1" />
-           <MenuItem value={2} primaryText="Event 2" />
-           <MenuItem value={3} primaryText="Event 3" />
-           <MenuItem value={4} primaryText="Event 4" />
-           <MenuItem value={5} primaryText="Event 5" />
-           <MenuItem value={6} primaryText="Event 6" />
-        </SelectField>
-        <SelectField floatingLabelText="Genre" value={this.state.value} onChange={this.handleChange} autoWidth={true}>
-           <MenuItem value={1} primaryText="All genres" />
-           <MenuItem value={2} primaryText="Pop" />
-           <MenuItem value={3} primaryText="Rock" />
-           <MenuItem value={4} primaryText="Electric" />
-           <MenuItem value={5} primaryText="Rap" />
-           <MenuItem value={6} primaryText="RnB" />
-        </SelectField>
-        </Paper>
+       <Toolbar>
+         <ToolbarGroup>
+         <SelectField floatingLabelText="Event" value={this.state.eventValue} onChange={this.handleChangeEvent} autoWidth={true}>
+            <MenuItem value="All events" primaryText="All events" key ={"All events"}/>
+            {Object.keys(this.state.events).map(key =>{
+              return(
+                  <MenuItem value={this.state.events[key].name} primaryText={this.state.events[key].name} key ={key}/>
+              )
+            })}
+
+         </SelectField>
+         </ToolbarGroup>
+         <ToolbarGroup>
+         <SelectField floatingLabelText="Genre" value={this.state.genreValue} onChange={this.handleChangeGenre} autoWidth={true}>
+            <MenuItem value={1} primaryText="All genres" />
+            <MenuItem value={2} primaryText="Pop" />
+            <MenuItem value={3} primaryText="Rock" />
+            <MenuItem value={4} primaryText="Electric" />
+            <MenuItem value={5} primaryText="Rap" />
+            <MenuItem value={6} primaryText="RnB" />
+         </SelectField>
+         </ToolbarGroup>
+       </Toolbar>
+       {Object.keys(this.state.concerts)
+         .filter(concert => this.state.concerts[concert].eventName === this.state.eventValue || this.state.eventValue === "All events")
+         .filter(concert => this.state.concerts[concert].genre === this.state.genres[this.state.genreValue] || this.state.genreValue === 1)
+         .map(memberKey => {
+         return(<ConcertSearchResult bands = {this.state.bands} concert = {this.state.concerts[memberKey]} key={memberKey}/>)
+       })}
        </div>
      )
    }
+}
 
+//Card for every concert in search result
+const ConcertSearchResult = ({concert, bands}) => {
+  const bandRef = concert.band
+  const band = bands[bandRef]
+  return(
+    <Card className="band-search-result">
+      <CardHeader title={band.name} subtitle={band.genre} actAsExpander={true} showExpandableButton={true}/>
+      <CardText expandable={true}>
+      <p>From: {parseDate(concert.from)}</p>
+      <p>To: {parseDate(concert.to)}</p>
+      <p>participants: {concert.participants} </p>
+      </CardText>
+    </Card>
+  )
 }
