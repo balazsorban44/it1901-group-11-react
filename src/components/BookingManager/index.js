@@ -94,7 +94,7 @@ handleMenuItemClick(openedMenuItem){
     const {openedMenuItem, bands, concerts, events, scenes} = this.state
 
     return (
-        <div id="booking-manager">
+        <div className="booking-manager role">
           <Drawer open={isDrawerOpened}>
             <MenuItem onClick={() => this.handleMenuItemClick("search")} primaryText="Search" />
             <MenuItem onClick={() => this.handleMenuItemClick("previousConcerts")} primaryText="Previous concerts" />

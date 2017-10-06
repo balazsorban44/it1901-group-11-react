@@ -1,107 +1,134 @@
 import React, { Component } from 'react'
 import MenuItem from 'material-ui/MenuItem'
-import TextField from 'material-ui/TextField';
-import FontIcon from 'material-ui/FontIcon';
-import SelectField from 'material-ui/SelectField';
-import {Card, CardHeader, CardText} from 'material-ui/Card';
-import {Toolbar, ToolbarGroup, ToolbarTitle} from 'material-ui/Toolbar';
+import TextField from 'material-ui/TextField'
+import {Icon} from '../../utils'
+import SelectField from 'material-ui/SelectField'
+import {Card, CardHeader, CardText} from 'material-ui/Card'
+import {Toolbar, ToolbarGroup} from 'material-ui/Toolbar'
 
-import {parseDate} from '../../utils'
+import { Table, TableBody, TableHeader,
+  TableHeaderColumn, TableRow,
+  TableRowColumn
+} from 'material-ui/Table'
+
+import {parseDate, Loading} from '../../utils'
 
 
 export default class Search extends Component{
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
-      value: 1,
-      bands:{},
-      concerts:{},
-      input:"",
+      value: 0,
+      bands: null,
+      input: "",
+      concerts: {},
       bandsToOutput : [],
-      genres:["none", "All Genres", "Pop", "Rock", "Electric", "Rap", "RnB"]
-    };
+      genres: ["none", "All Genres", "Pop", "Rock", "Electric", "Rap", "RnB"]
+    }
   }
 
-   componentWillReceiveProps({bands, concerts}) {
-     this.setState({bands, concerts})
-   }
+  componentWillReceiveProps({bands, concerts}) {
+    let bandsToOutput = Object.keys(bands).map(band => band)
+    this.setState({bands, bandsToOutput, concerts})
+  }
 
-//Search for band containing strings in input and update bandsToOutput state
-   searchForBand(input, directValue){
-     let {bands, genres, value} = this.state
-     //HACK to get updated value when changing genre. State do not change fast enough
-     if(directValue !=null){
-       value = directValue
-     }
-     let bandsToOutput = []
-     Object.keys(bands).forEach(key =>{
-       const {name, genre} = bands[key]
-       if(name.toLowerCase().includes(input.toLowerCase()) &&(genres[value] === genre || value === 1)){
-         bandsToOutput.push(key)
-       }
-     })
-     this.setState({bandsToOutput, input})
-   }
-//onChange genre dropdown list
-  handleChange = (event, index, value) => {
+
+  //Search for band containing strings in input and update bandsToOutput state
+  searchForBand = (e, genre) => {
+    let {bands, genres, value, input} = this.state
+    let bandsToOutput = Object.keys(bands).map(band => band)
+    // FIXME: Fix genre filtering for bands.
+    // bandsToOutput = bandsToOutput.filter(bandKey => genres[value] === bands[bandKey].genre)
+    if (input !== "") {
+      bandsToOutput = bandsToOutput.filter(bandKey => bands[bandKey].name.toLowerCase().includes(input))
+    }
+    this.setState({bandsToOutput})
+  }
+
+  handleInputChange = e => {
+    if (e.target.value !== "") {
+      const input = e.target.value.toLowerCase()
+      this.setState({input})
+      this.searchForBand(input, null)
+    }
+  }
+
+  //onChange genre dropdown list
+  handleGenreChange = (event, index, value) => {
     this.setState({value})
-    this.searchForBand(this.state.input, value)
+    this.searchForBand(null, value)
   }
 
    render(){
+     const {value, bandsToOutput, bands, concerts} = this.state
      return(
        <div>
          <Toolbar>
            <ToolbarGroup>
-             <ToolbarTitle text="" />
-             <TextField  fullWidth hintText="Search for band" onChange = {input => this.searchForBand(input.target.value)}/>
-             <FontIcon className="material-icons">search</FontIcon>
+             <TextField  fullWidth hintText="Search for band" onChange={this.handleInputChange}/>
+             <Icon name="search"/>
            </ToolbarGroup>
            <ToolbarGroup>
-             <SelectField value={this.state.value} onChange={this.handleChange} autoWidth={true}>
-               <MenuItem value={1} primaryText="All genres" />
-               <MenuItem value={2} primaryText="Pop" />
-               <MenuItem value={3} primaryText="Rock" />
-               <MenuItem value={4} primaryText="Electric" />
-               <MenuItem value={5} primaryText="Rap" />
-               <MenuItem value={6} primaryText="RnB" />
+             <SelectField value={value} onChange={this.handleGenreChange} autoWidth>
+               <MenuItem value={0} primaryText="All genres" />
+               <MenuItem value={1} primaryText="Pop" />
+               <MenuItem value={2} primaryText="Rock" />
+               <MenuItem value={3} primaryText="Electric" />
+               <MenuItem value={4} primaryText="Rap" />
+               <MenuItem value={5} primaryText="RnB" />
              </SelectField>
            </ToolbarGroup>
          </Toolbar>
          <div className="band-search">
-           {Object.keys(this.state.bandsToOutput).map(memberKey => {
-             const band = this.state.bands[this.state.bandsToOutput[memberKey]]
-             const key = this.state.bandsToOutput[memberKey]
-             const concerts = this.state.concerts
-             return(<BandSearchResult concerts = {concerts} band = {band} key={key}/>)
-           })}
+           { bands && bandsToOutput.length > 0 ?
+             bandsToOutput.map(key => (<BandSearchResult key={key} concerts={concerts} band={bands[key]}/>)) :
+             <Loading/>
+           }
          </div>
        </div>
-     )
-   }
-}
+     )}
+ }
 
 //Card for every band in search results
-const BandSearchResult = ({band, concerts}) => (
-  <Card className="band-search-result">
-    <CardHeader title={band.name} subtitle={band.genre} actAsExpander={true} showExpandableButton={true}
-    />
-    <CardText expandable={true}>
-      <p>Album sales: {band.albumSales}</p>
-      <p>Monthly listeners: {band.monthlyListeners}</p>
-      <p>Previous concerts: </p>
-      {Object.keys(band.concerts).map(keyd =>{
-        const concert = concerts[band.concerts[keyd]]
-        if (!concert) {
-          return <div key={Math.random()}></div>
-        } else {
-          return(
-            <div key = {band.concerts[keyd]}>
-              <p>{parseDate(concert.from)} Tickets sold: {concert.participants}</p>
-            </div>
-          )}
-      }
-      )}
-    </CardText>
-  </Card>
-)
+const BandSearchResult = ({band, concerts}) => {
+const {name, genre, albumSales, monthlyListeners} = band
+  return (
+    <Card className="band-search-result">
+      <CardHeader title={name} subtitle={genre} actAsExpander showExpandableButton/>
+      <CardText expandable>
+        <h6><Icon name="album"/> Album sales</h6>
+        <p>{albumSales}</p>
+        <h6><Icon name="music_note"/> Monthly listeners</h6>
+        <p>{monthlyListeners}</p>
+        <h6><Icon name="history"/> Band history</h6>
+        <Table>
+          <TableHeader adjustForCheckbox={false} displaySelectAll={false}>
+            <TableRow>
+              <TableHeaderColumn>Concert date</TableHeaderColumn>
+              <TableHeaderColumn>Tickets sold</TableHeaderColumn>
+              <TableHeaderColumn>Total income (NOK)</TableHeaderColumn>
+            </TableRow>
+          </TableHeader>
+          <TableBody showRowHover displayRowCheckbox={false}>
+            {concerts &&
+              Object.keys(band.concerts).map(key => {
+                const concert = concerts[band.concerts[key]]
+                if (concert) {
+                  const {from, participants, ticketPrice} = concert
+                  return (
+                    <TableRow key={key}>
+                      <TableRowColumn>{parseDate(from)}</TableRowColumn>
+                      <TableRowColumn>{participants}</TableRowColumn>
+                      <TableRowColumn>{participants*ticketPrice}</TableRowColumn>
+                    </TableRow>
+                  )
+                } else return null
+
+              })
+            }
+          </TableBody>
+        </Table>
+      </CardText>
+    </Card>
+  )
+}

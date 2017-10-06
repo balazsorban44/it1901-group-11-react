@@ -35,7 +35,7 @@ export default class Manager extends Component {
   render() {
     const {isDrawerOpened} = this.props
     return (
-      <div id="manager">
+      <div className="manager role">
         <Drawer
           open = {isDrawerOpened}>
           <MenuItem onClick={() => this.handleMenuItemClick("bandview")} primaryText="Band view"/>

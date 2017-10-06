@@ -1,13 +1,11 @@
 import React from 'react'
 import Paper from 'material-ui/Paper'
-import Subheader from 'material-ui/Subheader'
-import FontIcon from 'material-ui/FontIcon'
 import { Table, TableBody, TableHeader,
   TableHeaderColumn, TableRow,
   TableRowColumn
 } from 'material-ui/Table'
 
-import {parseDate, parseTime} from '../../utils'
+import {parseDate, parseTime, Icon} from '../../utils'
 
 const Scene = ({name, bands, eventStart}) => (
     <li className="scene">
@@ -32,13 +30,13 @@ const Scene = ({name, bands, eventStart}) => (
               return (
                 <TableRow key={name} className="band">
                   <TableRowColumn>
-                    <h6>{name}</h6>
+                    <p>{name}</p>
                   </TableRowColumn>
                   <TableRowColumn>
-                    <h6 title={parseDate(from)}>{`${parseTime(from)}/${startDay}`}</h6>
+                    <p title={parseDate(from)}>{`${parseTime(from)}/${startDay}`}</p>
                   </TableRowColumn>
                   <TableRowColumn>
-                    <h6 title={parseDate(to)}>{`${parseTime(to)}/${endDay}`}</h6>
+                    <p title={parseDate(to)}>{`${parseTime(to)}/${endDay}`}</p>
                   </TableRowColumn>
                 </TableRow>
               )
@@ -51,7 +49,7 @@ const Scene = ({name, bands, eventStart}) => (
 
 const ScenesList = ({scenes, eventStart}) => (
   <div>
-    <h4><FontIcon style={{color: "grey"}} className="material-icons">account_balance</FontIcon></h4>
+    <h4><Icon name="account_balance"/></h4>
     <ul className="scenes-list">
       {Object.keys(scenes).map(key => {
         const scene = scenes[key]
