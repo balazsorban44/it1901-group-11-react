@@ -124,15 +124,17 @@ const ConcertsOverview = ({concerts}) => {
     // console.log("concerts: ", concerts,"bands: ", bands /* ,"scenes: ",scenes*/);
 
     concertBandsList.push(
-      <ListItem key={key}>
-        <h2>{bandName}</h2>
+      <li key={key} className="concert-list-item">
+        <Paper>
 
-        <p><i className="material-icons">date_range</i>{parseDate(from)} - {parseDate(to)}</p>
-        <p><i className="material-icons">access_time</i>{parseTime(from)} - {parseTime(to)}</p>
-        <p><i className="material-icons">settings_input_component</i> Technical requirements: {technicalRequirements}</p>
-        <p><i className="material-icons">place</i> Location: {location}</p>
+          <h2>{bandName}</h2>
 
-      </ListItem>
+          <p><i className="material-icons">date_range</i>{parseDate(from)} - {parseDate(to)}</p>
+          <p><i className="material-icons">access_time</i>{parseTime(from)} - {parseTime(to)}</p>
+          <p><i className="material-icons">settings_input_component</i> Technical requirements: {technicalRequirements}</p>
+          <p><i className="material-icons">place</i> Location: {location}</p>
+        </Paper>
+      </li>
     )
 
   })
@@ -142,22 +144,11 @@ const ConcertsOverview = ({concerts}) => {
 
   //Return statement for ConcertsOverview
   return(
-    <Paper>
 
-      <List>
+      <ul className="concert-list">
         {concertBandsList}
-      </List>
-      {/*<p>mulige symbol: <i className="material-icons">grade</i>
-      <i className="material-icons">build</i> <i className="material-icons">lightbulb_outline</i>
-      <i className="material-icons">mic</i> <i className="material-icons">album</i>
-      <i className="material-icons">attach_file</i> <i className="material-icons">attachment</i>
-      <i className="material-icons">map</i> <i className="material-icons">power</i>
-      <i className="material-icons">location_city</i> <i className="material-icons">whatshot</i>
-      <i className="material-icons">group</i><i className="material-icons">terrain</i>
-      <i className="material-icons">gps_fixed</i> <i className="material-icons">audiotrack</i>
-      </p>*/}
+      </ul>
 
-    </Paper>
   )
 
 }
