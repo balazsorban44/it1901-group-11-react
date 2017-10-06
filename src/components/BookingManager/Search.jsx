@@ -18,7 +18,7 @@ export default class Search extends Component{
   constructor(props) {
     super(props)
     this.state = {
-      value: 0,
+      genre: "All genres",
       bands: this.props.bands,
       input: "",
       concerts: this.props.concerts,
@@ -34,23 +34,23 @@ export default class Search extends Component{
 
 
   //Search for band containing strings in input and update bandsToOutput state
-  searchForBand = (e, genre) => {
-    let {bands, genres, value, input} = this.state
-    if(e !== null){
-      input = e
+  searchForBand = (inputIn, genreIn) => {
+    let {bands, genres, genre, input} = this.state
+    if(inputIn !== null){
+      input = inputIn
     }
-    if(genre !== null){
-      value = genre
+    if(genreIn !== null){
+      genre = genreIn
     }
-
     let bandsToOutput = Object.keys(bands).map(band => band)
     .filter(bandKey => bands[bandKey].name.toLowerCase().includes(input))
-    if(genres[value] !== "All Genres"){
-      bandsToOutput = bandsToOutput.filter(bandKey => genres[value] === bands[bandKey].genre)
+    if(genre !== "All genres"){
+      bandsToOutput = bandsToOutput.filter(bandKey => genre === bands[bandKey].genre)
     }
     this.setState({bandsToOutput})
   }
 
+//Handle input from search
   handleInputChange = e => {
       const input = e.target.value.toLowerCase()
       this.setState({input})
@@ -60,12 +60,12 @@ export default class Search extends Component{
 
   //onChange genre dropdown list
   handleGenreChange = (event, index, value) => {
-    this.setState({value})
-    this.searchForBand(null, index)
+    this.setState({genre:value})
+    this.searchForBand(null, value)
   }
 
    render(){
-     const {value, bandsToOutput, bands, concerts} = this.state
+     const {genre, bandsToOutput, bands, concerts} = this.state
      return(
        <div>
          <Toolbar>
@@ -74,13 +74,13 @@ export default class Search extends Component{
              <Icon name="search"/>
            </ToolbarGroup>
            <ToolbarGroup>
-             <SelectField value={value} onChange={this.handleGenreChange} autoWidth>
-               <MenuItem value={0} primaryText="All genres" />
-               <MenuItem value={1} primaryText="Pop" />
-               <MenuItem value={2} primaryText="Rock" />
-               <MenuItem value={3} primaryText="Electric" />
-               <MenuItem value={4} primaryText="Rap" />
-               <MenuItem value={5} primaryText="RnB" />
+             <SelectField value={genre} onChange={this.handleGenreChange} autoWidth>
+               <MenuItem value={"All genres"} primaryText="All genres" />
+               <MenuItem value={"Pop"} primaryText="Pop" />
+               <MenuItem value={"Rock"} primaryText="Rock" />
+               <MenuItem value={"Electric"} primaryText="Electric" />
+               <MenuItem value={"Rap"} primaryText="Rap" />
+               <MenuItem value={"RnB"} primaryText="RnB" />
              </SelectField>
            </ToolbarGroup>
          </Toolbar>
