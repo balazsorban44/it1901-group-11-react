@@ -19,9 +19,9 @@ export default class Search extends Component{
     super(props)
     this.state = {
       value: 0,
-      bands: null,
+      bands: this.props.bands,
       input: "",
-      concerts: {},
+      concerts: this.props.concerts,
       bandsToOutput : [],
       genres: ["none", "All Genres", "Pop", "Rock", "Electric", "Rap", "RnB"]
     }
@@ -36,9 +36,18 @@ export default class Search extends Component{
   //Search for band containing strings in input and update bandsToOutput state
   searchForBand = (e, genre) => {
     let {bands, genres, value, input} = this.state
+    if(e !== null){
+      input = e
+    }
+    if(typeof invalue !== "undefined"){
+      value = genre
+    }
+
     let bandsToOutput = Object.keys(bands).map(band => band)
-    // FIXME: Fix genre filtering for bands.
-    // bandsToOutput = bandsToOutput.filter(bandKey => genres[value] === bands[bandKey].genre)
+    if(genres[value] !== "All Genres"){
+      console.log(genres[value])
+      //bandsToOutput = bandsToOutput.filter(bandKey => genres[value] === bands[bandKey].genre)
+    }
     if (input !== "") {
       bandsToOutput = bandsToOutput.filter(bandKey => bands[bandKey].name.toLowerCase().includes(input))
     }
@@ -46,11 +55,10 @@ export default class Search extends Component{
   }
 
   handleInputChange = e => {
-    if (e.target.value !== "") {
       const input = e.target.value.toLowerCase()
       this.setState({input})
       this.searchForBand(input, null)
-    }
+
   }
 
   //onChange genre dropdown list
