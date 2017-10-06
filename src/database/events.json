@@ -46,7 +46,7 @@
       "bookingBoss": ["33gMwGSuFfUTMv9BWCAakNXF0re2"],
       "bookingManager" : [ "ZCcD5DwBbzgXLAGRdR28cUCdQub2" ],
       "organizer" : [ "13pAdrh9t4Pt7qrdDJfpzjy8Vrh1" ],
-      "technician" : [ "kg08ojgicAgx23e0fPca33AVx8B3", "kg08ojgicAgx23e0fPca33AVx8B3" ]
+      "technician" : [ "kg08ojgicAgx23e0fPca33AVx8B3" ]
     },
     "to" : 1511748000000,
     "location" : "Trondheim"

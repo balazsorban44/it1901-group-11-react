@@ -121,7 +121,8 @@ const Footer = () => (
       <div className="mdl-mega-footer__drop-down-section">
         <h1 className="mdl-mega-footer__heading">Technology<i className="material-icons">build</i></h1>
         <ul className="mdl-mega-footer__link-list">
-          <li><a target="_blank" rel="noopener noreferrer" href="https://reactjs.org/">React</a></li>
+          <li><a target="_blank" rel="noopener noreferrer" href="https://reactjs.org/">ReactJS</a></li>
+          <li><a target="_blank" rel="noopener noreferrer" href="https://firebase.google.com">Google Firebase</a></li>
         </ul>
       </div>
 
