@@ -130,11 +130,11 @@ const ConcertsOverview = ({concerts}) => {
 
           <h2>{bandName}</h2>
 
-          <p><Icon name="date_range"/>{parseDate(from)} - {parseDate(to)}</p>
-          <p><Icon name="access_time"/>{parseTime(from)} - {parseTime(to)}</p>
-          <p><Icon name="settings_input_component"/> Technical requirements: {technicalRequirements}</p>
-          <p><Icon name="account_balance"/> Scene: {sceneName}</p>
-          <p><Icon name="place"/> Location: {location}</p>
+          <p><Icon title="Concert dates" name="date_range"/>{parseDate(from)} - {parseDate(to)}</p>
+          <p><Icon title="Concert start/end" name="access_time"/>{parseTime(from)} - {parseTime(to)}</p>
+          <p><Icon title="Band's technical requirements" name="settings_input_component"/> Technical requirements: {technicalRequirements}</p>
+          <p><Icon title="Scene" name="account_balance"/> Scene: {sceneName}</p>
+          <p><Icon title="Concert location" name="place"/> Location: {location}</p>
         </Paper>
       </li>
     )

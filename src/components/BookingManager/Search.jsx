@@ -105,11 +105,11 @@ const {name, genre, albumSales, monthlyListeners} = band
     <Card className="search-result">
       <CardHeader title={name} subtitle={genre} actAsExpander showExpandableButton/>
       <CardText expandable>
-        <h6><Icon name="album"/> Album sales</h6>
+        <h6><Icon title="Album sales" name="album"/> Album sales</h6>
         <p>{albumSales}</p>
-        <h6><Icon name="music_note"/> Monthly listeners</h6>
+        <h6><Icon title="Monthly listeners" name="music_note"/> Monthly listeners</h6>
         <p>{monthlyListeners}</p>
-        <h6><Icon name="history"/> Previous concerts</h6>
+        <h6><Icon title="Previous concerts" name="history"/> Previous concerts</h6>
         <Table>
           <TableHeader adjustForCheckbox={false} displaySelectAll={false}>
             <TableRow>

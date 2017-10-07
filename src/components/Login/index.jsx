@@ -2,8 +2,9 @@ import React, {Component} from 'react'
 import concert from '../../img/concert.jpg'
 import firebase from 'firebase'
 import TextField from 'material-ui/TextField'
-import FontIcon from 'material-ui/FontIcon'
 import RaisedButton from 'material-ui/RaisedButton'
+
+import {Icon} from '../../utils'
 
 export default class Login extends Component {
   constructor() {
@@ -59,7 +60,7 @@ export default class Login extends Component {
             <RaisedButton className="login-btn" label="Login" secondary onClick={() => this.login()}/>
           </div>
           <div className="mdl-card__menu">
-            <FontIcon className="material-icons">lock</FontIcon>
+            <Icon name="lock"/>
           </div>
         </div>
 

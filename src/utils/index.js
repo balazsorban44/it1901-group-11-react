@@ -28,7 +28,7 @@ export const Loading = () => (
   }}><CircularProgress/></div>
 )
 
-export const Icon =({name}) => <FontIcon style={{color: "grey", margin: "0 .5em"}} className="material-icons">{name}</FontIcon>
+export const Icon =({name, title}) => <FontIcon title={title ? title : name} style={{color: "grey", margin: "0 .5em"}} className="material-icons">{name}</FontIcon>
 
 export const NoResult = () => (
   <div style={{

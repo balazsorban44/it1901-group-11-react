@@ -49,7 +49,7 @@ const Scene = ({name, bands, eventStart}) => (
 
 const ScenesList = ({scenes, eventStart}) => (
   <div>
-    <h4><Icon name="account_balance"/></h4>
+    <h4><Icon title="Scenes" name="account_balance"/></h4>
     <ul className="scenes-list">
       {Object.keys(scenes).map(key => {
         const scene = scenes[key]

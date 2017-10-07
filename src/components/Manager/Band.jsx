@@ -7,6 +7,8 @@ import Paper from 'material-ui/Paper'
 import RaisedButton from 'material-ui/RaisedButton'
 import TextField from 'material-ui/TextField'
 
+import {Icon} from '../../utils'
+
 class Band extends Component{
   constructor(){
     super()
@@ -54,59 +56,60 @@ class Band extends Component{
     const {name, technicalRequirements, members, genre} = this.props.band
     const bandId = this.props.bandId
     return(
-      <Paper className="band">
-        <h4>{name} ({genre})</h4>
-        <div>
-          <List className="member-list">
-            {Object.keys(members).map(memberKey => (
-              <ListItem key={memberKey}>
-                {members[memberKey]}
-              </ListItem>
-            ))}
-          </List>
-        </div>
-        <div className="technical-requirements">
+      <li>
 
-
-          <ul>
-            {Object.keys(technicalRequirements).map(reqKey => {
-              return (
-                <li key={reqKey}>
-                  {technicalRequirements[reqKey] !== "" &&
-                    <Chip
-                      key={reqKey}
-                      onRequestDelete={this.state.editMode ? () => this.removeTechnicalRequirement(bandId, reqKey) : null}
-                      style={this.styles.chip}
-                    >
-                      {technicalRequirements[reqKey]}</Chip>
-                  }
-                </li>
-              )
-            })}
-            <li>
+        <Paper className="band">
+          <h4>{name} ({genre})</h4>
+          <div>
+            <Icon title="Band members" name="people"/>
+            <List className="member-list">
+              {Object.keys(members).map(memberKey => (
+                <ListItem key={memberKey}>
+                  {members[memberKey]}
+                </ListItem>
+              ))}
+            </List>
+          </div>
+          <div className="technical-requirements">
+            <div>
+              <Icon title="Technical requirements" name="settings_input_component"/>
               <RaisedButton
                 label={this.state.editMode ? "Done" : "Edit"}
                 onClick={e => this.toggleEdit(e)}
                 labelPosition="before"
                 primary
               />
-            </li>
-          </ul>
-          {this.state.editMode &&
-            <form>
-              <TextField
-                hintText="Guitars, Microphone, etc."
-                floatingLabelText="Add technical requirement"
-                value={this.state.requirements.join(', ')}
-                onChange={e => this.handleInput(e)}
-              />
-              <RaisedButton label="Add" primary onClick={e => this.addTechicalRequirement(e, bandId)}/>
-            </form>
-          }
-        </div>
-
-
-      </Paper>
+            </div>
+            <ul>
+              {Object.keys(technicalRequirements).map(reqKey => {
+                return (
+                  <li key={reqKey}>
+                    {technicalRequirements[reqKey] !== "" &&
+                      <Chip
+                        key={reqKey}
+                        onRequestDelete={this.state.editMode ? () => this.removeTechnicalRequirement(bandId, reqKey) : null}
+                        style={this.styles.chip}
+                      >
+                        {technicalRequirements[reqKey]}</Chip>
+                    }
+                  </li>
+                )
+              })}
+            </ul>
+            {this.state.editMode &&
+              <form>
+                <TextField
+                  hintText="Guitars, Microphone, etc."
+                  floatingLabelText="Add technical requirement"
+                  value={this.state.requirements.join(', ')}
+                  onChange={e => this.handleInput(e)}
+                />
+                <RaisedButton className="add-technical-requirement" label="Add" primary onClick={e => this.addTechicalRequirement(e, bandId)}/>
+              </form>
+            }
+          </div>
+        </Paper>
+      </li>
     )
   }
 }

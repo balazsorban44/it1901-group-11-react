@@ -2,21 +2,31 @@
   .band-list-manager
     display: flex
     flex-wrap: wrap
+    justify-content: center
   .band
     margin: 1em
-    padding: 1em 3em
+    padding: 1em
     max-width: 480px
-    min-height: 240px
+    min-height: 320px
     width: 90vw
     display: flex
-    align-items: center
-    justify-content: center
     flex-direction: column
+    justify-content: center
+    align-items: center
   .band
     h4, h5
       margin: 0
       display: flex
       align-items: center
+    >div
+      margin-top: 1em
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      >div
+        display: flex
+        align-items: center
 
   .member-list
     display: flex
@@ -34,3 +44,10 @@
       margin-top: 1em
     li
       margin: .3em
+    form
+      display: flex
+      flex-wrap: wrap
+      justify-content: center
+      align-items: center
+    .add-technical-requirement
+      margin: 1em 1em 0 1em
