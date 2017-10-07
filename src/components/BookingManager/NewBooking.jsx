@@ -45,17 +45,16 @@ export default class NewBooking extends Component {
   // Update the state whenever new data is fetched from the database
   // into the parent component.
   componentWillReceiveProps({bands, events, scenes}) {
-    const bandNames = Object.keys(bands).map(key => bands[key].name)
-    this.setState({bands, events, scenes, bandNames})
+    if (bands) {
+      const bandNames = Object.keys(bands).map(key => bands[key].name)
+      this.setState({bands, events, scenes, bandNames})
+    }
   }
 
   // Handling if the New Booking component is visible or not.
   handleOpen = () => this.setState({open: true})
   handleClose = () => this.setState({open: false})
-  resetBooking = () => {
-    this.handleClose()
-    this.setState({newConcert})
-  }
+  resetBooking = () => this.setState({newConcert}, () => this.handleClose())
 
   // When this.state.newConcert includes all the necessary info,
   // submitBooking() will generate a concert Object and will
@@ -79,6 +78,8 @@ export default class NewBooking extends Component {
       ticketPrice,
       to
     }
+
+    // REVIEW: Only update concerts when accepted by booking boss. (Move this method to Booking Boss) 
     const sceneRef = scenesRef.child(`${scene}/concerts`)
     sceneRef.once('value').then(snap => {
       let updatedScenes = snap.val()
@@ -103,28 +104,30 @@ export default class NewBooking extends Component {
   // Sets the date input as a UNIX timestamp
   // to this.state.newConcert.from.
   handleStartDateChange = date => {
-    this.setState(prevState => ({
-      newConcert: {
-        ...prevState.newConcert,
-        from: date.getTime()
-      }
+    const from = date.getTime()
+    this.setState(({newConcert}) => ({
+      newConcert: {...newConcert, from}
     }))
   }
 
-  handleEndDateChange = date => {
-    this.setState(prevState => ({
-      newConcert: {
-        ...prevState.newConcert,
-        to: date.getTime()
-      }
-    }))
+  handleConcertLengthChange = e => {
+    const hours = parseInt(e.target.value, 10)*60*60*1000
+    const {from} = this.state.newConcert
+    const to = from + hours
+    if (from < to) {
+      console.log("From: " + new Date(from))
+      console.log("To: " + new Date(to))
+      this.setState(({newConcert}) => ({
+        newConcert: {...newConcert, to}
+      }))
+    }
   }
 
 
-  // // handleEndDateChange() takes int as an input, which is the length
+  // // handleConcertLengthChange() takes int as an input, which is the length
   // // of a concert. It is added to the from date of the concert, and
   // // then sets it to this.state.newConcert.to as a UNIX timestamp.
-  // handleEndDateChange = e => {
+  // handleConcertLengthChange = e => {
   //   const hours = parseInt(e.target.value, 10)
   //   let {from} = this.state.newConcert
   //   from = new Date(from)
@@ -182,6 +185,7 @@ export default class NewBooking extends Component {
     this.setState({canSubmit:true})
   }
 
+  // FIXME: limitAcceptedDates disables the first day of the event.
   limitAcceptedDates = date => {
     const {from, to} = this.state.newConcert.event
     return from > date.getTime() || date.getTime() > to || date < Date.now()
@@ -234,7 +238,7 @@ export default class NewBooking extends Component {
             handleEventChange={this.handleEventChange}
             handleSceneChange={this.handleSceneChange}
             handleStartDateChange={this.handleStartDateChange}
-            handleEndDateChange={this.handleEndDateChange}
+            handleConcertLengthChange={this.handleConcertLengthChange}
             limitAcceptedDates={this.limitAcceptedDates}
             canSubmit={() => this.canSubmit()}/>
         </Dialog>
@@ -249,16 +253,55 @@ class VerticalLinearStepper extends Component {
     super()
     this.state = {
       stepIndex: 0,
+      bandName: "",
+      stepDisabled: Array(6).fill(true)
     }
+  }
+
+  handleStepChange = (stepIndex) => {
+    let {stepDisabled} = this.state
+    stepDisabled[stepIndex] = false
+    this.setState({stepDisabled})
+  }
+
+  handleBandChange = (element, index) => {
+    this.props.handleBandChange(element, index)
+    this.setState({bandName: this.props.bandNames[index]})
+    this.handleStepChange(0)
+  }
+
+  handleBandSearchText = searchText => this.setState({bandName: searchText})
+
+  handleTicketPriceChange = e => {
+    this.props.handleTicketPriceChange(e)
+    this.handleStepChange(1)
+  }
+
+  handleEventChange = (event, index, value) => {
+    this.props.handleEventChange(event, index, value)
+    this.handleStepChange(2)
+  }
+
+  handleSceneChange = (event, index, value) => {
+    this.props.handleSceneChange(event, index, value)
+    this.handleStepChange(3)
+  }
+
+  handleStartDateChange = date => {
+    this.props.handleStartDateChange(date)
+    this.handleStepChange(4)
+  }
+  handleConcertLengthChange = e => {
+    this.props.handleConcertLengthChange(e)
+    this.handleStepChange(5)
   }
 
   handleNext = () => {
     const {stepIndex} = this.state
     this.setState({
-      stepIndex: stepIndex + 1,
-      finished: stepIndex >= 5,
+      stepIndex: stepIndex + 1
     })
-    stepIndex === 4 && this.props.canSubmit()
+    stepIndex === 5 && this.props.canSubmit()
   }
 
   handlePrev = () => {
@@ -269,15 +312,16 @@ class VerticalLinearStepper extends Component {
   }
 
   renderStepActions(step) {
-    const {stepIndex} = this.state
+    const {stepIndex, stepDisabled} = this.state
     return (
       <div style={{margin: '12px 0'}}>
-        {stepIndex < 5 &&
+        {stepIndex < 6 &&
           <RaisedButton
             label={'Next'}
             disableTouchRipple
             disableFocusRipple
             primary
+            disabled={stepDisabled[stepIndex]}
             onClick={this.handleNext}
             style={{marginRight: 12}}
           />
@@ -298,122 +342,126 @@ class VerticalLinearStepper extends Component {
 
 
   render() {
-    const {stepIndex} = this.state
-    const {
-      bandNames, newConcert, events,
-      handleBandChange, handleTicketPriceChange,
-      handleEventChange, handleSceneChange,
-      handleStartDateChange, handleEndDateChange, limitAcceptedDates
-    } = this.props
+    const {stepIndex, stepDisabled, bandName} = this.state
+    const {bandNames, newConcert, events, limitAcceptedDates} = this.props
+    const {ticketPrice, from} = newConcert
     const {eventKey, eventScenes, scene} = newConcert
     return (
       <div>
         <Stepper activeStep={stepIndex} orientation="vertical">
           <Step>
-            <StepLabel icon={<i className="material-icons">star</i>}>Select a band</StepLabel>
+            <StepLabel icon={<Icon name="star"/>}>Select a band {bandName !== "" && `(${bandName})`}</StepLabel>
             <StepContent>
               <p>Which band you want to book a concert for?</p>
               <AutoComplete
                 filter={AutoComplete.fuzzyFilter}
+                onUpdateInput={this.handleBandSearchText}
+                searchText={bandName}
                 dataSource={bandNames}
                 floatingLabelText="Band"
                 maxSearchResults={7}
-                onNewRequest={handleBandChange}
+                onNewRequest={this.handleBandChange}
               />
               {this.renderStepActions(0)}
             </StepContent>
           </Step>
           <Step>
-            <StepLabel icon={<i className="material-icons">monetization_on</i>}>Set ticket price</StepLabel>
+            <StepLabel icon={<Icon name="monetization_on"/>}>Set ticket price {ticketPrice && `(${ticketPrice} NOK)`}</StepLabel>
             <StepContent>
               <p>What should be the price of a ticket?</p>
               <TextField
                 hintText="(NOK)"
-                onChange={handleTicketPriceChange}
+                onChange={this.handleTicketPriceChange}
                 type="number"
+                min={1}
+                value={ticketPrice ? ticketPrice : ""}
               />
               {this.renderStepActions(1)}
             </StepContent>
           </Step>
           <Step>
-            <StepLabel icon={<i className="material-icons">event</i>}>Select an event</StepLabel>
+            <StepLabel icon={<Icon name="event"/>}>Select an event {eventKey !== "Event" && `(${events[eventKey].name})`}</StepLabel>
             <StepContent>
               <p>On which event do you want the band to play?</p>
-              <DropDownMenu
-                animated={false}
-                value={eventKey}
-                onChange={handleEventChange}>
-                <MenuItem key={0} value={"Event"} primaryText="Event"/>
-                {events && Object.keys(events).map(key => (
-                  <MenuItem
-                    key={key}
-                    value={key}
-                    primaryText={events[key].name}
-                  />))
-                }
-              </DropDownMenu>
+              { !stepDisabled[1] &&
+                <DropDownMenu
+                  value={eventKey}
+                  onChange={this.handleEventChange}>
+                  <MenuItem key={0} value={"Event"} primaryText="Event"/>
+                  {events && Object.keys(events).map(key => (
+                    <MenuItem
+                      key={key}
+                      value={key}
+                      primaryText={events[key].name}
+                    />))
+                  }
+                </DropDownMenu>
+              }
               {this.renderStepActions(2)}
             </StepContent>
           </Step>
           <Step>
-            <StepLabel icon={<i className="material-icons">account_balance</i>}>Select a scene</StepLabel>
+            <StepLabel icon={<Icon name="account_balance"/>}>Select a scene {scene !== "Scene" && `(${eventScenes[scene].name})`}</StepLabel>
             <StepContent>
               <p>On which scene do you want the band to play?</p>
-              <DropDownMenu
-                animated={false}
-                value={scene}
-                onChange={handleSceneChange}>
-                <MenuItem key={0} value={"Scene"} primaryText="Scene"/>
-                {eventScenes && Object.keys(eventScenes).map(key => (
-                  <MenuItem
-                    key={key}
-                    value={key}
-                    primaryText={eventScenes[key].name}
-                  />))
-                }
-              </DropDownMenu>
+              {!stepDisabled[2] &&
+                <DropDownMenu
+                  value={scene}
+                  onChange={this.handleSceneChange}>
+                  <MenuItem key={0} value={"Scene"} primaryText="Scene"/>
+                  {eventScenes && Object.keys(eventScenes).map(key => (
+                    <MenuItem
+                      key={key}
+                      value={key}
+                      primaryText={eventScenes[key].name}
+                    />))
+                  }
+                </DropDownMenu>
+              }
               {this.renderStepActions(3)}
             </StepContent>
           </Step>
           <Step>
-            <StepLabel icon={<i className="material-icons">date_range</i>}>Set concert dates</StepLabel>
+            <StepLabel icon={<Icon name="date_range"/>}>Set start date</StepLabel>
             <StepContent>
-              <p>Please specify when should the band play.</p>
+              <p>Please specify when should the band start.</p>
               <label htmlFor="start-date">Start date: </label>
-              <DateTimePicker
-                id="start-date"
-                format='YYYY-MM-DD hh:mm'
-                hintText="Start date"
-                minutesStep={5}
-                clearIcon={null}
-                onChange={handleStartDateChange}
-                shouldDisableDate={limitAcceptedDates}
-              />
-              <label htmlFor="end-date">End date: </label>
-              <DateTimePicker
-                id="end-date"
-                format='YYYY-MM-DD hh:mm'
-                hintText="End date"
-                minutesStep={5}
-                clearIcon={null}
-                onChange={handleEndDateChange}
-                shouldDisableDate={limitAcceptedDates}
-              />
-              {/* <TextField
-
-                hintText="Concert length (hours)"
-                type="number"
-                min={0}
-                onChange={handleEndDateChange}
-              /> */}
+              {!stepDisabled[3] &&
+                <DateTimePicker
+                  id="start-date"
+                  format='YYYY-MM-DD hh:mm'
+                  hintText="Start date"
+                  autoOk
+                  defaultTime={new Date(events[eventKey].from)}
+                  value={from ? new Date(from) : new Date(events[eventKey].from)}
+                  minutesStep={30}
+                  onChange={this.handleStartDateChange}
+                  shouldDisableDate={limitAcceptedDates}/>
+              }
               {this.renderStepActions(4)}
             </StepContent>
           </Step>
           <Step>
-            <StepLabel icon={<i className="material-icons">done_all</i>}>Almost done...</StepLabel>
+            <StepLabel icon={<Icon name="timelapse"/>}>Concert length</StepLabel>
+            <StepContent>
+              <p>Please specify the length of the concert</p>
+              {!stepDisabled[4] &&
+                <TextField
+                  id="concert-length"
+                  hintText="(hours)"
+                  type="number"
+                  min={1}
+                  onChange={this.handleConcertLengthChange}
+                />
+              }
+              {this.renderStepActions(5)}
+            </StepContent>
+          </Step>
+          <Step>
+            <StepLabel icon={<Icon name="done_all"/>}>Almost done...</StepLabel>
             <StepContent>
               <p>Please send your booking request to the Booking Boss for approval.</p>
-              {this.renderStepActions(5)}
+              {this.renderStepActions(6)}
             </StepContent>
           </Step>
         </Stepper>
