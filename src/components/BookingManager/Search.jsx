@@ -18,33 +18,40 @@ export default class Search extends Component{
   constructor(props) {
     super(props)
     this.state = {
-      genre: "All genres",
-      bands: this.props.bands,
       input: "",
-      concerts: this.props.concerts,
-      bandsToOutput : [],
-      genres: ["All Genres", "Pop", "Rock", "Electric", "Rap", "RnB"]
+      genre: "All genres",
+      bands: null,
+      concerts: null,
+      bandsToOutput : null,
+      genres: ["All genres", "Pop", "Rock", "Electric", "Rap", "RnB"]
     }
   }
 
   componentWillReceiveProps({bands, concerts}) {
-    let bandsToOutput = Object.keys(bands).map(band => band)
-    this.setState({bands, bandsToOutput, concerts})
+    if (bands && concerts) {
+      let bandsToOutput = Object.keys(bands).map(band => band)
+      this.setState({bands, bandsToOutput, concerts})
+    }
+    else {
+      this.setState({
+        bands,
+        bandsToOutput: null,
+        concerts
+      })
+    }
   }
 
 
   //Search for band containing strings in input and update bandsToOutput state
-  searchForBand = (inputIn, genreIn) => {
+  searchForBand = () => {
     let {bands, genres, genre, input} = this.state
-    if(inputIn !== null){
-      input = inputIn
-    }
-    if(genreIn !== null){
-      genre = genreIn
-    }
     let bandsToOutput = Object.keys(bands).map(band => band)
-    .filter(bandKey => bands[bandKey].name.toLowerCase().includes(input))
-    if(genre !== "All genres"){
+
+    if (input !== "") {
+      bandsToOutput = bandsToOutput.filter(bandKey => bands[bandKey].name.toLowerCase().includes(input))
+    }
+
+    if (genre !== genres[0]){
       bandsToOutput = bandsToOutput.filter(bandKey => genre === bands[bandKey].genre)
     }
     this.setState({bandsToOutput})
@@ -52,16 +59,13 @@ export default class Search extends Component{
 
 //Handle input from search
   handleInputChange = e => {
-      const input = e.target.value.toLowerCase()
-      this.setState({input})
-      this.searchForBand(input, null)
-
+    const input = e.target.value.toLowerCase()
+    this.setState({input}, () => this.searchForBand())
   }
 
   //onChange genre dropdown list
   handleGenreChange = (event, index, value) => {
-    this.setState({genre:value})
-    this.searchForBand(null, value)
+    this.setState({genre:value}, () => this.searchForBand())
   }
 
    render(){
@@ -85,10 +89,10 @@ export default class Search extends Component{
            </ToolbarGroup>
          </Toolbar>
          <div className="search">
-           { bands && bandsToOutput.length > 0 ?
+           {bands && concerts ?
              bandsToOutput.map(key => (<BandSearchResult key={key} concerts={concerts} band={bands[key]}/>)) :
-             <Loading/>
-           }
+             <Loading/>}
+           {bandsToOutput && !bandsToOutput.length && <NoResult/>}
          </div>
        </div>
      )}

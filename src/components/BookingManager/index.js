@@ -14,7 +14,7 @@ export default class BookingManager extends Component {
       events: {},
       scenes: {},
       concerts: {},
-      bands: {},
+      bands: null,
       openedMenuItem: "search"
     }
   }
