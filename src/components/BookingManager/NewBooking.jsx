@@ -10,8 +10,8 @@ import DateTimePicker from 'material-ui-datetimepicker'
 import MenuItem from 'material-ui/MenuItem'
 import DropDownMenu from 'material-ui/DropDownMenu'
 import {Step, StepLabel, Stepper, StepContent} from 'material-ui/Stepper'
-
 import firebase from 'firebase'
+import {Icon} from '../../utils'
 
 
 // newConcert Object collects the information required

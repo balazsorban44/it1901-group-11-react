@@ -19,6 +19,29 @@ export const parseTime = (...date) => dateParser(11, 16, ...date)
 
 export const capitalize = s => (s.charAt(0).toUpperCase() + s.slice(1)).replace(/([a-z])([A-Z][a-z])/g, "$1 $2")
 
-export const Loading = () => <div className="loading"><CircularProgress/></div>
+export const Loading = () => (
+  <div style={{
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    minHeight: "70vh",
+  }}><CircularProgress/></div>
+)
 
-export const Icon =({name}) => <FontIcon style={{color: "grey"}} className="material-icons">{name}</FontIcon>
+export const Icon =({name}) => <FontIcon style={{color: "grey", margin: "0 .5em"}} className="material-icons">{name}</FontIcon>
+
+export const NoResult = () => (
+  <div style={{
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    minHeight: "70vh",
+  }}>
+    <div style={{display: "flex", alignItems: "center"}}>
+      <p style={{color:"grey"}}>
+        This is not the search result you are looking for.
+      </p>
+      <Icon name="sentiment_dissatisfied"/>
+    </div>
+  </div>
+)

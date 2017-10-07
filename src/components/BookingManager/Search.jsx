@@ -11,7 +11,7 @@ import { Table, TableBody, TableHeader,
   TableRowColumn
 } from 'material-ui/Table'
 
-import {parseDate, Loading} from '../../utils'
+import {parseDate, Loading, NoResult} from '../../utils'
 
 
 export default class Search extends Component{
