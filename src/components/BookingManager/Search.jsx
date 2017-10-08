@@ -12,7 +12,7 @@ import { Table, TableBody, TableHeader,
   TableRowColumn
 } from 'material-ui/Table'
 
-import {parseDate, parseNumber, Loading, NoResult} from '../../utils'
+import {parseDate, parseNumber, parsePrice, Loading, NoResult} from '../../utils'
 
 
 export default class Search extends Component{
@@ -127,7 +127,7 @@ const {name, genre, albumSales, monthlyListeners} = band
                 <TableHeaderColumn>Total income</TableHeaderColumn>
               </TableRow>
             </TableHeader>
-            <TableBody displayRowCheckbox={false}>
+            <TableBody displayRowCheckbox={false} showRowHover>
               {concerts &&
                 Object.keys(band.concerts).map(key => {
                   const concert = concerts[band.concerts[key]]
@@ -137,7 +137,7 @@ const {name, genre, albumSales, monthlyListeners} = band
                       <TableRow key={key}>
                         <TableRowColumn>{parseDate(from)}</TableRowColumn>
                         <TableRowColumn>{parseNumber(participants)}</TableRowColumn>
-                        <TableRowColumn>{(participants*ticketPrice).toLocaleString('no-NO', {style: 'currency', currency: 'NOK'})}</TableRowColumn>
+                        <TableRowColumn>{parsePrice(participants*ticketPrice)}</TableRowColumn>
                       </TableRow>
                     )
                   } else return null
