@@ -15,7 +15,7 @@ const EventInfo = ({staff, event: {from, to, location, name}}) => {
         <List>
           <InfoSnippet icon="event" subText="Dates">{`${parseDate(from)} - ${parseDate(to)}`}</InfoSnippet>
           <InfoSnippet icon="map" subText="Location">{location}</InfoSnippet>
-          <InfoSnippet icon="people" disableTitle disableHover alignSubText="center" subText="Staff members">
+          <InfoSnippet icon="people" orientation="portrait" disableTitle disableHover alignSubText="center" subText="Staff members">
             <StaffList {...{staff}}/>
           </InfoSnippet>
         </List>

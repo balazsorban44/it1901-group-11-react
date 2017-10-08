@@ -11,7 +11,7 @@ import MenuItem from 'material-ui/MenuItem'
 import DropDownMenu from 'material-ui/DropDownMenu'
 import {Step, StepLabel, Stepper, StepContent} from 'material-ui/Stepper'
 import firebase from 'firebase'
-import {Icon} from '../../utils'
+import {Icon, parsePrice} from '../../utils'
 
 
 // newConcert Object collects the information required
@@ -79,7 +79,7 @@ export default class NewBooking extends Component {
       to
     }
 
-    // REVIEW: Only update concerts when accepted by booking boss. (Move this method to Booking Boss) 
+    // REVIEW: Only update concerts when accepted by booking boss. (Move this method to Booking Boss)
     const sceneRef = scenesRef.child(`${scene}/concerts`)
     sceneRef.once('value').then(snap => {
       let updatedScenes = snap.val()
@@ -366,7 +366,7 @@ class VerticalLinearStepper extends Component {
             </StepContent>
           </Step>
           <Step>
-            <StepLabel icon={<Icon name="monetization_on"/>}>Set ticket price {ticketPrice && `(${ticketPrice} NOK)`}</StepLabel>
+            <StepLabel icon={<Icon name="monetization_on"/>}>Set ticket price {ticketPrice && `(${parsePrice(ticketPrice)})`}</StepLabel>
             <StepContent>
               <p>What should be the price of a ticket?</p>
               <TextField

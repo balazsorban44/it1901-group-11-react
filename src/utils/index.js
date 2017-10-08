@@ -57,12 +57,13 @@ export const NoResult = () => (
   </div>
 )
 
-export const InfoSnippet = ({icon, children, subText, disableTitle, disableHover, alignSubText}) => (
+export const InfoSnippet = ({icon, children, subText, disableTitle, disableHover, alignSubText, orientation}) => (
   <ListItem disabled={disableHover} title={disableTitle ? "" : subText}>
-    <div className="info-snippet"
+    <div
       style={{
         display: "flex",
-        alignItems: "center"
+        alignItems: "center",
+        flexDirection: orientation === "portrait" && window.innerWidth < 768 && "column"
       }}
     >
       <Icon

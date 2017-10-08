@@ -12,7 +12,7 @@ import { Table, TableBody, TableHeader,
   TableRowColumn
 } from 'material-ui/Table'
 
-import {parseDate, Loading, NoResult} from '../../utils'
+import {parseDate, parseNumber, Loading, NoResult} from '../../utils'
 
 
 export default class Search extends Component{
@@ -108,17 +108,23 @@ const {name, genre, albumSales, monthlyListeners} = band
       <CardText expandable>
         <List>
           <InfoSnippet icon="fingerprint" subText="Genre">{genre}</InfoSnippet>
-          <InfoSnippet icon="album" subText="Album sales">{albumSales}</InfoSnippet>
-          <InfoSnippet icon="music_note" subText="Monthly listeners">{monthlyListeners}</InfoSnippet>
+          <InfoSnippet icon="album" subText="Album sales">{parseNumber(albumSales)}</InfoSnippet>
+          <InfoSnippet icon="music_note" subText="Monthly listeners">{parseNumber(monthlyListeners)}</InfoSnippet>
         </List>
-        {/* <h6><Icon title="Previous concerts" name="history"/></h6> */}
-        <InfoSnippet icon="history" disableTitle disableHover alignSubText="center" subText="Previous concerts">
+        <InfoSnippet
+          icon="history"
+          orientation="portrait"
+          disableTitle
+          disableHover
+          alignSubText="center"
+          subText="Previous concerts"
+        >
           <Table>
             <TableHeader adjustForCheckbox={false} displaySelectAll={false}>
               <TableRow>
                 <TableHeaderColumn>Concert date</TableHeaderColumn>
                 <TableHeaderColumn>Tickets sold</TableHeaderColumn>
-                <TableHeaderColumn>Total income (NOK)</TableHeaderColumn>
+                <TableHeaderColumn>Total income</TableHeaderColumn>
               </TableRow>
             </TableHeader>
             <TableBody displayRowCheckbox={false}>
@@ -130,8 +136,8 @@ const {name, genre, albumSales, monthlyListeners} = band
                     return (
                       <TableRow key={key}>
                         <TableRowColumn>{parseDate(from)}</TableRowColumn>
-                        <TableRowColumn>{participants}</TableRowColumn>
-                        <TableRowColumn>{participants*ticketPrice}</TableRowColumn>
+                        <TableRowColumn>{parseNumber(participants)}</TableRowColumn>
+                        <TableRowColumn>{(participants*ticketPrice).toLocaleString('no-NO', {style: 'currency', currency: 'NOK'})}</TableRowColumn>
                       </TableRow>
                     )
                   } else return null

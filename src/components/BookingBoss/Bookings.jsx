@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import {Tabs, Tab} from 'material-ui/Tabs'
 import RaisedButton from 'material-ui/RaisedButton'
 import firebase from 'firebase'
-import {parseDate, parseTime} from '../../utils'
+import {parseDate, parseTime, parsePrice, Loading} from '../../utils'
 
 export default class Bookings extends Component {
 
@@ -12,7 +12,10 @@ export default class Bookings extends Component {
     return (
       <Tabs>
         <Tab label={`New(${unhandledCounter})`}>
-          <BookingTab bookings={unhandledBookings}/>
+          {unhandledCounter !== 0 ?
+            <BookingTab bookings={unhandledBookings}/>
+          :
+            <Loading/>}
         </Tab>/>
         <Tab label={`Accepted(${acceptedCounter})`}>
           <BookingTab bookings={acceptedBookings}/>
@@ -67,7 +70,7 @@ export const Booking = ({eventName, bandName, from, ticketPrice, bookingState, c
             {eventName} <br/>
             {parseDate(from)} - {parseTime(from)}
             <br/>
-            {ticketPrice} NOK
+            {parsePrice(ticketPrice)}
           </h5>
         </div>
         <div className="booking-footer mdl-card__actions mdl-card--border">
