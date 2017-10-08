@@ -5,49 +5,25 @@
     justify-content: center
   .band
     margin: 1em
-    padding: 1em
     max-width: 480px
-    min-height: 320px
     width: 90vw
-    display: flex
-    flex-direction: column
-    justify-content: center
-    align-items: center
-  .band
-    h4, h5
-      margin: 0
-      display: flex
-      align-items: center
-    >div
-      margin-top: 1em
-      display: flex
-      flex-direction: column
-      justify-content: center
-      align-items: center
-      >div
-        display: flex
-        align-items: center
 
   .member-list
     display: flex
-    justify-content: center
     flex-wrap: wrap
+    line-height: 1.5
+    font-size: 1em
 
   .technical-requirements
-    >div
-      display: flex
-      justify-content: space-between
-    ul
-      display: flex
-      flex-wrap: wrap
-      justify-content: center
-      margin-top: 1em
+    display: flex
+    flex-wrap: wrap
+    margin-top: 1em
     li
-      margin: .3em
-    form
-      display: flex
-      flex-wrap: wrap
-      justify-content: center
-      align-items: center
-    .add-technical-requirement
-      margin: 1em 1em 0 1em
+      margin: 0 .6em .6em 0
+  .add-technical-requirement
+    margin-left: 1em
+
+  @media (min-width: 768px)
+    .band
+      padding: 1em
+      min-height: 420px

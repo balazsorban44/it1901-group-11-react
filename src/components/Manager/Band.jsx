@@ -2,12 +2,13 @@ import Chip from 'material-ui/Chip'
 import React, { Component } from 'react'
 import firebase from 'firebase'
 
-import {List, ListItem} from 'material-ui/List'
 import Paper from 'material-ui/Paper'
+import Divider from 'material-ui/Divider'
 import RaisedButton from 'material-ui/RaisedButton'
+import FlatButton from 'material-ui/FlatButton'
 import TextField from 'material-ui/TextField'
 
-import {Icon} from '../../utils'
+import {InfoSnippet} from '../../utils'
 
 class Band extends Component{
   constructor(){
@@ -55,32 +56,48 @@ class Band extends Component{
   render(){
     const {name, technicalRequirements, members, genre} = this.props.band
     const bandId = this.props.bandId
+    let bandMembers = []
+    Object.keys(members).forEach(memberKey => {
+      bandMembers.push(members[memberKey])
+    })
+
     return(
       <li>
 
         <Paper className="band">
-          <h4>{name} ({genre})</h4>
-          <div>
-            <Icon title="Band members" name="people"/>
-            <List className="member-list">
-              {Object.keys(members).map(memberKey => (
-                <ListItem key={memberKey}>
-                  {members[memberKey]}
-                </ListItem>
-              ))}
-            </List>
-          </div>
-          <div className="technical-requirements">
-            <div>
-              <Icon title="Technical requirements" name="settings_input_component"/>
-              <RaisedButton
+          <h2>{name}</h2>
+          <Divider/>
+          <InfoSnippet icon="fingerprint" subText="Genre">{genre}</InfoSnippet>
+          <InfoSnippet
+            icon="people"
+            subText="Band members"
+          >
+            <p className="member-list">{bandMembers.join(", ")}</p>
+          </InfoSnippet>
+          <InfoSnippet
+
+            icon="settings_input_component"
+            alignSubText="stretch"
+            subText={
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  flexGrow: 1,
+                  justifyContent: "space-between"
+                }}>
+              <p>Technical requirements</p>
+              <FlatButton
                 label={this.state.editMode ? "Done" : "Edit"}
                 onClick={e => this.toggleEdit(e)}
                 labelPosition="before"
                 primary
               />
-            </div>
-            <ul>
+            </div>}
+            disableTitle
+            disableHover
+          >
+            <ul className="technical-requirements">
               {Object.keys(technicalRequirements).map(reqKey => {
                 return (
                   <li key={reqKey}>
@@ -107,7 +124,7 @@ class Band extends Component{
                 <RaisedButton className="add-technical-requirement" label="Add" primary onClick={e => this.addTechicalRequirement(e, bandId)}/>
               </form>
             }
-          </div>
+          </InfoSnippet>
         </Paper>
       </li>
     )

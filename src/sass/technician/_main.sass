@@ -4,8 +4,8 @@
     align-items: center
     flex-direction: column
   .concert-list-item
-    max-width: 70vw
-    min-width: 70vw
+    max-width: 90vw
+    min-width: 90vw
     margin: 1em
     p
       display: flex
@@ -15,3 +15,11 @@
         margin-right: .5em
     >div
       padding: 2em
+  @media (min-width: 768px)
+      .concert-list
+        flex-direction: row
+        flex-wrap: wrap
+        justify-content: center
+      .concert-list-item
+        max-width: none
+        min-width: 25vw

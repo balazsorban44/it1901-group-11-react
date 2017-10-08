@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 import MenuItem from 'material-ui/MenuItem'
 import TextField from 'material-ui/TextField'
-import {Icon} from '../../utils'
+import {Icon, InfoSnippet} from '../../utils'
 import SelectField from 'material-ui/SelectField'
+import {List} from 'material-ui/List'
 import {Card, CardHeader, CardText} from 'material-ui/Card'
 import {Toolbar, ToolbarGroup} from 'material-ui/Toolbar'
 
@@ -75,7 +76,7 @@ export default class Search extends Component{
          <Toolbar>
            <ToolbarGroup>
              <TextField  fullWidth hintText="Search for band" onChange={this.handleInputChange}/>
-             <Icon name="search"/>
+             <Icon name="search" color="grey"/>
            </ToolbarGroup>
            <ToolbarGroup>
              <SelectField value={genre} onChange={this.handleGenreChange} autoWidth>
@@ -103,40 +104,43 @@ const BandSearchResult = ({band, concerts}) => {
 const {name, genre, albumSales, monthlyListeners} = band
   return (
     <Card className="search-result">
-      <CardHeader title={name} subtitle={genre} actAsExpander showExpandableButton/>
+      <CardHeader title={name} actAsExpander showExpandableButton/>
       <CardText expandable>
-        <h6><Icon title="Album sales" name="album"/> Album sales</h6>
-        <p>{albumSales}</p>
-        <h6><Icon title="Monthly listeners" name="music_note"/> Monthly listeners</h6>
-        <p>{monthlyListeners}</p>
-        <h6><Icon title="Previous concerts" name="history"/> Previous concerts</h6>
-        <Table>
-          <TableHeader adjustForCheckbox={false} displaySelectAll={false}>
-            <TableRow>
-              <TableHeaderColumn>Concert date</TableHeaderColumn>
-              <TableHeaderColumn>Tickets sold</TableHeaderColumn>
-              <TableHeaderColumn>Total income (NOK)</TableHeaderColumn>
-            </TableRow>
-          </TableHeader>
-          <TableBody showRowHover displayRowCheckbox={false}>
-            {concerts &&
-              Object.keys(band.concerts).map(key => {
-                const concert = concerts[band.concerts[key]]
-                if (concert) {
-                  const {from, participants, ticketPrice} = concert
-                  return (
-                    <TableRow key={key}>
-                      <TableRowColumn>{parseDate(from)}</TableRowColumn>
-                      <TableRowColumn>{participants}</TableRowColumn>
-                      <TableRowColumn>{participants*ticketPrice}</TableRowColumn>
-                    </TableRow>
-                  )
-                } else return null
+        <List>
+          <InfoSnippet icon="fingerprint" subText="Genre">{genre}</InfoSnippet>
+          <InfoSnippet icon="album" subText="Album sales">{albumSales}</InfoSnippet>
+          <InfoSnippet icon="music_note" subText="Monthly listeners">{monthlyListeners}</InfoSnippet>
+        </List>
+        {/* <h6><Icon title="Previous concerts" name="history"/></h6> */}
+        <InfoSnippet icon="history" disableTitle disableHover alignSubText="center" subText="Previous concerts">
+          <Table>
+            <TableHeader adjustForCheckbox={false} displaySelectAll={false}>
+              <TableRow>
+                <TableHeaderColumn>Concert date</TableHeaderColumn>
+                <TableHeaderColumn>Tickets sold</TableHeaderColumn>
+                <TableHeaderColumn>Total income (NOK)</TableHeaderColumn>
+              </TableRow>
+            </TableHeader>
+            <TableBody displayRowCheckbox={false}>
+              {concerts &&
+                Object.keys(band.concerts).map(key => {
+                  const concert = concerts[band.concerts[key]]
+                  if (concert) {
+                    const {from, participants, ticketPrice} = concert
+                    return (
+                      <TableRow key={key}>
+                        <TableRowColumn>{parseDate(from)}</TableRowColumn>
+                        <TableRowColumn>{participants}</TableRowColumn>
+                        <TableRowColumn>{participants*ticketPrice}</TableRowColumn>
+                      </TableRow>
+                    )
+                  } else return null
 
-              })
-            }
-          </TableBody>
-        </Table>
+                })
+              }
+            </TableBody>
+          </Table>
+        </InfoSnippet>
       </CardText>
     </Card>
   )

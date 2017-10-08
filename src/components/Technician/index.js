@@ -3,7 +3,8 @@ import firebase from 'firebase'
 import Drawer from 'material-ui/Drawer'
 import Paper from 'material-ui/Paper'
 import MenuItem from 'material-ui/MenuItem'
-import {parseDate, parseTime, Loading, Icon} from '../../utils'
+import {List} from 'material-ui/List'
+import {parseDate, parseTime, Loading, InfoSnippet} from '../../utils'
 
 // 13.  Som lyd eller lystekniker skal jeg kunne få opp en oversikt over konserter jeg skal jobbe med.
 export default class Technician extends Component {
@@ -127,14 +128,14 @@ const ConcertsOverview = ({concerts}) => {
     concertBandsList.push(
       <li key={key} className="concert-list-item">
         <Paper>
-
           <h2>{bandName}</h2>
-
-          <p><Icon title="Concert dates" name="date_range"/>{parseDate(from)} - {parseDate(to)}</p>
-          <p><Icon title="Concert start/end" name="access_time"/>{parseTime(from)} - {parseTime(to)}</p>
-          <p><Icon title="Band's technical requirements" name="settings_input_component"/> Technical requirements: {technicalRequirements}</p>
-          <p><Icon title="Scene" name="account_balance"/> Scene: {sceneName}</p>
-          <p><Icon title="Concert location" name="place"/> Location: {location}</p>
+          <List>
+            <InfoSnippet icon="date_range" subText="Date">{parseDate(from)}</InfoSnippet>
+            <InfoSnippet icon="access_time" subText="Start/end">{parseTime(from)} - {parseTime(to)}</InfoSnippet>
+            <InfoSnippet icon="settings_input_component" subText="Technical requirements">{technicalRequirements}</InfoSnippet>
+            <InfoSnippet icon="account_balance" subText="Scene">{sceneName}</InfoSnippet>
+            <InfoSnippet icon="place" subText="Location">{location}</InfoSnippet>
+          </List>
         </Paper>
       </li>
     )

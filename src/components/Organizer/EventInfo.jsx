@@ -2,40 +2,29 @@ import React from 'react'
 import Avatar from 'material-ui/Avatar'
 import {List, ListItem} from 'material-ui/List'
 import Paper from 'material-ui/Paper'
-import {capitalize, parseDate, Icon} from '../../utils'
+import {capitalize, parseDate, Icon, InfoSnippet} from '../../utils'
 
 const profiles = require.context('../../img/profiles')
 
 const EventInfo = ({staff, event: {from, to, location, name}}) => {
   return (
     <div>
-      <h4><Icon title="Event info" name="info"/></h4>
+      <h4><Icon title="Event info" name="info" color="grey"/></h4>
       <Paper  className="event-info">
-        <div className="event-blob">
-          <Name {...{name}}/>
-          <Dates {...{from, to}}/>
-          <Location {...{location}}/>
-        </div>
-        <StaffList staff={staff}/>
+        <h2>{name}</h2>
+        <List>
+          <InfoSnippet icon="event" subText="Dates">{`${parseDate(from)} - ${parseDate(to)}`}</InfoSnippet>
+          <InfoSnippet icon="map" subText="Location">{location}</InfoSnippet>
+          <InfoSnippet icon="people" disableTitle disableHover alignSubText="center" subText="Staff members">
+            <StaffList {...{staff}}/>
+          </InfoSnippet>
+        </List>
       </Paper>
     </div>
   )
 }
 
 export default EventInfo
-
-const Name = ({name}) => <h6>{name}</h6>
-const Dates = ({from, to}) => (
-  <div>
-    <Icon title="Event dates" name="event"/>
-    <p>{parseDate(from)} - {parseDate(to)}</p>
-  </div>)
-
-const Location = ({location}) => (
-  <div>
-    <Icon title="Event's location" name="map"/>
-    <p>{location}</p>
-  </div>)
 
 const StaffList = ({staff}) => {
   let staffList = []
@@ -53,7 +42,7 @@ const StaffList = ({staff}) => {
   })
   return (
     <div>
-      <h5><Icon title="Staff members" name="people"/></h5>
+      {/* <h5><Icon title="Staff members" name="people"/></h5> */}
       <List className="staff-list">
         {staffList}
       </List>
