@@ -8,7 +8,7 @@ const dateParser = (from, to,...date) => new Date(...date).toISOString().slice(f
 // Parse a date. Returns "1970-01-01"
 export const parseDate = (...date) => {
   try {
-     return dateParser(0, 10, ...date)
+     return new Date(...date).toString('dd. MMM yyyy')
   } catch(e) {
     console.log("Invalid date!");
     console.error(e)
@@ -17,6 +17,10 @@ export const parseDate = (...date) => {
 }
 // Parse a time. Returns 00:00
 export const parseTime = (...date) => dateParser(11, 16, ...date)
+
+export const parseNumber = num => num.toLocaleString()
+
+export const parsePrice = price => price.toLocaleString('no-NO', {style: "currency", currency: "NOK"})
 
 export const capitalize = s => (s.charAt(0).toUpperCase() + s.slice(1)).replace(/([a-z])([A-Z][a-z])/g, "$1 $2")
 
