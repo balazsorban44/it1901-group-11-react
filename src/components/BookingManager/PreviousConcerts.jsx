@@ -4,7 +4,6 @@ import MenuItem from 'material-ui/MenuItem'
 import {Card, CardHeader, CardText} from 'material-ui/Card'
 import {Toolbar, ToolbarGroup} from 'material-ui/Toolbar'
 import {parseDate, Icon} from '../../utils'
-import index from './index'
 
 export default class PreviousConcerts extends Component {
   constructor(props) {
