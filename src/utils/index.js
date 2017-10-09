@@ -4,20 +4,10 @@ import FontIcon from 'material-ui/FontIcon'
 import {ListItem} from 'material-ui/List'
 import 'datejs'
 
-// Parse any date into an ISOString and returns a slice of it. For example: "1970-01-01T00:00:00.000Z"
-const dateParser = (from, to,...date) => new Date(...date).toISOString().slice(from, to)
-// Parse a date. Returns "1970-01-01"
-export const parseDate = (...date) => {
-  try {
-     return new Date(...date).toString('dd. MMM yyyy')
-  } catch(e) {
-    console.log("Invalid date!");
-    console.error(e)
-    return dateParser(Date.now())
-  }
-}
-// Parse a time. Returns 00:00
-export const parseTime = (...date) => dateParser(11, 16, ...date)
+// Parse a date. Returns "01. Jan 1970"
+export const parseDate = (...date) => new Date(...date).toString('dd. MMM yyyy')
+// Parse a time. Returns "00:00"
+export const parseTime = (...date) => new Date(...date).toString('HH:mm')
 
 export const parseNumber = num => num.toLocaleString()
 

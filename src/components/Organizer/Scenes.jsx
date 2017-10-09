@@ -7,6 +7,7 @@ import { Table, TableBody, TableHeader,
 
 import {parseDate, parseTime, Icon} from '../../utils'
 
+
 const Scene = ({name, bands, eventStart}) => (
     <li className="scene">
       <Paper>
@@ -25,8 +26,8 @@ const Scene = ({name, bands, eventStart}) => (
           >
             {bands.map(band => {
               const {name, from, to} = band
-              const startDay = 1 + parseInt(parseDate(from).slice(8), 10) - parseInt(parseDate(eventStart).slice(8), 10)
-              const endDay = 1 + parseInt(parseDate(to).slice(8), 10) - parseInt(parseDate(eventStart).slice(8), 10)
+              const startDay = 1 + new Date(from).getDate() - new Date(eventStart).getDate()
+              const endDay = 1 +  new Date(to).getDate() - new Date(eventStart).getDate()
               return (
                 <TableRow key={name} className="band">
                   <TableRowColumn>
