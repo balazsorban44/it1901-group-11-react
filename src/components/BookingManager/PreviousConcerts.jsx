@@ -60,7 +60,7 @@ export default class PreviousConcerts extends Component {
             .filter(concert => concerts[concert].eventName === eventValue || eventValue === "All events")
             .filter(concert => concerts[concert].genre === genres[genreValue] || genreValue === 1)
             .map(memberKey => <ConcertSearchResult key={memberKey} bands={bands} concert={concerts[memberKey]}/>)
-          })}
+          }
         </div>
       </div>
      )

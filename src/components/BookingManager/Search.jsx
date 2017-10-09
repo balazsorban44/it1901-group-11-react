@@ -24,7 +24,6 @@ export default class Search extends Component{
       bands: null,
       concerts: null,
       bandsToOutput : null,
-      genres: ["All genres", "Pop", "Rock", "Electric", "Rap", "RnB"]
     }
   }
 
@@ -45,14 +44,9 @@ export default class Search extends Component{
 
   //Search for band containing strings in input and update bandsToOutput state
   searchForBand = () => {
-    let {bands, genres, genre, input} = this.state
-    let bandsToOutput = Object.keys(bands).map(band => band)
-
-    if (input !== "") {
-      bandsToOutput = bandsToOutput.filter(bandKey => bands[bandKey].name.toLowerCase().includes(input))
-    }
-
-    if (genre !== genres[0]){
+    let {bands, genre, input} = this.state
+    let bandsToOutput = Object.keys(bands).filter(bandKey => bands[bandKey].name.toLowerCase().includes(input))
+    if (genre !== "All genres"){
       bandsToOutput = bandsToOutput.filter(bandKey => genre === bands[bandKey].genre)
     }
     this.setState({bandsToOutput})
