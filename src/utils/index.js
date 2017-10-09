@@ -2,6 +2,7 @@ import React from 'react'
 import CircularProgress from 'material-ui/CircularProgress'
 import FontIcon from 'material-ui/FontIcon'
 import {ListItem} from 'material-ui/List'
+import 'datejs'
 
 // Parse any date into an ISOString and returns a slice of it. For example: "1970-01-01T00:00:00.000Z"
 const dateParser = (from, to,...date) => new Date(...date).toISOString().slice(from, to)

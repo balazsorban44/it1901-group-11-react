@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "datejs": "^1.0.0-rc3",
     "firebase": "^4.5.0",
     "material-ui": "^0.19.4",
     "material-ui-datetimepicker": "0.1.9",
