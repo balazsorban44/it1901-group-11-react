@@ -3,6 +3,7 @@ import MenuItem from 'material-ui/MenuItem'
 import TextField from 'material-ui/TextField'
 import {Icon, InfoSnippet} from '../../utils'
 import SelectField from 'material-ui/SelectField'
+import Chip from 'material-ui/Chip'
 import {List} from 'material-ui/List'
 import {Card, CardHeader, CardText} from 'material-ui/Card'
 import {Toolbar, ToolbarGroup} from 'material-ui/Toolbar'
@@ -95,15 +96,23 @@ export default class Search extends Component{
 
 //Card for every band in search results
 const BandSearchResult = ({band, concerts}) => {
-const {name, genre, albumSales, monthlyListeners} = band
+const {name, genre, albumSales, monthlyListeners, technicalRequirements} = band
   return (
     <Card className="search-result">
-      <CardHeader title={name} actAsExpander showExpandableButton/>
+      <CardHeader title={<h2 style={{lineHeight: 1.2}}>{name}</h2>} actAsExpander showExpandableButton/>
       <CardText expandable>
         <List>
-          <InfoSnippet icon="fingerprint" subText="Genre">{genre}</InfoSnippet>
           <InfoSnippet icon="album" subText="Album sales">{parseNumber(albumSales)}</InfoSnippet>
           <InfoSnippet icon="music_note" subText="Monthly listeners">{parseNumber(monthlyListeners)}</InfoSnippet>
+          <InfoSnippet icon="fingerprint" subText="Genre">{genre}</InfoSnippet>
+          <InfoSnippet
+            icon="settings_input_component"
+            subText="Technical requirements"
+          >
+            <div style={{display: "flex"}}>
+              {technicalRequirements.map(technicalRequirement => <Chip style={{margin: "0 .5em .5em 0"}} key={technicalRequirement}>{technicalRequirement}</Chip>)}
+            </div>
+          </InfoSnippet>
         </List>
         <InfoSnippet
           icon="history"

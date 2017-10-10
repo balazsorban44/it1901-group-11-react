@@ -22,7 +22,7 @@ const newConcert = {
   eventScenes: null,
   scene: "Scene",
   band: null,
-  ticketPrice: null,
+  bandFee: null,
   from: null,
   to: null
 }
@@ -63,7 +63,7 @@ export default class NewBooking extends Component {
     const db = firebase.database().ref()
     const scenesRef = db.child('scenes')
     const concertsRef = db.child('concerts')
-    const {scene, from, to, band, ticketPrice} = this.state.newConcert
+    const {scene, from, to, band, bandFee} = this.state.newConcert
     const newConcertRef = concertsRef.push()
     const newConcertKey = newConcertRef.key
     const newConcert = {
@@ -74,8 +74,9 @@ export default class NewBooking extends Component {
       // REVIEW: What to do with the participants?
       "participants" : 0,
       // REVIEW: Staff for concerts?
+      "ticketPrice": 0,
       "staff" : [""],
-      ticketPrice,
+      bandFee,
       to
     }
 
@@ -91,12 +92,12 @@ export default class NewBooking extends Component {
     })
   }
 
-  handleTicketPriceChange = e => {
-    const ticketPrice = parseInt(e.target.value, 10)
+  handleBandFeeChange = e => {
+    const bandFee = parseInt(e.target.value, 10)
     this.setState(({newConcert}) => ({
       newConcert: {
         ...newConcert,
-        ticketPrice
+        bandFee
       }
     }))
   }
@@ -234,7 +235,7 @@ export default class NewBooking extends Component {
           <VerticalLinearStepper
             {...{bandNames, newConcert, events}}
             handleBandChange={this.handleBandChange}
-            handleTicketPriceChange={this.handleTicketPriceChange}
+            handleBandFeeChange={this.handleBandFeeChange}
             handleEventChange={this.handleEventChange}
             handleSceneChange={this.handleSceneChange}
             handleStartDateChange={this.handleStartDateChange}
@@ -272,8 +273,8 @@ class VerticalLinearStepper extends Component {
 
   handleBandSearchText = searchText => this.setState({bandName: searchText})
 
-  handleTicketPriceChange = e => {
-    this.props.handleTicketPriceChange(e)
+  handleBandFeeChange = e => {
+    this.props.handleBandFeeChange(e)
     this.handleStepChange(1)
   }
 
@@ -344,7 +345,7 @@ class VerticalLinearStepper extends Component {
   render() {
     const {stepIndex, stepDisabled, bandName} = this.state
     const {bandNames, newConcert, events, limitAcceptedDates} = this.props
-    const {ticketPrice, from} = newConcert
+    const {bandFee, from} = newConcert
     const {eventKey, eventScenes, scene} = newConcert
     return (
       <div>
@@ -366,15 +367,15 @@ class VerticalLinearStepper extends Component {
             </StepContent>
           </Step>
           <Step>
-            <StepLabel icon={<Icon name="monetization_on"/>}>Set ticket price {ticketPrice && `(${parsePrice(ticketPrice)})`}</StepLabel>
+            <StepLabel icon={<Icon name="monetization_on"/>}>Set the band fee {bandFee && `(${parsePrice(bandFee)})`}</StepLabel>
             <StepContent>
-              <p>What should be the price of a ticket?</p>
+              <p>How much money the band will earn on the concert?</p>
               <TextField
                 hintText="(NOK)"
-                onChange={this.handleTicketPriceChange}
+                onChange={this.handleBandFeeChange}
                 type="number"
                 min={1}
-                value={ticketPrice ? ticketPrice : ""}
+                value={bandFee ? bandFee : ""}
               />
               {this.renderStepActions(1)}
             </StepContent>
