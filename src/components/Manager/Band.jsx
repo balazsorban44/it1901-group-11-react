@@ -17,11 +17,6 @@ class Band extends Component{
       requirements: [""],
       editMode: false
     }
-    this.styles = {
-      chip: {
-        margin: 'auto'
-      }
-    }
   }
 
   handleInput(e){
@@ -63,17 +58,16 @@ class Band extends Component{
 
     return(
       <li>
-
         <Paper className="band">
           <h2>{name}</h2>
           <Divider/>
-          <InfoSnippet icon="fingerprint" subText="Genre">{genre}</InfoSnippet>
           <InfoSnippet
             icon="people"
             subText="Band members"
           >
             <p className="member-list">{bandMembers.join(", ")}</p>
           </InfoSnippet>
+          <InfoSnippet icon="fingerprint" subText="Genre">{genre}</InfoSnippet>
           <InfoSnippet
 
             icon="settings_input_component"
@@ -105,7 +99,6 @@ class Band extends Component{
                       <Chip
                         key={reqKey}
                         onRequestDelete={this.state.editMode ? () => this.removeTechnicalRequirement(bandId, reqKey) : null}
-                        style={this.styles.chip}
                       >
                         {technicalRequirements[reqKey]}</Chip>
                     }

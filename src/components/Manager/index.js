@@ -3,6 +3,7 @@ import Drawer from 'material-ui/Drawer'
 import MenuItem from 'material-ui/MenuItem'
 import firebase from 'firebase'
 import Band from './Band'
+import {Loading} from '../../utils'
 
 export default class Manager extends Component {
 
@@ -51,8 +52,11 @@ export default class Manager extends Component {
 
 const BandView = ({bands}) => (
   <ul className="band-list-manager">
-    {Object.keys(bands).map(bandKey => (
-      <Band key={bandKey} band={bands[bandKey]} bandId={bandKey}/>)
-    )}
+    {Object.keys(bands).length !== 0 ?
+      Object.keys(bands).map(bandKey => (
+        <Band key={bandKey} band={bands[bandKey]} bandId={bandKey}/>)
+      ):
+      <Loading/>
+      }
   </ul>
 )
