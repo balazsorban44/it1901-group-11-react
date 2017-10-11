@@ -8,7 +8,7 @@
     position: fixed
     right: 0
     z-index: 1000
-    
+
 .previous-concerts
   flex-direction: column
 
@@ -30,7 +30,17 @@
 .search-result
   margin: 1em 0
 
+.band-search-toolbar
+  flex-direction: column
+  padding: 1em 0 !important
+  height: auto !important
+  align-items: center
 
+@media (min-width: 640px)
+  .band-search-toolbar
+    flex-direction: row
+    padding: 1em 2em !important
+    height: 56px !important
 
 @media (min-width: 768px)
   .search
