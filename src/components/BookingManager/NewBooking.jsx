@@ -116,31 +116,11 @@ export default class NewBooking extends Component {
     const {from} = this.state.newConcert
     const to = from + hours
     if (from < to) {
-      console.log("From: " + new Date(from))
-      console.log("To: " + new Date(to))
       this.setState(({newConcert}) => ({
         newConcert: {...newConcert, to}
       }))
     }
   }
-
-
-  // // handleConcertLengthChange() takes int as an input, which is the length
-  // // of a concert. It is added to the from date of the concert, and
-  // // then sets it to this.state.newConcert.to as a UNIX timestamp.
-  // handleConcertLengthChange = e => {
-  //   const hours = parseInt(e.target.value, 10)
-  //   let {from} = this.state.newConcert
-  //   from = new Date(from)
-  //   const to = from.setHours(from.getHours() + hours)
-  //   this.setState(({newConcert}) => ({
-  //     newConcert: {
-  //       ...newConcert,
-  //       to
-  //     }
-  //   }))
-  // }
-
 
   handleBandChange = (searchText, index) => {
     const {bands} = this.state
