@@ -19,27 +19,25 @@ import {parseDate, parseNumber, parsePrice, Loading, NoResult} from '../../utils
 export default class Search extends Component{
   constructor(props) {
     super(props)
+    const {bands, concerts} = props
     this.state = {
       input: "",
       genre: "All genres",
-      bands: null,
-      concerts: null,
-      bandsToOutput : null,
+      bands,
+      concerts,
+      bandsToOutput : bands && Object.keys(bands),
     }
   }
 
   componentWillReceiveProps({bands, concerts}) {
     if (bands && concerts) {
-      let bandsToOutput = Object.keys(bands).map(band => band)
-      this.setState({bands, bandsToOutput, concerts})
-    }
-    else {
       this.setState({
         bands,
-        bandsToOutput: null,
+        bandsToOutput: Object.keys(bands),
         concerts
       })
     }
+    else this.setState({bandsToOutput: null})
   }
 
 
@@ -68,7 +66,7 @@ export default class Search extends Component{
      const {genre, bandsToOutput, bands, concerts} = this.state
      return(
        <div>
-         <Toolbar>
+         <Toolbar className="band-search-toolbar">
            <ToolbarGroup>
              <TextField  fullWidth hintText="Search for band" onChange={this.handleInputChange}/>
              <Icon name="search" color="grey"/>
@@ -109,7 +107,7 @@ const {name, genre, albumSales, monthlyListeners, technicalRequirements} = band
             icon="settings_input_component"
             subText="Technical requirements"
           >
-            <div style={{display: "flex"}}>
+            <div style={{display: "flex", flexWrap: "wrap"}}>
               {technicalRequirements.map(technicalRequirement => <Chip style={{margin: "0 .5em .5em 0"}} key={technicalRequirement}>{technicalRequirement}</Chip>)}
             </div>
           </InfoSnippet>
