@@ -10,6 +10,8 @@ import DatePickerDialog from 'material-ui/DatePicker/DatePickerDialog'
 import TimePickerDialog from 'material-ui/TimePicker/TimePickerDialog'
 import DateTimePicker from 'material-ui-datetimepicker'
 import MenuItem from 'material-ui/MenuItem'
+import IconButton from 'material-ui/IconButton'
+import FontIcon from 'material-ui/FontIcon'
 import DropDownMenu from 'material-ui/DropDownMenu'
 import {Step, StepLabel, Stepper, StepContent} from 'material-ui/Stepper'
 import firebase from 'firebase'
@@ -95,7 +97,7 @@ export default class NewBooking extends Component {
   }
 
   handleBandFeeChange = e => {
-    const bandFee = parseInt(e.target.value, 10)
+    const bandFee = Number(e.target.value)
     this.setState(({newConcert}) => ({
       newConcert: {
         ...newConcert,
@@ -114,7 +116,7 @@ export default class NewBooking extends Component {
   }
 
   handleConcertLengthChange = e => {
-    const hours = parseInt(e.target.value, 10)*60*60*1000
+    const hours = Number(e.target.value)*60*60*1000
     const {from} = this.state.newConcert
     const to = from + hours
     if (from < to) {
@@ -212,7 +214,15 @@ export default class NewBooking extends Component {
           actions={actions}
           modal
           open={open}>
-          <h4> New Concert</h4>
+          <div style={{display: "flex", alignItems: "center", justifyContent: "space-between"}}>
+            <h4> New Concert</h4>
+            <IconButton
+              onClick={this.handleClose}
+            >
+              <FontIcon
+                style={{color: '#000'}} className='material-icons'>close</FontIcon>
+            </IconButton>
+          </div>
 
           <VerticalLinearStepper
             {...{bandNames, newConcert, events}}
