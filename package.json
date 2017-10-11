@@ -6,7 +6,7 @@
     "datejs": "^1.0.0-rc3",
     "firebase": "^4.5.0",
     "material-ui": "^0.19.4",
-    "material-ui-datetimepicker": "0.1.9",
+    "material-ui-datetimepicker": "^1.0.0",
     "node-sass-chokidar": "^0.0.3",
     "npm-run-all": "^4.1.1",
     "react": "^16.0.0",

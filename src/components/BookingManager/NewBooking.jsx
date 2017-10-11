@@ -6,6 +6,8 @@ import FlatButton from 'material-ui/FlatButton'
 import AutoComplete from 'material-ui/AutoComplete'
 import FloatingActionButton from 'material-ui/FloatingActionButton'
 import ContentAdd from 'material-ui/svg-icons/content/add'
+import DatePickerDialog from 'material-ui/DatePicker/DatePickerDialog'
+import TimePickerDialog from 'material-ui/TimePicker/TimePickerDialog'
 import DateTimePicker from 'material-ui-datetimepicker'
 import MenuItem from 'material-ui/MenuItem'
 import DropDownMenu from 'material-ui/DropDownMenu'
@@ -409,6 +411,8 @@ class VerticalLinearStepper extends Component {
               <label htmlFor="start-date">Start date: </label>
               {!stepDisabled[3] &&
                 <DateTimePicker
+                  DatePicker={DatePickerDialog}
+                  TimePicker={TimePickerDialog}
                   id="start-date"
                   format='YYYY-MM-DD hh:mm'
                   hintText="Start date"
