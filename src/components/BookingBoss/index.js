@@ -72,11 +72,11 @@ export default class BookingBoss extends Component {
     let rejectedCounter = 0
     Object.keys(concerts).forEach(key => {
       const concert = concerts[key]
-      const {eventName, band, ticketPrice, from, isAcceptedByBookingManager, isAcceptedByBookingBoss} = concert
+      const {eventName, band, bandFee, from, isAcceptedByBookingManager, isAcceptedByBookingBoss} = concert
       const bandName = bands[band] && bands[band].name
       const booking = <Booking
         key={key}
-        {...{eventName, bandName, from, ticketPrice}}
+        {...{eventName, bandName, from, bandFee}}
         concertKey={key}
         bookingState={isAcceptedByBookingBoss}
                       />

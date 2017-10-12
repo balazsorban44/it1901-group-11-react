@@ -38,7 +38,7 @@ const BookingTab = ({bookings}) => {
   )
 }
 
-export const Booking = ({eventName, bandName, from, ticketPrice, bookingState, concertKey}) => {
+export const Booking = ({eventName, bandName, from, bandFee, bookingState, concertKey}) => {
 
   const handleBooking = (concert, isAccepted) => {
     const db = firebase.database().ref()
@@ -70,7 +70,7 @@ export const Booking = ({eventName, bandName, from, ticketPrice, bookingState, c
             {eventName} <br/>
             {parseDate(from)} - {parseTime(from)}
             <br/>
-            {parsePrice(ticketPrice)}
+            {parsePrice(bandFee)}
           </h5>
         </div>
         <div className="booking-footer mdl-card__actions mdl-card--border">
