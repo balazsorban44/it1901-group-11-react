@@ -99,19 +99,19 @@ const {name, genre, albumSales, monthlyListeners, technicalRequirements} = band
     <Card className="search-result">
       <CardHeader title={<h2 style={{lineHeight: 1.2}}>{name}</h2>} actAsExpander showExpandableButton/>
       <CardText expandable>
-        <List>
+        <List style={{display: "flex"}}>
           <InfoSnippet icon="album" subText="Album sales">{parseNumber(albumSales)}</InfoSnippet>
           <InfoSnippet icon="music_note" subText="Monthly listeners">{parseNumber(monthlyListeners)}</InfoSnippet>
           <InfoSnippet icon="fingerprint" subText="Genre">{genre}</InfoSnippet>
-          <InfoSnippet
-            icon="settings_input_component"
-            subText="Technical requirements"
-          >
-            <div style={{display: "flex", flexWrap: "wrap"}}>
-              {technicalRequirements.map(technicalRequirement => <Chip style={{margin: "0 .5em .5em 0"}} key={technicalRequirement}>{technicalRequirement}</Chip>)}
-            </div>
-          </InfoSnippet>
         </List>
+        <InfoSnippet
+          icon="settings_input_component"
+          subText="Technical requirements"
+        >
+          <div style={{display: "flex", flexWrap: "wrap"}}>
+            {technicalRequirements.map(technicalRequirement => <Chip style={{margin: "0 .5em .5em 0"}} key={technicalRequirement}>{technicalRequirement}</Chip>)}
+          </div>
+        </InfoSnippet>
         <InfoSnippet
           icon="history"
           orientation="portrait"
