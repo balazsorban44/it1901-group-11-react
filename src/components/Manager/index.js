@@ -3,6 +3,7 @@ import Drawer from 'material-ui/Drawer'
 import MenuItem from 'material-ui/MenuItem'
 import firebase from 'firebase'
 import Band from './Band'
+import Concert from './Concert'
 import {Loading} from '../../utils'
 
 export default class Manager extends Component {
@@ -11,7 +12,8 @@ export default class Manager extends Component {
     super()
     this.state = {
       bands: {},
-      openedMenuItem: "bandview"
+      openedMenuItem: "bandview",
+      concerts: {}
     }
   }
   handleMenuItemClick(openedMenuItem) {
@@ -23,6 +25,7 @@ export default class Manager extends Component {
     const db = firebase.database().ref()
     const bandsRef = db.child('bands')
     const staffRef = db.child('staff')
+    const concertsRef = db.child('concerts')
     bandsRef.on('value', snap => {
       let bands = snap.val()
       Object.keys(bands).forEach(bandKey => {
@@ -30,6 +33,7 @@ export default class Manager extends Component {
           delete(bands[bandKey])
         }
         else{
+          bands[bandKey].concerts = []
           let memberNames = []
           const members = bands[bandKey].members
           staffRef.child('profiles').on('value', snap => {
@@ -40,7 +44,18 @@ export default class Manager extends Component {
               }
             })
             bands[bandKey].members = memberNames
-            this.setState({bands})
+            concertsRef.on('value', snap => {
+              const concerts = snap.val()
+              Object.keys(concerts).forEach(concertKey => {
+                if (concerts[concertKey].band === bandKey){
+                  concerts[concertKey].band = bands[bandKey].name
+                  let prevState = this.state.concerts
+                  prevState[concertKey] = concerts[concertKey]
+                  this.setState({concerts: prevState})
+                }
+                this.setState({bands})
+              })
+            })
           })
         }
       })
@@ -54,10 +69,13 @@ export default class Manager extends Component {
         <Drawer
           open = {isDrawerOpened}>
           <MenuItem onClick={() => this.handleMenuItemClick("bandview")} primaryText="Band view"/>
+          <MenuItem onClick={() => this.handleMenuItemClick("concertview")} primaryText="Concert view"/>
         </Drawer>
         {{
           "bandview":
-          <BandView bands={this.state.bands}/>
+          <BandView bands={this.state.bands}/>,
+          "concertview":
+          <ConcertView concerts={this.state.concerts} />
         }[this.state.openedMenuItem]}
       </div>
     );
@@ -72,5 +90,16 @@ const BandView = ({bands}) => (
       ):
       <Loading/>
       }
+  </ul>
+)
+
+const ConcertView = ({concerts}) => (
+  <ul className="concert-list-manager">
+  {Object.keys(concerts).length !== 0 ?
+    Object.keys(concerts).map(concertKey => (
+      <Concert key={concertKey} concert={concerts[concertKey]} concertId={concertKey}/>)
+    ):
+    <Loading/>
+    }
   </ul>
 )
