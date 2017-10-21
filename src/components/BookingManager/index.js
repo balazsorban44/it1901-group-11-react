@@ -32,50 +32,25 @@ componentDidMount(){
     Object.keys(events).forEach(eventKey => {
       const event = events[eventKey]
       if (event.staff.bookingManager.includes(this.props.user.uid)) {
-        const {scenes, name} = event
         this.setState(({events}) => ({
           events: {
             ...events,
             [eventKey]: event
           }
         }))
-        scenes.forEach(sceneKey => {
-          scenesRef.child(sceneKey).on('value', snap => {
-            const scene = snap.val()
-            const {concerts} = scene
-            this.setState(({scenes}) => ({
-              scenes: {
-                ...scenes,
-                [sceneKey]: scene
-              }
-            }))
-            concerts.forEach(concertKey => {
-              concertsRef.child(concertKey).on('value', snap => {
-                let concert = snap.val()
-                const {band} = concert
-                bandsRef.child(band).on('value', snap => {
-                  const {genre} = snap.val()
-                  concert.genre = genre
-                  concert.eventName = name
-                  this.setState(({bands, concerts}) => ({
-                    concerts: {
-                      ...concerts,
-                      [concertKey]: concert
-                    },
-                    bands: {
-                      ...bands,
-                      [band]: snap.val()
-                    }
-                  }))
-                })
-              })
-            })
-          })
-        })
       } else {
         delete events[eventKey]
       }
     })
+  })
+  bandsRef.on('value', snap => {
+    this.setState({bands: snap.val()})
+  })
+  scenesRef.on('value', snap => {
+    this.setState({scenes: snap.val()})
+  })
+  concertsRef.on('value', snap => {
+    this.setState({concerts: snap.val()})
   })
 
 }

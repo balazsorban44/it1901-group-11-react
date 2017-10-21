@@ -1,7 +1,9 @@
 import React from 'react'
 import CircularProgress from 'material-ui/CircularProgress'
 import FontIcon from 'material-ui/FontIcon'
-import {ListItem} from 'material-ui/List'
+
+import {List, ListItem} from 'material-ui/List'
+
 import 'datejs'
 
 // Parse a date. Returns "01. Jan 1970"
@@ -52,7 +54,7 @@ export const NoResult = () => (
   </div>
 )
 
-export const InfoSnippet = ({icon, children, subText, disableTitle, disableHover, alignSubText, orientation}) => (
+export const InfoSnippet = ({icon, content, children, subText, disableTitle, disableHover, alignSubText, orientation}) => (
   <ListItem disabled={disableHover} title={disableTitle ? "" : subText}>
     <div
       style={{
@@ -77,7 +79,7 @@ export const InfoSnippet = ({icon, children, subText, disableTitle, disableHover
             margin: 0,
             fontSize: "1.1em"
           }}
-        >{children}</div>
+        >{children ? children : content}</div>
         <h6
           style={{
             flexGrow: 1,
@@ -90,3 +92,37 @@ export const InfoSnippet = ({icon, children, subText, disableTitle, disableHover
     </div>
   </ListItem>
 )
+
+export const Review = ({reviews}) => (
+  <List>
+    {Object.keys(reviews).map(key => {
+      const {content, rating} = reviews[key]
+      return(
+        <ListItem key={key}>
+          <Rating {...{rating}}/>
+          <p>{content}</p>
+        </ListItem>
+      )
+    })}
+  </List>
+)
+
+export const Rating = ({rating, editable, handleRatingChange}) =>  {
+  let stars = []
+  for(let i = 1; i < 6; i++) {
+    stars.push(
+      <li
+        style={editable && {cursor: "pointer"}}
+        key={i}
+        onClick={() => editable && handleRatingChange(i)}
+      >
+        <Icon name={`star${i<=rating ? "" : "_border"}`}/>
+      </li>
+    )
+  }
+  return (
+    <ul style={{display: "flex"}}>
+      {stars}
+    </ul>
+  )
+}
