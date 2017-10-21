@@ -4,6 +4,7 @@ import firebase from 'firebase'
 import Login from './components/Login'
 
 import Organizer from './components/Organizer'
+import PROrganizer from './components/PROrganizer'
 import BookingBoss from './components/BookingBoss'
 import BookingManager from './components/BookingManager'
 import Technician from './components/Technician'
@@ -38,11 +39,7 @@ export default class App extends Component {
     }
   }
 
-  toggleDrawer() {
-    this.setState(prevState => (
-      {isDrawerOpened: !prevState.isDrawerOpened}
-    ))
-  }
+  toggleDrawer = () => this.setState(({isDrawerOpened}) => ({isDrawerOpened: !isDrawerOpened}))
 
 
   logout() {
@@ -55,9 +52,10 @@ export default class App extends Component {
   componentDidMount() {
     firebase.auth().onAuthStateChanged((user) => {
       if (user) {
-        const db = firebase.database().ref(`staff/profiles/${user.uid}`)
+        const {uid} = user
+        const db = firebase.database().ref(`staff/profiles/${uid}`)
         db.on('value', snap => {
-          this.setState({user: Object.assign(snap.val(), {uid: user.uid})})
+          this.setState({user: Object.assign(snap.val(), {uid})})
         })
       }
     })
@@ -82,18 +80,19 @@ export default class App extends Component {
                   </div>
 
                 </AppBar>
-
                 {{
                   "organizer":
-                  <Organizer {...{user, isDrawerOpened}} toggleDrawer={() => this.toggleDrawer()}/>,
+                  <Organizer {...{user, isDrawerOpened}} toggleDrawer={this.toggleDrawer}/>,
+                  "PROrganizer":
+                  <PROrganizer {...{user, isDrawerOpened}} toggleDrawer={this.toggleDrawer}/>,
                   "bookingBoss":
-                  <BookingBoss {...{user, isDrawerOpened}} toggleDrawer={() => this.toggleDrawer()}/>,
+                  <BookingBoss {...{user, isDrawerOpened}} toggleDrawer={this.toggleDrawer}/>,
                   "bookingManager":
-                  <BookingManager {...{user, isDrawerOpened}} toggleDrawer={() => this.toggleDrawer()}/>,
+                  <BookingManager {...{user, isDrawerOpened}} toggleDrawer={this.toggleDrawer}/>,
                   "technician":
-                  <Technician {...{user, isDrawerOpened}} toggleDrawer={() => this.toggleDrawer()}/>,
+                  <Technician {...{user, isDrawerOpened}} toggleDrawer={this.toggleDrawer}/>,
                   "manager":
-                  <Manager {...{user, isDrawerOpened}} toggleDrawer={() => this.toggleDrawer()}/>
+                  <Manager {...{user, isDrawerOpened}} toggleDrawer={this.toggleDrawer}/>
                 }[user.role]}
               </div>
             }
