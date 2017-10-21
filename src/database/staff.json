@@ -1,6 +1,11 @@
 {
-  "acceptedRoles" : ["organizer", "bookingManager", "bookingBoss", "technician", "manager", "bandMember" ],
+  "acceptedRoles" : ["organizer", "bookingManager", "bookingBoss", "technician", "manager", "bandMember", "PROrganizer" ],
   "profiles" : {
+    "Pk2mFknfpBd8ksNbP2Ae7YTWcOc2": {
+      "img" : "frank",
+      "name" : "Frank",
+      "role" : "PROrganizer"
+    },
     "13pAdrh9t4Pt7qrdDJfpzjy8Vrh1" : {
       "img" : "joe",
       "name" : "Joe",
