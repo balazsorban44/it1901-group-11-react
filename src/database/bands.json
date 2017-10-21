@@ -7,7 +7,17 @@
     "monthlyListeners" : 416665,
     "name" : "Metallica",
     "technicalRequirements" : [ "Guitars", "Drums", "Amplifiers", "Lights", "Microphone" ],
-    "manager": "YiBSLuDTjTMRfaJbtGsfkq9N7M12"
+    "manager": "YiBSLuDTjTMRfaJbtGsfkq9N7M12",
+    "reviews": {
+      "oesifufdoij": {
+        "rating": 2,
+        "content": "Bad band"
+      },
+      "oesifufj": {
+        "rating": 4,
+        "content": "Very good band"
+      }
+    }
   },
   "59bc02108ebb6407fe317b7d" : {
     "albumSales" : 4952763,
@@ -17,7 +27,13 @@
     "monthlyListeners" : 202272,
     "name" : "Alan Walker",
     "technicalRequirements" : [ "DJ Pult", "Coffee", "Hoodie", "Lights" ],
-    "manager": "YiBSLuDTjTMRfaJbtGsfkq9N7M12"
+    "manager": "YiBSLuDTjTMRfaJbtGsfkq9N7M12",
+    "reviews": {
+      "esi": {
+        "rating": 3,
+        "content": "Very good band"
+      }
+    }
   },
   "59bc0dkfgbfb433drc291132" : {
     "albumSales" : 9837432,
@@ -27,7 +43,13 @@
     "monthlyListeners" : 398328,
     "name" : "Coldplay",
     "technicalRequirements" : [ "Microphone", "Drums" ],
-    "manager": "YiBSLuDTjTMRfaJbtGsfkq9N7M12"
+    "manager": "YiBSLuDTjTMRfaJbtGsfkq9N7M12",
+    "reviews": {
+      "skfuh": {
+        "rating": 3,
+        "content": "Very good band"
+      }
+    }
   },
   "59bc0dsaoleb433drc985hj3" : {
     "albumSales" : 34234432,
@@ -37,7 +59,13 @@
     "monthlyListeners" : 233142,
     "name" : "ABBA",
     "technicalRequirements" : [ "Clothes", "Lights" ],
-    "manager": "YiBSLuDTjTMRfaJbtGsfkq9N7M12"
+    "manager": "YiBSLuDTjTMRfaJbtGsfkq9N7M12",
+    "reviews": {
+      "eskf": {
+        "rating": 3,
+        "content": "Very good band"
+      }
+    }
   },
   "59bc0210bbfba53daf291ab2" : {
     "albumSales" : 7657913,
@@ -47,7 +75,13 @@
     "monthlyListeners" : 238419,
     "name" : "Lana Del Rey",
     "technicalRequirements" : [ "Sunglasses", "Water" ],
-    "manager": "I90tBRUgsba4pT2c9DGiygGszhw1"
+    "manager": "I90tBRUgsba4pT2c9DGiygGszhw1",
+    "reviews": {
+      "sfikhd": {
+        "rating": 3,
+        "content": "Very good band"
+      }
+    }
   },
   "59bc102345fba5kjdsoieioe" : {
     "albumSales" : 10000000,
@@ -57,7 +91,13 @@
     "monthlyListeners" : 99999,
     "name" : "Michael Jackson",
     "technicalRequirements" : [ "Sunglasses" ],
-    "manager": "I90tBRUgsba4pT2c9DGiygGszhw1"
+    "manager": "I90tBRUgsba4pT2c9DGiygGszhw1",
+    "reviews": {
+      "iskufe": {
+        "rating": 3,
+        "content": "Very good band"
+      }
+    }
   },
   "59bc1r3p928ouwfba5kjdsoieioe" : {
     "albumSales" : 43298429,
@@ -67,7 +107,13 @@
     "monthlyListeners" : 43298,
     "name" : "Drake",
     "technicalRequirements" : [ "Microphone" ],
-    "manager": "I90tBRUgsba4pT2c9DGiygGszhw1"
+    "manager": "I90tBRUgsba4pT2c9DGiygGszhw1",
+    "reviews": {
+      "feskl": {
+        "rating": 3,
+        "content": "Very good band"
+      }
+    }
   },
   "59bc0210df2d44289458aac0" : {
     "albumSales" : 8176519,
@@ -77,7 +123,13 @@
     "monthlyListeners" : 276256,
     "name" : "Volbeat",
     "technicalRequirements" : [ "dolor ullamco", "amet cillum", "fugiat duis", "deserunt esse" ],
-    "manager": "I90tBRUgsba4pT2c9DGiygGszhw1"
+    "manager": "I90tBRUgsba4pT2c9DGiygGszhw1",
+    "reviews": {
+      "osaeuhf": {
+        "rating": 3,
+        "content": "Very good band"
+      }
+    }
   },
   "59fnewhbgf234fgnnn44554f" : {
     "albumSales" : 4673532,
@@ -87,7 +139,13 @@
     "monthlyListeners" : 9837233,
     "name" : "OneRepublic",
     "technicalRequirements" : ["Guitars", "Drums", "Microphone", "Bass", "Keyboard" ],
-    "manager": "I90tBRUgsba4pT2c9DGiygGszhw1"
+    "manager": "I90tBRUgsba4pT2c9DGiygGszhw1",
+    "reviews": {
+      "sk": {
+        "rating": 3,
+        "content": "Very good band"
+      }
+    }
   },
   "59ebedbybe76f5e6f7efdv8" : {
     "albumSales" : 817364572,
@@ -97,17 +155,29 @@
     "monthlyListeners" : 98476282,
     "name" : "Logic",
     "technicalRequirements" : [ "Microphone" ],
-    "manager": "I90tBRUgsba4pT2c9DGiygGszhw1"
+    "manager": "I90tBRUgsba4pT2c9DGiygGszhw1",
+    "reviews": {
+      "seikuf": {
+        "rating": 3,
+        "content": "Very good band"
+      }
+    }
   },
   "59duwnunw34gth3434ggrt4" : {
     "albumSales" : 192387465,
-    "concerts" : [ "59as87dc6a5s7dva6sdsa76sdaads", "597yds7fih4kjbduifh78dfgisukd", "59sd9fy78i3bkwjbndfkuh78", "59isd97fy78iuk3bwjkbdf7" ],
+    "concerts" : [""],
     "genre" : "Rap",
     "members" : [ "AIyJlBrMSUhaBv8AqypxkbWJPPg2" ],
     "monthlyListeners" : 724682482,
-    "name" : "Witt Lowry" ,
+    "name" : "Witt Lowry",
     "technicalRequirements" : [ "Microphone" ],
-    "manager": "r52CRDQ5hDb1e7jTPHFYtNbNkbm2"
+    "manager": "r52CRDQ5hDb1e7jTPHFYtNbNkbm2",
+    "reviews": {
+      "esklikjf": {
+        "rating": 3,
+        "content": "Very good band"
+      }
+    }
   },
   "59iuewnfyw7653ybfe76fef" : {
     "albumSales" : 8374657233,
@@ -117,7 +187,13 @@
     "monthlyListeners" : 724682,
     "name" : "The Fray",
     "technicalRequirements" : [ "Guitars", "Microphone", "Drums", "Bass", "Keyboard", "Violin" ],
-    "manager": "r52CRDQ5hDb1e7jTPHFYtNbNkbm2"
+    "manager": "r52CRDQ5hDb1e7jTPHFYtNbNkbm2",
+    "reviews": {
+      "seofilj": {
+        "rating": 3,
+        "content": "Very good band"
+      }
+    }
   },
   "59iyurewbfu6756w4e45e5f" : {
     "albumSales" : 1337999991337,
@@ -127,7 +203,13 @@
     "monthlyListeners" : 133799991337,
     "name" : "Fantastic Five",
     "technicalRequirements" : [ "Pc" ],
-    "manager": "r52CRDQ5hDb1e7jTPHFYtNbNkbm2"
+    "manager": "r52CRDQ5hDb1e7jTPHFYtNbNkbm2",
+    "reviews": {
+      "eskfj": {
+        "rating": 3,
+        "content": "Very good band"
+      }
+    }
   },
   "59iuwrefuybwef7we67f6e5" : {
     "albumSales" : 6384638,
@@ -137,7 +219,13 @@
     "monthlyListeners" : 49897236,
     "name" : "Yellowcard",
     "technicalRequirements" : [ "Guitars", "Drums", "Microphone", "Violin", "Bass", "Keyboard" ],
-    "manager": "r52CRDQ5hDb1e7jTPHFYtNbNkbm2"
+    "manager": "r52CRDQ5hDb1e7jTPHFYtNbNkbm2",
+    "reviews": {
+      "skelkjf": {
+        "rating": 3,
+        "content": "Very good band"
+      }
+    }
   },
   "59w6we5ervf8r7evre86v6v" : {
     "albumSales" : 78346,
@@ -147,7 +235,13 @@
     "monthlyListeners" : 127674839,
     "name" : "Bastille",
     "technicalRequirements" : [ "Guitars", "Bass", "Keyboard", "Microphone" ],
-    "manager": "r52CRDQ5hDb1e7jTPHFYtNbNkbm2"
+    "manager": "r52CRDQ5hDb1e7jTPHFYtNbNkbm2",
+    "reviews": {
+      "eslfkjdk": {
+        "rating": 3,
+        "content": "Very good band"
+      }
+    }
   },
   "59fniu7r676er58vre66v86" : {
     "albumSales" : 8927864257,
@@ -157,7 +251,13 @@
     "monthlyListeners" : 6367824,
     "name" : "Justin Timberlake" ,
     "technicalRequirements" : [ "Microphone", "Dancing Shoes" ],
-    "manager": "r52CRDQ5hDb1e7jTPHFYtNbNkbm2"
+    "manager": "r52CRDQ5hDb1e7jTPHFYtNbNkbm2",
+    "reviews": {
+      "soelifjkd": {
+        "rating": 3,
+        "content": "Very good band"
+      }
+    }
   },
   "59wiue767we56f67v677fv7" : {
     "albumSales" : 892657248,
@@ -167,7 +267,13 @@
     "monthlyListeners" : 97463,
     "name" : "Maroon 5" ,
     "technicalRequirements" : [ "Microphone", "Guitars", "Keyboard", "Trumpet", "Drums" ],
-    "manager": "r52CRDQ5hDb1e7jTPHFYtNbNkbm2"
+    "manager": "r52CRDQ5hDb1e7jTPHFYtNbNkbm2",
+    "reviews": {
+      "dsufeh": {
+        "rating": 3,
+        "content": "Very good band"
+      }
+    }
   },
   "59ver898vb6as321sa2fvrf" : {
     "albumSales" : 946645244,
@@ -177,7 +283,13 @@
     "monthlyListeners" : 7382654,
     "name" : "Imagine Dragons" ,
     "technicalRequirements" : [ "Guitars" , "Microphone", "Drums", "Keyboard", "Bass" ],
-    "manager": "r52CRDQ5hDb1e7jTPHFYtNbNkbm2"
+    "manager": "r52CRDQ5hDb1e7jTPHFYtNbNkbm2",
+    "reviews": {
+      "ieskhf": {
+        "rating": 3,
+        "content": "Very good band"
+      }
+    }
   },
   "59jertg07857as22kfne9e" : {
     "albumSales" : 123456,
@@ -187,7 +299,13 @@
     "monthlyListeners" : 54321,
     "name" : "Eminem" ,
     "technicalRequirements" : [ "Microphone" ] ,
-    "manager": "ZThJHM8iAhcQxuo5MPDf6L952h13"
+    "manager": "ZThJHM8iAhcQxuo5MPDf6L952h13",
+    "reviews": {
+      "xsikujc": {
+        "rating": 3,
+        "content": "Very good band"
+      }
+    }
   },
   "59hvbyuas8v0ngb8dfbhvvd" : {
     "albumSales" : 92775739,
@@ -197,7 +315,13 @@
     "monthlyListeners" : 983863,
     "name" : "Chainsmokers" ,
     "technicalRequirements" : [ "Pc" ] ,
-    "manager": "ZThJHM8iAhcQxuo5MPDf6L952h13"
+    "manager": "ZThJHM8iAhcQxuo5MPDf6L952h13",
+    "reviews": {
+      "oewirl": {
+        "rating": 3,
+        "content": "Very good band"
+      }
+    }
   },
   "59fjnhvye32wtvac3bhj90d" : {
     "albumSales" : 83974990,
@@ -207,7 +331,13 @@
     "monthlyListeners" : 78643244,
     "name" : "Astrid S",
     "technicalRequirements" : [ "Microphone" ],
-    "manager": "ZThJHM8iAhcQxuo5MPDf6L952h13"
+    "manager": "ZThJHM8iAhcQxuo5MPDf6L952h13",
+    "reviews": {
+      "esoifd": {
+        "rating": 3,
+        "content": "Very good band"
+      }
+    }
   },
   "59f7eg60sd7v0t79f787s6d" : {
     "albumSales" : 9099949,
@@ -217,7 +347,13 @@
     "monthlyListeners" : 7348657824,
     "name" : "Rihanna",
     "technicalRequirements" : [ "Microphone" ],
-    "manager": "ZThJHM8iAhcQxuo5MPDf6L952h13"
+    "manager": "ZThJHM8iAhcQxuo5MPDf6L952h13",
+    "reviews": {
+      "gdgdgr": {
+        "rating": 3,
+        "content": "Very good band"
+      }
+    }
   },
   "59fhe7cbehf65ewfkj8v9s" : {
     "albumSales" : 9837468397,
@@ -227,7 +363,13 @@
     "monthlyListeners" : 972386542,
     "name" : "Ed Sheeran" ,
     "technicalRequirements" : [ "Microphone", "Guitars" ],
-    "manager": "ZThJHM8iAhcQxuo5MPDf6L952h13"
+    "manager": "ZThJHM8iAhcQxuo5MPDf6L952h13",
+    "reviews": {
+      "idufkjfd": {
+        "rating": 3,
+        "content": "Very good band"
+      }
+    }
   },
   "5973hjfiueriufnksdjfn" : {
     "albumSales" : 72836475,
@@ -237,7 +379,13 @@
     "monthlyListeners" : 7846728,
     "name" : "The All-American Rejects",
     "technicalRequirements" : [ "Guitars", "Drums", "Bass", "Microphone"] ,
-    "manager": "ZThJHM8iAhcQxuo5MPDf6L952h13"
+    "manager": "ZThJHM8iAhcQxuo5MPDf6L952h13",
+    "reviews": {
+      "sfkdj": {
+        "rating": 3,
+        "content": "Very good band"
+      }
+    }
   },
   "591jnkjnweknfjnejfsd" : {
     "albumSales" : 78236754,
@@ -247,6 +395,28 @@
     "monthlyListeners" : 97347,
     "name" : "Twenty One Pilots",
     "technicalRequirements" : [ "Drums", "Microphone", "Pc"] ,
-    "manager": "ZThJHM8iAhcQxuo5MPDf6L952h13"
+    "manager": "ZThJHM8iAhcQxuo5MPDf6L952h13",
+    "reviews": {
+      "sff": {
+        "rating": 3,
+        "content": "Very good band"
+      }
+    }
+  },
+  "9r3iwhfeskuh3i" : {
+    "albumSales" : 0,
+    "concerts" : [""],
+    "genre" : "Pop",
+    "members" : [ "IoruqtEie1hlEV9ol0LIBecrfhg1", "3B142NVUlTYIoGBcEksm05vGRay2" ],
+    "monthlyListeners" : 100,
+    "name" : "Bad band",
+    "technicalRequirements" : [ "Drums", "Microphone", "Pc"] ,
+    "manager": "ZThJHM8iAhcQxuo5MPDf6L952h13",
+    "reviews": {
+      "3w8r7iuz83iufs98e": {
+        "rating": 0,
+        "content": ""
+      }
+    }
   }
 }

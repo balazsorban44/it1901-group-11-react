@@ -4,6 +4,7 @@
     "name" : "Schwartz festival",
     "scenes" : [ "597ast76ugyjh3bkjhbdfjke", "59u89s7difgi3ukbwkjbjkfdk", "59u8s97dfiguk3bkjbdkbnfkd", "59u98sdyv7iukj3bjkbsjkdbf" ],
     "staff" : {
+      "PROrganizer": ["Pk2mFknfpBd8ksNbP2Ae7YTWcOc2"],
       "bookingBoss": ["33gMwGSuFfUTMv9BWCAakNXF0re2"],
       "bookingManager": ["ZCcD5DwBbzgXLAGRdR28cUCdQub2"],
       "organizer" : [ "uN2sZVTwlsUwBBBHUWFzDLBikB42" ],
@@ -17,6 +18,7 @@
     "name" : "Morse festival",
     "scenes" : [ "5978dyaf873bkjbkbkufbkjd", "59s78dibk4bksbmdfuygkb4k", "59u787gibkkjskjbfkjkjbjs", "59usd87y7i3kbjkbsjdkbfkj" ],
     "staff" : {
+      "PROrganizer": ["Pk2mFknfpBd8ksNbP2Ae7YTWcOc2"],
       "bookingBoss": ["RluDhpq9gpPHWK5aRGHLu5PvTDA2"],
       "bookingManager" : [ "ZCcD5DwBbzgXLAGRdR28cUCdQub2" ],
       "organizer" : [ "13pAdrh9t4Pt7qrdDJfpzjy8Vrh1" ],
@@ -30,6 +32,7 @@
     "name" : "Leon festival",
     "scenes" : [ "59i8ud7fhy3jhbjhabdfhhjabd", "59u7ashuy3jvjahsbd3iaujssd", "59uas7g3uyqhjgwbdyhjkbiakj", "59u8ash78h3kb3q6g76duf673" ],
     "staff" : {
+      "PROrganizer": ["Pk2mFknfpBd8ksNbP2Ae7YTWcOc2"],
       "bookingBoss": ["RluDhpq9gpPHWK5aRGHLu5PvTDA2"],
       "bookingManager" : [ "ZCcD5DwBbzgXLAGRdR28cUCdQub2" ],
       "organizer" : [ "uN2sZVTwlsUwBBBHUWFzDLBikB42" ],
@@ -43,6 +46,7 @@
     "name" : "Phillips festival",
     "scenes" : [ "5986gduyfbh3hkkb32yrbyjb", "59y7dfygyj3hbhjbajhfjbdh", "59u8ds7figiy3hbhabdfjjsbf", "59ua7syfguy3gjhbsjhdbhasbd" ],
     "staff" : {
+      "PROrganizer": ["Pk2mFknfpBd8ksNbP2Ae7YTWcOc2"],
       "bookingBoss": ["33gMwGSuFfUTMv9BWCAakNXF0re2"],
       "bookingManager" : [ "ZCcD5DwBbzgXLAGRdR28cUCdQub2" ],
       "organizer" : [ "13pAdrh9t4Pt7qrdDJfpzjy8Vrh1" ],
