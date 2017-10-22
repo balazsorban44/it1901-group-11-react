@@ -11,23 +11,14 @@ import Technician from './components/Technician'
 import Manager from './components/Manager'
 
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
-import getMuiTheme from 'material-ui/styles/getMuiTheme'
-import {amber500, amber700} from 'material-ui/styles/colors'
 import AppBar from 'material-ui/AppBar'
 
 import RaisedButton from 'material-ui/RaisedButton'
 import Avatar from 'material-ui/Avatar'
 
-const profiles = require.context('./img/profiles')
+import {profiles, muiTheme} from './utils'
 
-const muiTheme = getMuiTheme({
-  palette: {
-    primary1Color: "#f8c53b",
-    primary2Color: amber500,
-    primary3Color: amber700,
-    accent1Color: "#ea4a53"
-  },
-})
+
 
 
 export default class App extends Component {

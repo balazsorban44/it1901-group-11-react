@@ -8,25 +8,18 @@ import {parseDate, parseNumber, parsePrice, InfoSnippet} from '../../utils'
 
 export default class Concerts extends Component {
   render() {
-    const {concerts, band} = this.props
+    const {concerts} = this.props
     const acceptedBookings = {}
     const awaitingBookings = {}
-    if (concerts && band.concerts[0] !== "") {
-      console.log(band.concerts);
-      band.concerts.forEach(key => {
-        console.log(key)
+      Object.keys(concerts).forEach(key => {
         const concert = concerts[key]
-        const {isAcceptedByBookingBoss} = concert
-        if (isAcceptedByBookingBoss === true) {
-          if (Date.now() <= concert.from) {
-            acceptedBookings[key] = concert
-          }
+        const {isAcceptedByBookingBoss, from} = concert
+        if (isAcceptedByBookingBoss === true && Date.now() <= from) {
+          acceptedBookings[key] = concert
         } else if (isAcceptedByBookingBoss === "unhandled") {
           awaitingBookings[key] = concert
         }
-
       })
-    }
 
     return (
       <div>
@@ -47,23 +40,17 @@ export default class Concerts extends Component {
               </TableRow>
             </TableHeader>
             <TableBody displayRowCheckbox={false} showRowHover>
-              {concerts &&
-                Object.keys(band.concerts).map(key => {
-                  const concert = concerts[band.concerts[key]]
-                  if (concert) {
-                    const {from, participants, ticketPrice, bandFee} = concert
-                    if (from < Date.now()) {
-                      return (
-                        <TableRow key={key}>
-                          <TableRowColumn>{parseDate(from)}</TableRowColumn>
-                          <TableRowColumn>{parseNumber(participants)}</TableRowColumn>
-                          <TableRowColumn>{parsePrice(participants*ticketPrice-bandFee)}</TableRowColumn>
-                        </TableRow>
-                      )}
-                      else return null
-                  } else return null
-                })
-              }
+              {Object.keys(concerts).map(key => {
+                const {from, participants, ticketPrice, bandFee} = concerts[key]
+                return (
+                  from < Date.now() &&
+                    <TableRow key={key}>
+                      <TableRowColumn>{parseDate(from)}</TableRowColumn>
+                      <TableRowColumn>{parseNumber(participants)}</TableRowColumn>
+                      <TableRowColumn>{parsePrice(participants*ticketPrice-bandFee)}</TableRowColumn>
+                    </TableRow>
+                )
+              })}
             </TableBody>
           </Table>
         </InfoSnippet>
@@ -89,15 +76,13 @@ export default class Concerts extends Component {
             content={<ConcertTable concerts={awaitingBookings}/>}
           />
         }
-
       </div>
     )
   }
 }
 
 
-const ConcertTable = ({concerts}) => {
-  return(
+const ConcertTable = ({concerts}) => (
   <Table>
     <TableHeader adjustForCheckbox={false} displaySelectAll={false}>
       <TableRow>
@@ -108,8 +93,7 @@ const ConcertTable = ({concerts}) => {
     </TableHeader>
     <TableBody displayRowCheckbox={false} showRowHover>
       {Object.keys(concerts).map(key => {
-        const concert = concerts[key]
-        const {from, ticketPrice, bandFee,} = concert
+        const {from, ticketPrice, bandFee,} = concerts[key]
         return (
           <TableRow key={key}>
             <TableRowColumn>{parseDate(from)}</TableRowColumn>
@@ -120,4 +104,4 @@ const ConcertTable = ({concerts}) => {
       })}
     </TableBody>
   </Table>
-)}
+)
