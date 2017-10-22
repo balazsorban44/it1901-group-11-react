@@ -1,6 +1,6 @@
 {
   "59bc04b271b3c31a520daeae" : {
-    "band" : "59bc02105d041286efac0960",
+    "band" : "65f4f0c5-ef9e-490c-aee3-909e7ae6b2ab",
     "from" : 1501264800000,
     "isAcceptedByBookingBoss" : true,
     "isAcceptedByBookingManager" : true,
@@ -11,7 +11,7 @@
     "to" : 1501279200000
   },
   "59uef787dinsdiu89sdiff" : {
-    "band" : "59bc02105d041286efac0960",
+    "band" : "65f4f0c5-ef9e-490c-aee3-909e7ae6b2ab",
     "from" : 1503079200000,
     "isAcceptedByBookingBoss" : true,
     "isAcceptedByBookingManager" : true,
@@ -22,7 +22,7 @@
     "to" : 1503093600000
   },
   "59usd7hsd78hfh7f8e32irr" : {
-    "band" : "59bc02105d041286efac0960",
+    "band" : "65f4f0c5-ef9e-490c-aee3-909e7ae6b2ab",
     "from" : 1510336800000,
     "isAcceptedByBookingBoss" : true,
     "isAcceptedByBookingManager" : true,
@@ -33,7 +33,7 @@
     "to" : 1510351200000
   },
   "59nsdin7s87h87dfh78sduihsd" : {
-    "band" : "59bc02105d041286efac0960",
+    "band" : "65f4f0c5-ef9e-490c-aee3-909e7ae6b2ab",
     "from" : 1511546400000,
     "isAcceptedByBookingBoss" : "unhandled",
     "isAcceptedByBookingManager" : true,
@@ -88,7 +88,7 @@
     "to" : 1511575200000
   },
   "59bc04b2c6ee092945795f8e" : {
-    "band" : "59bc0210bbfba53daf291ab2",
+    "band" : "b7539c32-53e7-4908-bda3-81449c367da6",
     "from" : 1501264800000,
     "isAcceptedByBookingBoss" : true,
     "isAcceptedByBookingManager" : true,
@@ -99,7 +99,7 @@
     "to" : 1501279200000
   },
   "59jkndfu8789d8v6sf6gt87" : {
-    "band" : "59bc0210bbfba53daf291ab2",
+    "band" : "b7539c32-53e7-4908-bda3-81449c367da6",
     "from" : 1511560800000,
     "isAcceptedByBookingBoss" : "unhandled",
     "isAcceptedByBookingManager" : true,
@@ -110,7 +110,7 @@
     "to" : 1511575200000
   },
   "59sd8u9u7s8dfsid7fukdhs" : {
-    "band" : "59bc0210bbfba53daf291ab2",
+    "band" : "b7539c32-53e7-4908-bda3-81449c367da6",
     "from" : 1510351200000,
     "isAcceptedByBookingBoss" : "unhandled",
     "isAcceptedByBookingManager" : true,
@@ -121,7 +121,7 @@
     "to" : 1510365600000
   },
   "59sd877isdhfuik4jwbbjkv" : {
-    "band" : "59bc0210bbfba53daf291ab2",
+    "band" : "b7539c32-53e7-4908-bda3-81449c367da6",
     "from" : 1503079200000,
     "isAcceptedByBookingBoss" : "unhandled",
     "isAcceptedByBookingManager" : true,
@@ -176,7 +176,7 @@
     "to" : 1501279200000
   },
   "59bc04b2d4bb6d33232814d6" : {
-    "band" : "59bc0210df2d44289458aac0",
+    "band" : "4753fcb7-9270-493a-974d-8daca4e49125",
     "from" : 1511560800000,
     "isAcceptedByBookingBoss" : "unhandled",
     "isAcceptedByBookingManager" : true,
@@ -187,7 +187,7 @@
     "to" : 1511575200000
   },
   "59jdufuikbrfkuewbfjj" : {
-    "band" : "59bc0210df2d44289458aac0",
+    "band" : "4753fcb7-9270-493a-974d-8daca4e49125",
     "from" : 1510351200000,
     "isAcceptedByBookingBoss" : "unhandled",
     "isAcceptedByBookingManager" : true,
@@ -198,7 +198,7 @@
     "to" : 1510365600000
   },
   "59ookdfminwekfbsmbdfhk" : {
-    "band" : "59bc0210df2d44289458aac0",
+    "band" : "4753fcb7-9270-493a-974d-8daca4e49125",
     "from" : 1503093600000,
     "isAcceptedByBookingBoss" : false,
     "isAcceptedByBookingManager" : true,
@@ -209,7 +209,7 @@
     "to" : 1503108000000
   },
   "59podsjfoijuosbkdfkhjbk" : {
-    "band" : "59bc0210df2d44289458aac0",
+    "band" : "4753fcb7-9270-493a-974d-8daca4e49125",
     "from" : 1501279200000,
     "isAcceptedByBookingBoss" : false,
     "isAcceptedByBookingManager" : true,
@@ -308,7 +308,7 @@
     "to" : 1503108000000
   },
   "598dfunir7df76vr88sf7v" : {
-    "band" : "59f7eg60sd7v0t79f787s6d" ,
+    "band" : "73e5e69d-3554-40d8-8516-00cb38737a1c" ,
     "from" : 1501279200000,
     "isAcceptedByBookingBoss" : true,
     "isAcceptedByBookingManager" : true,
@@ -319,7 +319,7 @@
     "to" : 1501293600000
   },
   "59mmouefh7idsf7878sdids" : {
-    "band" : "59f7eg60sd7v0t79f787s6d",
+    "band" : "73e5e69d-3554-40d8-8516-00cb38737a1c",
     "from" : 1511632800000,
     "isAcceptedByBookingBoss" : "unhandled",
     "isAcceptedByBookingManager" : true,
@@ -330,7 +330,7 @@
     "to" : 1511647200000
   },
   "59nnefishfyi7sdy9f9dss" : {
-    "band" : "59f7eg60sd7v0t79f787s6d",
+    "band" : "73e5e69d-3554-40d8-8516-00cb38737a1c",
     "from" : 1510423200000,
     "isAcceptedByBookingBoss" : "unhandled",
     "isAcceptedByBookingManager" : true,
@@ -341,7 +341,7 @@
     "to" : 1510437600000
   },
   "59jsodoi879sd7fiuksdukb" : {
-    "band" : "59f7eg60sd7v0t79f787s6d",
+    "band" : "73e5e69d-3554-40d8-8516-00cb38737a1c",
     "from" : 1503165600000,
     "isAcceptedByBookingBoss" : true,
     "isAcceptedByBookingManager" : true,
@@ -440,7 +440,7 @@
     "to" : 1511661600000
   },
   "59alksndfu6sef78b8ees6dfee" : {
-    "band" : "59jertg07857as22kfne9e" ,
+    "band" : "b95ce3ff-3d05-4e87-9e01-c97b66af13d4" ,
     "from" : 1511647200000,
     "isAcceptedByBookingBoss" : "unhandled",
     "isAcceptedByBookingManager" : true,
@@ -451,7 +451,7 @@
     "to" : 1511661600000
   },
   "59vijkef78sdifhksujef7ds" : {
-    "band" : "59jertg07857as22kfne9e",
+    "band" : "b95ce3ff-3d05-4e87-9e01-c97b66af13d4",
     "from" : 1510437600000,
     "isAcceptedByBookingBoss" : "unhandled",
     "isAcceptedByBookingManager" : true,
@@ -462,7 +462,7 @@
     "to" : 1510452000000
   },
   "59paofpisjifois78f8idds" : {
-    "band" : "59jertg07857as22kfne9e",
+    "band" : "b95ce3ff-3d05-4e87-9e01-c97b66af13d4",
     "from" : 1501351200000,
     "isAcceptedByBookingBoss" : true,
     "isAcceptedByBookingManager" : true,
@@ -473,7 +473,7 @@
     "to" : 1501365600000
   },
   "59i99osjdfjhsdbjkfdsjjs" : {
-    "band" : "59jertg07857as22kfne9e",
+    "band" : "b95ce3ff-3d05-4e87-9e01-c97b66af13d4",
     "from" : 1503165600000,
     "isAcceptedByBookingBoss" : true,
     "isAcceptedByBookingManager" : true,
@@ -484,7 +484,7 @@
     "to" : 1503180000000
   },
   "590erguniusdfvtg7af6a6s7d7" : {
-    "band" : "59ver898vb6as321sa2fvrf" ,
+    "band" : "012151a8-0f9a-44c9-997f-ebd68b5389f9" ,
     "from" : 1501351200000,
     "isAcceptedByBookingBoss" : false,
     "isAcceptedByBookingManager" : true,
@@ -495,7 +495,7 @@
     "to" : 1501365600000
   },
   "59jd89ys78ihukefbkusbdfk" : {
-    "band" : "59ver898vb6as321sa2fvrf",
+    "band" : "012151a8-0f9a-44c9-997f-ebd68b5389f9",
     "from" : 1511647200000,
     "isAcceptedByBookingBoss" : "unhandled",
     "isAcceptedByBookingManager" : true,
@@ -506,7 +506,7 @@
     "to" : 1511661600000
   },
   "59sdiufhisdfu7u7sd78fgyi" : {
-    "band" : "59ver898vb6as321sa2fvrf",
+    "band" : "012151a8-0f9a-44c9-997f-ebd68b5389f9",
     "from" : 1510437600000,
     "isAcceptedByBookingBoss" : "unhandled",
     "isAcceptedByBookingManager" : true,
@@ -517,7 +517,7 @@
     "to" : 1510452000000
   },
   "59o8sdifhuisdgfbksdbf7f" : {
-    "band" : "59ver898vb6as321sa2fvrf",
+    "band" : "012151a8-0f9a-44c9-997f-ebd68b5389f9",
     "from" : 1503180000000,
     "isAcceptedByBookingBoss" : false,
     "isAcceptedByBookingManager" : true,
@@ -528,7 +528,7 @@
     "to" : 1503194400000
   },
   "59sdofuniuds5fc7qkj34bnth4j" : {
-    "band" : "59wiue767we56f67v677fv7" ,
+    "band" : "0ab49580-c84f-44d4-875f-d83760ea2cfe" ,
     "from" : 1501365600000,
     "isAcceptedByBookingBoss" : false,
     "isAcceptedByBookingManager" : true,
@@ -539,7 +539,7 @@
     "to" : 1501380000000
   },
   "59oidjfoiu89f9889ds8f89sd" : {
-    "band" : "59wiue767we56f67v677fv7",
+    "band" : "0ab49580-c84f-44d4-875f-d83760ea2cfe",
     "from" : 1503180000000,
     "isAcceptedByBookingBoss" : false,
     "isAcceptedByBookingManager" : true,
@@ -550,7 +550,7 @@
     "to" : 1503194400000
   },
   "59sd87t8i4bkrjmmhrehke" : {
-    "band" : "59wiue767we56f67v677fv7",
+    "band" : "0ab49580-c84f-44d4-875f-d83760ea2cfe",
     "from" : 1510437600000,
     "isAcceptedByBookingBoss" : "unhandled",
     "isAcceptedByBookingManager" : true,
@@ -561,7 +561,7 @@
     "to" : 1510452000000
   },
   "59iuhsd78fy78787f877s8df" : {
-    "band" : "59wiue767we56f67v677fv7",
+    "band" : "0ab49580-c84f-44d4-875f-d83760ea2cfe",
     "from" : 1511647200000,
     "isAcceptedByBookingBoss" : "unhandled",
     "isAcceptedByBookingManager" : true,
@@ -880,7 +880,7 @@
     "to" : 1510538400000
   },
   "59897df78igy3iwkbkbsjfdb" : {
-    "band" : "59bc0dkfgbfb433drc291132",
+    "band" : "cc197bad-dc9c-440d-a5b5-d52ba2e14234",
     "from" : 1503266400000,
     "isAcceptedByBookingBoss" : true,
     "isAcceptedByBookingManager" : true,
@@ -891,7 +891,7 @@
     "to" : 1503280800000
   },
   "59sdu98fhihu4bwukjbefu" : {
-    "band" : "59bc0dkfgbfb433drc291132",
+    "band" : "cc197bad-dc9c-440d-a5b5-d52ba2e14234",
     "from" : 1510524000000,
     "isAcceptedByBookingBoss" : "unhandled",
     "isAcceptedByBookingManager" : true,
@@ -902,7 +902,7 @@
     "to" : 1510538400000
   },
   "59hsd7fih3kuwbkdbfkj4ws" : {
-    "band" : "59bc0dkfgbfb433drc291132",
+    "band" : "cc197bad-dc9c-440d-a5b5-d52ba2e14234",
     "from" : 1501452000000,
     "isAcceptedByBookingBoss" : true,
     "isAcceptedByBookingManager" : true,

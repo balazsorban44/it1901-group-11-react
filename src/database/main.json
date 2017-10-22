@@ -1,6 +1,6 @@
 {
   "bands" : {
-    "59bc02105d041286efac0960" : {
+    "65f4f0c5-ef9e-490c-aee3-909e7ae6b2ab" : {
       "albumSales" : 1693215,
       "concerts" : [ "INEEDCONCERTS" ],
       "genre" : "Rock",
@@ -18,7 +18,7 @@
       "name" : "Welch Sonya",
       "technicalRequirements" : [ "culpa anim", "dolore adipisicing", "culpa labore" ]
     },
-    "59bc0210bbfba53daf291ab2" : {
+    "b7539c32-53e7-4908-bda3-81449c367da6" : {
       "albumSales" : 7657913,
       "concerts" : [ "INEEDCONCERTS" ],
       "genre" : "Rock",
@@ -27,7 +27,7 @@
       "name" : "Munjor Hendricks",
       "technicalRequirements" : [ "consequat nostrud", "ex proident", "et sunt", "ex consequat", "et nostrud" ]
     },
-    "59bc0210df2d44289458aac0" : {
+    "4753fcb7-9270-493a-974d-8daca4e49125" : {
       "albumSales" : 8176519,
       "concerts" : [ "INEEDCONCERTS" ],
       "genre" : "Pop",
