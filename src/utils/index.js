@@ -94,7 +94,6 @@ export const InfoSnippet = ({icon, content, children, subText, disableTitle, dis
         >{children ? children : content}</div>
         <h6
           style={{
-            lineHeight: 1,
             flexGrow: 1,
             padding: 0,
             color: "grey",
@@ -139,3 +138,21 @@ export const Rating = ({rating, editable, handleRatingChange}) =>  {
     </ul>
   )
 }
+
+
+// class FanartTV {
+//   constructor(apiKey) {
+//     this.apiKey = apiKey
+//   }
+//
+//   getImagesForArtist(bandId) {
+//     fetch(`http://webservice.fanart.tv/v3/music/${bandId}?api_key=${this.apiKey}`)
+//     .then( response => {
+//       if (response.status === 200) {
+//         return new Promise((resolve, reject) => resolve(response.json()))
+//       }
+//     })
+//   }
+// }
+//
+// export const fanarttv = new FanartTV("152d071f673f4e189fbe2a1e17606481")

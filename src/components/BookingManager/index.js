@@ -63,7 +63,7 @@ handleMenuItemClick(openedMenuItem){
 
   render() {
 
-    const {isDrawerOpened} = this.props
+    const {isDrawerOpened, user: {name}} = this.props
     const {openedMenuItem, bands, concerts, events, scenes} = this.state
 
     return (
@@ -75,7 +75,7 @@ handleMenuItemClick(openedMenuItem){
           <NewBooking {...{bands, events, scenes}}/>
           {{
             "search":
-            <Search {...{bands, concerts}}/>,
+            <Search {...{bands, concerts, name}}/>,
             "previousConcerts":
             <PreviousConcerts {...{concerts, events, bands}}/>,
           }[openedMenuItem]}

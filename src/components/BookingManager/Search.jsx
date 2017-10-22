@@ -21,12 +21,13 @@ export default class Search extends Component{
     }
   }
 
-  componentWillReceiveProps({bands, concerts}) {
-    if (bands && concerts) {
+  componentWillReceiveProps({bands, concerts, name}) {
+    if (bands && concerts && name) {
       this.setState({
         bands,
         bandsToOutput: Object.keys(bands),
-        concerts
+        concerts,
+        name
       })
     }
     else this.setState({bandsToOutput: null})
@@ -55,7 +56,8 @@ export default class Search extends Component{
   }
 
    render(){
-     const {genre, bandsToOutput, bands, concerts} = this.state
+     const {genre, bandsToOutput, bands, concerts, name} = this.state
+
      return(
        <div>
          <Toolbar className="band-search-toolbar">
@@ -78,6 +80,7 @@ export default class Search extends Component{
            {bands && concerts ?
              bandsToOutput.map(key => (
                <Band
+                 reviewerName={name}
                  key={key}
                  bandKey={key}
                  concerts={concerts}

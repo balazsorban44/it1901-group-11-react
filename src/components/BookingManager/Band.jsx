@@ -2,13 +2,12 @@ import React, {Component} from 'react'
 import Chip from 'material-ui/Chip'
 import {List} from 'material-ui/List'
 import FontIcon from 'material-ui/FontIcon'
-import {Card, CardHeader, CardText, CardMedia, CardTitle} from 'material-ui/Card'
+import {Card, CardText, CardMedia, CardTitle} from 'material-ui/Card'
 import AddReview from './AddReview'
 import Concerts from './Concerts'
 import firebase from 'firebase'
-import {InfoSnippet, parseNumber, muiTheme} from '../../utils'
-import fanarttvAPI from 'fanarttv'
-
+import {InfoSnippet, parseNumber, parseDate, muiTheme, Rating} from '../../utils'
+import musician from '../../img/musician.jpg'
 
 //Card for every band in search results
 export default class Band extends Component {
@@ -27,20 +26,22 @@ export default class Band extends Component {
       this.setState({manager: snap.val()})
     })
 
-    const fanart = new fanarttvAPI('152d071f673f4e189fbe2a1e17606481')
-    fanart.getImagesForArtist(this.props.bandKey, (err, res) => {
-      if (!err) {
-        this.setState({cover: res.artistbackground[1].url})
-      }
+    // fanarttv.getImagesForArtist(this.props.bandKey).then(data => console.log(data))
+
+    fetch(`https://webservice.fanart.tv/v3/music/${this.props.bandKey}?api_key=152d071f673f4e189fbe2a1e17606481`)
+    .then(response => {
+      if (response.ok) {
+        response.json().then(result => {
+        result.artistbackground && this.setState({cover: result.artistbackground[0].url})
+      })}
     })
+
 
   }
 
   render() {
-    let {bandKey, band, concerts} = this.props
+    let {bandKey, band, concerts, reviewerName} = this.props
     const {manager: {name: managerName, email}, cover} = this.state
-
-
 
     concerts = Object.keys(concerts)
       .filter(key => band.concerts.includes(key))
@@ -49,18 +50,15 @@ export default class Band extends Component {
         return obj
       }, {})
 
-    const {name, genre, albumSales, monthlyListeners, technicalRequirements} = band
+    const {name, genre, albumSales, monthlyListeners, technicalRequirements, reviews} = band
     return (
       <Card className="search-result">
 
-        {cover !== "" ?
-          <CardMedia actAsExpander overlay={
-            <CardTitle title={name} subtitle="click for more"/>}>
-            <img src={cover} alt={name}/>
-          </CardMedia> :
-          <CardHeader title={<h2 style={{lineHeight: 1.2}}>{name}</h2>} actAsExpander showExpandableButton/>
+        <CardMedia actAsExpander overlay={
+          <CardTitle title={name} subtitle="click for more"/>}>
+          <img src={cover !== "" ? cover : musician} alt={name}/>
+        </CardMedia>
 
-        }
         <CardText expandable>
           <List style={{display: "flex", flexWrap: "wrap"}}>
             <InfoSnippet
@@ -108,12 +106,57 @@ export default class Band extends Component {
             icon="rate_review"
             disableTitle
             disableHover
+            orientation="portrait"
+            alignSubText="center"
             subText="Review band"
-            content={band.concerts[0] !== "" ? <AddReview {...{bandKey}}/> : "You cannot review this band because they have not played on any concerts yet."}
+            content={band.concerts[0] !== "" ? <AddReview {...{bandKey, reviewerName}}/> : "You cannot review this band because they have not played on any concerts yet."}
           />
 
+          <InfoSnippet
+            icon="thumbs_up_down"
+            disableTitle
+            disableHover
+            orientation="portrait"
+            alignSubText="center"
+            subText="Band reviews"
+            content={reviews[Object.keys(reviews)[0]].rating !== 0 ? <Reviews {...{reviews}}/> : "There is no reviews yet."}
+          />
         </CardText>
       </Card>
     )
   }
+}
+
+const Reviews = ({reviews}) => {
+  let reviewList = []
+  let averageRating = []
+  Object.keys(reviews).forEach(key => {
+    const {content, rating, reviewerName, timestamp} = reviews[key]
+    averageRating.push(rating)
+    reviewList.push(
+      <li
+        style={{display: "flex"}}
+        key={content}
+      >
+        <p style={{fontSize: "1.1em"}}>{content} ({rating})</p>
+        <span style={{margin: "0 .5em"}}>-</span>
+        <p style={{fontStyle: "italic"}}>{reviewerName} ({parseDate(timestamp)})</p>
+      </li>
+    )
+  })
+  averageRating = averageRating.reduce((p, c) => p + c) / averageRating.length
+  return(
+    <div>
+      <ul style={{marginBottom: 0}}>
+        {reviewList}
+      </ul>
+      <div style={{
+        display: "flex",
+        alignItems: "center"
+      }}>
+        <h6>({averageRating.toFixed(2)})</h6>
+        <Rating rating={Math.ceil(averageRating)}/>
+      </div>
+    </div>
+  )
 }

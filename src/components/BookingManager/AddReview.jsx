@@ -16,6 +16,7 @@ export default class AddReview extends Component {
     }
   }
 
+
   handleRatingChange = index => {
     this.setState(({rating}) => ({
       rating: rating===index ? 0 : index
@@ -32,7 +33,9 @@ export default class AddReview extends Component {
       const db = firebase.database().ref()
       db.child(`bands/${this.props.bandKey}/reviews`)
         .push().set({
-          content, rating
+          content, rating,
+          timestamp: Date.now(),
+          reviewerName: this.props.reviewerName
         }).then(
           this.setState({
             content: "",

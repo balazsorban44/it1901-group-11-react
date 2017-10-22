@@ -31,28 +31,29 @@ export default class Concerts extends Component {
           alignSubText="center"
           subText="Previous concerts"
         >
-          <Table>
-            <TableHeader adjustForCheckbox={false} displaySelectAll={false}>
-              <TableRow>
-                <TableHeaderColumn>Concert date</TableHeaderColumn>
-                <TableHeaderColumn>Tickets sold</TableHeaderColumn>
-                <TableHeaderColumn>Total income</TableHeaderColumn>
-              </TableRow>
-            </TableHeader>
-            <TableBody displayRowCheckbox={false} showRowHover>
-              {Object.keys(concerts).map(key => {
-                const {from, participants, ticketPrice, bandFee} = concerts[key]
-                return (
-                  from < Date.now() &&
-                    <TableRow key={key}>
-                      <TableRowColumn>{parseDate(from)}</TableRowColumn>
-                      <TableRowColumn>{parseNumber(participants)}</TableRowColumn>
-                      <TableRowColumn>{parsePrice(participants*ticketPrice-bandFee)}</TableRowColumn>
-                    </TableRow>
-                )
-              })}
-            </TableBody>
-          </Table>
+          {Object.keys(concerts)[0] ?
+            <Table>
+              <TableHeader adjustForCheckbox={false} displaySelectAll={false}>
+                <TableRow>
+                  <TableHeaderColumn>Concert date</TableHeaderColumn>
+                  <TableHeaderColumn>Tickets sold</TableHeaderColumn>
+                  <TableHeaderColumn>Total income</TableHeaderColumn>
+                </TableRow>
+              </TableHeader>
+              <TableBody displayRowCheckbox={false} showRowHover>
+                {Object.keys(concerts).map(key => {
+                  const {from, participants, ticketPrice, bandFee} = concerts[key]
+                  return (
+                    from < Date.now() &&
+                      <TableRow key={key}>
+                        <TableRowColumn>{parseDate(from)}</TableRowColumn>
+                        <TableRowColumn>{parseNumber(participants)}</TableRowColumn>
+                        <TableRowColumn>{parsePrice(participants*ticketPrice-bandFee)}</TableRowColumn>
+                      </TableRow>
+                  )
+                })}
+              </TableBody>
+            </Table>: "There is no concerts yet."}
         </InfoSnippet>
         {Object.keys(acceptedBookings).length !== 0 &&
           <InfoSnippet
