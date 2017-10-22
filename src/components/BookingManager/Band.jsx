@@ -4,6 +4,7 @@ import {List} from 'material-ui/List'
 import {Card, CardHeader, CardText} from 'material-ui/Card'
 import AddReview from './AddReview'
 import Concerts from './Concerts'
+import fanarttvAPI from 'fanarttv'
 
 import {InfoSnippet, parseNumber} from '../../utils'
 //Card for every band in search results

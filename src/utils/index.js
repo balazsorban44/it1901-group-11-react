@@ -1,10 +1,22 @@
 import React from 'react'
 import CircularProgress from 'material-ui/CircularProgress'
 import FontIcon from 'material-ui/FontIcon'
-
+import getMuiTheme from 'material-ui/styles/getMuiTheme'
+import {amber500, amber700} from 'material-ui/styles/colors'
 import {List, ListItem} from 'material-ui/List'
 
 import 'datejs'
+
+export const muiTheme = getMuiTheme({
+  palette: {
+    primary1Color: "#f8c53b",
+    primary2Color: amber500,
+    primary3Color: amber700,
+    accent1Color: "#ea4a53"
+  },
+})
+
+export const profiles = require.context('../img/profiles')
 
 // Parse a date. Returns "01. Jan 1970"
 export const parseDate = (...date) => new Date(...date).toString('dd. MMM yyyy')
@@ -82,6 +94,7 @@ export const InfoSnippet = ({icon, content, children, subText, disableTitle, dis
         >{children ? children : content}</div>
         <h6
           style={{
+            lineHeight: 1,
             flexGrow: 1,
             padding: 0,
             color: "grey",
