@@ -1,473 +1,473 @@
 {
-  "acceptedRoles" : ["organizer", "bookingManager", "bookingBoss", "technician", "manager", "bandMember", "PROrganizer" ],
+  "acceptedRoles" : [ "organizer", "bookingManager", "bookingBoss", "technician", "manager", "bandMember", "PROrganizer" ],
   "profiles" : {
-    "Pk2mFknfpBd8ksNbP2Ae7YTWcOc2": {
-      "img" : "frank",
-      "name" : "Frank",
-      "role" : "PROrganizer"
+    "05vwEXLE5oVql9aaTmApjOb1fG62" : {
+      "band" : "d87e52c5-bb8d-4da8-b941-9f4928627dc8",
+      "name" : "Anni-Frid Lyngstad",
+      "role" : "bandMember"
+    },
+    "0HiWQdn0qtN3EN1ofXoqiyQZsQ82" : {
+      "band" : "7808accb-6395-4b25-858c-678bbb73896b",
+      "name" : "Kyle Simmons",
+      "role" : "bandMember"
+    },
+    "0vXvBt9Y6CgG9JNzgdFJrEcVh3z2" : {
+      "band" : "c33c2065-b1c3-4406-b066-d33a9e2ea71a",
+      "name" : "Eddie Fisher",
+      "role" : "bandMember"
     },
     "13pAdrh9t4Pt7qrdDJfpzjy8Vrh1" : {
       "img" : "joe",
       "name" : "Joe",
       "role" : "organizer"
     },
-    "uN2sZVTwlsUwBBBHUWFzDLBikB42" : {
-      "img" : "betty",
-      "name" : "Betty",
-      "role" : "organizer"
+    "1d81ImVafFfiM0TAsPOXD2n7Fs62" : {
+      "band" : "4753fcb7-9270-493a-974d-8daca4e49125",
+      "name" : "Campbell Dorsey",
+      "role" : "bandMember"
     },
-    "RluDhpq9gpPHWK5aRGHLu5PvTDA2" : {
-      "img" : "jane",
-      "name" : "Jane",
-      "role" : "bookingBoss"
+    "1xqNZEBOeTV5K6o86wXR4B3qvpJ3" : {
+      "img" : "veronica",
+      "name" : "Veronica",
+      "role" : "technician"
     },
     "33gMwGSuFfUTMv9BWCAakNXF0re2" : {
       "img" : "ben",
       "name" : "Ben",
       "role" : "bookingBoss"
     },
-    "YiBSLuDTjTMRfaJbtGsfkq9N7M12" : {
-      "img" : "james",
-      "name" : "James",
-      "role" : "manager",
-      "email": "james@man.com"
+    "3B142NVUlTYIoGBcEksm05vGRay2" : {
+      "band" : "a6c6897a-7415-4f8d-b5a5-3a5e05f3be67",
+      "name" : "Josh Dun",
+      "role" : "bandMember"
     },
-    "I90tBRUgsba4pT2c9DGiygGszhw1" : {
-      "img" : "george",
-      "name" : "George",
-      "role" : "manager",
-      "email": "george@man.com"
+    "3mNn1aGAtDhjR2P1L3DFrUH8cS32" : {
+      "band" : "c33c2065-b1c3-4406-b066-d33a9e2ea71a",
+      "name" : "Ryan Tedder",
+      "role" : "bandMember"
     },
-    "r52CRDQ5hDb1e7jTPHFYtNbNkbm2" : {
-      "img" : "jeff",
-      "name" : "Jeff",
-      "role" : "manager",
-      "email": "jeff@man.com"
+    "3xkOMBk0uRgFBuA7vsOppPcLxo73" : {
+      "band" : "cc197bad-dc9c-440d-a5b5-d52ba2e14234",
+      "name" : "Chris Martin",
+      "role" : "bandMember"
     },
-    "ZThJHM8iAhcQxuo5MPDf6L952h13" : {
-      "img" : "jacob",
-      "name" : "Jacob",
-      "role" : "manager"
-    },
-    "ZCcD5DwBbzgXLAGRdR28cUCdQub2" : {
-      "img" : "jessica",
-      "name" : "Jessica",
-      "role" : "bookingManager"
-    },
-    "kg08ojgicAgx23e0fPca33AVx8B3" : {
-      "img" : "jack",
-      "name" : "Jack",
+    "4xuhZNv3Ffh7jgnCedm3F63T1yU2" : {
+      "img" : "erik",
+      "name" : "Erik",
       "role" : "technician"
     },
-    "pgZ9lsCC1OXwuDi2b7I83WBkswb2" : {
-      "img" : "bob",
-      "name" : "Bob",
+    "5OAhMtNmUOfDyheZVmuqGTZlfp32" : {
+      "band" : "3630fff3-52fc-4e97-ab01-d68fd88e4135",
+      "name" : "Ryan Key",
+      "role" : "bandMember"
+    },
+    "5XjmcDoOfZaXUgAyoHzAf96FWfj1" : {
+      "band" : "5973hjfiueriufnksdjfn",
+      "name" : "Chris Gaylor",
+      "role" : "bandMember"
+    },
+    "5sQyKeT0P4eAO21Nm33TybTut3E2" : {
+      "img" : "eirik",
+      "name" : "Eirik",
       "role" : "technician"
+    },
+    "63b80PS1SxRAB95JvGZzEcQnrbU2" : {
+      "img" : "howard",
+      "name" : "Howard",
+      "role" : "technician"
+    },
+    "6XeD5iiWB9MexhHhSAkyrC2cAes2" : {
+      "band" : "d87e52c5-bb8d-4da8-b941-9f4928627dc8",
+      "name" : "Agnetha Fältskog",
+      "role" : "bandMember"
+    },
+    "7On6X24czxNKrmVz8lBVqzG11tx1" : {
+      "band" : "012151a8-0f9a-44c9-997f-ebd68b5389f9",
+      "name" : "Dan Reynolds",
+      "role" : "bandMember"
+    },
+    "7uHaGKs8maNUXpI92zqGtroHRPv2" : {
+      "img" : "birgit",
+      "name" : "Birgit",
+      "role" : "technician"
+    },
+    "8QwsVLqtMKQF0HvdcOCL3COuru42" : {
+      "band" : "7808accb-6395-4b25-858c-678bbb73896b",
+      "name" : "Chris Wood",
+      "role" : "bandMember"
+    },
+    "AIyJlBrMSUhaBv8AqypxkbWJPPg2" : {
+      "band" : "0b4ce616-79c3-471c-9792-1b8767eca03a",
+      "name" : "Mark Lawrence Richard Jr",
+      "role" : "bandMember"
     },
     "AZOpCPsvtbWhk8ASWuwJbv2rts93" : {
       "img" : "brandon",
       "name" : "Brandon",
       "role" : "technician"
     },
-    "nCXaOPJjIYe8v5Wes5jQEOeNMSz1" : {
-      "img" : "lars",
-      "name": "Lars",
-      "role" : "technician"
+    "BN90zMQ7pNbkbNyvwoCGW4dlQth2" : {
+      "band" : "cc197bad-dc9c-440d-a5b5-d52ba2e14234",
+      "name" : "Guy Berryman",
+      "role" : "bandMember"
     },
-    "Ibjsqw4uJxZJrCl0ClL5pneKhgv1" : {
-      "img" : "per",
-      "name": "Per",
-      "role" : "technician"
+    "C24x4OqZJLeDEdHumh7mMwinJSu2" : {
+      "band" : "b95ce3ff-3d05-4e87-9e01-c97b66af13d4",
+      "name" : "Marshall Bruce Mathers III",
+      "role" : "bandMember"
     },
-    "xvKe4kdXR7OnQBrzSB5Rph8lGkK2" : {
-      "img" : "bernt",
-      "name": "Bernt",
-      "role" : "technician"
+    "CJViH0HVqQZ9EpBtuzb45gBGgUA3" : {
+      "band" : "59iyurewbfu6756w4e45e5f",
+      "name" : "Stian Tøsse",
+      "role" : "bandMember"
     },
-    "twDpZNCedjgYAJKmkoTEiVdJEUv1" : {
-      "img" : "inge",
-      "name": "Inge",
-      "role" : "technician"
+    "CbsaHQX4jSSgFKegVcO2xUrq9883" : {
+      "band" : "2ddd167f-5b8a-4372-b350-6ad50493bac0",
+      "name" : "Dave Welsh",
+      "role" : "bandMember"
     },
-    "MnzmGlSX11PT8ZYeI1a5SwT0Fbg1" : {
-      "img" : "andy",
-      "name": "Andy",
-      "role" : "technician"
+    "Cw31gQTRH8R3UNmQQUNoVKYzWpI2" : {
+      "band" : "7808accb-6395-4b25-858c-678bbb73896b",
+      "name" : "Will Farquarson",
+      "role" : "bandMember"
     },
-    "4xuhZNv3Ffh7jgnCedm3F63T1yU2" : {
-      "img" : "erik",
-      "name": "Erik",
-      "role" : "technician"
+    "DwFReHvA22Mr3UilIBQHN7kAe0f2" : {
+      "band" : "c33c2065-b1c3-4406-b066-d33a9e2ea71a",
+      "name" : "Zach Filkins",
+      "role" : "bandMember"
     },
-    "5sQyKeT0P4eAO21Nm33TybTut3E2" : {
-      "img" : "eirik",
-      "name": "Eirik",
-      "role" : "technician"
-    },
-    "63b80PS1SxRAB95JvGZzEcQnrbU2" : {
-      "img" : "howard",
-      "name": "Howard",
-      "role" : "technician"
-    },
-    "1xqNZEBOeTV5K6o86wXR4B3qvpJ3" : {
-      "img" : "veronica",
-      "name": "Veronica",
-      "role" : "technician"
-    },
-    "Ym30wwBVThSF1X44Bzph7Ss8yds2" : {
-      "img" : "marthe",
-      "name": "Marthe",
-      "role" : "technician"
-    },
-    "7uHaGKs8maNUXpI92zqGtroHRPv2" : {
-      "img" : "birgit",
-      "name": "Birgit",
-      "role" : "technician"
+    "EL8PXdNr7nRju23q10ubgw7YpyC2" : {
+      "band" : "d87e52c5-bb8d-4da8-b941-9f4928627dc8",
+      "name" : "Benny Andersson",
+      "role" : "bandMember"
     },
     "FEV3ktwWIYfNQCecOEO1isAkrFZ2" : {
       "img" : "chad",
-      "name": "Chad",
+      "name" : "Chad",
       "role" : "technician"
+    },
+    "FTm8hQMUFegIWHSXVX90Qz7Vn8j1" : {
+      "band" : "c33c2065-b1c3-4406-b066-d33a9e2ea71a",
+      "name" : "Drew Brown",
+      "role" : "bandMember"
+    },
+    "FngArgFX0sRIAITfeCluL9nMula2" : {
+      "band" : "5973hjfiueriufnksdjfn",
+      "name" : "Nick Wheeler",
+      "role" : "bandMember"
+    },
+    "GiHANA7fTEMKgghwaIDTvwVkyLi1" : {
+      "band" : "0ab49580-c84f-44d4-875f-d83760ea2cfe",
+      "name" : "James Valentine",
+      "role" : "bandMember"
+    },
+    "I90tBRUgsba4pT2c9DGiygGszhw1" : {
+      "email" : "george@man.com",
+      "img" : "george",
+      "name" : "George",
+      "role" : "manager"
+    },
+    "IPZakpzhNlRixtuMF2YsAlEli043" : {
+      "band" : "65f4f0c5-ef9e-490c-aee3-909e7ae6b2ab",
+      "name" : "Debora Becker",
+      "role" : "bandMember"
+    },
+    "IZ5XQ9CvMKe5xgAZIB2X4bWeilu1" : {
+      "band" : "cc197bad-dc9c-440d-a5b5-d52ba2e14234",
+      "name" : "Will Champion",
+      "role" : "bandMember"
+    },
+    "Ibjsqw4uJxZJrCl0ClL5pneKhgv1" : {
+      "img" : "per",
+      "name" : "Per",
+      "role" : "technician"
+    },
+    "IoruqtEie1hlEV9ol0LIBecrfhg1" : {
+      "band" : "a6c6897a-7415-4f8d-b5a5-3a5e05f3be67",
+      "name" : "Tyler Joseph",
+      "role" : "bandMember"
+    },
+    "IzNodST8CaZzVB9s3j8DIEdUPp32" : {
+      "band" : "4753fcb7-9270-493a-974d-8daca4e49125",
+      "name" : "Angel Church",
+      "role" : "bandMember"
+    },
+    "JZuieN2j80RXMM9frbwSlClJXMJ3" : {
+      "band" : "3630fff3-52fc-4e97-ab01-d68fd88e4135",
+      "name" : "Longineu W. Parsons III",
+      "role" : "bandMember"
+    },
+    "KyGxqYtSf8TDrTC0dZifcOqP2tH3" : {
+      "band" : "012151a8-0f9a-44c9-997f-ebd68b5389f9",
+      "name" : "Ben McKee",
+      "role" : "bandMember"
+    },
+    "LBhCZm6DxVaqJ3CcZGKd34DX3Lk2" : {
+      "band" : "012151a8-0f9a-44c9-997f-ebd68b5389f9",
+      "name" : "Daniel Platzman",
+      "role" : "bandMember"
+    },
+    "LgBNXvgA2ASRpX87479nc7skgTE3" : {
+      "band" : "c33c2065-b1c3-4406-b066-d33a9e2ea71a",
+      "name" : "Brent Kutzle",
+      "role" : "bandMember"
+    },
+    "LjKm8RzTI9fqIOkqA9cw55q387j2" : {
+      "band" : "f27ec8db-af05-4f36-916e-3d57f91ecf5e",
+      "name" : "Michael Jackson",
+      "role" : "bandMember"
+    },
+    "MnzmGlSX11PT8ZYeI1a5SwT0Fbg1" : {
+      "img" : "andy",
+      "name" : "Andy",
+      "role" : "technician"
+    },
+    "NGO8rtpG0caLSWBw0CHJlBp2hWC3" : {
+      "band" : "0ab49580-c84f-44d4-875f-d83760ea2cfe",
+      "name" : "Micket Madden",
+      "role" : "bandMember"
+    },
+    "PJQUu2HnuOMovkmY0zxGC1bpyfE3" : {
+      "band" : "73e5e69d-3554-40d8-8516-00cb38737a1c",
+      "name" : "Robyn Rihanna Fenty",
+      "role" : "bandMember"
+    },
+    "Pk2mFknfpBd8ksNbP2Ae7YTWcOc2" : {
+      "img" : "frank",
+      "name" : "Frank",
+      "role" : "PROrganizer"
+    },
+    "QovBZRyNC4WyItXE40scxNOXehM2" : {
+      "band" : "5973hjfiueriufnksdjfn",
+      "name" : "Tyson Ritter",
+      "role" : "bandMember"
+    },
+    "RNK8vI4WrreSDC3TylKxLqZ8tmV2" : {
+      "band" : "0ab49580-c84f-44d4-875f-d83760ea2cfe",
+      "name" : "Matt Flynn",
+      "role" : "bandMember"
+    },
+    "RX5xs3zuNmeINnvYaVOttGLBzir1" : {
+      "band" : "012151a8-0f9a-44c9-997f-ebd68b5389f9",
+      "name" : "Wayne Sermon",
+      "role" : "bandMember"
+    },
+    "RluDhpq9gpPHWK5aRGHLu5PvTDA2" : {
+      "img" : "jane",
+      "name" : "Jane",
+      "role" : "bookingBoss"
+    },
+    "T9UsSMhIp1UWTR7aJpwO72C9wfe2" : {
+      "band" : "2ddd167f-5b8a-4372-b350-6ad50493bac0",
+      "name" : "Isaac Slade",
+      "role" : "bandMember"
+    },
+    "UZH5t2VsQ2fcevqSBX9Iw92FdC33" : {
+      "band" : "d87e52c5-bb8d-4da8-b941-9f4928627dc8",
+      "name" : "Björn Ulvaeus",
+      "role" : "bandMember"
+    },
+    "VhFX61MLj7ck6TZMVV0zw1cdIZ03" : {
+      "band" : "91a81925-92f9-4fc9-b897-93cf01226282",
+      "name" : "Alex Pall",
+      "role" : "bandMember"
+    },
+    "WdP2LtB9mYXqy6XljVelbDGljMH2" : {
+      "band" : "3630fff3-52fc-4e97-ab01-d68fd88e4135",
+      "name" : "Sean Mackin",
+      "role" : "bandMember"
+    },
+    "X42X9P84eAXTetKxGMWlsbW55uz2" : {
+      "band" : "2ddd167f-5b8a-4372-b350-6ad50493bac0",
+      "name" : "Jimmy Stofer",
+      "role" : "bandMember"
+    },
+    "XJlaGUgUFcbNhapMiXJgjr8rTcK2" : {
+      "band" : "59iyurewbfu6756w4e45e5f",
+      "name" : "Mats Pedersen",
+      "role" : "bandMember"
+    },
+    "Y7FBnJWda5buak3CsMCJYY0BTnd2" : {
+      "band" : "4753fcb7-9270-493a-974d-8daca4e49125",
+      "name" : "Orr Cooper",
+      "role" : "bandMember"
+    },
+    "YiBSLuDTjTMRfaJbtGsfkq9N7M12" : {
+      "email" : "james@man.com",
+      "img" : "james",
+      "name" : "James",
+      "role" : "manager"
+    },
+    "Ym30wwBVThSF1X44Bzph7Ss8yds2" : {
+      "img" : "marthe",
+      "name" : "Marthe",
+      "role" : "technician"
+    },
+    "Yvl69VS0S9eHRXTlaxbX07FhiTG2" : {
+      "band" : "65f4f0c5-ef9e-490c-aee3-909e7ae6b2ab",
+      "name" : "Vance Macdonald",
+      "role" : "bandMember"
+    },
+    "ZCcD5DwBbzgXLAGRdR28cUCdQub2" : {
+      "img" : "jessica",
+      "name" : "Jessica",
+      "role" : "bookingManager"
+    },
+    "ZSJeGxnnzfRvEAtRqY0LjI6Qvp93" : {
+      "band" : "3630fff3-52fc-4e97-ab01-d68fd88e4135",
+      "name" : "Ryan Mendez",
+      "role" : "bandMember"
+    },
+    "ZThJHM8iAhcQxuo5MPDf6L952h13" : {
+      "img" : "jacob",
+      "name" : "Jacob",
+      "role" : "manager"
+    },
+    "a0xLTqQglRgSaUsCDAi3R2CIym02" : {
+      "band" : "7808accb-6395-4b25-858c-678bbb73896b",
+      "name" : "Dan Smith",
+      "role" : "bandMember"
+    },
+    "cuy6BS0SUsSTZU3vUZz9DISLPip1" : {
+      "band" : "b8a7c51f-362c-4dcb-a259-bc6e0095f0a6",
+      "name" : "Edward Christopher Sheeran",
+      "role" : "bandMember"
+    },
+    "fDGEoDaMdPcv7nELKeubKXK1e5s2" : {
+      "band" : "59iyurewbfu6756w4e45e5f",
+      "name" : "Aleksander Karlsson",
+      "role" : "bandMember"
     },
     "gADgB4F4xzb8S1oOzyVYzCljDtJ2" : {
       "img" : "ida",
-      "name": "Ida",
+      "name" : "Ida",
       "role" : "technician"
     },
-    "zOkNChvPFiUFWxSl2V7paVecfHA2" : {
-      "name" : "Hammond Robbins",
-      "role": "bandMember",
-      "band" : "65f4f0c5-ef9e-490c-aee3-909e7ae6b2ab"
-    },
-    "IPZakpzhNlRixtuMF2YsAlEli043" : {
-      "name" : "Debora Becker",
-      "role": "bandMember",
-      "band" : "65f4f0c5-ef9e-490c-aee3-909e7ae6b2ab"
-    },
-    "Yvl69VS0S9eHRXTlaxbX07FhiTG2" : {
-      "name" : "Vance Macdonald",
-      "role": "bandMember",
-      "band" : "65f4f0c5-ef9e-490c-aee3-909e7ae6b2ab"
-    },
-    "oXg9fnCh3KT7lpDgR68BfKkVXZs2" : {
-      "name" : "Alan Walker",
-      "role": "bandMember",
-      "band" : "59bc02108ebb6407fe317b7d"
-    },
-    "3xkOMBk0uRgFBuA7vsOppPcLxo73" : {
-      "name" : "Chris Martin",
-      "role": "bandMember",
-      "band" : "cc197bad-dc9c-440d-a5b5-d52ba2e14234"
-    },
-    "BN90zMQ7pNbkbNyvwoCGW4dlQth2" : {
-      "name" : "Guy Berryman",
-      "role": "bandMember",
-      "band" : "cc197bad-dc9c-440d-a5b5-d52ba2e14234"
-    },
     "gmxVHUhjuXeTeHm7tuDa1tQ7rF73" : {
+      "band" : "cc197bad-dc9c-440d-a5b5-d52ba2e14234",
       "name" : "Jonny Buckland",
-      "role": "bandMember",
-      "band" : "cc197bad-dc9c-440d-a5b5-d52ba2e14234"
-    },
-    "IZ5XQ9CvMKe5xgAZIB2X4bWeilu1" : {
-      "name" : "Will Champion",
-      "role": "bandMember",
-      "band" : "cc197bad-dc9c-440d-a5b5-d52ba2e14234"
-    },
-    "6XeD5iiWB9MexhHhSAkyrC2cAes2" : {
-      "name" : "Agnetha Fältskog",
-      "role": "bandMember",
-      "band" : "59bc0dsaoleb433drc985hj3"
-    },
-    "05vwEXLE5oVql9aaTmApjOb1fG62" : {
-      "name" : "Anni-Frid Lyngstad",
-      "role": "bandMember",
-      "band" : "59bc0dsaoleb433drc985hj3"
-    },
-    "UZH5t2VsQ2fcevqSBX9Iw92FdC33" : {
-      "name" : "Björn Ulvaeus",
-      "role": "bandMember",
-      "band" : "59bc0dsaoleb433drc985hj3"
-    },
-    "EL8PXdNr7nRju23q10ubgw7YpyC2" : {
-      "name" : "Benny Andersson",
-      "role": "bandMember",
-      "band" : "59bc0dsaoleb433drc985hj3"
-    },
-    "wgCF4LHgKIaiFHe8opNKg8NYvJr1" : {
-      "name" : "Lana Del Rey",
-      "role": "bandMember",
-      "band" : "b7539c32-53e7-4908-bda3-81449c367da6"
-    },
-    "LjKm8RzTI9fqIOkqA9cw55q387j2" : {
-      "name" : "Michael Jackson",
-      "role": "bandMember",
-      "band" : "59bc102345fba5kjdsoieioe"
-    },
-    "sC8t2OmHfPh6AibBcU5Tp04tiN52" : {
-      "name" : "Aubrey Drake Graham",
-      "role": "bandMember",
-      "band" : "59bc1r3p928ouwfba5kjdsoieioe"
-    },
-    "yirpOKeR2NfgPUT0kW2ajWSGRM43" : {
-      "name" : "Michael Nicholson",
-      "role": "bandMember",
-      "band" : "4753fcb7-9270-493a-974d-8daca4e49125"
-    },
-    "Y7FBnJWda5buak3CsMCJYY0BTnd2" : {
-      "name" : "Orr Cooper",
-      "role": "bandMember",
-      "band" : "4753fcb7-9270-493a-974d-8daca4e49125"
-    },
-    "1d81ImVafFfiM0TAsPOXD2n7Fs62" : {
-      "name" : "Campbell Dorsey",
-      "role": "bandMember",
-      "band" : "4753fcb7-9270-493a-974d-8daca4e49125"
-    },
-    "tjpvkCu3LUclKnn8XKzE3ShSsoc2" : {
-      "name" : "Knapp Atkins",
-      "role": "bandMember",
-      "band" : "4753fcb7-9270-493a-974d-8daca4e49125"
-    },
-    "IzNodST8CaZzVB9s3j8DIEdUPp32" : {
-      "name" : "Angel Church",
-      "role": "bandMember",
-      "band" : "4753fcb7-9270-493a-974d-8daca4e49125"
-    },
-    "3mNn1aGAtDhjR2P1L3DFrUH8cS32" : {
-      "name" : "Ryan Tedder",
-      "role": "bandMember",
-      "band" : "59fnewhbgf234fgnnn44554f"
-    },
-    "DwFReHvA22Mr3UilIBQHN7kAe0f2" : {
-      "name" : "Zach Filkins",
-      "role": "bandMember",
-      "band" : "59fnewhbgf234fgnnn44554f"
-    },
-    "LgBNXvgA2ASRpX87479nc7skgTE3" : {
-      "name" : "Brent Kutzle",
-      "role": "bandMember",
-      "band" : "59fnewhbgf234fgnnn44554f"
-    },
-    "FTm8hQMUFegIWHSXVX90Qz7Vn8j1" : {
-      "name" : "Drew Brown",
-      "role": "bandMember",
-      "band" : "59fnewhbgf234fgnnn44554f"
-    },
-    "0vXvBt9Y6CgG9JNzgdFJrEcVh3z2" : {
-      "name" : "Eddie Fisher",
-      "role": "bandMember",
-      "band" : "59fnewhbgf234fgnnn44554f"
-    },
-    "r3mpnFLoMwRqTqKD20HtKsoNe8a2" : {
-      "name" : "Sir Robert Bryson Hall II",
-      "role": "bandMember",
-      "band" : "59ebedbybe76f5e6f7efdv8"
-    },
-    "AIyJlBrMSUhaBv8AqypxkbWJPPg2" : {
-      "name" : "Mark Lawrence Richard Jr",
-      "role": "bandMember",
-      "band" : "59duwnunw34gth3434ggrt4"
-    },
-    "T9UsSMhIp1UWTR7aJpwO72C9wfe2" : {
-      "name" : "Isaac Slade",
-      "role": "bandMember",
-      "band" : "59iuewnfyw7653ybfe76fef"
-    },
-    "vueaZSKAzAhtXcKAAbxk5019LuQ2" : {
-      "name" : "Joe King",
-      "role": "bandMember",
-      "band" : "59iuewnfyw7653ybfe76fef"
-    },
-    "CbsaHQX4jSSgFKegVcO2xUrq9883" : {
-      "name" : "Dave Welsh",
-      "role": "bandMember",
-      "band" : "59iuewnfyw7653ybfe76fef"
-    },
-    "tVwntdtxKwfOx7FbOJVE4OnjNx53" : {
-      "name" : "Ben Wysocki",
-      "role": "bandMember",
-      "band" : "59iuewnfyw7653ybfe76fef"
-    },
-    "X42X9P84eAXTetKxGMWlsbW55uz2" : {
-      "name" : "Jimmy Stofer",
-      "role": "bandMember",
-      "band" : "59iuewnfyw7653ybfe76fef"
-    },
-    "n16G0h3ZkDfXj19XP8ilAGkbSm33" : {
-      "name" : "Balázs Orbán",
-      "role": "bandMember",
-      "band" : "59iyurewbfu6756w4e45e5f"
-    },
-    "XJlaGUgUFcbNhapMiXJgjr8rTcK2" : {
-      "name" : "Mats Pedersen",
-      "role": "bandMember",
-      "band" : "59iyurewbfu6756w4e45e5f"
-    },
-    "CJViH0HVqQZ9EpBtuzb45gBGgUA3" : {
-      "name" : "Stian Tøsse",
-      "role": "bandMember",
-      "band" : "59iyurewbfu6756w4e45e5f"
-    },
-    "fDGEoDaMdPcv7nELKeubKXK1e5s2" : {
-      "name" : "Aleksander Karlsson",
-      "role": "bandMember",
-      "band" : "59iyurewbfu6756w4e45e5f"
-    },
-    "lmL5Sw8iqXhr894O03Zq6DBDxkU2" : {
-      "name" : "Erik Krüger",
-      "role": "bandMember",
-      "band" : "59iyurewbfu6756w4e45e5f"
-    },
-    "5OAhMtNmUOfDyheZVmuqGTZlfp32" : {
-      "name" : "Ryan Key",
-      "role": "bandMember",
-      "band" : "59iuwrefuybwef7we67f6e5"
-    },
-    "WdP2LtB9mYXqy6XljVelbDGljMH2" : {
-      "name" : "Sean Mackin",
-      "role": "bandMember",
-      "band" : "59iuwrefuybwef7we67f6e5"
-    },
-    "ZSJeGxnnzfRvEAtRqY0LjI6Qvp93" : {
-      "name" : "Ryan Mendez",
-      "role": "bandMember",
-      "band" : "59iuwrefuybwef7we67f6e5"
-    },
-    "JZuieN2j80RXMM9frbwSlClJXMJ3" : {
-      "name" : "Longineu W. Parsons III",
-      "role": "bandMember",
-      "band" : "59iuwrefuybwef7we67f6e5"
-    },
-    "a0xLTqQglRgSaUsCDAi3R2CIym02" : {
-      "name" : "Dan Smith",
-      "role": "bandMember",
-      "band" : "59w6we5ervf8r7evre86v6v"
-    },
-    "Cw31gQTRH8R3UNmQQUNoVKYzWpI2" : {
-      "name" : "Will Farquarson",
-      "role": "bandMember",
-      "band" : "59w6we5ervf8r7evre86v6v"
-    },
-    "0HiWQdn0qtN3EN1ofXoqiyQZsQ82" : {
-      "name" : "Kyle Simmons",
-      "role": "bandMember",
-      "band" : "59w6we5ervf8r7evre86v6v"
-    },
-    "8QwsVLqtMKQF0HvdcOCL3COuru42" : {
-      "name" : "Chris Wood",
-      "role": "bandMember",
-      "band" : "59w6we5ervf8r7evre86v6v"
-    },
-    "k7wy8miPhwdbmHFVyaplSoxmS9w1" : {
-      "name" : "Justin Randall Timberlake",
-      "role": "bandMember",
-      "band" : "59fniu7r676er58vre66v86"
+      "role" : "bandMember"
     },
     "j3AXr39008Z7auYiyKB0pCMfJsa2" : {
+      "band" : "0ab49580-c84f-44d4-875f-d83760ea2cfe",
       "name" : "Adam Levine",
-      "role": "bandMember",
-      "band" : "0ab49580-c84f-44d4-875f-d83760ea2cfe"
-    },
-    "GiHANA7fTEMKgghwaIDTvwVkyLi1" : {
-      "name" : "James Valentine",
-      "role": "bandMember",
-      "band" : "0ab49580-c84f-44d4-875f-d83760ea2cfe"
-    },
-    "wa8UtXdCjGVWBuzIMH70zKdbuB13" : {
-      "name" : "Jesse Carmichael",
-      "role": "bandMember",
-      "band" : "0ab49580-c84f-44d4-875f-d83760ea2cfe"
-    },
-    "NGO8rtpG0caLSWBw0CHJlBp2hWC3" : {
-      "name" : "Micket Madden",
-      "role": "bandMember",
-      "band" : "0ab49580-c84f-44d4-875f-d83760ea2cfe"
-    },
-    "RNK8vI4WrreSDC3TylKxLqZ8tmV2" : {
-      "name" : "Matt Flynn",
-      "role": "bandMember",
-      "band" : "0ab49580-c84f-44d4-875f-d83760ea2cfe"
-    },
-    "LBhCZm6DxVaqJ3CcZGKd34DX3Lk2" : {
-      "name" : "Daniel Platzman",
-      "role": "bandMember",
-      "band" : "012151a8-0f9a-44c9-997f-ebd68b5389f9"
-    },
-    "KyGxqYtSf8TDrTC0dZifcOqP2tH3" : {
-      "name" : "Ben McKee",
-      "role": "bandMember",
-      "band" : "012151a8-0f9a-44c9-997f-ebd68b5389f9"
-    },
-    "7On6X24czxNKrmVz8lBVqzG11tx1" : {
-      "name" : "Dan Reynolds",
-      "role": "bandMember",
-      "band" : "012151a8-0f9a-44c9-997f-ebd68b5389f9"
-    },
-    "RX5xs3zuNmeINnvYaVOttGLBzir1" : {
-      "name" : "Wayne Sermon",
-      "role": "bandMember",
-      "band" : "012151a8-0f9a-44c9-997f-ebd68b5389f9"
-    },
-    "C24x4OqZJLeDEdHumh7mMwinJSu2" : {
-      "name" : "Marshall Bruce Mathers III",
-      "role": "bandMember",
-      "band" : "b95ce3ff-3d05-4e87-9e01-c97b66af13d4"
-    },
-    "sDGM21QqklMYoETERWa28gWO6ir2" : {
-      "name" : "Andrew Taggart",
-      "role": "bandMember",
-      "band" : "59hvbyuas8v0ngb8dfbhvvd"
-    },
-    "VhFX61MLj7ck6TZMVV0zw1cdIZ03" : {
-      "name" : "Alex Pall",
-      "role": "bandMember",
-      "band" : "59hvbyuas8v0ngb8dfbhvvd"
+      "role" : "bandMember"
     },
     "jMGYahxqiWexKrg9VlwDo8vEYv02" : {
+      "band" : "be389638-e74f-46a9-83d2-91ee3ce1fb0c",
       "name" : "Astrid Smeplass",
-      "role": "bandMember",
-      "band" : "59fjnhvye32wtvac3bhj90d"
+      "role" : "bandMember"
     },
-    "PJQUu2HnuOMovkmY0zxGC1bpyfE3" : {
-      "name" : "Robyn Rihanna Fenty",
-      "role": "bandMember",
-      "band" : "73e5e69d-3554-40d8-8516-00cb38737a1c"
+    "k7wy8miPhwdbmHFVyaplSoxmS9w1" : {
+      "band" : "596ffa74-3d08-44ef-b113-765d43d12738",
+      "name" : "Justin Randall Timberlake",
+      "role" : "bandMember"
     },
-    "cuy6BS0SUsSTZU3vUZz9DISLPip1" : {
-      "name" : "Edward Christopher Sheeran",
-      "role": "bandMember",
-      "band" : "59fhe7cbehf65ewfkj8v9s"
+    "kg08ojgicAgx23e0fPca33AVx8B3" : {
+      "img" : "jack",
+      "name" : "Jack",
+      "role" : "technician"
     },
-    "QovBZRyNC4WyItXE40scxNOXehM2" : {
-      "name" : "Tyson Ritter",
-      "role": "bandMember",
-      "band" : "5973hjfiueriufnksdjfn"
+    "lmL5Sw8iqXhr894O03Zq6DBDxkU2" : {
+      "band" : "59iyurewbfu6756w4e45e5f",
+      "name" : "Erik Krüger",
+      "role" : "bandMember"
     },
-    "FngArgFX0sRIAITfeCluL9nMula2" : {
-      "name" : "Nick Wheeler",
-      "role": "bandMember",
-      "band" : "5973hjfiueriufnksdjfn"
+    "n16G0h3ZkDfXj19XP8ilAGkbSm33" : {
+      "band" : "59iyurewbfu6756w4e45e5f",
+      "name" : "Balázs Orbán",
+      "role" : "bandMember"
+    },
+    "nCXaOPJjIYe8v5Wes5jQEOeNMSz1" : {
+      "img" : "lars",
+      "name" : "Lars",
+      "role" : "technician"
+    },
+    "oXg9fnCh3KT7lpDgR68BfKkVXZs2" : {
+      "band" : "b0e4bc50-3062-4d31-afad-def6a6b7a8e9",
+      "name" : "Alan Walker",
+      "role" : "bandMember"
     },
     "pNJbjM51c4gGIAC1tyvdXGbHFdC3" : {
+      "band" : "5973hjfiueriufnksdjfn",
       "name" : "Mike Kennerty",
-      "role": "bandMember",
-      "band" : "5973hjfiueriufnksdjfn"
+      "role" : "bandMember"
     },
-    "5XjmcDoOfZaXUgAyoHzAf96FWfj1" : {
-      "name" : "Chris Gaylor",
-      "role": "bandMember",
-      "band" : "5973hjfiueriufnksdjfn"
+    "pgZ9lsCC1OXwuDi2b7I83WBkswb2" : {
+      "img" : "bob",
+      "name" : "Bob",
+      "role" : "technician"
     },
-    "IoruqtEie1hlEV9ol0LIBecrfhg1" : {
-      "name" : "Tyler Joseph",
-      "role": "bandMember",
-      "band" : "591jnkjnweknfjnejfsd"
+    "r3mpnFLoMwRqTqKD20HtKsoNe8a2" : {
+      "band" : "20104c4d-cba0-4371-ab77-2f9d544674be",
+      "name" : "Sir Robert Bryson Hall II",
+      "role" : "bandMember"
     },
-    "3B142NVUlTYIoGBcEksm05vGRay2" : {
-      "name" : "Josh Dun",
-      "role": "bandMember",
-      "band" : "591jnkjnweknfjnejfsd"
+    "r52CRDQ5hDb1e7jTPHFYtNbNkbm2" : {
+      "email" : "jeff@man.com",
+      "img" : "jeff",
+      "name" : "Jeff",
+      "role" : "manager"
+    },
+    "sC8t2OmHfPh6AibBcU5Tp04tiN52" : {
+      "band" : "9fff2f8a-21e6-47de-a2b8-7f449929d43f",
+      "name" : "Aubrey Drake Graham",
+      "role" : "bandMember"
+    },
+    "sDGM21QqklMYoETERWa28gWO6ir2" : {
+      "band" : "91a81925-92f9-4fc9-b897-93cf01226282",
+      "name" : "Andrew Taggart",
+      "role" : "bandMember"
+    },
+    "tVwntdtxKwfOx7FbOJVE4OnjNx53" : {
+      "band" : "2ddd167f-5b8a-4372-b350-6ad50493bac0",
+      "name" : "Ben Wysocki",
+      "role" : "bandMember"
+    },
+    "tjpvkCu3LUclKnn8XKzE3ShSsoc2" : {
+      "band" : "4753fcb7-9270-493a-974d-8daca4e49125",
+      "name" : "Knapp Atkins",
+      "role" : "bandMember"
+    },
+    "twDpZNCedjgYAJKmkoTEiVdJEUv1" : {
+      "img" : "inge",
+      "name" : "Inge",
+      "role" : "technician"
+    },
+    "uN2sZVTwlsUwBBBHUWFzDLBikB42" : {
+      "img" : "betty",
+      "name" : "Betty",
+      "role" : "organizer"
+    },
+    "vueaZSKAzAhtXcKAAbxk5019LuQ2" : {
+      "band" : "2ddd167f-5b8a-4372-b350-6ad50493bac0",
+      "name" : "Joe King",
+      "role" : "bandMember"
+    },
+    "wa8UtXdCjGVWBuzIMH70zKdbuB13" : {
+      "band" : "0ab49580-c84f-44d4-875f-d83760ea2cfe",
+      "name" : "Jesse Carmichael",
+      "role" : "bandMember"
+    },
+    "wgCF4LHgKIaiFHe8opNKg8NYvJr1" : {
+      "band" : "b7539c32-53e7-4908-bda3-81449c367da6",
+      "name" : "Lana Del Rey",
+      "role" : "bandMember"
+    },
+    "xvKe4kdXR7OnQBrzSB5Rph8lGkK2" : {
+      "img" : "bernt",
+      "name" : "Bernt",
+      "role" : "technician"
+    },
+    "yirpOKeR2NfgPUT0kW2ajWSGRM43" : {
+      "band" : "4753fcb7-9270-493a-974d-8daca4e49125",
+      "name" : "Michael Nicholson",
+      "role" : "bandMember"
+    },
+    "zOkNChvPFiUFWxSl2V7paVecfHA2" : {
+      "band" : "65f4f0c5-ef9e-490c-aee3-909e7ae6b2ab",
+      "name" : "Hammond Robbins",
+      "role" : "bandMember"
     }
   }
 }
