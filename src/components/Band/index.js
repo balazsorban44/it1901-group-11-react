@@ -43,7 +43,7 @@ export default class Band extends Component {
       this.setState({manager: snap.val()})
     })
 
-    fetch(`http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=${this.props.band.name}&api_key=35f1b3f9790cddd48125c3b2acaae8a4&format=json`)
+    fetch(`https://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=${this.props.band.name}&api_key=35f1b3f9790cddd48125c3b2acaae8a4&format=json`)
     .then(response => {
       if (response.ok) {
         response.json().then(({artist}) => {
