@@ -5,6 +5,7 @@
 @import technician/_main
 @import login/_main
 
+$accent2color: #ea4a53
 
 body
   margin: 0
@@ -47,3 +48,14 @@ h2
     margin: 0
     padding-top: 1em
     padding-bottom: .5em
+
+.band-cover
+  >div
+    background-image: linear-gradient(to bottom, rgba(0,0,0,.4) 0%, darken(transparentize($accent2color, .5), 10) 100%)
+    // transition: .8s
+    // &:hover
+    //   background: none
+    //   img
+    //     filter: none
+    img
+      filter: grayscale(1) contrast(.8) brightness(1.2)

@@ -8,7 +8,7 @@ import TechnicalRequirements from './TechnicalRequirements'
 
 import Concerts from './Concerts'
 import firebase from 'firebase'
-import {InfoSnippet, parseNumber, muiTheme} from '../../utils'
+import {InfoSnippet, parseNumber, muiTheme, Icon} from '../../utils'
 import cover from '../../img/musician.jpg'
 
 //Card for every band in search results
@@ -25,6 +25,8 @@ export default class Band extends Component {
 
     this.state = {
       manager: {},
+      summary: "",
+      lastFMLink: "",
       cover,
       showAlbumSales, showMonthlyListeners, showGenre, showManager,
       showBandMembers,
@@ -41,11 +43,16 @@ export default class Band extends Component {
       this.setState({manager: snap.val()})
     })
 
-    fetch(`https://webservice.fanart.tv/v3/music/${this.props.bandKey}?api_key=152d071f673f4e189fbe2a1e17606481`)
+    fetch(`http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=${this.props.band.name}&api_key=35f1b3f9790cddd48125c3b2acaae8a4&format=json`)
     .then(response => {
       if (response.ok) {
-        response.json().then(result => {
-        result.artistbackground && this.setState({cover: result.artistbackground[0].url})
+        response.json().then(({artist}) => {
+          let {bio: {summary}, image} = artist
+          const lastFMLink = summary.split('href="')[1].split('">')[0]
+          summary = this.props.band.name === "Fantastic Five" ? "Thie is the most amazing band in the world!" : summary.split('<a')[0]
+          const cover = image[4]["#text"].replace("/300x300", "")
+          cover !== "" && this.setState({cover})
+          this.setState({summary, lastFMLink})
       })}
     })
   }
@@ -54,7 +61,7 @@ export default class Band extends Component {
     let {bandKey, band, concerts, reviewerName} = this.props
     const {
       manager: {name: managerName, email},
-      cover,
+      cover, summary, lastFMLink,
       showAlbumSales, showMonthlyListeners, showGenre, showManager,
       showBandMembers,
       showRequirements, canEditRequirements,
@@ -72,11 +79,20 @@ export default class Band extends Component {
 
     const {name, genre, albumSales, monthlyListeners, technicalRequirements, reviews, members} = band
     return (
-      <Card style={{maxWidth: 720, margin: "1em auto"}}>
-        <CardMedia actAsExpander overlay={<CardTitle title={name} subtitle="click for more"/>}>
-          <img style={{minHeight: 160, backgroundColor: "grey"}} src={cover} alt={name}/>
+      <Card style={{maxWidth: 640, margin: "1em auto"}}>
+        <CardMedia className="band-cover" actAsExpander overlay={
+          <CardTitle title={<div style={{display: "flex", justifyContent: "space-between", alignItems: "flex-end"}}>
+            <span>{name}</span>
+            <Icon color="white" name="keyboard_arrow_down"/>
+          </div>} subtitle={genre}/>
+        }>
+          <img style={{
+
+              backgroundColor: "grey"
+          }} src={cover} alt={name}/>
         </CardMedia>
-        <CardText expandable>
+        <CardText expandable >
+          <Summary {...{summary, lastFMLink}}/>
           <List style={{display: "flex", flexWrap: "wrap"}}>
             <AlbumSales {...{showAlbumSales, albumSales}}/>
             <Genre {...{showGenre, genre}}/>
@@ -99,9 +115,9 @@ const BandManager = ({showManager, managerName, email}) => (
   <div>
     {showManager &&
       <InfoSnippet
+        disableHover
         icon="business"
         subText="Band manager"
-        disableHover
       >
         <div style={{
             display: "flex",
@@ -115,6 +131,14 @@ const BandManager = ({showManager, managerName, email}) => (
   </div>
 )
 
+const Summary = ({summary, lastFMLink}) => (
+  <InfoSnippet
+    disableHover
+    icon="info"
+    subText="Summary"
+    content={<p style={{textAlign: "left"}}>{summary} <a style={{color: muiTheme.palette.accent1Color}} href={lastFMLink}>read more on LastFM</a></p>}
+  />
+)
 
 const AlbumSales = ({showAlbumSales, albumSales}) => (
   <div>
