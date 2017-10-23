@@ -5,7 +5,6 @@ import Chip from 'material-ui/Chip'
 import {Card, CardText, CardMedia, CardTitle} from 'material-ui/Card'
 import Reviews, {AddReview} from './Reviews'
 import TechnicalRequirements from './TechnicalRequirements'
-
 import Concerts from './Concerts'
 import firebase from 'firebase'
 import {InfoSnippet, parseNumber, muiTheme, Icon} from '../../utils'
@@ -79,19 +78,22 @@ export default class Band extends Component {
 
     const {name, genre, albumSales, monthlyListeners, technicalRequirements, reviews, members} = band
     return (
-      <Card style={{maxWidth: 640, margin: "1em auto"}}>
-        <CardMedia className="band-cover" actAsExpander overlay={
-          <CardTitle title={<div style={{display: "flex", justifyContent: "space-between", alignItems: "flex-end"}}>
-            <span>{name}</span>
-            <Icon color="white" name="keyboard_arrow_down"/>
-          </div>} subtitle={genre}/>
-        }>
-          <img style={{
-
-              backgroundColor: "grey"
-          }} src={cover} alt={name}/>
+      <Card>
+        <CardMedia
+          className="band-cover"
+          overlayContentStyle={{
+            background: "linear-gradient(rgba(0,0,0,0), rgba(0,0,0,.6))"
+          }}
+          actAsExpander
+          overlay={
+            <CardTitle title={<div style={{display: "flex", justifyContent: "space-between", alignItems: "flex-end"}}>
+              <span>{name}</span>
+              <Icon color="white" name="keyboard_arrow_down"/>
+            </div>} subtitle={genre}/>
+          }>
+          <img style={{backgroundColor: "grey"}} src={cover} alt={name}/>
         </CardMedia>
-        <CardText expandable >
+        <CardText expandable>
           <Summary {...{summary, lastFMLink}}/>
           <List style={{display: "flex", flexWrap: "wrap"}}>
             <AlbumSales {...{showAlbumSales, albumSales}}/>
@@ -133,13 +135,14 @@ const BandManager = ({showManager, managerName, email}) => (
 
 const Summary = ({summary, lastFMLink}) => (
   <InfoSnippet
+    orientation="portrait"
     disableHover
     icon="info"
     subText="Summary"
     content={
       <div>
         <p style={{textAlign: "left"}}>{summary}</p>
-        <a style={{fontSize: ".9em", color: muiTheme.palette.accent1Color}} href={lastFMLink}>more on LastFM</a>
+        <a style={{fontSize: ".8em", color: muiTheme.palette.accent1Color}} href={lastFMLink}>more on Last.FM</a>
       </div>
     }
   />
@@ -193,7 +196,6 @@ const BandMembers = ({showBandMembers, members}) => (
         <div style={{display: "flex", flexWrap: "wrap"}}>
           {members.map(member => <Chip style={{margin: "0 .6em .6em 0"}} key={member}>{member}</Chip>)}
         </div>
-
       </InfoSnippet>
     }
   </div>
