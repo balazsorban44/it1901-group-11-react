@@ -136,7 +136,12 @@ const Summary = ({summary, lastFMLink}) => (
     disableHover
     icon="info"
     subText="Summary"
-    content={<p style={{textAlign: "left"}}>{summary} <a style={{color: muiTheme.palette.accent1Color}} href={lastFMLink}>read more on LastFM</a></p>}
+    content={
+      <div>
+        <p style={{textAlign: "left"}}>{summary}</p>
+        <a style={{fontSize: ".9em", color: muiTheme.palette.accent1Color}} href={lastFMLink}>more on LastFM</a>
+      </div>
+    }
   />
 )
 
