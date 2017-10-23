@@ -8,9 +8,10 @@ import {parseDate, parseNumber, parsePrice, InfoSnippet} from '../../utils'
 
 export default class Concerts extends Component {
   render() {
-    const {concerts} = this.props
+    const {concerts, showPreviousConcerts, showFutureConcerts} = this.props
     const acceptedBookings = {}
     const awaitingBookings = {}
+    if (concerts) {
       Object.keys(concerts).forEach(key => {
         const concert = concerts[key]
         const {isAcceptedByBookingBoss, from} = concert
@@ -20,42 +21,45 @@ export default class Concerts extends Component {
           awaitingBookings[key] = concert
         }
       })
+    }
 
     return (
       <div>
-        <InfoSnippet
-          icon="history"
-          orientation="portrait"
-          disableTitle
-          disableHover
-          alignSubText="center"
-          subText="Previous concerts"
-        >
-          {Object.keys(concerts)[0] ?
-            <Table>
-              <TableHeader adjustForCheckbox={false} displaySelectAll={false}>
-                <TableRow>
-                  <TableHeaderColumn>Concert date</TableHeaderColumn>
-                  <TableHeaderColumn>Tickets sold</TableHeaderColumn>
-                  <TableHeaderColumn>Total income</TableHeaderColumn>
-                </TableRow>
-              </TableHeader>
-              <TableBody displayRowCheckbox={false} showRowHover>
-                {Object.keys(concerts).map(key => {
-                  const {from, participants, ticketPrice, bandFee} = concerts[key]
-                  return (
-                    from < Date.now() &&
-                      <TableRow key={key}>
-                        <TableRowColumn>{parseDate(from)}</TableRowColumn>
-                        <TableRowColumn>{parseNumber(participants)}</TableRowColumn>
-                        <TableRowColumn>{parsePrice(participants*ticketPrice-bandFee)}</TableRowColumn>
-                      </TableRow>
-                  )
-                })}
-              </TableBody>
-            </Table>: "There is no concerts yet."}
-        </InfoSnippet>
-        {Object.keys(acceptedBookings).length !== 0 &&
+        {showPreviousConcerts &&
+          <InfoSnippet
+            icon="history"
+            orientation="portrait"
+            disableTitle
+            disableHover
+            alignSubText="center"
+            subText="Previous concerts"
+          >
+            {Object.keys(concerts)[0] ?
+              <Table>
+                <TableHeader adjustForCheckbox={false} displaySelectAll={false}>
+                  <TableRow>
+                    <TableHeaderColumn>Concert date</TableHeaderColumn>
+                    <TableHeaderColumn>Tickets sold</TableHeaderColumn>
+                    <TableHeaderColumn>Total income</TableHeaderColumn>
+                  </TableRow>
+                </TableHeader>
+                <TableBody displayRowCheckbox={false} showRowHover>
+                  {Object.keys(concerts).map(key => {
+                    const {from, participants, ticketPrice, bandFee} = concerts[key]
+                    return (
+                      from < Date.now() &&
+                        <TableRow key={key}>
+                          <TableRowColumn>{parseDate(from)}</TableRowColumn>
+                          <TableRowColumn>{parseNumber(participants)}</TableRowColumn>
+                          <TableRowColumn>{parsePrice(participants*ticketPrice-bandFee)}</TableRowColumn>
+                        </TableRow>
+                    )
+                  })}
+                </TableBody>
+              </Table> : "There is no concerts yet."}
+          </InfoSnippet>
+        }
+        {showFutureConcerts && Object.keys(acceptedBookings).length !== 0 &&
           <InfoSnippet
             icon="bookmark"
             orientation="portrait"
@@ -66,7 +70,7 @@ export default class Concerts extends Component {
             content={<ConcertTable concerts={acceptedBookings}/>}
           />
         }
-        {Object.keys(awaitingBookings).length !== 0 &&
+        {showFutureConcerts && Object.keys(awaitingBookings).length !== 0 &&
           <InfoSnippet
             icon="bookmark_border"
             orientation="portrait"

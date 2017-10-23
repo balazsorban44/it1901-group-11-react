@@ -4,7 +4,7 @@ import TextField from 'material-ui/TextField'
 import {Icon} from '../../utils'
 import SelectField from 'material-ui/SelectField'
 import {Toolbar, ToolbarGroup} from 'material-ui/Toolbar'
-import Band from './Band'
+import Band from '../Band'
 import {Loading, NoResult} from '../../utils'
 
 
@@ -78,14 +78,17 @@ export default class Search extends Component{
          </Toolbar>
          <div className="search">
            {bands && concerts ?
-             bandsToOutput.map(key => (
+             bandsToOutput.map(bandKey => (
                <Band
-                 reviewerName={name}
-                 key={key}
-                 bandKey={key}
-                 concerts={concerts}
-                 band={bands[key]}/>
-             )):
+                 showAlbumSales showMonthlyListeners showGenre showManager
+                 showPreviousConcerts
+                 showRequirements
+                 canAddReview reviewerName={name}
+                 key={bandKey}
+                 {...{bandKey, concerts}}
+                 band={bands[bandKey]}
+               />
+             )) :
              <Loading/>
            }
            {bandsToOutput && !bandsToOutput.length && <NoResult/>}
