@@ -5,7 +5,6 @@ import Chip from 'material-ui/Chip'
 import {Card, CardText, CardMedia, CardTitle} from 'material-ui/Card'
 import Reviews, {AddReview} from './Reviews'
 import TechnicalRequirements from './TechnicalRequirements'
-
 import Concerts from './Concerts'
 import firebase from 'firebase'
 import {InfoSnippet, parseNumber, muiTheme, Icon} from '../../utils'
@@ -139,7 +138,7 @@ const Summary = ({summary, lastFMLink}) => (
     content={
       <div>
         <p style={{textAlign: "left"}}>{summary}</p>
-        <a style={{fontSize: ".9em", color: muiTheme.palette.accent1Color}} href={lastFMLink}>more on LastFM</a>
+        <a style={{fontSize: ".8em", color: muiTheme.palette.accent1Color}} href={lastFMLink}>more on Last.FM</a>
       </div>
     }
   />
