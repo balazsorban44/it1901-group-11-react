@@ -11,22 +11,29 @@ import {Loading, NoResult} from '../../utils'
 export default class Search extends Component{
   constructor(props) {
     super(props)
-    const {bands, concerts} = props
+    const {bands, concerts, events, scenes} = props
     this.state = {
       input: "",
       genre: "All genres",
+      eventValue: "All events",
+      sceneValue: "All events",
       bands,
       concerts,
+      events,
+      scenes,
+
       bandsToOutput : bands && Object.keys(bands),
     }
   }
 
-  componentWillReceiveProps({bands, concerts, name}) {
+  componentWillReceiveProps({bands, concerts, events, scenes, name}) {
     if (bands && concerts && name) {
       this.setState({
         bands,
         bandsToOutput: Object.keys(bands),
         concerts,
+        events,
+        scenes,
         name
       })
     }
@@ -41,6 +48,10 @@ export default class Search extends Component{
     if (genre !== "All genres"){
       bandsToOutput = bandsToOutput.filter(bandKey => genre === bands[bandKey].genre)
     }
+    bandsToOutput = Object.keys(bands)
+    .filter(band => {
+      Object.keys(bands[band]['concerts']).forEach()
+    })
     this.setState({bandsToOutput})
   }
 
@@ -54,9 +65,10 @@ export default class Search extends Component{
   handleGenreChange = (event, index, value) => {
     this.setState({genre:value}, () => this.searchForBand())
   }
+  handleEventChange = (event, index, eventValue) => {this.setState({eventValue})}
 
    render(){
-     const {genre, bandsToOutput, bands, concerts, name} = this.state
+     const {genre, bandsToOutput, bands, concerts, events, scenes, name, eventValue, sceneValue} = this.state
 
      return(
        <div>
@@ -75,6 +87,17 @@ export default class Search extends Component{
                <MenuItem value={"RnB"} primaryText="RnB" />
              </SelectField>
            </ToolbarGroup>
+
+           <ToolbarGroup>
+             <SelectField floatingLabelText="Event" value={eventValue} onChange={this.handleEventChange} autoWidth>
+               <MenuItem value="All events" primaryText="All events" key ={"All events"}/>
+               {Object.keys(events).map(key => {
+                 const {name} = events[key]
+                 return <MenuItem value={name} primaryText={name} key ={key}/>
+               })}
+             </SelectField>
+           </ToolbarGroup>
+
          </Toolbar>
          <div className="search">
            {bands && concerts ?

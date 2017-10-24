@@ -13,6 +13,7 @@ export default class PreviousConcerts extends Component {
       genreValue:1,
       concerts: this.props.concerts,
       events : this.props.events,
+      scenes : this.props.scenes,
       bands: this.props.bands,
       genres:["none", "All Genres", "Pop", "Rock", "Electric", "Rap", "RnB"],
     }
@@ -59,7 +60,7 @@ export default class PreviousConcerts extends Component {
           {Object.keys(concerts)
             .filter(concert => concerts[concert].eventName === eventValue || eventValue === "All events")
             .filter(concert => concerts[concert].genre === genres[genreValue] || genreValue === 1)
-            .map(memberKey => <ConcertSearchResult key={memberKey} bands={bands} concert={concerts[memberKey]}/>)
+            .map(memberKey => <ConcertSearchResult key={memberKey} bands={bands} scenes = {this.state.scenes} events = {this.state.events} concert={concerts[memberKey]}/>)
           }
         </div>
       </div>
@@ -68,11 +69,12 @@ export default class PreviousConcerts extends Component {
 }
 
 //Card for every concert in search result
-const ConcertSearchResult = ({concert, bands}) => {
+const ConcertSearchResult = ({concert, bands, events, scenes}) => {
+  console.log(scenes)
   const bandKey = concert.band
   const band = bands[bandKey]
   const {name, genre} = band
-  const {from, to, participants} = concert
+  const {from, to, participants, eventId, sceneId} = concert
   return (
     <Card className="search-result">
       <CardHeader title={name} subtitle={genre} actAsExpander showExpandableButton/>
@@ -80,6 +82,8 @@ const ConcertSearchResult = ({concert, bands}) => {
         <h6><Icon name="event"/>From: {parseDate(from)}</h6>
         <h6><Icon name="event"/>To: {parseDate(to)}</h6>
         <h6><Icon name="attach_money"/>Tickets sold: {participants}</h6>
+        <h6><Icon name="attach_money"/>Evenet: {events[concert['event']]['name']}</h6>
+        <h6><Icon name="attach_money"/>Scene: {scenes[concert['scene']]['name']}</h6>
       </CardText>
     </Card>
   )

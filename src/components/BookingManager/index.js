@@ -60,8 +60,7 @@ componentDidMount(){
 handleMenuItemClick(openedMenuItem){
   this.props.toggleDrawer()
   this.setState({openedMenuItem})
-
-  ///////////////////////////////////
+  /////////////////////////////////// TODO eventuallly remove
   // const events = this.state.events
   // const scenes = this.state.scenes
   // const concerts = this.state.concerts
@@ -69,26 +68,24 @@ handleMenuItemClick(openedMenuItem){
   // Object.keys(scenes).forEach(sceneKey =>{
   //   const sceneId = sceneKey
   //   Object.keys(scenes[sceneKey]['concerts']).forEach(concertKey =>{
-  //     const concertId = scenes[scenesKey]['concerts'][concertKey]
+  //     const concertId = scenes[sceneKey]['concerts'][concertKey]
   //
   //     const db = firebase.database().ref()
-  //     const concertsRef = db.child('scenes')
-  //     const concertRef = scenesRef.child(concertId)
+  //     const concertsRef = db.child('concerts')
+  //     const concertRef = concertsRef.child(concertId)
   //     concertRef.once('value').then(snap => {
-  //     if (snap.val().event) {
+  //     if (snap.val().scene) {
   //         console.log("Exist")
   //        return
   //      } else {
-  //        console.log(scenes[sceneId]['event'])
+  //        console.log(sceneId)
   //        console.log("not there")
-  //        //sceneRef.child('event').set(eventId)
+  //        concertRef.child('scene').set(sceneId)
   //       }
   //     })
   //
   //   })
   // })
-  //
-  //
   // Object.keys(events).forEach(eventKey =>{
   //   const eventName = events[eventKey]['name']
   //   const eventId = eventKey
@@ -112,9 +109,6 @@ handleMenuItemClick(openedMenuItem){
   //
   //   })
   // })
-
-
-
   ///////////////////////////////////
 }
 
@@ -132,9 +126,9 @@ handleMenuItemClick(openedMenuItem){
           <NewBooking {...{bands, events, scenes}}/>
           {{
             "search":
-            <Search {...{bands, concerts, name}}/>,
+            <Search {...{bands, concerts, name, scenes, events}}/>,
             "previousConcerts":
-            <PreviousConcerts {...{concerts, events, bands}}/>,
+            <PreviousConcerts {...{concerts, events, bands, scenes}}/>,
           }[openedMenuItem]}
 
         </div>
