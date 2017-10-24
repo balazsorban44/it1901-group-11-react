@@ -19,8 +19,18 @@ export default class Manager extends Component {
     const bandsRef = db.child('bands')
     const staffRef = db.child('staff')
     const concertsRef = db.child('concerts')
+    const profilesRef = db.child('staff/profiles')
+
     concertsRef.on('value', snap => {
-      this.setState({concerts: snap.val()})
+      const concerts = snap.val()
+      Object.keys(concerts).forEach(key => {
+        const concert = concerts[key]
+        const {staff} = concert
+        profilesRef.child(staff[0]).on('value', snap => {
+          concerts[key].staff[0] = `${snap.val().img}@tech.com`
+        })
+      })
+      this.setState({concerts})
     })
     bandsRef.on('value', snap => {
       let bands = snap.val()
