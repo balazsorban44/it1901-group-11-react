@@ -19,8 +19,18 @@ export default class Manager extends Component {
     const bandsRef = db.child('bands')
     const staffRef = db.child('staff')
     const concertsRef = db.child('concerts')
+    const profilesRef = db.child('staff/profiles')
+
     concertsRef.on('value', snap => {
-      this.setState({concerts: snap.val()})
+      const concerts = snap.val()
+      Object.keys(concerts).forEach(key => {
+        const concert = concerts[key]
+        const {staff} = concert
+        profilesRef.child(staff[0]).on('value', snap => {
+          concerts[key].staff[0] = `${snap.val().img}@tech.com`
+        })
+      })
+      this.setState({concerts})
     })
     bandsRef.on('value', snap => {
       let bands = snap.val()
@@ -50,7 +60,7 @@ export default class Manager extends Component {
     const {bands, concerts} = this.state
     return (
       <div className="manager role">
-        <ul className="band-list-manager">
+        <ul className="search">
           {Object.keys(bands).length !== 0 ?
             Object.keys(bands).map(bandKey => (
               <Band

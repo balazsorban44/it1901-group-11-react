@@ -4,7 +4,7 @@ import { Table, TableBody, TableHeader,
   TableHeaderColumn, TableRow,
   TableRowColumn
 } from 'material-ui/Table'
-import {parseDate, parseNumber, parsePrice, InfoSnippet} from '../../utils'
+import {parseDate, parseNumber, parsePrice, InfoSnippet, muiTheme} from '../../utils'
 
 export default class Concerts extends Component {
   render() {
@@ -92,18 +92,18 @@ const ConcertTable = ({concerts}) => (
     <TableHeader adjustForCheckbox={false} displaySelectAll={false}>
       <TableRow>
         <TableHeaderColumn>Concert date</TableHeaderColumn>
-        <TableHeaderColumn>Band fee</TableHeaderColumn>
         <TableHeaderColumn>Ticket price</TableHeaderColumn>
+        <TableHeaderColumn>Contact</TableHeaderColumn>
       </TableRow>
     </TableHeader>
     <TableBody displayRowCheckbox={false} showRowHover>
       {Object.keys(concerts).map(key => {
-        const {from, ticketPrice, bandFee,} = concerts[key]
+        const {from, ticketPrice, staff} = concerts[key]
         return (
           <TableRow key={key}>
             <TableRowColumn>{parseDate(from)}</TableRowColumn>
-            <TableRowColumn>{parsePrice(bandFee)}</TableRowColumn>
             <TableRowColumn>{ticketPrice === 0 ? "No price yet" : parsePrice(ticketPrice)}</TableRowColumn>
+            <TableRowColumn><a style={{color: muiTheme.palette.accent1Color}} href={`mailto:${staff}`}>{staff}</a></TableRowColumn>
           </TableRow>
         )
       })}
