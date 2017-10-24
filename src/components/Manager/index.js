@@ -50,7 +50,7 @@ export default class Manager extends Component {
     const {bands, concerts} = this.state
     return (
       <div className="manager role">
-        <ul className="band-list-manager">
+        <ul className="search">
           {Object.keys(bands).length !== 0 ?
             Object.keys(bands).map(bandKey => (
               <Band
