@@ -49,7 +49,7 @@ export default class Band extends Component {
           let {bio: {summary}, image} = artist
           const lastFMLink = summary.split('href="')[1].split('">')[0]
           summary = this.props.band.name === "Fantastic Five" ? "Thie is the most amazing band in the world!" : summary.split('<a')[0]
-          const cover = image[4]["#text"].replace("/300x300", "")
+          const cover = image[4]["#text"].replace("300x300", "600x600")
           cover !== "" && this.setState({cover})
           this.setState({summary, lastFMLink})
       })}
