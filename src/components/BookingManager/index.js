@@ -21,6 +21,7 @@ export default class BookingManager extends Component {
 
 // Fetching content from firebase
 componentDidMount(){
+
   const db = firebase.database().ref()
   const eventsRef = db.child('events')
   const scenesRef = db.child('scenes')
@@ -43,6 +44,7 @@ componentDidMount(){
       }
     })
   })
+
   bandsRef.on('value', snap => {
     this.setState({bands: snap.val()})
   })
@@ -52,13 +54,68 @@ componentDidMount(){
   concertsRef.on('value', snap => {
     this.setState({concerts: snap.val()})
   })
-
 }
 
 //change page to display after item in left menui is clicked
 handleMenuItemClick(openedMenuItem){
   this.props.toggleDrawer()
   this.setState({openedMenuItem})
+
+  ///////////////////////////////////
+  // const events = this.state.events
+  // const scenes = this.state.scenes
+  // const concerts = this.state.concerts
+  //
+  // Object.keys(scenes).forEach(sceneKey =>{
+  //   const sceneId = sceneKey
+  //   Object.keys(scenes[sceneKey]['concerts']).forEach(concertKey =>{
+  //     const concertId = scenes[scenesKey]['concerts'][concertKey]
+  //
+  //     const db = firebase.database().ref()
+  //     const concertsRef = db.child('scenes')
+  //     const concertRef = scenesRef.child(concertId)
+  //     concertRef.once('value').then(snap => {
+  //     if (snap.val().event) {
+  //         console.log("Exist")
+  //        return
+  //      } else {
+  //        console.log(scenes[sceneId]['event'])
+  //        console.log("not there")
+  //        //sceneRef.child('event').set(eventId)
+  //       }
+  //     })
+  //
+  //   })
+  // })
+  //
+  //
+  // Object.keys(events).forEach(eventKey =>{
+  //   const eventName = events[eventKey]['name']
+  //   const eventId = eventKey
+  //   Object.keys(events[eventKey]['scenes']).forEach(sceneKey =>{
+  //     const sceneId = events[eventKey]['scenes'][sceneKey]
+  //     console.log(scenes[sceneId])
+  //
+  //     const db = firebase.database().ref()
+  //     const scenesRef = db.child('scenes')
+  //     const sceneRef = scenesRef.child(sceneId)
+  //     sceneRef.once('value').then(snap => {
+  //     if (snap.val().event) {
+  //         console.log("Exist")
+  //        return
+  //      } else {
+  //        console.log(events[eventId]['name'])
+  //        console.log("not there")
+  //        //sceneRef.child('event').set(eventId)
+  //       }
+  //     })
+  //
+  //   })
+  // })
+
+
+
+  ///////////////////////////////////
 }
 
   render() {
