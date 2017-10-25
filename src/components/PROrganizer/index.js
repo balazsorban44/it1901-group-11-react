@@ -53,8 +53,8 @@ export default class PROrganizer extends Component {
                 scene.bands = []
                 concertsRef.child(`${concertKey}`).on('value', snap => {
                   const {band, from, to} = snap.val()
-                  bandsRef.child(`${band}/name`).on('value', snap => {
-                    scene.bands.push({ name: snap.val(), from, to})
+                  bandsRef.child(`${band}`).on('value', snap => {
+                    scene.bands.push({ from, to,...snap.val()})
                     this.setState({events, value: Object.keys(events)[0]})
                   })
                 })
