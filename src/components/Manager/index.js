@@ -62,18 +62,24 @@ export default class Manager extends Component {
       <div className="manager role">
         <ul className="search">
           {Object.keys(bands).length !== 0 ?
-            Object.keys(bands).map(bandKey => (
-              <Band
-                showAlbumSales showGenre showMonthlyListeners
-                showBandMembers
-                showRequirements canEditRequirements
-                showReviews
-                showFutureConcerts
-                key={bandKey}
-                band={bands[bandKey]}
-                {...{bandKey, concerts}}
-              />
-            )) :
+            Object.keys(bands).map(bandKey => {
+              const {name, genre} = bands[bandKey]
+              return (
+                <Band
+                  headerType={'big'}
+                  title={name}
+                  subtitle={genre}
+                  showAlbumSales showGenre showMonthlyListeners
+                  showBandMembers
+                  showRequirements canEditRequirements
+                  showReviews
+                  showFutureConcerts
+                  key={bandKey}
+                  band={bands[bandKey]}
+                  {...{bandKey, concerts}}
+                />
+              )
+            }) :
             <Loading/>
           }
         </ul>

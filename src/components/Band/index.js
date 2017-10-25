@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import {List} from 'material-ui/List'
+import Divider from 'material-ui/Divider'
 import FontIcon from 'material-ui/FontIcon'
 import Chip from 'material-ui/Chip'
 import {Card, CardText, CardMedia, CardTitle} from 'material-ui/Card'
@@ -12,26 +13,15 @@ import cover from '../../img/musician.jpg'
 
 //Card for every band in search results
 export default class Band extends Component {
-  constructor(props) {
-    super(props)
-    const {
-      showAlbumSales, showMonthlyListeners, showGenre, showManager,
-      showBandMembers,
-      showRequirements, canEditRequirements,
-      showPreviousConcerts, showFutureConcerts,
-      canAddReview, showReviews,
-    } = props
+  constructor() {
+    super()
 
     this.state = {
       manager: {},
       summary: "",
       lastFMLink: "",
       cover,
-      showAlbumSales, showMonthlyListeners, showGenre, showManager,
-      showBandMembers,
-      showRequirements, canEditRequirements,
-      showPreviousConcerts, showFutureConcerts,
-      canAddReview, showReviews,
+
     }
   }
 
@@ -57,16 +47,21 @@ export default class Band extends Component {
   }
 
   render() {
-    let {bandKey, band, concerts, reviewerName} = this.props
-    const {
-      manager: {name: managerName, email},
-      cover, summary, lastFMLink,
+    let {
+      headerType, title, subtitle,
+      bandKey, band, concerts, reviewerName,
       showAlbumSales, showMonthlyListeners, showGenre, showManager,
       showBandMembers,
       showRequirements, canEditRequirements,
       showPreviousConcerts, showFutureConcerts,
       canAddReview, showReviews
+    } = this.props
+
+    const {
+      manager: {name: managerName, email},
+      cover, summary, lastFMLink
     } = this.state
+
     if (concerts) {
       concerts = Object.keys(concerts)
       .filter(key => band.concerts.includes(key))
@@ -78,22 +73,63 @@ export default class Band extends Component {
 
     const {name, genre, albumSales, monthlyListeners, technicalRequirements, reviews, members} = band
     return (
-      <Card>
-        <CardMedia
-          className="band-cover"
-          overlayContentStyle={{
-            background: "linear-gradient(rgba(0,0,0,0), rgba(0,0,0,.6))"
-          }}
-          actAsExpander
-          overlay={
-            <CardTitle title={<div style={{display: "flex", justifyContent: "space-between", alignItems: "flex-end"}}>
-              <span>{name}</span>
-              <Icon color="white" name="keyboard_arrow_down"/>
-            </div>} subtitle={genre}/>
-          }>
-          <img style={{backgroundColor: "grey"}} src={cover} alt={name}/>
-        </CardMedia>
+      <Card style={{margin: "1em"}}>
+        {{
+          "compact":
+          <CardTitle style={{paddingBottom: 8}} actAsExpander>
+            <div style={{display: "flex"}}>
+              <div style={{
+                position: "relative",
+                width: 128,
+                height: 128,
+                overflow: "hidden",
+                backgroundColor: "pink"
+              }}>
+                <img
+                  style={{
+                    height: "100%",
+                    backgroundColor: "grey",
+                    filter: "grayscale(1)"
+                  }}
+                  src={cover}
+                  alt={name}
+                />
+                <div style={{
+                  top: 0,
+                  position: "absolute",
+                  width: "100%",
+                  height: "100%",
+                  zIndex: 1,
+                  overflow: "hidden",
+                  backgroundImage: "linear-gradient(to bottom, rgba(0,0,0,.4) 0%, rgba(229, 28, 40, 0.5) 100%)"
+                }}/>
+              </div>
+              <div style={{flexGrow: 1}}>
+                <h6 >{title}</h6>
+                <div style={{textAlign: "center"}}>{subtitle}</div>
+              </div>
+              <Icon color="black" name="keyboard_arrow_down"/>
+            </div>
+          </CardTitle>,
+          "big": <CardMedia
+            className="band-cover"
+            overlayContentStyle={{
+              background: "linear-gradient(rgba(0,0,0,0), rgba(0,0,0,.6))"
+            }}
+            actAsExpander
+            overlay={
+              <CardTitle title={<div style={{display: "flex", justifyContent: "space-between", alignItems: "flex-end"}}>
+                <span>{title}</span>
+                <Icon color="white" name="keyboard_arrow_down"/>
+              </div>} subtitle={subtitle}/>
+            }>
+            <img style={{backgroundColor: "grey"}} src={cover} alt={name}/>
+          </CardMedia>
+
+        }[headerType]}
+
         <CardText expandable>
+          {headerType === "compact" && <Divider/>}
           <Summary {...{summary, lastFMLink}}/>
           <List style={{display: "flex", flexWrap: "wrap"}}>
             <AlbumSales {...{showAlbumSales, albumSales}}/>

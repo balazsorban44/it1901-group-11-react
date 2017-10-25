@@ -103,6 +103,9 @@ export default class Search extends Component{
            {bands && concerts ?
              bandsToOutput.map(bandKey => (
                <Band
+                 headerType={'big'}
+                 title={name}
+                 subtitle={genre}
                  showAlbumSales showMonthlyListeners showGenre showManager
                  showPreviousConcerts
                  showRequirements
