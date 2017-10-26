@@ -1,5 +1,5 @@
 {
-  "acceptedRoles" : [ "organizer", "bookingManager", "bookingBoss", "technician", "manager", "bandMember", "PROrganizer" ],
+  "acceptedRoles" : [ "organizer", "bookingManager", "bookingBoss", "technician", "manager", "bandMember", "PROrganizer", "serviceManager" ],
   "profiles" : {
     "05vwEXLE5oVql9aaTmApjOb1fG62" : {
       "band" : "d87e52c5-bb8d-4da8-b941-9f4928627dc8",
@@ -15,6 +15,26 @@
       "band" : "c33c2065-b1c3-4406-b066-d33a9e2ea71a",
       "name" : "Eddie Fisher",
       "role" : "bandMember"
+    },
+    "HOj2SCs7w7ZQrZOGYuCCAUjdXMO2" : {
+      "img" : "arnold",
+      "name" : "Arnold",
+      "role" : "serviceManager"
+    },
+    "q4OEbZnIdDNO7q0Q4LqFW9U19fH2" : {
+      "img" : "jamie",
+      "name" : "Jamie",
+      "role" : "serviceManager"
+    },
+    "mXRBzTsVPLfOaWzGwPAvYvn7h3o1" : {
+      "img" : "jeremy",
+      "name" : "Jeremy",
+      "role" : "serviceManager"
+    },
+    "vH5HcWpWjyWWO8f2XVSp5XeIEin1" : {
+      "img" : "zoe",
+      "name" : "Zoe",
+      "role" : "serviceManager"
     },
     "13pAdrh9t4Pt7qrdDJfpzjy8Vrh1" : {
       "img" : "joe",
