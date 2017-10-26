@@ -166,21 +166,24 @@ export default class Search extends Component{
            </ToolbarGroup>
          </Toolbar>
          <div className="band-list">
-           {bands && concerts ?
-             bandsToOutput.map(bandKey => (
-               <Band
-                 headerType={'big'}
-                 title={name}
-                 subtitle={bands[bandKey].genre}
-                 showAlbumSales showMonthlyListeners showGenre showManager
-                 showPreviousConcerts
-                 showRequirements
-                 canAddReview reviewerName={name}
-                 key={bandKey}
-                 {...{bandKey, concerts}}
-                 band={bands[bandKey]}
-               />
-             )) :
+           {bandsToOutput ?
+             bandsToOutput.map(bandKey => {
+               const band = bands[bandKey]
+               const {name, genre} = band
+               return(
+                 <Band
+                   key={bandKey}
+                   headerType={'big'}
+                   title={name}
+                   subtitle={genre}
+                   showAlbumSales showMonthlyListeners showGenre showManager
+                   showPreviousConcerts
+                   showRequirements
+                   canAddReview
+                   {...{bandKey, band, concerts, reviewerName}}
+                 />
+               )
+             }) :
              <Loading/>
            }
            {bandsToOutput && !bandsToOutput.length && <NoResult/>}
