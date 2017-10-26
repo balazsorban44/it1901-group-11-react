@@ -48,10 +48,6 @@ export default class Search extends Component{
     if (genre !== "All genres"){
       bandsToOutput = bandsToOutput.filter(bandKey => genre === bands[bandKey].genre)
     }
-    bandsToOutput = Object.keys(bands)
-    .filter(band => {
-      Object.keys(bands[band]['concerts']).forEach()
-    })
     this.setState({bandsToOutput})
   }
 
