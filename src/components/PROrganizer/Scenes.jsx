@@ -1,7 +1,7 @@
 import React from 'react'
 import Band from '../Band'
 
-import {parseDate, parseTime, Icon} from '../../utils'
+import {parseDate, parseTime, parseNumber, Icon} from '../../utils'
 
 
 const Scene = ({name, bands, eventStart}) => (
@@ -9,7 +9,7 @@ const Scene = ({name, bands, eventStart}) => (
       <h6>Scene {name}</h6>
       <div className="band-list">
         {bands.map(band => {
-          const {name, from, to} = band
+          const {name, from, to, size, participants} = band
           const startDay = 1 + new Date(from).getDate() - new Date(eventStart).getDate()
           const endDay = 1 +  new Date(to).getDate() - new Date(eventStart).getDate()
           return (
@@ -21,6 +21,8 @@ const Scene = ({name, bands, eventStart}) => (
               showManager
               subtitle={
                 <div>
+                  {/*FIXME: Fix scene sizes. */}
+                  <p>Tickets sold/Available seats: {parseNumber(participants)}/{parseNumber(size)}</p>
                   <p>Start date: {`${parseDate(from)}`}</p>
                   <p>Start time/day: {`${parseTime(from)}/${startDay}`}</p>
                   <p>End time/day: {`${parseTime(to)}/${endDay}`}</p>
