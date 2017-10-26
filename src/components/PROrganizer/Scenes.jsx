@@ -7,7 +7,7 @@ import {parseDate, parseTime, Icon} from '../../utils'
 const Scene = ({name, bands, eventStart}) => (
     <div className="scene">
       <h6>Scene {name}</h6>
-      <div className="search">
+      <div className="band-list">
         {bands.map(band => {
           const {name, from, to} = band
           const startDay = 1 + new Date(from).getDate() - new Date(eventStart).getDate()

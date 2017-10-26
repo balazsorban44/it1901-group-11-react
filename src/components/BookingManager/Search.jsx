@@ -99,7 +99,7 @@ export default class Search extends Component{
            </ToolbarGroup>
 
          </Toolbar>
-         <div className="search">
+         <div className="band-list">
            {bands && concerts ?
              bandsToOutput.map(bandKey => (
                <Band

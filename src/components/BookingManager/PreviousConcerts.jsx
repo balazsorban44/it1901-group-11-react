@@ -56,7 +56,7 @@ export default class PreviousConcerts extends Component {
             </SelectField>
           </ToolbarGroup>
         </Toolbar>
-        <div className="search">
+        <div className="band-list">
           {Object.keys(concerts)
             .filter(concert => concerts[concert].eventName === eventValue || eventValue === "All events")
             .filter(concert => concerts[concert].genre === genres[genreValue] || genreValue === 1)
