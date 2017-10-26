@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
 import firebase from 'firebase'
-import Drawer from 'material-ui/Drawer'
-import MenuItem from 'material-ui/MenuItem'
 
 export default class ServiceManager extends Component {
   constructor() {
