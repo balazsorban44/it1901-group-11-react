@@ -105,7 +105,7 @@ export default class Search extends Component{
                <Band
                  headerType={'big'}
                  title={name}
-                 subtitle={genre}
+                 subtitle={bands[bandKey].genre}
                  showAlbumSales showMonthlyListeners showGenre showManager
                  showPreviousConcerts
                  showRequirements

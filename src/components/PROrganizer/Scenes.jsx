@@ -18,6 +18,7 @@ const Scene = ({name, bands, eventStart}) => (
               {...{band}}
               headerType={'compact'}
               title={name}
+              showManager
               subtitle={
                 <div>
                   <p>Start date: {`${parseDate(from)}`}</p>
