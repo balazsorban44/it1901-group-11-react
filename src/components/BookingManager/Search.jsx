@@ -95,10 +95,13 @@ export default class Search extends Component{
            </ToolbarGroup>
 
          </Toolbar>
-         <div className="search">
+         <div className="band-list">
            {bands && concerts ?
              bandsToOutput.map(bandKey => (
                <Band
+                 headerType={'big'}
+                 title={name}
+                 subtitle={genre}
                  showAlbumSales showMonthlyListeners showGenre showManager
                  showPreviousConcerts
                  showRequirements
