@@ -9,6 +9,7 @@ import BookingBoss from './components/BookingBoss'
 import BookingManager from './components/BookingManager'
 import Technician from './components/Technician'
 import Manager from './components/Manager'
+import ServiceManager from './components/ServiceManager'
 
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import AppBar from 'material-ui/AppBar'
@@ -82,6 +83,8 @@ export default class App extends Component {
                   <BookingManager {...{user, isDrawerOpened}} toggleDrawer={this.toggleDrawer}/>,
                   "technician":
                   <Technician {...{user, isDrawerOpened}} toggleDrawer={this.toggleDrawer}/>,
+                  "serviceManager":
+                  <ServiceManager {...{user, isDrawerOpened}} toggleDrawer={this.toggleDrawer}/>,
                   "manager":
                   <Manager {...{user, isDrawerOpened}} toggleDrawer={this.toggleDrawer}/>
                 }[user.role]}
