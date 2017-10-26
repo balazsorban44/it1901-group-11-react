@@ -69,53 +69,15 @@ componentDidMount(){
 handleMenuItemClick(openedMenuItem){
   this.props.toggleDrawer()
   this.setState({openedMenuItem})
-  /////////////////////////////////// TODO eventuallly remove
-  // const events = this.state.events
-  // const scenes = this.state.scenes
-  // const concerts = this.state.concerts
-  //
-  // Object.keys(scenes).forEach(sceneKey =>{
-  //   const sceneId = sceneKey
-  //   Object.keys(scenes[sceneKey]['concerts']).forEach(concertKey =>{
-  //     const concertId = scenes[sceneKey]['concerts'][concertKey]
-  //
-  //     const db = firebase.database().ref()
-  //     const concertsRef = db.child('concerts')
-  //     const concertRef = concertsRef.child(concertId)
-  //     concertRef.once('value').then(snap => {
-  //     if (snap.val().scene) {
-  //         console.log("Exist")
-  //        return
-  //      } else {
-  //        console.log(sceneId)
-  //        console.log("not there")
-  //        concertRef.child('scene').set(sceneId)
-  //       }
+
+  /////////////////////////////////// TODO: eventuallly remove
+  // const {events, scenes, concerts} = this.state
+  // Object.keys(events).forEach(eventKey => {
+  //   events[eventKey].scenes.forEach(sceneKey => {
+  //     scenes[sceneKey].concerts.forEach(concertKey => {
+  //       firebase.database().ref(`concerts/${concertKey}/event`).set(eventKey)
+  //       firebase.database().ref(`concerts/${concertKey}/scene`).set(sceneKey)
   //     })
-  //
-  //   })
-  // })
-  // Object.keys(events).forEach(eventKey =>{
-  //   const eventName = events[eventKey]['name']
-  //   const eventId = eventKey
-  //   Object.keys(events[eventKey]['scenes']).forEach(sceneKey =>{
-  //     const sceneId = events[eventKey]['scenes'][sceneKey]
-  //     console.log(scenes[sceneId])
-  //
-  //     const db = firebase.database().ref()
-  //     const scenesRef = db.child('scenes')
-  //     const sceneRef = scenesRef.child(sceneId)
-  //     sceneRef.once('value').then(snap => {
-  //     if (snap.val().event) {
-  //         console.log("Exist")
-  //        return
-  //      } else {
-  //        console.log(events[eventId]['name'])
-  //        console.log("not there")
-  //        //sceneRef.child('event').set(eventId)
-  //       }
-  //     })
-  //
   //   })
   // })
   ///////////////////////////////////
