@@ -6,6 +6,7 @@ import SelectField from 'material-ui/SelectField'
 import {Toolbar, ToolbarGroup, ToolbarTitle} from 'material-ui/Toolbar'
 import Band from '../Band'
 import {Loading, NoResult} from '../../utils'
+import Masonry from 'react-masonry-css'
 
 
 export default class Search extends Component{
@@ -92,6 +93,7 @@ export default class Search extends Component{
       name: reviewerName
     } = this.state
 
+
      return(
        <div>
          <Toolbar>
@@ -165,7 +167,20 @@ export default class Search extends Component{
              </div>
            </ToolbarGroup>
          </Toolbar>
-         <div className="band-list">
+         <Masonry
+           breakpointCols={{
+             default: 3,
+             1440: 2,
+             1024: 1
+           }}
+           style={{
+             margin: "0 auto",
+             paddingLeft: 20,
+             display: "flex",
+             width: "100vw"
+           }}
+           columnClassName="band-list-column"
+         >
            {bandsToOutput ?
              bandsToOutput.map(bandKey => {
                const band = bands[bandKey]
@@ -186,8 +201,8 @@ export default class Search extends Component{
              }) :
              <Loading/>
            }
-           {bandsToOutput && !bandsToOutput.length && <NoResult/>}
-         </div>
+         </Masonry>
+         {bandsToOutput && !bandsToOutput.length && <NoResult/>}
        </div>
      )}
  }
