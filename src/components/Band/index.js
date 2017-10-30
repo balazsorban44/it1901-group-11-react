@@ -36,7 +36,8 @@ export default class Band extends Component {
     .then(response => {
       if (response.ok) {
         response.json().then(({artist}) => {
-          let {bio: {summary}, image} = artist
+          let {bio: {summary}, image, stats:{listeners}} = artist
+          firebase.database().ref(`bands/${this.props.bandKey}/monthlyListeners`).set(parseInt(listeners,10))
           const lastFMLink = summary.split('href="')[1].split('">')[0]
           summary = this.props.band.name === "Fantastic Five" ? "Thie is the most amazing band in the world!" : summary.split('<a')[0]
           const cover = image[4]["#text"].replace("300x300", "600x600")

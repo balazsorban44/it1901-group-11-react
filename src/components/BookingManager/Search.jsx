@@ -6,8 +6,7 @@ import SelectField from 'material-ui/SelectField'
 import {Toolbar, ToolbarGroup, ToolbarTitle} from 'material-ui/Toolbar'
 import Band from '../Band'
 import {Loading, NoResult} from '../../utils'
-import Masonry from '../../utils/react-masonry-css'
-
+import Masonry from 'react-masonry-css'
 
 export default class Search extends Component{
   constructor(props) {
@@ -74,12 +73,16 @@ export default class Search extends Component{
   handleSorters = (sortBy, isIncrease) => {
     let {bands, bandsToOutput} = this.state
     let filtered = bandsToOutput.map(bandKey => [bandKey, bands[bandKey]])
-    filtered.sort((a, b) => (isIncrease ?
+    filtered.sort((a, b) => {
+      if (isIncrease) {
+        console.log(a[1][sortBy] > b[1][sortBy]);
+        return a[1][sortBy].toString().localeCompare(b[1][sortBy].toString())
+      } else {
+        return b[1][sortBy].toString().localeCompare(a[1][sortBy].toString())
+      }
       // FIXME: toString() sorts (as should have been expected) strings, not integers.
       // For example: 99 > 980
-      a[1][sortBy].localeCompare(b[1][sortBy]) :
-      b[1][sortBy].localeCompare(a[1][sortBy]))
-    )
+    })
     bandsToOutput = filtered.map(band => band[0])
     this.setState({bandsToOutput, isIncrease})
   }

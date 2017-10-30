@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import firebase from 'firebase'
 import Band from '../Band'
 import {Loading} from '../../utils'
+import Masonry from 'react-masonry-css'
 
 export default class Manager extends Component {
 
@@ -60,7 +61,21 @@ export default class Manager extends Component {
     const {bands, concerts} = this.state
     return (
       <div className="manager role">
-        <ul className="band-list">
+
+        <Masonry
+          breakpointCols={{
+              default: 3,
+              1440: 2,
+              1024: 1
+          }}
+          style={{
+              margin: "0 auto",
+              paddingLeft: 20,
+              display: "flex",
+              width: "100vw"
+          }}
+          columnClassName="band-list-column"
+        >
           {Object.keys(bands).length !== 0 ?
             Object.keys(bands).map(bandKey => {
               const {name, genre} = bands[bandKey]
@@ -82,7 +97,7 @@ export default class Manager extends Component {
             }) :
             <Loading/>
           }
-        </ul>
+        </Masonry>
       </div>
     )
   }
