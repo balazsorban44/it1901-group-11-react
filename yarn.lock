@@ -4387,7 +4387,7 @@ map-stream@~0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/map-stream/-/map-stream-0.1.0.tgz#e56aa94c4c8055a16404a0674b78f215f7c8e194"
 
-material-ui-datetimepicker@^1.0.1:
+material-ui-datetimepicker@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/material-ui-datetimepicker/-/material-ui-datetimepicker-1.0.2.tgz#aa9b841eda5ebfc425ce3cd0d4bc990a870eeba7"
   dependencies:
@@ -5672,7 +5672,7 @@ react-event-listener@^0.5.0, react-event-listener@^0.5.1:
     prop-types "^15.6.0"
     warning "^3.0.0"
 
-react-masonry-css@^1.0.9:
+react-masonry-css@^1.0.10:
   version "1.0.10"
   resolved "https://registry.yarnpkg.com/react-masonry-css/-/react-masonry-css-1.0.10.tgz#9a510937d6a645615df7ff8bb585ff08b18dceaf"
 

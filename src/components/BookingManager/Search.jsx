@@ -25,6 +25,8 @@ export default class Search extends Component{
       scenes,
       bandsToOutput : bands ? Object.keys(bands) : null
     }
+
+
   }
 
   componentWillReceiveProps({bands, concerts, events, scenes, name}) {
@@ -42,9 +44,8 @@ export default class Search extends Component{
   }
 
 
-
-  handleFilters = (key, type) => {
-    this.setState({[type]: key}, () => {
+  handleFilters = (filterBy, value) => {
+    this.setState({[filterBy]: value}, () => {
       const {
         bands, concerts,
         query, event, scene, genre
@@ -56,13 +57,14 @@ export default class Search extends Component{
       .filter(bandKey => bands[bandKey].name.toLowerCase().includes(query))
       // Filter by genre
       .filter(bandKey => (genre ? bands[bandKey].genre === genre : bandKey))
-      // Filter by event
+      //Filter by event
+
       .filter(bandKey => (event ?
-        bands[bandKey].concerts.some(concertKey => concerts[concertKey] && concerts[concertKey].event !== event) : bandKey
+        bands[bandKey].concerts.some(concertKey => concerts[concertKey] && concerts[concertKey].event === event) : bandKey
       ))
       // Filter by scene
       .filter(bandKey => (scene ?
-        bands[bandKey].concerts.some(concertKey => concerts[concertKey] && concerts[concertKey].scene !== scene) : bandKey
+        bands[bandKey].concerts.some(concertKey => concerts[concertKey] && concerts[concertKey].scene === scene) : bandKey
       ))
 
       this.setState({bandsToOutput}, () => this.handleSorters("name", true))
@@ -73,16 +75,12 @@ export default class Search extends Component{
   handleSorters = (sortBy, isIncrease) => {
     let {bands, bandsToOutput} = this.state
     let filtered = bandsToOutput.map(bandKey => [bandKey, bands[bandKey]])
-    filtered.sort((a, b) => {
-      if (isIncrease) {
-        console.log(a[1][sortBy] > b[1][sortBy]);
-        return a[1][sortBy].toString().localeCompare(b[1][sortBy].toString())
-      } else {
-        return b[1][sortBy].toString().localeCompare(a[1][sortBy].toString())
-      }
-      // FIXME: toString() sorts (as should have been expected) strings, not integers.
-      // For example: 99 > 980
-    })
+    // FIXME: toString() sorts (as should have been expected) strings, not integers.
+    // For example: 99 > 980
+    filtered.sort((a, b) => ( isIncrease ?
+      a[1][sortBy].toString().localeCompare(b[1][sortBy].toString()):
+      b[1][sortBy].toString().localeCompare(a[1][sortBy].toString())
+    ))
     bandsToOutput = filtered.map(band => band[0])
     this.setState({bandsToOutput, isIncrease})
   }
@@ -104,7 +102,7 @@ export default class Search extends Component{
              <TextField
                fullWidth
                hintText="Search for band"
-               onChange={({target:{value}}) => this.handleFilters(value.toLowerCase(), "query")}
+               onChange={({target:{value}}) => this.handleFilters("query", value.toLowerCase())}
              />
              <Icon name="search" color="grey"/>
            </div>
@@ -114,7 +112,7 @@ export default class Search extends Component{
              <ToolbarTitle text="Filter"/>
              <SelectField
                value={event}
-               onChange={(event, index, value) => this.handleFilters(value, "event")}
+               onChange={(event, index, value) => this.handleFilters("event", value)}
              >
                <MenuItem key="All events" value={null} primaryText="All events"/>
                {Object.keys(events).map(eventKey => (
@@ -128,7 +126,7 @@ export default class Search extends Component{
              </SelectField>
              <SelectField
                value={scene}
-               onChange={(event, index, value) => this.handleFilters(value, "scene")}
+               onChange={(event, index, value) => this.handleFilters("scene", value)}
              >
                <MenuItem key="All scene" value={null} primaryText="All scene"/>
                {event && events[event].scenes.map(sceneKey => (
@@ -139,7 +137,7 @@ export default class Search extends Component{
                  />
                ))}
              </SelectField>
-             <SelectField value={genre} onChange={(event, index, value) => this.handleFilters(value, "genre")} >
+             <SelectField value={genre} onChange={(event, index, value) => this.handleFilters("genre", value)} >
                <MenuItem value={null} primaryText="All genres" />
                <MenuItem value={"Pop"} primaryText="Pop" />
                <MenuItem value={"Rock"} primaryText="Rock" />
