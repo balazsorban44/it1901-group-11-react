@@ -1,32 +1,19 @@
 import React, { Component } from 'react'
 import firebase from 'firebase'
-import Drawer from 'material-ui/Drawer'
-import Paper from 'material-ui/Paper'
-import MenuItem from 'material-ui/MenuItem'
-import {List} from 'material-ui/List'
-import {parseDate, parseTime, Loading, InfoSnippet} from '../../utils'
-
-import RaisedButton from 'material-ui/RaisedButton';
-// 13.  Som lyd eller lystekniker skal jeg kunne få opp en oversikt over
-// konserter jeg skal jobbe med.
-
-// TODO: ID26	Som tekniker så vil jeg kunne melde fra om oppmøte på rigging til konserter
+import Concerts from './Concerts'
+import {NoResult} from '../../utils'
 
 export default class Technician extends Component {
   constructor() {
     super()
     this.state = {
-      // initializing local concerts
-      concerts:{},
-      bands:{},
-      // NOTE: Might not be nessecary, added to get scenes and events
-      // REVIEW : Does Technician need all this information???
-      scenes:{},
-      events:{},
+      concerts: undefined,
+      bands: null,
+      scenes: null,
+      events: null,
       openedMenuItem: "concertsOverview"
     }
   }
-
 
   componentDidMount(){
     const db = firebase.database().ref()
@@ -40,9 +27,8 @@ export default class Technician extends Component {
       Object.keys(concerts).forEach(concertKey => {
         const {technicians, isAcceptedByBookingBoss} = concerts[concertKey]
         if (Object.keys(technicians).includes(this.props.user.uid) && isAcceptedByBookingBoss === true){
-          //TODO time filter
-          if (true){
-            const concert = concerts[concertKey]
+          const concert = concerts[concertKey]
+          if (Date.now() <= concert.from) {
             scenesRef.on('value', snap => {
               const scenes = snap.val()
               Object.keys(scenes).forEach(sceneKey => {
@@ -58,9 +44,9 @@ export default class Technician extends Component {
                           concert.sceneName = sceneName
                           concert.bandName = name
                           concert.technicalRequirements = technicalRequirements
-                          let prevState = this.state.concerts
-                          prevState[concertKey] = concert
-                          this.setState({concerts: prevState})
+                          let concerts = this.state.concerts ? this.state.concerts : {}
+                          concerts[concertKey] = concert
+                          this.setState({concerts})
                         })
                       }
                     })
@@ -68,109 +54,23 @@ export default class Technician extends Component {
                 }
               })
             })
-          } else{
-
           }
         }
-        else { delete concerts[concertKey] }
+        else delete concerts[concertKey]
       })
     })
   }
 
-
-
-handleMenuItemClick(openedMenuItem){
-  this.props.toggleDrawer()
-  this.setState({openedMenuItem})
-}
-
   render(){
-
-    const {isDrawerOpened} = this.props
-    // REVIEW: the scenes
     const {concerts} = this.state
-
+    const {name, uid:{technicianId}} = this.props.user
     return (
-        <div className='technician role'>
-          <Drawer open={isDrawerOpened}>
-            <MenuItem onClick={() => this.handleMenuItemClick("concertsOverview")} primaryText='Concerts Overview' />
-          </Drawer>
-
-          {/* Switch-case to toggle MenuItem */}
-
-          {/* This is the place the information will be rendered */}
-          {{
-            "concertsOverview":
-
-            <ConcertsOverview {...{concerts}} technicianId={this.props.user.uid}/>
-
-          }[this.state.openedMenuItem]}
-        </div>
+      <div className='technician role'>
+        {concerts ?
+          <Concerts {...{concerts, technicianId}}/> :
+          <NoResult text={`${name} has no upcoming concerts.`}/>
+        }
+      </div>
     )
   }
-}
-
-
-
-
-// function ConcertsOverview({concerts, bands}) {
-  // NOTE: This one or the one below? Welp, the arrow means they are the same?
-
-class ConcertsOverview extends Component {
-  constructor() {
-    super()
-    this.state = {
-      isAttending: false
-    }
-  }
-  handleClick = (concertId, isAttending) => {
-    this.setState({isAttending})
-    firebase.database().ref(`concerts/${concertId}/technicians/${this.props.technicianId}/isAttending`).set(isAttending)
-  }
-
-
-  //Return statement for ConcertsOverview
-  render() {
-    const {concerts, technicianId} = this.props
-    const {isAttending} = this.state
-    const concertBandsList = []
-
-    concerts && Object.keys(concerts).forEach(concertKey =>{
-      const {from, to, location, bandName, sceneName} = concerts[concertKey]
-      const technicalRequirements = concerts[concertKey].technicalRequirements.join(", ")
-
-      // console.log("concerts: ", concerts,"bands: ", bands /* ,"scenes: ",scenes*/);
-
-
-      concertBandsList.push(
-        <li key={concertKey} className="concert-list-item">
-          <Paper>
-            <h2>{bandName}</h2>
-            <List>
-              <InfoSnippet icon="date_range" subText="Date">{parseDate(from)}</InfoSnippet>
-              <InfoSnippet icon="access_time" subText="Start/end">{parseTime(from)} - {parseTime(to)}</InfoSnippet>
-              <InfoSnippet icon="settings_input_component" subText="Technical requirements">{technicalRequirements}</InfoSnippet>
-              <InfoSnippet icon="account_balance" subText="Scene">{sceneName}</InfoSnippet>
-              <InfoSnippet icon="place" subText="Location">{location}</InfoSnippet>
-              <div style={{display:"flex", justifyContent: "space-between"}}>
-                <RaisedButton disabled={isAttending} onClick={() => this.handleClick(concertKey, true)} label="I will attend" primary />
-                <RaisedButton disabled={!isAttending} onClick={() => this.handleClick(concertKey, false)} label="I will not attend" secondary />
-              </div>
-            </List>
-          </Paper>
-        </li>
-      )
-    })
-
-  return(
-    <div>
-      {concertBandsList.length > 0 ?
-        <ul className="concert-list">
-          {concertBandsList}
-        </ul> :
-        <Loading/>
-      }
-    </div>
-  )}
-
 }
