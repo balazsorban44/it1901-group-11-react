@@ -6,7 +6,11 @@ import MenuItem from 'material-ui/MenuItem'
 import {List} from 'material-ui/List'
 import {parseDate, parseTime, Loading, InfoSnippet} from '../../utils'
 
-// 13.  Som lyd eller lystekniker skal jeg kunne få opp en oversikt over konserter jeg skal jobbe med.
+// 13.  Som lyd eller lystekniker skal jeg kunne få opp en oversikt over
+// konserter jeg skal jobbe med.
+
+// TODO: ID26	Som tekniker så vil jeg kunne melde fra om oppmøte på rigging til konserter
+
 export default class Technician extends Component {
   constructor() {
     super()
@@ -23,7 +27,7 @@ export default class Technician extends Component {
   }
 
 
-  componentDidMount() {
+  componentDidMount(){
     const db = firebase.database().ref()
     const concertsRef = db.child('concerts')
     const bandsRef = db.child('bands')
@@ -63,15 +67,15 @@ export default class Technician extends Component {
                 }
               })
             })
+          }else{
+            
           }
-        }
-        else{
-
+        } else{
+          delete concerts[concertKey]
         }
       })
     })
   }
-
 
 
 
@@ -80,7 +84,7 @@ handleMenuItemClick(openedMenuItem){
   this.setState({openedMenuItem})
 }
 
-  render() {
+  render(){
 
     const {isDrawerOpened} = this.props
     // REVIEW: the scenes
