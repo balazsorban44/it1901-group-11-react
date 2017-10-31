@@ -20,27 +20,26 @@ export default class Band extends Component {
       manager: {},
       summary: "",
       lastFMLink: "",
-      cover,
-
+      cover
     }
   }
 
   componentDidMount() {
     const db = firebase.database().ref()
     const profilesRef = db.child('staff/profiles')
-    profilesRef.child(this.props.band.manager).on('value', snap => {
+    const {bandKey, band: {name, manager}} = this.props
+    profilesRef.child(manager).on('value', snap => {
       this.setState({manager: snap.val()})
     })
-    const {bandKey, band: {name}} = this.props
 
-    fetch(`https://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=${this.props.band.name}&api_key=35f1b3f9790cddd48125c3b2acaae8a4&format=json`)
+    fetch(`https://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=${name}&api_key=35f1b3f9790cddd48125c3b2acaae8a4&format=json`)
     .then(response => {
       if (response.ok) {
         response.json().then(({artist}) => {
           let {bio: {summary}, image, stats:{listeners}} = artist
           bandKey && firebase.database().ref(`bands/${bandKey}/monthlyListeners`).set(parseInt(listeners,10))
           const lastFMLink = summary.split('href="')[1].split('">')[0]
-          summary = name === "Fantastic Five" ? "Thie is the most amazing band in the world!" : summary.split('<a')[0]
+          summary = summary.split('<a')[0]
           const cover = image[4]["#text"].replace("300x300", "600x600")
           cover !== "" && this.setState({cover})
           this.setState({summary, lastFMLink})
