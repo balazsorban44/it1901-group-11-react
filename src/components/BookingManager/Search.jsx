@@ -193,7 +193,7 @@ export default class Search extends Component{
                    title={name}
                    subtitle={genre}
                    showAlbumSales showMonthlyListeners showGenre showManager
-                   showPreviousConcerts
+                   showPreviousConcerts showFutureConcerts
                    showRequirements
                    canAddReview
                    {...{bandKey, band, concerts, reviewerName}}

@@ -56,9 +56,9 @@ componentDidMount(){
     const concerts = snap.val()
     Object.keys(concerts).forEach(key => {
       const concert = concerts[key]
-      const {staff} = concert
-      profilesRef.child(staff[0]).on('value', snap => {
-        concerts[key].staff[0] = `${snap.val().img}@tech.com`
+      const {technicians} = concert
+      profilesRef.child(Object.keys(technicians)[0]).on('value', snap => {
+        concerts[key].contact = `${snap.val().img}@tech.com`
       })
     })
     this.setState({concerts})

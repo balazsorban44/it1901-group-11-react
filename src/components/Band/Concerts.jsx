@@ -98,12 +98,12 @@ const ConcertTable = ({concerts}) => (
     </TableHeader>
     <TableBody displayRowCheckbox={false} showRowHover>
       {Object.keys(concerts).map(key => {
-        const {from, ticketPrice, staff} = concerts[key]
+        const {from, ticketPrice, contact} = concerts[key]
         return (
           <TableRow key={key}>
             <TableRowColumn>{parseDate(from)}</TableRowColumn>
             <TableRowColumn>{ticketPrice === 0 ? "No price yet" : parsePrice(ticketPrice)}</TableRowColumn>
-            <TableRowColumn><a style={{color: muiTheme.palette.accent1Color}} href={`mailto:${staff}`}>{staff}</a></TableRowColumn>
+            <TableRowColumn><a style={{color: muiTheme.palette.accent1Color}} href={`mailto:${contact}`}>{contact}</a></TableRowColumn>
           </TableRow>
         )
       })}
