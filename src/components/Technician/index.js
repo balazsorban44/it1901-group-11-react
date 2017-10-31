@@ -6,6 +6,7 @@ import MenuItem from 'material-ui/MenuItem'
 import {List} from 'material-ui/List'
 import {parseDate, parseTime, Loading, InfoSnippet} from '../../utils'
 
+import RaisedButton from 'material-ui/RaisedButton';
 // 13.  Som lyd eller lystekniker skal jeg kunne få opp en oversikt over
 // konserter jeg skal jobbe med.
 
@@ -37,8 +38,8 @@ export default class Technician extends Component {
     concertsRef.on('value', snap => {
       const concerts = snap.val()
       Object.keys(concerts).forEach(concertKey => {
-        const {staff, isAcceptedByBookingBoss} = concerts[concertKey]
-        if (staff.includes(this.props.user.uid) && isAcceptedByBookingBoss === true){
+        const {technicians, isAcceptedByBookingBoss} = concerts[concertKey]
+        if (Object.keys(technicians).includes(this.props.user.uid) && isAcceptedByBookingBoss === true){
           //TODO time filter
           if (true){
             const concert = concerts[concertKey]
@@ -67,12 +68,11 @@ export default class Technician extends Component {
                 }
               })
             })
-          }else{
-            
+          } else{
+
           }
-        } else{
-          delete concerts[concertKey]
         }
+        else { delete concerts[concertKey] }
       })
     })
   }
@@ -102,7 +102,7 @@ handleMenuItemClick(openedMenuItem){
           {{
             "concertsOverview":
 
-            <ConcertsOverview{...{concerts}}/>
+            <ConcertsOverview {...{concerts}} technicianId={this.props.user.uid}/>
 
           }[this.state.openedMenuItem]}
         </div>
@@ -116,40 +116,52 @@ handleMenuItemClick(openedMenuItem){
 // function ConcertsOverview({concerts, bands}) {
   // NOTE: This one or the one below? Welp, the arrow means they are the same?
 
-const ConcertsOverview = ({concerts}) => {
-  const concertBandsList = []
-
-
-
-// TODO: get location from db, and add to list
-  Object.keys(concerts).forEach(key =>{
-    const {from, to, location, bandName, sceneName} = concerts[key]
-    const technicalRequirements = concerts[key].technicalRequirements.join(", ")
-
-    // NOTE: uncomment to log info to console
-    // console.log("concerts: ", concerts,"bands: ", bands /* ,"scenes: ",scenes*/);
-
-    concertBandsList.push(
-      <li key={key} className="concert-list-item">
-        <Paper>
-          <h2>{bandName}</h2>
-          <List>
-            <InfoSnippet icon="date_range" subText="Date">{parseDate(from)}</InfoSnippet>
-            <InfoSnippet icon="access_time" subText="Start/end">{parseTime(from)} - {parseTime(to)}</InfoSnippet>
-            <InfoSnippet icon="settings_input_component" subText="Technical requirements">{technicalRequirements}</InfoSnippet>
-            <InfoSnippet icon="account_balance" subText="Scene">{sceneName}</InfoSnippet>
-            <InfoSnippet icon="place" subText="Location">{location}</InfoSnippet>
-          </List>
-        </Paper>
-      </li>
-    )
-
-  })
-
-
+class ConcertsOverview extends Component {
+  constructor() {
+    super()
+    this.state = {
+      isAttending: false
+    }
+  }
+  handleClick = (concertId, isAttending) => {
+    this.setState({isAttending})
+    firebase.database().ref(`concerts/${concertId}/technicians/${this.props.technicianId}/isAttending`).set(isAttending)
+  }
 
 
   //Return statement for ConcertsOverview
+  render() {
+    const {concerts, technicianId} = this.props
+    const {isAttending} = this.state
+    const concertBandsList = []
+
+    concerts && Object.keys(concerts).forEach(concertKey =>{
+      const {from, to, location, bandName, sceneName} = concerts[concertKey]
+      const technicalRequirements = concerts[concertKey].technicalRequirements.join(", ")
+
+      // console.log("concerts: ", concerts,"bands: ", bands /* ,"scenes: ",scenes*/);
+
+
+      concertBandsList.push(
+        <li key={concertKey} className="concert-list-item">
+          <Paper>
+            <h2>{bandName}</h2>
+            <List>
+              <InfoSnippet icon="date_range" subText="Date">{parseDate(from)}</InfoSnippet>
+              <InfoSnippet icon="access_time" subText="Start/end">{parseTime(from)} - {parseTime(to)}</InfoSnippet>
+              <InfoSnippet icon="settings_input_component" subText="Technical requirements">{technicalRequirements}</InfoSnippet>
+              <InfoSnippet icon="account_balance" subText="Scene">{sceneName}</InfoSnippet>
+              <InfoSnippet icon="place" subText="Location">{location}</InfoSnippet>
+              <div style={{display:"flex", justifyContent: "space-between"}}>
+                <RaisedButton disabled={isAttending} onClick={() => this.handleClick(concertKey, true)} label="I will attend" primary />
+                <RaisedButton disabled={!isAttending} onClick={() => this.handleClick(concertKey, false)} label="I will not attend" secondary />
+              </div>
+            </List>
+          </Paper>
+        </li>
+      )
+    })
+
   return(
     <div>
       {concertBandsList.length > 0 ?
@@ -159,7 +171,6 @@ const ConcertsOverview = ({concerts}) => {
         <Loading/>
       }
     </div>
-
-  )
+  )}
 
 }
