@@ -50,7 +50,7 @@ export const Icon =({name, title, color}) => (
   </FontIcon>
 )
 
-export const NoResult = () => (
+export const NoResult = ({text}) => (
   <div style={{
     display: "flex",
     justifyContent: "center",
@@ -58,9 +58,7 @@ export const NoResult = () => (
     minHeight: "70vh",
   }}>
     <div style={{display: "flex", alignItems: "center"}}>
-      <p style={{color:"grey"}}>
-        This is not the search result you are looking for.
-      </p>
+      <p style={{color:"grey"}}>{text}</p>
       <Icon name="sentiment_dissatisfied"/>
     </div>
   </div>

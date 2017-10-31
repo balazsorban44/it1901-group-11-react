@@ -203,7 +203,7 @@ export default class Search extends Component{
              <Loading/>
            }
          </Masonry>
-         {bandsToOutput && !bandsToOutput.length && <NoResult/>}
+         {bandsToOutput && !bandsToOutput.length && <NoResult text={"This is not the search result you are looking for."}/>}
        </div>
      )}
  }
