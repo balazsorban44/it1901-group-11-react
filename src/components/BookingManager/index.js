@@ -99,13 +99,6 @@ handleMenuItemClick(openedMenuItem){
           </Drawer>
           <NewBooking {...{bands, events, scenes}}/>
           <Search {...{bands, concerts, name, scenes, events}}/>
-          {/* {{
-            "search":
-            <Search {...{bands, concerts, name, scenes, events}}/>,
-            "previousConcerts":
-            <PreviousConcerts {...{concerts, events, bands, scenes}}/>,
-          }[openedMenuItem]} */}
-
         </div>
     )}
 }
