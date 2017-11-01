@@ -7,7 +7,7 @@ export default class Technician extends Component {
   constructor() {
     super()
     this.state = {
-      concerts: undefined,
+      concerts: null,
       bands: null,
       scenes: null,
       events: null,
@@ -15,7 +15,8 @@ export default class Technician extends Component {
     }
   }
 
-  componentDidMount(){
+  componentDidMount() {
+
     const db = firebase.database().ref()
     const concertsRef = db.child('concerts')
     const bandsRef = db.child('bands')
@@ -37,7 +38,7 @@ export default class Technician extends Component {
                   eventsRef.on('value', snap => {
                     const events = snap.val()
                     Object.keys(events).forEach(eventKey => {
-                      if (events[eventKey].scenes.includes(sceneKey)){
+                      if (events[eventKey].scenes.includes(sceneKey)) {
                         concert.location = events[eventKey].location
                         bandsRef.child(concerts[concertKey].band).on('value', snap => {
                           const {name, technicalRequirements} = snap.val()
@@ -55,8 +56,7 @@ export default class Technician extends Component {
               })
             })
           }
-        }
-        else delete concerts[concertKey]
+        } else delete concerts[concertKey]
       })
     })
   }
