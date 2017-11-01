@@ -56,7 +56,7 @@ componentDidMount(){
     const concerts = snap.val()
     Object.keys(concerts).forEach(key => {
       const concert = concerts[key]
-      const {technicians, event} = concert
+      const {technicians} = concert
       // TODO: Remove
       // Object.keys(technicians).forEach(technicianKey => {
       //   eventsRef.child(`${event}/staff/technician`).once('value', snap => {
