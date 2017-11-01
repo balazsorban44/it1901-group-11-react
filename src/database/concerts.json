@@ -45,9 +45,6 @@
     "technicians" : {
       "nCXaOPJjIYe8v5Wes5jQEOeNMSz1" : {
         "isAttending" : false
-      },
-      "undefined" : {
-        "isAttending" : true
       }
     },
     "ticketPrice" : 0,
@@ -82,9 +79,6 @@
     "technicians" : {
       "Ibjsqw4uJxZJrCl0ClL5pneKhgv1" : {
         "isAttending" : false
-      },
-      "undefined" : {
-        "isAttending" : true
       }
     },
     "ticketPrice" : 0,
@@ -322,9 +316,6 @@
     "scene" : "59uas7g3uyqhjgwbdyhjkbiakj",
     "technicians" : {
       "twDpZNCedjgYAJKmkoTEiVdJEUv1" : {
-        "isAttending" : false
-      },
-      "undefined" : {
         "isAttending" : false
       }
     },
@@ -699,9 +690,6 @@
     "scene" : "59uas7g3uyqhjgwbdyhjkbiakj",
     "technicians" : {
       "twDpZNCedjgYAJKmkoTEiVdJEUv1" : {
-        "isAttending" : false
-      },
-      "undefined" : {
         "isAttending" : false
       }
     },
@@ -1467,9 +1455,6 @@
     "scene" : "59uas7g3uyqhjgwbdyhjkbiakj",
     "technicians" : {
       "twDpZNCedjgYAJKmkoTEiVdJEUv1" : {
-        "isAttending" : false
-      },
-      "undefined" : {
         "isAttending" : false
       }
     },
