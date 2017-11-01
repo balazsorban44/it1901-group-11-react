@@ -56,7 +56,14 @@ componentDidMount(){
     const concerts = snap.val()
     Object.keys(concerts).forEach(key => {
       const concert = concerts[key]
-      const {technicians} = concert
+      const {technicians, event} = concert
+      // TODO: Remove
+      // Object.keys(technicians).forEach(technicianKey => {
+      //   eventsRef.child(`${event}/staff/technician`).once('value', snap => {
+      //     eventsRef.child(`${event}/staff/technician`).set([technicianKey, ...snap.val()])
+      //   })
+      // })
+      //
       profilesRef.child(Object.keys(technicians)[0]).on('value', snap => {
         concerts[key].contact = `${snap.val().img}@tech.com`
       })
@@ -91,13 +98,18 @@ handleMenuItemClick(openedMenuItem){
       bands, concerts, events, scenes
     } = this.state
 
+    const upcomingEvents = {}
+    Object.keys(events)
+      .filter(eventkey => Date.now() <= events[eventkey].from)
+      .forEach(eventkey => upcomingEvents[eventkey] = events[eventkey])
+
     return (
         <div className="booking-manager role">
           <Drawer open={isDrawerOpened}>
             <MenuItem onClick={() => this.handleMenuItemClick("search")} primaryText="Search" />
             <MenuItem onClick={() => this.handleMenuItemClick("previousConcerts")} primaryText="Previous concerts" />
           </Drawer>
-          <NewBooking {...{bands, events, scenes}}/>
+          <NewBooking events={upcomingEvents} {...{bands, scenes}}/>
           <Search {...{bands, concerts, name, scenes, events}}/>
         </div>
     )}
