@@ -1,1566 +1,1572 @@
 {
-  "590erguniusdfvtg7af6a6s7d7" : {
-    "band" : "012151a8-0f9a-44c9-997f-ebd68b5389f9",
-    "bandFee" : 10000,
-    "event" : "59bc074f14b241f49427f5ec",
-    "from" : 1501351200000,
-    "isAcceptedByBookingBoss" : false,
-    "isAcceptedByBookingManager" : true,
-    "participants" : 5236,
-    "scene" : "59u98sdyv7iukj3bjkbsjkdbf",
-    "technicians" : {
-      "FEV3ktwWIYfNQCecOEO1isAkrFZ2" : {
-        "isAttending" : false
-      }
-    },
-    "ticketPrice" : 750,
-    "to" : 1501365600000
-  },
-  "5927ergerg932b32nnj5n5j" : {
-    "band" : "be389638-e74f-46a9-83d2-91ee3ce1fb0c",
-    "bandFee" : 10000,
-    "event" : "59bc074f14b241f49427f5ec",
-    "from" : 1501351200000,
-    "isAcceptedByBookingBoss" : true,
-    "isAcceptedByBookingManager" : true,
-    "participants" : 5000,
-    "scene" : "597ast76ugyjh3bkjhbdfjke",
-    "technicians" : {
-      "gADgB4F4xzb8S1oOzyVYzCljDtJ2" : {
-        "isAttending" : false
-      }
-    },
-    "ticketPrice" : 2000,
-    "to" : 1501365600000
-  },
-  "596adjhrf78sdfv87asdv78d6ae" : {
-    "band" : "59iyurewbfu6756w4e45e5f",
-    "bandFee" : 10000,
-    "event" : "59bc074fe0ba912c14c559b4",
-    "from" : 1511719200000,
-    "isAcceptedByBookingBoss" : "unhandled",
-    "isAcceptedByBookingManager" : true,
-    "participants" : 13337,
-    "scene" : "59ua7syfguy3gjhbsjhdbhasbd",
-    "technicians" : {
-      "nCXaOPJjIYe8v5Wes5jQEOeNMSz1" : {
-        "isAttending" : false
-      }
-    },
-    "ticketPrice" : 0,
-    "to" : 1511733600000
-  },
-  "596asdfiuy86sdzv67asdf788ds" : {
-    "band" : "2ddd167f-5b8a-4372-b350-6ad50493bac0",
-    "bandFee" : 10000,
-    "event" : "59bc074f396757632e2d709a",
-    "from" : 1503252000000,
-    "isAcceptedByBookingBoss" : false,
-    "isAcceptedByBookingManager" : true,
-    "participants" : 6742,
-    "scene" : "59u787gibkkjskjbfkjkjbjs",
-    "technicians" : {
-      "63b80PS1SxRAB95JvGZzEcQnrbU2" : {
-        "isAttending" : false
-      }
-    },
-    "ticketPrice" : 987,
-    "to" : 1503266400000
-  },
-  "59767d67fguyhb4kjbjkwkjk" : {
-    "band" : "7808accb-6395-4b25-858c-678bbb73896b",
-    "bandFee" : 10000,
-    "event" : "59bc074f3e98e809f6e807b2",
-    "from" : 1510509600000,
-    "isAcceptedByBookingBoss" : true,
-    "isAcceptedByBookingManager" : true,
-    "participants" : 6000,
-    "scene" : "59i8ud7fhy3jhbjhabdfhhjabd",
-    "technicians" : {
-      "Ibjsqw4uJxZJrCl0ClL5pneKhgv1" : {
-        "isAttending" : false
-      }
-    },
-    "ticketPrice" : 0,
-    "to" : 1510524000000
-  },
-  "5976sdfisdv6v87sfv787sfs67d" : {
-    "band" : "91a81925-92f9-4fc9-b897-93cf01226282",
-    "bandFee" : 10000,
-    "event" : "59bc074f3e98e809f6e807b2",
-    "from" : 1510423200000,
-    "isAcceptedByBookingBoss" : "unhandled",
-    "isAcceptedByBookingManager" : true,
-    "participants" : 10000,
-    "scene" : "59u8ash78h3kb3q6g76duf673",
-    "technicians" : {
-      "MnzmGlSX11PT8ZYeI1a5SwT0Fbg1" : {
-        "isAttending" : false
-      }
-    },
-    "ticketPrice" : 0,
-    "to" : 1510437600000
-  },
-  "59776dsfgbhkskjfysh7f87is" : {
-    "band" : "5973hjfiueriufnksdjfn",
-    "bandFee" : 10000,
-    "event" : "59bc074fe0ba912c14c559b4",
-    "from" : 1511546400000,
-    "isAcceptedByBookingBoss" : true,
-    "isAcceptedByBookingManager" : true,
-    "participants" : 9000,
-    "scene" : "59y7dfygyj3hbhjbajhfjbdh",
-    "technicians" : {
-      "pgZ9lsCC1OXwuDi2b7I83WBkswb2" : {
-        "isAttending" : false
-      }
-    },
-    "ticketPrice" : 0,
-    "to" : 1511560800000
-  },
-  "5978difubkj4jkwkjjkkwkdnkj" : {
-    "band" : "59iyurewbfu6756w4e45e5f",
-    "bandFee" : 10000,
-    "event" : "59bc074f14b241f49427f5ec",
-    "from" : 1501437600000,
-    "isAcceptedByBookingBoss" : false,
-    "isAcceptedByBookingManager" : true,
-    "participants" : 13337,
-    "scene" : "597ast76ugyjh3bkjhbdfjke",
-    "technicians" : {
-      "gADgB4F4xzb8S1oOzyVYzCljDtJ2" : {
-        "isAttending" : false
-      }
-    },
-    "ticketPrice" : 13337,
-    "to" : 1501452000000
-  },
-  "597s6dfgbksbfiuhsbdiyfbh" : {
-    "band" : "5973hjfiueriufnksdjfn",
-    "bandFee" : 10000,
-    "event" : "59bc074f14b241f49427f5ec",
-    "from" : 1501452000000,
-    "isAcceptedByBookingBoss" : true,
-    "isAcceptedByBookingManager" : true,
-    "participants" : 9500,
-    "scene" : "59u98sdyv7iukj3bjkbsjkdbf",
-    "technicians" : {
-      "FEV3ktwWIYfNQCecOEO1isAkrFZ2" : {
-        "isAttending" : false
-      }
-    },
-    "ticketPrice" : 1000,
-    "to" : 1501466400000
-  },
-  "597sd68f6t6tdsf76uysdjf" : {
-    "band" : "20104c4d-cba0-4371-ab77-2f9d544674be",
-    "bandFee" : 10000,
-    "event" : "59bc074fe0ba912c14c559b4",
-    "from" : 1511733600000,
-    "isAcceptedByBookingBoss" : "unhandled",
-    "isAcceptedByBookingManager" : true,
-    "participants" : 9000,
-    "scene" : "59u8ds7figiy3hbhabdfjjsbf",
-    "technicians" : {
-      "AZOpCPsvtbWhk8ASWuwJbv2rts93" : {
-        "isAttending" : false
-      }
-    },
-    "ticketPrice" : 0,
-    "to" : 1511748000000
-  },
-  "598776df8gihd78f78sfsef" : {
-    "band" : "5973hjfiueriufnksdjfn",
-    "bandFee" : 10000,
-    "event" : "59bc074f3e98e809f6e807b2",
-    "from" : 1510336800000,
-    "isAcceptedByBookingBoss" : true,
-    "isAcceptedByBookingManager" : true,
-    "participants" : 7000,
-    "scene" : "59i8ud7fhy3jhbjhabdfhhjabd",
-    "technicians" : {
-      "Ibjsqw4uJxZJrCl0ClL5pneKhgv1" : {
-        "isAttending" : false
-      }
-    },
-    "ticketPrice" : 0,
-    "to" : 1510351200000
-  },
-  "5987dfikdbfkbkewbfkbkwkb" : {
-    "band" : "3630fff3-52fc-4e97-ab01-d68fd88e4135",
-    "bandFee" : 10000,
-    "event" : "59bc074f3e98e809f6e807b2",
-    "from" : 1510509600000,
-    "isAcceptedByBookingBoss" : true,
-    "isAcceptedByBookingManager" : true,
-    "participants" : 9000,
-    "scene" : "59u7ashuy3jvjahsbd3iaujssd",
-    "technicians" : {
-      "xvKe4kdXR7OnQBrzSB5Rph8lGkK2" : {
-        "isAttending" : false
-      }
-    },
-    "ticketPrice" : 0,
-    "to" : 1510524000000
-  },
-  "5987sdf8gy4bkhwbk3bjdbfkj" : {
-    "band" : "c33c2065-b1c3-4406-b066-d33a9e2ea71a",
-    "bandFee" : 10000,
-    "event" : "59bc074f396757632e2d709a",
-    "from" : 1503266400000,
-    "isAcceptedByBookingBoss" : true,
-    "isAcceptedByBookingManager" : true,
-    "participants" : 9500,
-    "scene" : "59s78dibk4bksbmdfuygkb4k",
-    "technicians" : {
-      "5sQyKeT0P4eAO21Nm33TybTut3E2" : {
-        "isAttending" : false
-      }
-    },
-    "ticketPrice" : 1650,
-    "to" : 1503280800000
-  },
-  "5987sdft8gi43kwjuifbkdjs" : {
-    "band" : "d87e52c5-bb8d-4da8-b941-9f4928627dc8",
-    "bandFee" : 10000,
-    "event" : "59bc074f14b241f49427f5ec",
-    "from" : 1501452000000,
-    "isAcceptedByBookingBoss" : true,
-    "isAcceptedByBookingManager" : true,
-    "participants" : 9000,
-    "scene" : "59u8s97dfiguk3bkjbdkbnfkd",
-    "technicians" : {
-      "7uHaGKs8maNUXpI92zqGtroHRPv2" : {
-        "isAttending" : false
-      }
-    },
-    "ticketPrice" : 900,
-    "to" : 1501466400000
-  },
-  "59897d78fyejgfbk4bjbjkw" : {
-    "band" : "3630fff3-52fc-4e97-ab01-d68fd88e4135",
-    "bandFee" : 10000,
-    "event" : "59bc074fe0ba912c14c559b4",
-    "from" : 1511719200000,
-    "isAcceptedByBookingBoss" : true,
-    "isAcceptedByBookingManager" : true,
-    "participants" : 8800,
-    "scene" : "59u8ds7figiy3hbhabdfjjsbf",
-    "technicians" : {
-      "AZOpCPsvtbWhk8ASWuwJbv2rts93" : {
-        "isAttending" : false
-      }
-    },
-    "ticketPrice" : 0,
-    "to" : 1511733600000
-  },
-  "59897d78s6f67usd7f78" : {
-    "band" : "9fff2f8a-21e6-47de-a2b8-7f449929d43f",
-    "bandFee" : 10000,
-    "event" : "59bc074f396757632e2d709a",
-    "from" : 1503093600000,
-    "isAcceptedByBookingBoss" : "unhandled",
-    "isAcceptedByBookingManager" : true,
-    "participants" : 10000,
-    "scene" : "59u787gibkkjskjbfkjkjbjs",
-    "technicians" : {
-      "63b80PS1SxRAB95JvGZzEcQnrbU2" : {
-        "isAttending" : false
-      }
-    },
-    "ticketPrice" : 0,
-    "to" : 1503108000000
-  },
-  "59897df78igy3iwkbkbsjfdb" : {
-    "band" : "cc197bad-dc9c-440d-a5b5-d52ba2e14234",
-    "bandFee" : 10000,
-    "event" : "59bc074f396757632e2d709a",
-    "from" : 1503266400000,
-    "isAcceptedByBookingBoss" : true,
-    "isAcceptedByBookingManager" : true,
-    "participants" : 8600,
-    "scene" : "59u787gibkkjskjbfkjkjbjs",
-    "technicians" : {
-      "63b80PS1SxRAB95JvGZzEcQnrbU2" : {
-        "isAttending" : false
-      }
-    },
-    "ticketPrice" : 1250,
-    "to" : 1503280800000
-  },
-  "598dfunir7df76vr88sf7v" : {
-    "band" : "73e5e69d-3554-40d8-8516-00cb38737a1c",
-    "bandFee" : 10000,
-    "event" : "59bc074f14b241f49427f5ec",
-    "from" : 1501279200000,
-    "isAcceptedByBookingBoss" : true,
-    "isAcceptedByBookingManager" : true,
-    "participants" : 24000,
-    "scene" : "59u98sdyv7iukj3bjkbsjkdbf",
-    "technicians" : {
-      "FEV3ktwWIYfNQCecOEO1isAkrFZ2" : {
-        "isAttending" : false
-      }
-    },
-    "ticketPrice" : 1250,
-    "to" : 1501293600000
-  },
-  "598sd7f84gwi3bsbdfbksjdf" : {
-    "band" : "c33c2065-b1c3-4406-b066-d33a9e2ea71a",
-    "bandFee" : 10000,
-    "event" : "59bc074f3e98e809f6e807b2",
-    "from" : 1510524000000,
-    "isAcceptedByBookingBoss" : true,
-    "isAcceptedByBookingManager" : true,
-    "participants" : 7500,
-    "scene" : "59uas7g3uyqhjgwbdyhjkbiakj",
-    "technicians" : {
-      "twDpZNCedjgYAJKmkoTEiVdJEUv1" : {
-        "isAttending" : false
-      }
-    },
-    "ticketPrice" : 0,
-    "to" : 1510538400000
-  },
-  "5998duf78igy4bkwjbefis7dhf" : {
-    "band" : "20104c4d-cba0-4371-ab77-2f9d544674be",
-    "bandFee" : 10000,
-    "event" : "59bc074f3e98e809f6e807b2",
-    "from" : 1510524000000,
-    "isAcceptedByBookingBoss" : true,
-    "isAcceptedByBookingManager" : true,
-    "participants" : 12000,
-    "scene" : "59u7ashuy3jvjahsbd3iaujssd",
-    "technicians" : {
-      "xvKe4kdXR7OnQBrzSB5Rph8lGkK2" : {
-        "isAttending" : false
-      }
-    },
-    "ticketPrice" : 0,
-    "to" : 1510538400000
-  },
-  "599sd7f8giy3kwbeiiy3jkh" : {
-    "band" : "20104c4d-cba0-4371-ab77-2f9d544674be",
-    "bandFee" : 10000,
-    "event" : "59bc074f14b241f49427f5ec",
-    "from" : 1501437600000,
-    "isAcceptedByBookingBoss" : true,
-    "isAcceptedByBookingManager" : true,
-    "participants" : 10500,
-    "scene" : "59u98sdyv7iukj3bjkbsjkdbf",
-    "technicians" : {
-      "FEV3ktwWIYfNQCecOEO1isAkrFZ2" : {
-        "isAttending" : false
-      }
-    },
-    "ticketPrice" : 1400,
-    "to" : 1501452000000
-  },
-  "599u8dsf6786ugyusdfgu6g6d" : {
-    "band" : "596ffa74-3d08-44ef-b113-765d43d12738",
-    "bandFee" : 10000,
-    "event" : "59bc074f14b241f49427f5ec",
-    "from" : 1501365600000,
-    "isAcceptedByBookingBoss" : true,
-    "isAcceptedByBookingManager" : true,
-    "participants" : 9500,
-    "scene" : "59u89s7difgi3ukbwkjbjkfdk",
-    "technicians" : {
-      "Ym30wwBVThSF1X44Bzph7Ss8yds2" : {
-        "isAttending" : false
-      }
-    },
-    "ticketPrice" : 899,
-    "to" : 1501380000000
-  },
-  "59alksndfu6sef78b8ees6dfee" : {
-    "band" : "b95ce3ff-3d05-4e87-9e01-c97b66af13d4",
-    "bandFee" : 10000,
-    "event" : "59bc074fe0ba912c14c559b4",
-    "from" : 1511647200000,
-    "isAcceptedByBookingBoss" : true,
-    "isAcceptedByBookingManager" : true,
-    "participants" : 4512,
-    "scene" : "59y7dfygyj3hbhjbajhfjbdh",
-    "technicians" : {
-      "pgZ9lsCC1OXwuDi2b7I83WBkswb2" : {
-        "isAttending" : false
-      }
-    },
-    "ticketPrice" : 0,
-    "to" : 1511661600000
-  },
-  "59as654as5465asthv3j323" : {
-    "band" : "596ffa74-3d08-44ef-b113-765d43d12738",
-    "bandFee" : 10000,
-    "event" : "59bc074fe0ba912c14c559b4",
-    "from" : 1511719200000,
-    "isAcceptedByBookingBoss" : true,
-    "isAcceptedByBookingManager" : true,
-    "participants" : 11000,
-    "scene" : "5986gduyfbh3hkkb32yrbyjb",
-    "technicians" : {
-      "kg08ojgicAgx23e0fPca33AVx8B3" : {
-        "isAttending" : false
-      }
-    },
-    "ticketPrice" : 0,
-    "to" : 1511733600000
-  },
-  "59asiudbf7aw6efy4kiuwe78w4" : {
-    "band" : "596ffa74-3d08-44ef-b113-765d43d12738",
-    "bandFee" : 10000,
-    "event" : "59bc074f396757632e2d709a",
-    "from" : 1503180000000,
-    "isAcceptedByBookingBoss" : false,
-    "isAcceptedByBookingManager" : true,
-    "participants" : 12765,
-    "scene" : "59u787gibkkjskjbfkjkjbjs",
-    "technicians" : {
-      "63b80PS1SxRAB95JvGZzEcQnrbU2" : {
-        "isAttending" : false
-      }
-    },
-    "ticketPrice" : 738,
-    "to" : 1503194400000
-  },
-  "59bc0210df2d44289498573745" : {
-    "band" : "c33c2065-b1c3-4406-b066-d33a9e2ea71a",
-    "bandFee" : 10000,
-    "event" : "59bc074fe0ba912c14c559b4",
-    "from" : 1511733600000,
-    "isAcceptedByBookingBoss" : "unhandled",
-    "isAcceptedByBookingManager" : true,
-    "participants" : 7384,
-    "scene" : "59ua7syfguy3gjhbsjhdbhasbd",
-    "technicians" : {
-      "nCXaOPJjIYe8v5Wes5jQEOeNMSz1" : {
-        "isAttending" : false
-      }
-    },
-    "ticketPrice" : 0,
-    "to" : 1511748000000
-  },
-  "59bc04b271b3c31a520daeae" : {
-    "band" : "65f4f0c5-ef9e-490c-aee3-909e7ae6b2ab",
-    "bandFee" : 10000,
-    "event" : "59bc074f14b241f49427f5ec",
-    "from" : 1501264800000,
-    "isAcceptedByBookingBoss" : true,
-    "isAcceptedByBookingManager" : true,
-    "participants" : 10070,
-    "scene" : "597ast76ugyjh3bkjhbdfjke",
-    "technicians" : {
-      "gADgB4F4xzb8S1oOzyVYzCljDtJ2" : {
-        "isAttending" : false
-      }
-    },
-    "ticketPrice" : 1352,
-    "to" : 1501279200000
-  },
-  "59bc04b2b8e6f6f0dd55a2e7" : {
-    "band" : "b0e4bc50-3062-4d31-afad-def6a6b7a8e9",
-    "bandFee" : 10000,
-    "event" : "59bc074f3e98e809f6e807b2",
-    "from" : 1510336800000,
-    "isAcceptedByBookingBoss" : true,
-    "isAcceptedByBookingManager" : true,
-    "participants" : 8054,
-    "scene" : "59u8ash78h3kb3q6g76duf673",
-    "technicians" : {
-      "MnzmGlSX11PT8ZYeI1a5SwT0Fbg1" : {
-        "isAttending" : false
-      }
-    },
-    "ticketPrice" : 0,
-    "to" : 1510351200000
-  },
-  "59bc04b2c6ee092945795f8e" : {
-    "band" : "b7539c32-53e7-4908-bda3-81449c367da6",
-    "bandFee" : 10000,
-    "event" : "59bc074f14b241f49427f5ec",
-    "from" : 1501264800000,
-    "isAcceptedByBookingBoss" : true,
-    "isAcceptedByBookingManager" : true,
-    "participants" : 13433,
-    "scene" : "59u8s97dfiguk3bkjbdkbnfkd",
-    "technicians" : {
-      "7uHaGKs8maNUXpI92zqGtroHRPv2" : {
-        "isAttending" : false
-      }
-    },
-    "ticketPrice" : 2221,
-    "to" : 1501279200000
-  },
-  "59bc04b2c6ee09dwiukshei8" : {
-    "band" : "f27ec8db-af05-4f36-916e-3d57f91ecf5e",
-    "bandFee" : 10000,
-    "event" : "59bc074f396757632e2d709a",
-    "from" : 1503093600000,
-    "isAcceptedByBookingBoss" : "unhandled",
-    "isAcceptedByBookingManager" : true,
-    "participants" : 5000,
-    "scene" : "5978dyaf873bkjbkbkufbkjd",
-    "technicians" : {
-      "4xuhZNv3Ffh7jgnCedm3F63T1yU2" : {
-        "isAttending" : false
-      }
-    },
-    "ticketPrice" : 0,
-    "to" : 1503108000000
-  },
-  "59bc04b2d4bb6d33232814d6" : {
-    "band" : "4753fcb7-9270-493a-974d-8daca4e49125",
-    "bandFee" : 10000,
-    "event" : "59bc074fe0ba912c14c559b4",
-    "from" : 1511560800000,
-    "isAcceptedByBookingBoss" : "unhandled",
-    "isAcceptedByBookingManager" : true,
-    "participants" : 12286,
-    "scene" : "59ua7syfguy3gjhbsjhdbhasbd",
-    "technicians" : {
-      "nCXaOPJjIYe8v5Wes5jQEOeNMSz1" : {
-        "isAttending" : false
-      }
-    },
-    "ticketPrice" : 0,
-    "to" : 1511575200000
-  },
-  "59d78fg8ugy4hbwhbhkjbfskdh" : {
-    "band" : "2ddd167f-5b8a-4372-b350-6ad50493bac0",
-    "bandFee" : 10000,
-    "event" : "59bc074fe0ba912c14c559b4",
-    "from" : 1511733600000,
-    "isAcceptedByBookingBoss" : true,
-    "isAcceptedByBookingManager" : true,
-    "participants" : 9000,
-    "scene" : "5986gduyfbh3hkkb32yrbyjb",
-    "technicians" : {
-      "kg08ojgicAgx23e0fPca33AVx8B3" : {
-        "isAttending" : false
-      }
-    },
-    "ticketPrice" : 0,
-    "to" : 1511748000000
-  },
-  "59d8989wef78787huk4knjnjkjds" : {
-    "band" : "91a81925-92f9-4fc9-b897-93cf01226282",
-    "bandFee" : 10000,
-    "event" : "59bc074fe0ba912c14c559b4",
-    "from" : 1511647200000,
-    "isAcceptedByBookingBoss" : true,
-    "isAcceptedByBookingManager" : true,
-    "participants" : 7900,
-    "scene" : "5986gduyfbh3hkkb32yrbyjb",
-    "technicians" : {
-      "kg08ojgicAgx23e0fPca33AVx8B3" : {
-        "isAttending" : false
-      }
-    },
-    "ticketPrice" : 0,
-    "to" : 1511661600000
-  },
-  "59dfh78f8ihsdufkhkjdsfd" : {
-    "band" : "7808accb-6395-4b25-858c-678bbb73896b",
-    "bandFee" : 10000,
-    "event" : "59bc074f396757632e2d709a",
-    "from" : 1503180000000,
-    "isAcceptedByBookingBoss" : true,
-    "isAcceptedByBookingManager" : true,
-    "participants" : 4500,
-    "scene" : "59usd87y7i3kbjkbsjdkbfkj",
-    "technicians" : {
-      "1xqNZEBOeTV5K6o86wXR4B3qvpJ3" : {
-        "isAttending" : false
-      }
-    },
-    "ticketPrice" : 650,
-    "to" : 1503194400000
-  },
-  "59dsf7y7i3kwbkdbfkskjdbfjk" : {
-    "band" : "2ddd167f-5b8a-4372-b350-6ad50493bac0",
-    "bandFee" : 10000,
-    "event" : "59bc074f14b241f49427f5ec",
-    "from" : 1501437600000,
-    "isAcceptedByBookingBoss" : false,
-    "isAcceptedByBookingManager" : true,
-    "participants" : 7000,
-    "scene" : "59u89s7difgi3ukbwkjbjkfdk",
-    "technicians" : {
-      "Ym30wwBVThSF1X44Bzph7Ss8yds2" : {
-        "isAttending" : false
-      }
-    },
-    "ticketPrice" : 990,
-    "to" : 1501452000000
-  },
-  "59fvjn4379sfbdknfskj3nf3j" : {
-    "band" : "b8a7c51f-362c-4dcb-a259-bc6e0095f0a6",
-    "bandFee" : 10000,
-    "event" : "59bc074f3e98e809f6e807b2",
-    "from" : 1510423200000,
-    "isAcceptedByBookingBoss" : true,
-    "isAcceptedByBookingManager" : true,
-    "participants" : 12000,
-    "scene" : "59i8ud7fhy3jhbjhabdfhhjabd",
-    "technicians" : {
-      "Ibjsqw4uJxZJrCl0ClL5pneKhgv1" : {
-        "isAttending" : false
-      }
-    },
-    "ticketPrice" : 0,
-    "to" : 1510437600000
-  },
-  "59hsd7fih3kuwbkdbfkj4ws" : {
-    "band" : "cc197bad-dc9c-440d-a5b5-d52ba2e14234",
-    "bandFee" : 10000,
-    "event" : "59bc074f14b241f49427f5ec",
-    "from" : 1501452000000,
-    "isAcceptedByBookingBoss" : true,
-    "isAcceptedByBookingManager" : true,
-    "participants" : 8800,
-    "scene" : "59u89s7difgi3ukbwkjbjkfdk",
-    "technicians" : {
-      "Ym30wwBVThSF1X44Bzph7Ss8yds2" : {
-        "isAttending" : false
-      }
-    },
-    "ticketPrice" : 1325,
-    "to" : 1501466400000
-  },
-  "59i99osjdfjhsdbjkfdsjjs" : {
-    "band" : "b95ce3ff-3d05-4e87-9e01-c97b66af13d4",
-    "bandFee" : 10000,
-    "event" : "59bc074f396757632e2d709a",
-    "from" : 1503165600000,
-    "isAcceptedByBookingBoss" : true,
-    "isAcceptedByBookingManager" : true,
-    "participants" : 6300,
-    "scene" : "59usd87y7i3kbjkbsjdkbfkj",
-    "technicians" : {
-      "1xqNZEBOeTV5K6o86wXR4B3qvpJ3" : {
-        "isAttending" : false
-      }
-    },
-    "ticketPrice" : 1950,
-    "to" : 1503180000000
-  },
-  "59iodjiosidoioseiioioes" : {
-    "band" : "be389638-e74f-46a9-83d2-91ee3ce1fb0c",
-    "bandFee" : 10000,
-    "event" : "59bc074f3e98e809f6e807b2",
-    "from" : 1510423200000,
-    "isAcceptedByBookingBoss" : true,
-    "isAcceptedByBookingManager" : true,
-    "participants" : 7000,
-    "scene" : "59uas7g3uyqhjgwbdyhjkbiakj",
-    "technicians" : {
-      "twDpZNCedjgYAJKmkoTEiVdJEUv1" : {
-        "isAttending" : false
-      }
-    },
-    "ticketPrice" : 0,
-    "to" : 1510437600000
-  },
-  "59ioud7ys7dhfiukj4kbwkj3" : {
-    "band" : "2ddd167f-5b8a-4372-b350-6ad50493bac0",
-    "bandFee" : 10000,
-    "event" : "59bc074f3e98e809f6e807b2",
-    "from" : 1510509600000,
-    "isAcceptedByBookingBoss" : "unhandled",
-    "isAcceptedByBookingManager" : true,
-    "participants" : 7000,
-    "scene" : "59u8ash78h3kb3q6g76duf673",
-    "technicians" : {
-      "MnzmGlSX11PT8ZYeI1a5SwT0Fbg1" : {
-        "isAttending" : false
-      }
-    },
-    "ticketPrice" : 0,
-    "to" : 1510524000000
-  },
-  "59iousdiufiubkbkjabjkdfbjk" : {
-    "band" : "59iyurewbfu6756w4e45e5f",
-    "bandFee" : 10000,
-    "event" : "59bc074f3e98e809f6e807b2",
-    "from" : 1510509600000,
-    "isAcceptedByBookingBoss" : true,
-    "isAcceptedByBookingManager" : true,
-    "participants" : 13337,
-    "scene" : "59uas7g3uyqhjgwbdyhjkbiakj",
-    "technicians" : {
-      "twDpZNCedjgYAJKmkoTEiVdJEUv1" : {
-        "isAttending" : false
-      }
-    },
-    "ticketPrice" : 0,
-    "to" : 1510524000000
-  },
-  "59iuhsd78fy78787f877s8df" : {
-    "band" : "0ab49580-c84f-44d4-875f-d83760ea2cfe",
-    "bandFee" : 10000,
-    "event" : "59bc074fe0ba912c14c559b4",
-    "from" : 1511647200000,
-    "isAcceptedByBookingBoss" : "unhandled",
-    "isAcceptedByBookingManager" : true,
-    "participants" : 7000,
-    "scene" : "59ua7syfguy3gjhbsjhdbhasbd",
-    "technicians" : {
-      "nCXaOPJjIYe8v5Wes5jQEOeNMSz1" : {
-        "isAttending" : false
-      }
-    },
-    "ticketPrice" : 0,
-    "to" : 1511661600000
-  },
-  "59iuhsduygyebfhbjhshdsd" : {
-    "band" : "b0e4bc50-3062-4d31-afad-def6a6b7a8e9",
-    "bandFee" : 10000,
-    "event" : "59bc074fe0ba912c14c559b4",
-    "from" : 1511560800000,
-    "isAcceptedByBookingBoss" : true,
-    "isAcceptedByBookingManager" : true,
-    "participants" : 10000,
-    "scene" : "5986gduyfbh3hkkb32yrbyjb",
-    "technicians" : {
-      "kg08ojgicAgx23e0fPca33AVx8B3" : {
-        "isAttending" : false
-      }
-    },
-    "ticketPrice" : 0,
-    "to" : 1511575200000
-  },
-  "59jd89ys78ihukefbkusbdfk" : {
-    "band" : "012151a8-0f9a-44c9-997f-ebd68b5389f9",
-    "bandFee" : 10000,
-    "event" : "59bc074fe0ba912c14c559b4",
-    "from" : 1511647200000,
-    "isAcceptedByBookingBoss" : true,
-    "isAcceptedByBookingManager" : true,
-    "participants" : 10000,
-    "scene" : "59u8ds7figiy3hbhabdfjjsbf",
-    "technicians" : {
-      "AZOpCPsvtbWhk8ASWuwJbv2rts93" : {
-        "isAttending" : false
-      }
-    },
-    "ticketPrice" : 0,
-    "to" : 1511661600000
-  },
-  "59jdufuikbrfkuewbfjj" : {
-    "band" : "4753fcb7-9270-493a-974d-8daca4e49125",
-    "bandFee" : 10000,
-    "event" : "59bc074f3e98e809f6e807b2",
-    "from" : 1510351200000,
-    "isAcceptedByBookingBoss" : true,
-    "isAcceptedByBookingManager" : true,
-    "participants" : 10000,
-    "scene" : "59uas7g3uyqhjgwbdyhjkbiakj",
-    "technicians" : {
-      "twDpZNCedjgYAJKmkoTEiVdJEUv1" : {
-        "isAttending" : false
-      }
-    },
-    "ticketPrice" : 0,
-    "to" : 1510365600000
-  },
-  "59jkndfu8789d8v6sf6gt87" : {
-    "band" : "b7539c32-53e7-4908-bda3-81449c367da6",
-    "bandFee" : 10000,
-    "event" : "59bc074fe0ba912c14c559b4",
-    "from" : 1511560800000,
-    "isAcceptedByBookingBoss" : true,
-    "isAcceptedByBookingManager" : true,
-    "participants" : 11000,
-    "scene" : "59y7dfygyj3hbhjbajhfjbdh",
-    "technicians" : {
-      "pgZ9lsCC1OXwuDi2b7I83WBkswb2" : {
-        "isAttending" : false
-      }
-    },
-    "ticketPrice" : 0,
-    "to" : 1511575200000
-  },
-  "59jsodoi879sd7fiuksdukb" : {
-    "band" : "73e5e69d-3554-40d8-8516-00cb38737a1c",
-    "bandFee" : 10000,
-    "event" : "59bc074f396757632e2d709a",
-    "from" : 1503165600000,
-    "isAcceptedByBookingBoss" : true,
-    "isAcceptedByBookingManager" : true,
-    "participants" : 12500,
-    "scene" : "5978dyaf873bkjbkbkufbkjd",
-    "technicians" : {
-      "4xuhZNv3Ffh7jgnCedm3F63T1yU2" : {
-        "isAttending" : false
-      }
-    },
-    "ticketPrice" : 990,
-    "to" : 1503180000000
-  },
-  "59kipisocviosnlcknkdsl" : {
-    "band" : "f27ec8db-af05-4f36-916e-3d57f91ecf5e",
-    "bandFee" : 10000,
-    "event" : "59bc074fe0ba912c14c559b4",
-    "from" : 1511560800000,
-    "isAcceptedByBookingBoss" : true,
-    "isAcceptedByBookingManager" : true,
-    "participants" : 7500,
-    "scene" : "59u8ds7figiy3hbhabdfjjsbf",
-    "technicians" : {
-      "AZOpCPsvtbWhk8ASWuwJbv2rts93" : {
-        "isAttending" : false
-      }
-    },
-    "ticketPrice" : 0,
-    "to" : 1511575200000
-  },
-  "59kkwpf8h7sd787sihudfk4" : {
-    "band" : "be389638-e74f-46a9-83d2-91ee3ce1fb0c",
-    "bandFee" : 10000,
-    "event" : "59bc074fe0ba912c14c559b4",
-    "from" : 1511632800000,
-    "isAcceptedByBookingBoss" : "unhandled",
-    "isAcceptedByBookingManager" : true,
-    "participants" : 7500,
-    "scene" : "59ua7syfguy3gjhbsjhdbhasbd",
-    "technicians" : {
-      "nCXaOPJjIYe8v5Wes5jQEOeNMSz1" : {
-        "isAttending" : false
-      }
-    },
-    "ticketPrice" : 0,
-    "to" : 1511647200000
-  },
-  "59mmouefh7idsf7878sdids" : {
-    "band" : "73e5e69d-3554-40d8-8516-00cb38737a1c",
-    "bandFee" : 10000,
-    "event" : "59bc074fe0ba912c14c559b4",
-    "from" : 1511632800000,
-    "isAcceptedByBookingBoss" : true,
-    "isAcceptedByBookingManager" : true,
-    "participants" : 12000,
-    "scene" : "59u8ds7figiy3hbhabdfjjsbf",
-    "technicians" : {
-      "AZOpCPsvtbWhk8ASWuwJbv2rts93" : {
-        "isAttending" : false
-      }
-    },
-    "ticketPrice" : 0,
-    "to" : 1511647200000
-  },
-  "59nnefishfyi7sdy9f9dss" : {
-    "band" : "73e5e69d-3554-40d8-8516-00cb38737a1c",
-    "bandFee" : 10000,
-    "event" : "59bc074f3e98e809f6e807b2",
-    "from" : 1510423200000,
-    "isAcceptedByBookingBoss" : true,
-    "isAcceptedByBookingManager" : true,
-    "participants" : 15000,
-    "scene" : "59u7ashuy3jvjahsbd3iaujssd",
-    "technicians" : {
-      "xvKe4kdXR7OnQBrzSB5Rph8lGkK2" : {
-        "isAttending" : false
-      }
-    },
-    "ticketPrice" : 0,
-    "to" : 1510437600000
-  },
-  "59nsdin7s87h87dfh78sduihsd" : {
-    "band" : "65f4f0c5-ef9e-490c-aee3-909e7ae6b2ab",
-    "bandFee" : 10000,
-    "event" : "59bc074fe0ba912c14c559b4",
-    "from" : 1511546400000,
-    "isAcceptedByBookingBoss" : "unhandled",
-    "isAcceptedByBookingManager" : true,
-    "participants" : 7500,
-    "scene" : "59ua7syfguy3gjhbsjhdbhasbd",
-    "technicians" : {
-      "nCXaOPJjIYe8v5Wes5jQEOeNMSz1" : {
-        "isAttending" : false
-      }
-    },
-    "ticketPrice" : 0,
-    "to" : 1511560800000
-  },
-  "59o8sdifhuisdgfbksdbf7f" : {
-    "band" : "012151a8-0f9a-44c9-997f-ebd68b5389f9",
-    "bandFee" : 10000,
-    "event" : "59bc074f396757632e2d709a",
-    "from" : 1503180000000,
-    "isAcceptedByBookingBoss" : false,
-    "isAcceptedByBookingManager" : true,
-    "participants" : 6900,
-    "scene" : "5978dyaf873bkjbkbkufbkjd",
-    "technicians" : {
-      "4xuhZNv3Ffh7jgnCedm3F63T1yU2" : {
-        "isAttending" : false
-      }
-    },
-    "ticketPrice" : 1000,
-    "to" : 1503194400000
-  },
-  "59oidjfoiu89f9889ds8f89sd" : {
-    "band" : "0ab49580-c84f-44d4-875f-d83760ea2cfe",
-    "bandFee" : 10000,
-    "event" : "59bc074f396757632e2d709a",
-    "from" : 1503180000000,
-    "isAcceptedByBookingBoss" : false,
-    "isAcceptedByBookingManager" : true,
-    "participants" : 7000,
-    "scene" : "59s78dibk4bksbmdfuygkb4k",
-    "technicians" : {
-      "5sQyKeT0P4eAO21Nm33TybTut3E2" : {
-        "isAttending" : false
-      }
-    },
-    "ticketPrice" : 1000,
-    "to" : 1503194400000
-  },
-  "59oids98f9889sd89f89heukf" : {
-    "band" : "91a81925-92f9-4fc9-b897-93cf01226282",
-    "bandFee" : 10000,
-    "event" : "59bc074f14b241f49427f5ec",
-    "from" : 1501351200000,
-    "isAcceptedByBookingBoss" : true,
-    "isAcceptedByBookingManager" : true,
-    "participants" : 7000,
-    "scene" : "59u89s7difgi3ukbwkjbjkfdk",
-    "technicians" : {
-      "Ym30wwBVThSF1X44Bzph7Ss8yds2" : {
-        "isAttending" : false
-      }
-    },
-    "ticketPrice" : 1700,
-    "to" : 1501365600000
-  },
-  "59oiusd778sd87fy7shiudkfj" : {
-    "band" : "7808accb-6395-4b25-858c-678bbb73896b",
-    "bandFee" : 10000,
-    "event" : "59bc074f14b241f49427f5ec",
-    "from" : 1501365600000,
-    "isAcceptedByBookingBoss" : true,
-    "isAcceptedByBookingManager" : true,
-    "participants" : 5000,
-    "scene" : "59u8s97dfiguk3bkjbdkbnfkd",
-    "technicians" : {
-      "7uHaGKs8maNUXpI92zqGtroHRPv2" : {
-        "isAttending" : false
-      }
-    },
-    "ticketPrice" : 500,
-    "to" : 1501380000000
-  },
-  "59oj89dsifkuiuehfiui7s7idf" : {
-    "band" : "91a81925-92f9-4fc9-b897-93cf01226282",
-    "bandFee" : 10000,
-    "event" : "59bc074f396757632e2d709a",
-    "from" : 1503165600000,
-    "isAcceptedByBookingBoss" : true,
-    "isAcceptedByBookingManager" : true,
-    "participants" : 9900,
-    "scene" : "59u787gibkkjskjbfkjkjbjs",
-    "technicians" : {
-      "63b80PS1SxRAB95JvGZzEcQnrbU2" : {
-        "isAttending" : false
-      }
-    },
-    "ticketPrice" : 1750,
-    "to" : 1503180000000
-  },
-  "59oofspfisndvsjkejsfj" : {
-    "band" : "f27ec8db-af05-4f36-916e-3d57f91ecf5e",
-    "bandFee" : 10000,
-    "event" : "59bc074f14b241f49427f5ec",
-    "from" : 1501264800000,
-    "isAcceptedByBookingBoss" : false,
-    "isAcceptedByBookingManager" : true,
-    "participants" : 8890,
-    "scene" : "59u98sdyv7iukj3bjkbsjkdbf",
-    "technicians" : {
-      "FEV3ktwWIYfNQCecOEO1isAkrFZ2" : {
-        "isAttending" : false
-      }
-    },
-    "ticketPrice" : 1200,
-    "to" : 1501279200000
-  },
-  "59ookdfminwekfbsmbdfhk" : {
-    "band" : "4753fcb7-9270-493a-974d-8daca4e49125",
-    "bandFee" : 10000,
-    "event" : "59bc074f396757632e2d709a",
-    "from" : 1503093600000,
-    "isAcceptedByBookingBoss" : false,
-    "isAcceptedByBookingManager" : true,
-    "participants" : 9000,
-    "scene" : "59s78dibk4bksbmdfuygkb4k",
-    "technicians" : {
-      "5sQyKeT0P4eAO21Nm33TybTut3E2" : {
-        "isAttending" : false
-      }
-    },
-    "ticketPrice" : 1000,
-    "to" : 1503108000000
-  },
-  "59paofpisjifois78f8idds" : {
-    "band" : "b95ce3ff-3d05-4e87-9e01-c97b66af13d4",
-    "bandFee" : 10000,
-    "event" : "59bc074f14b241f49427f5ec",
-    "from" : 1501351200000,
-    "isAcceptedByBookingBoss" : true,
-    "isAcceptedByBookingManager" : true,
-    "participants" : 7800,
-    "scene" : "59u8s97dfiguk3bkjbdkbnfkd",
-    "technicians" : {
-      "7uHaGKs8maNUXpI92zqGtroHRPv2" : {
-        "isAttending" : false
-      }
-    },
-    "ticketPrice" : 1900,
-    "to" : 1501365600000
-  },
-  "59pdf089hisubkefb3iuwb33" : {
-    "band" : "c33c2065-b1c3-4406-b066-d33a9e2ea71a",
-    "bandFee" : 10000,
-    "event" : "59bc074f14b241f49427f5ec",
-    "from" : 1501452000000,
-    "isAcceptedByBookingBoss" : true,
-    "isAcceptedByBookingManager" : true,
-    "participants" : 8000,
-    "scene" : "597ast76ugyjh3bkjhbdfjke",
-    "technicians" : {
-      "gADgB4F4xzb8S1oOzyVYzCljDtJ2" : {
-        "isAttending" : false
-      }
-    },
-    "ticketPrice" : 1700,
-    "to" : 1501466400000
-  },
-  "59podsjfoijuosbkdfkhjbk" : {
-    "band" : "4753fcb7-9270-493a-974d-8daca4e49125",
-    "bandFee" : 10000,
-    "event" : "59bc074f14b241f49427f5ec",
-    "from" : 1501279200000,
-    "isAcceptedByBookingBoss" : false,
-    "isAcceptedByBookingManager" : true,
-    "participants" : 9500,
-    "scene" : "597ast76ugyjh3bkjhbdfjke",
-    "technicians" : {
-      "gADgB4F4xzb8S1oOzyVYzCljDtJ2" : {
-        "isAttending" : false
-      }
-    },
-    "ticketPrice" : 970,
-    "to" : 1501293600000
-  },
-  "59sad76asdv78aer7f8hdf78v7h87d" : {
-    "band" : "20104c4d-cba0-4371-ab77-2f9d544674be",
-    "bandFee" : 10000,
-    "event" : "59bc074f396757632e2d709a",
-    "from" : 1503266400000,
-    "isAcceptedByBookingBoss" : true,
-    "isAcceptedByBookingManager" : true,
-    "participants" : 12375,
-    "scene" : "5978dyaf873bkjbkbkufbkjd",
-    "technicians" : {
-      "4xuhZNv3Ffh7jgnCedm3F63T1yU2" : {
-        "isAttending" : false
-      }
-    },
-    "ticketPrice" : 1340,
-    "to" : 1503280800000
-  },
-  "59sd877isdhfuik4jwbbjkv" : {
-    "band" : "b7539c32-53e7-4908-bda3-81449c367da6",
-    "bandFee" : 10000,
-    "event" : "59bc074f396757632e2d709a",
-    "from" : 1503079200000,
-    "isAcceptedByBookingBoss" : "unhandled",
-    "isAcceptedByBookingManager" : true,
-    "participants" : 9999,
-    "scene" : "59usd87y7i3kbjkbsjdkbfkj",
-    "technicians" : {
-      "1xqNZEBOeTV5K6o86wXR4B3qvpJ3" : {
-        "isAttending" : false
-      }
-    },
-    "ticketPrice" : 0,
-    "to" : 1503093600000
-  },
-  "59sd87t8i4bkrjmmhrehke" : {
-    "band" : "0ab49580-c84f-44d4-875f-d83760ea2cfe",
-    "bandFee" : 10000,
-    "event" : "59bc074f3e98e809f6e807b2",
-    "from" : 1510437600000,
-    "isAcceptedByBookingBoss" : true,
-    "isAcceptedByBookingManager" : true,
-    "participants" : 7500,
-    "scene" : "59uas7g3uyqhjgwbdyhjkbiakj",
-    "technicians" : {
-      "twDpZNCedjgYAJKmkoTEiVdJEUv1" : {
-        "isAttending" : false
-      }
-    },
-    "ticketPrice" : 0,
-    "to" : 1510452000000
-  },
-  "59sd889f8cxvuihiudsfhisdi" : {
-    "band" : "b8a7c51f-362c-4dcb-a259-bc6e0095f0a6",
-    "bandFee" : 10000,
-    "event" : "59bc074f396757632e2d709a",
-    "from" : 1503093600000,
-    "isAcceptedByBookingBoss" : true,
-    "isAcceptedByBookingManager" : true,
-    "participants" : 12000,
-    "scene" : "59usd87y7i3kbjkbsjdkbfkj",
-    "technicians" : {
-      "1xqNZEBOeTV5K6o86wXR4B3qvpJ3" : {
-        "isAttending" : false
-      }
-    },
-    "ticketPrice" : 950,
-    "to" : 1503108000000
-  },
-  "59sd8u9u7s8dfsid7fukdhs" : {
-    "band" : "b7539c32-53e7-4908-bda3-81449c367da6",
-    "bandFee" : 10000,
-    "event" : "59bc074f3e98e809f6e807b2",
-    "from" : 1510351200000,
-    "isAcceptedByBookingBoss" : "unhandled",
-    "isAcceptedByBookingManager" : true,
-    "participants" : 9500,
-    "scene" : "59i8ud7fhy3jhbjhabdfhhjabd",
-    "technicians" : {
-      "Ibjsqw4uJxZJrCl0ClL5pneKhgv1" : {
-        "isAttending" : false
-      }
-    },
-    "ticketPrice" : 0,
-    "to" : 1510365600000
-  },
-  "59sdf877887sd87f78787d7d7" : {
-    "band" : "b8a7c51f-362c-4dcb-a259-bc6e0095f0a6",
-    "bandFee" : 10000,
-    "event" : "59bc074f14b241f49427f5ec",
-    "from" : 1501279200000,
-    "isAcceptedByBookingBoss" : "unhandled",
-    "isAcceptedByBookingManager" : true,
-    "participants" : 9800,
-    "scene" : "59u8s97dfiguk3bkjbdkbnfkd",
-    "technicians" : {
-      "7uHaGKs8maNUXpI92zqGtroHRPv2" : {
-        "isAttending" : false
-      }
-    },
-    "ticketPrice" : 0,
-    "to" : 1501293600000
-  },
-  "59sdi7vg65u3hbguy324iub4b2" : {
-    "band" : "3630fff3-52fc-4e97-ab01-d68fd88e4135",
-    "bandFee" : 10000,
-    "event" : "59bc074f396757632e2d709a",
-    "from" : 1503252000000,
-    "isAcceptedByBookingBoss" : true,
-    "isAcceptedByBookingManager" : true,
-    "participants" : 9748,
-    "scene" : "5978dyaf873bkjbkbkufbkjd",
-    "technicians" : {
-      "4xuhZNv3Ffh7jgnCedm3F63T1yU2" : {
-        "isAttending" : false
-      }
-    },
-    "ticketPrice" : 800,
-    "to" : 1503266400000
-  },
-  "59sdiufhisdfu7u7sd78fgyi" : {
-    "band" : "012151a8-0f9a-44c9-997f-ebd68b5389f9",
-    "bandFee" : 10000,
-    "event" : "59bc074f3e98e809f6e807b2",
-    "from" : 1510437600000,
-    "isAcceptedByBookingBoss" : true,
-    "isAcceptedByBookingManager" : true,
-    "participants" : 7000,
-    "scene" : "59u7ashuy3jvjahsbd3iaujssd",
-    "technicians" : {
-      "xvKe4kdXR7OnQBrzSB5Rph8lGkK2" : {
-        "isAttending" : false
-      }
-    },
-    "ticketPrice" : 0,
-    "to" : 1510452000000
-  },
-  "59sdofuhas7gf68asd8gvia87s" : {
-    "band" : "7808accb-6395-4b25-858c-678bbb73896b",
-    "bandFee" : 10000,
-    "event" : "59bc074fe0ba912c14c559b4",
-    "from" : 1511719200000,
-    "isAcceptedByBookingBoss" : true,
-    "isAcceptedByBookingManager" : true,
-    "participants" : 2454,
-    "scene" : "59y7dfygyj3hbhjbajhfjbdh",
-    "technicians" : {
-      "pgZ9lsCC1OXwuDi2b7I83WBkswb2" : {
-        "isAttending" : false
-      }
-    },
-    "ticketPrice" : 0,
-    "to" : 1511733600000
-  },
-  "59sdofuniuds5fc7qkj34bnth4j" : {
-    "band" : "0ab49580-c84f-44d4-875f-d83760ea2cfe",
-    "bandFee" : 10000,
-    "event" : "59bc074f14b241f49427f5ec",
-    "from" : 1501365600000,
-    "isAcceptedByBookingBoss" : false,
-    "isAcceptedByBookingManager" : true,
-    "participants" : 6732,
-    "scene" : "597ast76ugyjh3bkjhbdfjke",
-    "technicians" : {
-      "gADgB4F4xzb8S1oOzyVYzCljDtJ2" : {
-        "isAttending" : false
-      }
-    },
-    "ticketPrice" : 999,
-    "to" : 1501380000000
-  },
-  "59sdu98fhihu4bwukjbefu" : {
-    "band" : "cc197bad-dc9c-440d-a5b5-d52ba2e14234",
-    "bandFee" : 10000,
-    "event" : "59bc074f3e98e809f6e807b2",
-    "from" : 1510524000000,
-    "isAcceptedByBookingBoss" : "unhandled",
-    "isAcceptedByBookingManager" : true,
-    "participants" : 7000,
-    "scene" : "59u8ash78h3kb3q6g76duf673",
-    "technicians" : {
-      "MnzmGlSX11PT8ZYeI1a5SwT0Fbg1" : {
-        "isAttending" : false
-      }
-    },
-    "ticketPrice" : 0,
-    "to" : 1510538400000
-  },
-  "59sduiiusdjhbjhsdbhjkd" : {
-    "band" : "9fff2f8a-21e6-47de-a2b8-7f449929d43f",
-    "bandFee" : 10000,
-    "event" : "59bc074f3e98e809f6e807b2",
-    "from" : 1510351200000,
-    "isAcceptedByBookingBoss" : "unhandled",
-    "isAcceptedByBookingManager" : true,
-    "participants" : 12000,
-    "scene" : "59u8ash78h3kb3q6g76duf673",
-    "technicians" : {
-      "MnzmGlSX11PT8ZYeI1a5SwT0Fbg1" : {
-        "isAttending" : false
-      }
-    },
-    "ticketPrice" : 0,
-    "to" : 1510365600000
-  },
-  "59sjnu4jjkj3ejhbh4kjk34n" : {
-    "band" : "b0e4bc50-3062-4d31-afad-def6a6b7a8e9",
-    "bandFee" : 10000,
-    "event" : "59bc074f14b241f49427f5ec",
-    "from" : 1501264800000,
-    "isAcceptedByBookingBoss" : "unhandled",
-    "isAcceptedByBookingManager" : true,
-    "participants" : 7000,
-    "scene" : "59u89s7difgi3ukbwkjbjkfdk",
-    "technicians" : {
-      "Ym30wwBVThSF1X44Bzph7Ss8yds2" : {
-        "isAttending" : false
-      }
-    },
-    "ticketPrice" : 0,
-    "to" : 1501279200000
-  },
-  "59u7s8dhf76gbiukj3jkjks" : {
-    "band" : "a6c6897a-7415-4f8d-b5a5-3a5e05f3be67",
-    "bandFee" : 10000,
-    "event" : "59bc074f396757632e2d709a",
-    "from" : 1503079200000,
-    "isAcceptedByBookingBoss" : true,
-    "isAcceptedByBookingManager" : true,
-    "participants" : 11000,
-    "scene" : "5978dyaf873bkjbkbkufbkjd",
-    "technicians" : {
-      "4xuhZNv3Ffh7jgnCedm3F63T1yU2" : {
-        "isAttending" : false
-      }
-    },
-    "ticketPrice" : 1200,
-    "to" : 1503093600000
-  },
-  "59u7sdt6gu3ikwbksdfkbds" : {
-    "band" : "d87e52c5-bb8d-4da8-b941-9f4928627dc8",
-    "bandFee" : 10000,
-    "event" : "59bc074fe0ba912c14c559b4",
-    "from" : 1511546400000,
-    "isAcceptedByBookingBoss" : true,
-    "isAcceptedByBookingManager" : true,
-    "participants" : 9500,
-    "scene" : "5986gduyfbh3hkkb32yrbyjb",
-    "technicians" : {
-      "kg08ojgicAgx23e0fPca33AVx8B3" : {
-        "isAttending" : false
-      }
-    },
-    "ticketPrice" : 0,
-    "to" : 1511560800000
-  },
-  "59u7sdy67fguyksbkjdfnk" : {
-    "band" : "a6c6897a-7415-4f8d-b5a5-3a5e05f3be67",
-    "bandFee" : 10000,
-    "event" : "59bc074fe0ba912c14c559b4",
-    "from" : 1511546400000,
-    "isAcceptedByBookingBoss" : true,
-    "isAcceptedByBookingManager" : true,
-    "participants" : 7500,
-    "scene" : "59u8ds7figiy3hbhabdfjjsbf",
-    "technicians" : {
-      "AZOpCPsvtbWhk8ASWuwJbv2rts93" : {
-        "isAttending" : false
-      }
-    },
-    "ticketPrice" : 0,
-    "to" : 1511560800000
-  },
-  "59u8sd9yf87gib3jbwkjbkd" : {
-    "band" : "3630fff3-52fc-4e97-ab01-d68fd88e4135",
-    "bandFee" : 10000,
-    "event" : "59bc074f14b241f49427f5ec",
-    "from" : 1501365600000,
-    "isAcceptedByBookingBoss" : true,
-    "isAcceptedByBookingManager" : true,
-    "participants" : 8800,
-    "scene" : "59u98sdyv7iukj3bjkbsjkdbf",
-    "technicians" : {
-      "FEV3ktwWIYfNQCecOEO1isAkrFZ2" : {
-        "isAttending" : false
-      }
-    },
-    "ticketPrice" : 1000,
-    "to" : 1501380000000
-  },
-  "59u8sdhb4unkjsu7sdudhsuif" : {
-    "band" : "b0e4bc50-3062-4d31-afad-def6a6b7a8e9",
-    "bandFee" : 10000,
-    "event" : "59bc074f396757632e2d709a",
-    "from" : 1503079200000,
-    "isAcceptedByBookingBoss" : true,
-    "isAcceptedByBookingManager" : true,
-    "participants" : 5900,
-    "scene" : "59u787gibkkjskjbfkjkjbjs",
-    "technicians" : {
-      "63b80PS1SxRAB95JvGZzEcQnrbU2" : {
-        "isAttending" : false
-      }
-    },
-    "ticketPrice" : 1400,
-    "to" : 1503093600000
-  },
-  "59uajhbjhwefhjkbkhwefkj" : {
-    "band" : "9fff2f8a-21e6-47de-a2b8-7f449929d43f",
-    "bandFee" : 10000,
-    "event" : "59bc074fe0ba912c14c559b4",
-    "from" : 1511632800000,
-    "isAcceptedByBookingBoss" : true,
-    "isAcceptedByBookingManager" : true,
-    "participants" : 11000,
-    "scene" : "5986gduyfbh3hkkb32yrbyjb",
-    "technicians" : {
-      "kg08ojgicAgx23e0fPca33AVx8B3" : {
-        "isAttending" : false
-      }
-    },
-    "ticketPrice" : 0,
-    "to" : 1511647200000
-  },
-  "59udiufikwembfkjbkjfbkjds" : {
-    "band" : "59iyurewbfu6756w4e45e5f",
-    "bandFee" : 10000,
-    "event" : "59bc074f396757632e2d709a",
-    "from" : 1503252000000,
-    "isAcceptedByBookingBoss" : false,
-    "isAcceptedByBookingManager" : true,
-    "participants" : 13337,
-    "scene" : "59s78dibk4bksbmdfuygkb4k",
-    "technicians" : {
-      "5sQyKeT0P4eAO21Nm33TybTut3E2" : {
-        "isAttending" : false
-      }
-    },
-    "ticketPrice" : 13337,
-    "to" : 1503266400000
-  },
-  "59uef787dinsdiu89sdiff" : {
-    "band" : "65f4f0c5-ef9e-490c-aee3-909e7ae6b2ab",
-    "bandFee" : 10000,
-    "event" : "59bc074f396757632e2d709a",
-    "from" : 1503079200000,
-    "isAcceptedByBookingBoss" : true,
-    "isAcceptedByBookingManager" : true,
-    "participants" : 8000,
-    "scene" : "59s78dibk4bksbmdfuygkb4k",
-    "technicians" : {
-      "5sQyKeT0P4eAO21Nm33TybTut3E2" : {
-        "isAttending" : true
-      }
-    },
-    "ticketPrice" : 2400,
-    "to" : 1503093600000
-  },
-  "59uhiuas7878d7f7ihksdjkfbk" : {
-    "band" : "596ffa74-3d08-44ef-b113-765d43d12738",
-    "bandFee" : 10000,
-    "event" : "59bc074f3e98e809f6e807b2",
-    "from" : 1510437600000,
-    "isAcceptedByBookingBoss" : "unhandled",
-    "isAcceptedByBookingManager" : true,
-    "participants" : 10000,
-    "scene" : "59u8ash78h3kb3q6g76duf673",
-    "technicians" : {
-      "MnzmGlSX11PT8ZYeI1a5SwT0Fbg1" : {
-        "isAttending" : false
-      }
-    },
-    "ticketPrice" : 0,
-    "to" : 1510452000000
-  },
-  "59usd78fgiu3jkkjwbfkjsd" : {
-    "band" : "a6c6897a-7415-4f8d-b5a5-3a5e05f3be67",
-    "bandFee" : 10000,
-    "event" : "59bc074f3e98e809f6e807b2",
-    "from" : 1510336800000,
-    "isAcceptedByBookingBoss" : true,
-    "isAcceptedByBookingManager" : true,
-    "participants" : 13500,
-    "scene" : "59u7ashuy3jvjahsbd3iaujssd",
-    "technicians" : {
-      "xvKe4kdXR7OnQBrzSB5Rph8lGkK2" : {
-        "isAttending" : false
-      }
-    },
-    "ticketPrice" : 0,
-    "to" : 1510351200000
-  },
-  "59usd7hsd78hfh7f8e32irr" : {
-    "band" : "65f4f0c5-ef9e-490c-aee3-909e7ae6b2ab",
-    "bandFee" : 10000,
-    "event" : "59bc074f3e98e809f6e807b2",
-    "from" : 1510336800000,
-    "isAcceptedByBookingBoss" : true,
-    "isAcceptedByBookingManager" : true,
-    "participants" : 6000,
-    "scene" : "59uas7g3uyqhjgwbdyhjkbiakj",
-    "technicians" : {
-      "twDpZNCedjgYAJKmkoTEiVdJEUv1" : {
-        "isAttending" : false
-      }
-    },
-    "ticketPrice" : 1000,
-    "to" : 1510351200000
-  },
-  "59usdy78fgikbsudkbfkjds" : {
-    "band" : "d87e52c5-bb8d-4da8-b941-9f4928627dc8",
-    "bandFee" : 10000,
-    "event" : "59bc074f396757632e2d709a",
-    "from" : 1503266400000,
-    "isAcceptedByBookingBoss" : true,
-    "isAcceptedByBookingManager" : true,
-    "participants" : 11000,
-    "scene" : "59usd87y7i3kbjkbsjdkbfkj",
-    "technicians" : {
-      "1xqNZEBOeTV5K6o86wXR4B3qvpJ3" : {
-        "isAttending" : false
-      }
-    },
-    "ticketPrice" : 850,
-    "to" : 1503280800000
-  },
-  "59uudnjkerukfnu78sfhiu" : {
-    "band" : "f27ec8db-af05-4f36-916e-3d57f91ecf5e",
-    "bandFee" : 10000,
-    "event" : "59bc074f3e98e809f6e807b2",
-    "from" : 1510351200000,
-    "isAcceptedByBookingBoss" : true,
-    "isAcceptedByBookingManager" : true,
-    "participants" : 7000,
-    "scene" : "59u7ashuy3jvjahsbd3iaujssd",
-    "technicians" : {
-      "xvKe4kdXR7OnQBrzSB5Rph8lGkK2" : {
-        "isAttending" : false
-      }
-    },
-    "ticketPrice" : 0,
-    "to" : 1510365600000
-  },
-  "59vijkef78sdifhksujef7ds" : {
-    "band" : "b95ce3ff-3d05-4e87-9e01-c97b66af13d4",
-    "bandFee" : 10000,
-    "event" : "59bc074f3e98e809f6e807b2",
-    "from" : 1510437600000,
-    "isAcceptedByBookingBoss" : true,
-    "isAcceptedByBookingManager" : true,
-    "participants" : 5600,
-    "scene" : "59i8ud7fhy3jhbjhabdfhhjabd",
-    "technicians" : {
-      "Ibjsqw4uJxZJrCl0ClL5pneKhgv1" : {
-        "isAttending" : false
-      }
-    },
-    "ticketPrice" : 0,
-    "to" : 1510452000000
-  },
-  "59wudnkwebfubiuusfkujds" : {
-    "band" : "be389638-e74f-46a9-83d2-91ee3ce1fb0c",
-    "bandFee" : 10000,
-    "event" : "59bc074f396757632e2d709a",
-    "from" : 1503165600000,
-    "isAcceptedByBookingBoss" : true,
-    "isAcceptedByBookingManager" : true,
-    "participants" : 12000,
-    "scene" : "59s78dibk4bksbmdfuygkb4k",
-    "technicians" : {
-      "5sQyKeT0P4eAO21Nm33TybTut3E2" : {
-        "isAttending" : false
-      }
-    },
-    "ticketPrice" : 1600,
-    "to" : 1503180000000
-  },
-  "59wwunkdfbnkjbesfjbjkbsek" : {
-    "band" : "b8a7c51f-362c-4dcb-a259-bc6e0095f0a6",
-    "bandFee" : 10000,
-    "event" : "59bc074fe0ba912c14c559b4",
-    "from" : 1511632800000,
-    "isAcceptedByBookingBoss" : true,
-    "isAcceptedByBookingManager" : true,
-    "participants" : 10000,
-    "scene" : "59y7dfygyj3hbhjbajhfjbdh",
-    "technicians" : {
-      "pgZ9lsCC1OXwuDi2b7I83WBkswb2" : {
-        "isAttending" : false
-      }
-    },
-    "ticketPrice" : 0,
-    "to" : 1511647200000
-  },
-  "lkfsjdoidlkj38ir3983iki4" : {
-    "band" : "9fff2f8a-21e6-47de-a2b8-7f449929d43f",
-    "bandFee" : 10000,
-    "event" : "59bc074f14b241f49427f5ec",
-    "from" : 1501279200000,
-    "isAcceptedByBookingBoss" : false,
-    "isAcceptedByBookingManager" : true,
-    "participants" : 13433,
-    "scene" : "59u89s7difgi3ukbwkjbjkfdk",
-    "technicians" : {
-      "Ym30wwBVThSF1X44Bzph7Ss8yds2" : {
-        "isAttending" : false
-      }
-    },
-    "ticketPrice" : 2221,
-    "to" : 1501293600000
+  "590erguniusdfvtg7af6a6s7d7": {
+    "band": "012151a8-0f9a-44c9-997f-ebd68b5389f9",
+    "bandFee": 10000,
+    "event": "59bc074f14b241f49427f5ec",
+    "from": 1501351200000,
+    "isAcceptedByBookingBoss": false,
+    "isAcceptedByBookingManager": true,
+    "participants": 5236,
+    "scene": "59u98sdyv7iukj3bjkbsjkdbf",
+    "technicians": {
+      "FEV3ktwWIYfNQCecOEO1isAkrFZ2": {
+        "isAttending": false
+      }
+    },
+    "ticketPrice": 750,
+    "to": 1501365600000
+  },
+  "5927ergerg932b32nnj5n5j": {
+    "band": "be389638-e74f-46a9-83d2-91ee3ce1fb0c",
+    "bandFee": 10000,
+    "event": "59bc074f14b241f49427f5ec",
+    "from": 1501351200000,
+    "isAcceptedByBookingBoss": true,
+    "isAcceptedByBookingManager": true,
+    "participants": 5000,
+    "scene": "597ast76ugyjh3bkjhbdfjke",
+    "technicians": {
+      "gADgB4F4xzb8S1oOzyVYzCljDtJ2": {
+        "isAttending": false
+      }
+    },
+    "ticketPrice": 2000,
+    "to": 1501365600000
+  },
+  "596adjhrf78sdfv87asdv78d6ae": {
+    "band": "59iyurewbfu6756w4e45e5f",
+    "bandFee": 10000,
+    "event": "59bc074fe0ba912c14c559b4",
+    "from": 1511719200000,
+    "isAcceptedByBookingBoss": "unhandled",
+    "isAcceptedByBookingManager": true,
+    "participants": 13337,
+    "scene": "59ua7syfguy3gjhbsjhdbhasbd",
+    "technicians": {
+      "nCXaOPJjIYe8v5Wes5jQEOeNMSz1": {
+        "isAttending": false
+      }
+    },
+    "ticketPrice": 0,
+    "to": 1511733600000
+  },
+  "596asdfiuy86sdzv67asdf788ds": {
+    "band": "2ddd167f-5b8a-4372-b350-6ad50493bac0",
+    "bandFee": 10000,
+    "event": "59bc074f396757632e2d709a",
+    "from": 1503252000000,
+    "isAcceptedByBookingBoss": false,
+    "isAcceptedByBookingManager": true,
+    "participants": 6742,
+    "scene": "59u787gibkkjskjbfkjkjbjs",
+    "technicians": {
+      "63b80PS1SxRAB95JvGZzEcQnrbU2": {
+        "isAttending": false
+      }
+    },
+    "ticketPrice": 987,
+    "to": 1503266400000
+  },
+  "59767d67fguyhb4kjbjkwkjk": {
+    "band": "7808accb-6395-4b25-858c-678bbb73896b",
+    "bandFee": 10000,
+    "event": "59bc074f3e98e809f6e807b2",
+    "from": 1510509600000,
+    "isAcceptedByBookingBoss": true,
+    "isAcceptedByBookingManager": true,
+    "participants": 6000,
+    "scene": "59i8ud7fhy3jhbjhabdfhhjabd",
+    "technicians": {
+      "Ibjsqw4uJxZJrCl0ClL5pneKhgv1": {
+        "isAttending": false
+      }
+    },
+    "ticketPrice": 0,
+    "to": 1510524000000
+  },
+  "5976sdfisdv6v87sfv787sfs67d": {
+    "band": "91a81925-92f9-4fc9-b897-93cf01226282",
+    "bandFee": 10000,
+    "event": "59bc074f3e98e809f6e807b2",
+    "from": 1510423200000,
+    "isAcceptedByBookingBoss": "unhandled",
+    "isAcceptedByBookingManager": true,
+    "participants": 10000,
+    "scene": "59u8ash78h3kb3q6g76duf673",
+    "technicians": {
+      "MnzmGlSX11PT8ZYeI1a5SwT0Fbg1": {
+        "isAttending": false
+      }
+    },
+    "ticketPrice": 0,
+    "to": 1510437600000
+  },
+  "59776dsfgbhkskjfysh7f87is": {
+    "band": "5973hjfiueriufnksdjfn",
+    "bandFee": 10000,
+    "event": "59bc074fe0ba912c14c559b4",
+    "from": 1511546400000,
+    "isAcceptedByBookingBoss": true,
+    "isAcceptedByBookingManager": true,
+    "participants": 9000,
+    "scene": "59y7dfygyj3hbhjbajhfjbdh",
+    "technicians": {
+      "pgZ9lsCC1OXwuDi2b7I83WBkswb2": {
+        "isAttending": false
+      }
+    },
+    "ticketPrice": 0,
+    "to": 1511560800000
+  },
+  "5978difubkj4jkwkjjkkwkdnkj": {
+    "band": "59iyurewbfu6756w4e45e5f",
+    "bandFee": 10000,
+    "event": "59bc074f14b241f49427f5ec",
+    "from": 1501437600000,
+    "isAcceptedByBookingBoss": false,
+    "isAcceptedByBookingManager": true,
+    "participants": 13337,
+    "scene": "597ast76ugyjh3bkjhbdfjke",
+    "technicians": {
+      "gADgB4F4xzb8S1oOzyVYzCljDtJ2": {
+        "isAttending": false
+      }
+    },
+    "ticketPrice": 13337,
+    "to": 1501452000000
+  },
+  "597s6dfgbksbfiuhsbdiyfbh": {
+    "band": "5973hjfiueriufnksdjfn",
+    "bandFee": 10000,
+    "event": "59bc074f14b241f49427f5ec",
+    "from": 1501452000000,
+    "isAcceptedByBookingBoss": true,
+    "isAcceptedByBookingManager": true,
+    "participants": 9500,
+    "scene": "59u98sdyv7iukj3bjkbsjkdbf",
+    "technicians": {
+      "FEV3ktwWIYfNQCecOEO1isAkrFZ2": {
+        "isAttending": false
+      }
+    },
+    "ticketPrice": 1000,
+    "to": 1501466400000
+  },
+  "597sd68f6t6tdsf76uysdjf": {
+    "band": "20104c4d-cba0-4371-ab77-2f9d544674be",
+    "bandFee": 10000,
+    "event": "59bc074fe0ba912c14c559b4",
+    "from": 1511733600000,
+    "isAcceptedByBookingBoss": true,
+    "isAcceptedByBookingManager": true,
+    "participants": 9000,
+    "scene": "59u8ds7figiy3hbhabdfjjsbf",
+    "technicians": {
+      "AZOpCPsvtbWhk8ASWuwJbv2rts93": {
+        "isAttending": false
+      }
+    },
+    "ticketPrice": 0,
+    "to": 1511748000000
+  },
+  "598776df8gihd78f78sfsef": {
+    "band": "5973hjfiueriufnksdjfn",
+    "bandFee": 10000,
+    "event": "59bc074f3e98e809f6e807b2",
+    "from": 1510336800000,
+    "isAcceptedByBookingBoss": true,
+    "isAcceptedByBookingManager": true,
+    "participants": 7000,
+    "scene": "59i8ud7fhy3jhbjhabdfhhjabd",
+    "technicians": {
+      "Ibjsqw4uJxZJrCl0ClL5pneKhgv1": {
+        "isAttending": false
+      }
+    },
+    "ticketPrice": 0,
+    "to": 1510351200000
+  },
+  "5987dfikdbfkbkewbfkbkwkb": {
+    "band": "3630fff3-52fc-4e97-ab01-d68fd88e4135",
+    "bandFee": 10000,
+    "event": "59bc074f3e98e809f6e807b2",
+    "from": 1510509600000,
+    "isAcceptedByBookingBoss": true,
+    "isAcceptedByBookingManager": true,
+    "participants": 9000,
+    "scene": "59u7ashuy3jvjahsbd3iaujssd",
+    "technicians": {
+      "xvKe4kdXR7OnQBrzSB5Rph8lGkK2": {
+        "isAttending": false
+      }
+    },
+    "ticketPrice": 0,
+    "to": 1510524000000
+  },
+  "5987sdf8gy4bkhwbk3bjdbfkj": {
+    "band": "c33c2065-b1c3-4406-b066-d33a9e2ea71a",
+    "bandFee": 10000,
+    "event": "59bc074f396757632e2d709a",
+    "from": 1503266400000,
+    "isAcceptedByBookingBoss": true,
+    "isAcceptedByBookingManager": true,
+    "participants": 9500,
+    "scene": "59s78dibk4bksbmdfuygkb4k",
+    "technicians": {
+      "5sQyKeT0P4eAO21Nm33TybTut3E2": {
+        "isAttending": false
+      }
+    },
+    "ticketPrice": 1650,
+    "to": 1503280800000
+  },
+  "5987sdft8gi43kwjuifbkdjs": {
+    "band": "d87e52c5-bb8d-4da8-b941-9f4928627dc8",
+    "bandFee": 10000,
+    "event": "59bc074f14b241f49427f5ec",
+    "from": 1501452000000,
+    "isAcceptedByBookingBoss": true,
+    "isAcceptedByBookingManager": true,
+    "participants": 9000,
+    "scene": "59u8s97dfiguk3bkjbdkbnfkd",
+    "technicians": {
+      "7uHaGKs8maNUXpI92zqGtroHRPv2": {
+        "isAttending": false
+      }
+    },
+    "ticketPrice": 900,
+    "to": 1501466400000
+  },
+  "59897d78fyejgfbk4bjbjkw": {
+    "band": "3630fff3-52fc-4e97-ab01-d68fd88e4135",
+    "bandFee": 10000,
+    "event": "59bc074fe0ba912c14c559b4",
+    "from": 1511719200000,
+    "isAcceptedByBookingBoss": true,
+    "isAcceptedByBookingManager": true,
+    "participants": 8800,
+    "scene": "59u8ds7figiy3hbhabdfjjsbf",
+    "technicians": {
+      "AZOpCPsvtbWhk8ASWuwJbv2rts93": {
+        "isAttending": false
+      }
+    },
+    "ticketPrice": 0,
+    "to": 1511733600000
+  },
+  "59897d78s6f67usd7f78": {
+    "band": "9fff2f8a-21e6-47de-a2b8-7f449929d43f",
+    "bandFee": 10000,
+    "event": "59bc074f396757632e2d709a",
+    "from": 1503093600000,
+    "isAcceptedByBookingBoss": "unhandled",
+    "isAcceptedByBookingManager": true,
+    "participants": 10000,
+    "scene": "59u787gibkkjskjbfkjkjbjs",
+    "technicians": {
+      "63b80PS1SxRAB95JvGZzEcQnrbU2": {
+        "isAttending": false
+      }
+    },
+    "ticketPrice": 0,
+    "to": 1503108000000
+  },
+  "59897df78igy3iwkbkbsjfdb": {
+    "band": "cc197bad-dc9c-440d-a5b5-d52ba2e14234",
+    "bandFee": 10000,
+    "event": "59bc074f396757632e2d709a",
+    "from": 1503266400000,
+    "isAcceptedByBookingBoss": true,
+    "isAcceptedByBookingManager": true,
+    "participants": 8600,
+    "scene": "59u787gibkkjskjbfkjkjbjs",
+    "technicians": {
+      "63b80PS1SxRAB95JvGZzEcQnrbU2": {
+        "isAttending": false
+      }
+    },
+    "ticketPrice": 1250,
+    "to": 1503280800000
+  },
+  "598dfunir7df76vr88sf7v": {
+    "band": "73e5e69d-3554-40d8-8516-00cb38737a1c",
+    "bandFee": 10000,
+    "event": "59bc074f14b241f49427f5ec",
+    "from": 1501279200000,
+    "isAcceptedByBookingBoss": true,
+    "isAcceptedByBookingManager": true,
+    "participants": 24000,
+    "scene": "59u98sdyv7iukj3bjkbsjkdbf",
+    "technicians": {
+      "FEV3ktwWIYfNQCecOEO1isAkrFZ2": {
+        "isAttending": false
+      }
+    },
+    "ticketPrice": 1250,
+    "to": 1501293600000
+  },
+  "598sd7f84gwi3bsbdfbksjdf": {
+    "band": "c33c2065-b1c3-4406-b066-d33a9e2ea71a",
+    "bandFee": 10000,
+    "event": "59bc074f3e98e809f6e807b2",
+    "from": 1510524000000,
+    "isAcceptedByBookingBoss": true,
+    "isAcceptedByBookingManager": true,
+    "participants": 7500,
+    "scene": "59uas7g3uyqhjgwbdyhjkbiakj",
+    "technicians": {
+      "twDpZNCedjgYAJKmkoTEiVdJEUv1": {
+        "isAttending": false
+      }
+    },
+    "ticketPrice": 0,
+    "to": 1510538400000
+  },
+  "5998duf78igy4bkwjbefis7dhf": {
+    "band": "20104c4d-cba0-4371-ab77-2f9d544674be",
+    "bandFee": 10000,
+    "event": "59bc074f3e98e809f6e807b2",
+    "from": 1510524000000,
+    "isAcceptedByBookingBoss": true,
+    "isAcceptedByBookingManager": true,
+    "participants": 12000,
+    "scene": "59u7ashuy3jvjahsbd3iaujssd",
+    "technicians": {
+      "xvKe4kdXR7OnQBrzSB5Rph8lGkK2": {
+        "isAttending": false
+      }
+    },
+    "ticketPrice": 0,
+    "to": 1510538400000
+  },
+  "599sd7f8giy3kwbeiiy3jkh": {
+    "band": "20104c4d-cba0-4371-ab77-2f9d544674be",
+    "bandFee": 10000,
+    "event": "59bc074f14b241f49427f5ec",
+    "from": 1501437600000,
+    "isAcceptedByBookingBoss": true,
+    "isAcceptedByBookingManager": true,
+    "participants": 10500,
+    "scene": "59u98sdyv7iukj3bjkbsjkdbf",
+    "technicians": {
+      "FEV3ktwWIYfNQCecOEO1isAkrFZ2": {
+        "isAttending": false
+      }
+    },
+    "ticketPrice": 1400,
+    "to": 1501452000000
+  },
+  "599u8dsf6786ugyusdfgu6g6d": {
+    "band": "596ffa74-3d08-44ef-b113-765d43d12738",
+    "bandFee": 10000,
+    "event": "59bc074f14b241f49427f5ec",
+    "from": 1501365600000,
+    "isAcceptedByBookingBoss": true,
+    "isAcceptedByBookingManager": true,
+    "participants": 9500,
+    "scene": "59u89s7difgi3ukbwkjbjkfdk",
+    "technicians": {
+      "Ym30wwBVThSF1X44Bzph7Ss8yds2": {
+        "isAttending": false
+      }
+    },
+    "ticketPrice": 899,
+    "to": 1501380000000
+  },
+  "59alksndfu6sef78b8ees6dfee": {
+    "band": "b95ce3ff-3d05-4e87-9e01-c97b66af13d4",
+    "bandFee": 10000,
+    "event": "59bc074fe0ba912c14c559b4",
+    "from": 1511647200000,
+    "isAcceptedByBookingBoss": true,
+    "isAcceptedByBookingManager": true,
+    "participants": 4512,
+    "scene": "59y7dfygyj3hbhjbajhfjbdh",
+    "technicians": {
+      "pgZ9lsCC1OXwuDi2b7I83WBkswb2": {
+        "isAttending": false
+      }
+    },
+    "ticketPrice": 0,
+    "to": 1511661600000
+  },
+  "59as654as5465asthv3j323": {
+    "band": "596ffa74-3d08-44ef-b113-765d43d12738",
+    "bandFee": 10000,
+    "event": "59bc074fe0ba912c14c559b4",
+    "from": 1511719200000,
+    "isAcceptedByBookingBoss": true,
+    "isAcceptedByBookingManager": true,
+    "participants": 11000,
+    "scene": "5986gduyfbh3hkkb32yrbyjb",
+    "technicians": {
+      "kg08ojgicAgx23e0fPca33AVx8B3": {
+        "isAttending": false
+      },
+      "undefined": {
+        "isAttending": false
+      }
+    },
+    "ticketPrice": 0,
+    "to": 1511733600000
+  },
+  "59asiudbf7aw6efy4kiuwe78w4": {
+    "band": "596ffa74-3d08-44ef-b113-765d43d12738",
+    "bandFee": 10000,
+    "event": "59bc074f396757632e2d709a",
+    "from": 1503180000000,
+    "isAcceptedByBookingBoss": false,
+    "isAcceptedByBookingManager": true,
+    "participants": 12765,
+    "scene": "59u787gibkkjskjbfkjkjbjs",
+    "technicians": {
+      "63b80PS1SxRAB95JvGZzEcQnrbU2": {
+        "isAttending": false
+      }
+    },
+    "ticketPrice": 738,
+    "to": 1503194400000
+  },
+  "59bc0210df2d44289498573745": {
+    "band": "c33c2065-b1c3-4406-b066-d33a9e2ea71a",
+    "bandFee": 10000,
+    "event": "59bc074fe0ba912c14c559b4",
+    "from": 1511733600000,
+    "isAcceptedByBookingBoss": "unhandled",
+    "isAcceptedByBookingManager": true,
+    "participants": 7384,
+    "scene": "59ua7syfguy3gjhbsjhdbhasbd",
+    "technicians": {
+      "nCXaOPJjIYe8v5Wes5jQEOeNMSz1": {
+        "isAttending": false
+      }
+    },
+    "ticketPrice": 0,
+    "to": 1511748000000
+  },
+  "59bc04b271b3c31a520daeae": {
+    "band": "65f4f0c5-ef9e-490c-aee3-909e7ae6b2ab",
+    "bandFee": 10000,
+    "event": "59bc074f14b241f49427f5ec",
+    "from": 1501264800000,
+    "isAcceptedByBookingBoss": true,
+    "isAcceptedByBookingManager": true,
+    "participants": 10070,
+    "scene": "597ast76ugyjh3bkjhbdfjke",
+    "technicians": {
+      "gADgB4F4xzb8S1oOzyVYzCljDtJ2": {
+        "isAttending": false
+      }
+    },
+    "ticketPrice": 1352,
+    "to": 1501279200000
+  },
+  "59bc04b2b8e6f6f0dd55a2e7": {
+    "band": "b0e4bc50-3062-4d31-afad-def6a6b7a8e9",
+    "bandFee": 10000,
+    "event": "59bc074f3e98e809f6e807b2",
+    "from": 1510336800000,
+    "isAcceptedByBookingBoss": true,
+    "isAcceptedByBookingManager": true,
+    "participants": 8054,
+    "scene": "59u8ash78h3kb3q6g76duf673",
+    "technicians": {
+      "MnzmGlSX11PT8ZYeI1a5SwT0Fbg1": {
+        "isAttending": false
+      }
+    },
+    "ticketPrice": 0,
+    "to": 1510351200000
+  },
+  "59bc04b2c6ee092945795f8e": {
+    "band": "b7539c32-53e7-4908-bda3-81449c367da6",
+    "bandFee": 10000,
+    "event": "59bc074f14b241f49427f5ec",
+    "from": 1501264800000,
+    "isAcceptedByBookingBoss": true,
+    "isAcceptedByBookingManager": true,
+    "participants": 13433,
+    "scene": "59u8s97dfiguk3bkjbdkbnfkd",
+    "technicians": {
+      "7uHaGKs8maNUXpI92zqGtroHRPv2": {
+        "isAttending": false
+      }
+    },
+    "ticketPrice": 2221,
+    "to": 1501279200000
+  },
+  "59bc04b2c6ee09dwiukshei8": {
+    "band": "f27ec8db-af05-4f36-916e-3d57f91ecf5e",
+    "bandFee": 10000,
+    "event": "59bc074f396757632e2d709a",
+    "from": 1503093600000,
+    "isAcceptedByBookingBoss": "unhandled",
+    "isAcceptedByBookingManager": true,
+    "participants": 5000,
+    "scene": "5978dyaf873bkjbkbkufbkjd",
+    "technicians": {
+      "4xuhZNv3Ffh7jgnCedm3F63T1yU2": {
+        "isAttending": false
+      }
+    },
+    "ticketPrice": 0,
+    "to": 1503108000000
+  },
+  "59bc04b2d4bb6d33232814d6": {
+    "band": "4753fcb7-9270-493a-974d-8daca4e49125",
+    "bandFee": 10000,
+    "event": "59bc074fe0ba912c14c559b4",
+    "from": 1511560800000,
+    "isAcceptedByBookingBoss": "unhandled",
+    "isAcceptedByBookingManager": true,
+    "participants": 12286,
+    "scene": "59ua7syfguy3gjhbsjhdbhasbd",
+    "technicians": {
+      "nCXaOPJjIYe8v5Wes5jQEOeNMSz1": {
+        "isAttending": false
+      }
+    },
+    "ticketPrice": 0,
+    "to": 1511575200000
+  },
+  "59d78fg8ugy4hbwhbhkjbfskdh": {
+    "band": "2ddd167f-5b8a-4372-b350-6ad50493bac0",
+    "bandFee": 10000,
+    "event": "59bc074fe0ba912c14c559b4",
+    "from": 1511733600000,
+    "isAcceptedByBookingBoss": true,
+    "isAcceptedByBookingManager": true,
+    "participants": 9000,
+    "scene": "5986gduyfbh3hkkb32yrbyjb",
+    "technicians": {
+      "kg08ojgicAgx23e0fPca33AVx8B3": {
+        "isAttending": false
+      },
+      "undefined": {
+        "isAttending": false
+      }
+    },
+    "ticketPrice": 0,
+    "to": 1511748000000
+  },
+  "59d8989wef78787huk4knjnjkjds": {
+    "band": "91a81925-92f9-4fc9-b897-93cf01226282",
+    "bandFee": 10000,
+    "event": "59bc074fe0ba912c14c559b4",
+    "from": 1511647200000,
+    "isAcceptedByBookingBoss": true,
+    "isAcceptedByBookingManager": true,
+    "participants": 7900,
+    "scene": "5986gduyfbh3hkkb32yrbyjb",
+    "technicians": {
+      "kg08ojgicAgx23e0fPca33AVx8B3": {
+        "isAttending": false
+      }
+    },
+    "ticketPrice": 0,
+    "to": 1511661600000
+  },
+  "59dfh78f8ihsdufkhkjdsfd": {
+    "band": "7808accb-6395-4b25-858c-678bbb73896b",
+    "bandFee": 10000,
+    "event": "59bc074f396757632e2d709a",
+    "from": 1503180000000,
+    "isAcceptedByBookingBoss": true,
+    "isAcceptedByBookingManager": true,
+    "participants": 4500,
+    "scene": "59usd87y7i3kbjkbsjdkbfkj",
+    "technicians": {
+      "1xqNZEBOeTV5K6o86wXR4B3qvpJ3": {
+        "isAttending": false
+      }
+    },
+    "ticketPrice": 650,
+    "to": 1503194400000
+  },
+  "59dsf7y7i3kwbkdbfkskjdbfjk": {
+    "band": "2ddd167f-5b8a-4372-b350-6ad50493bac0",
+    "bandFee": 10000,
+    "event": "59bc074f14b241f49427f5ec",
+    "from": 1501437600000,
+    "isAcceptedByBookingBoss": false,
+    "isAcceptedByBookingManager": true,
+    "participants": 7000,
+    "scene": "59u89s7difgi3ukbwkjbjkfdk",
+    "technicians": {
+      "Ym30wwBVThSF1X44Bzph7Ss8yds2": {
+        "isAttending": false
+      }
+    },
+    "ticketPrice": 990,
+    "to": 1501452000000
+  },
+  "59fvjn4379sfbdknfskj3nf3j": {
+    "band": "b8a7c51f-362c-4dcb-a259-bc6e0095f0a6",
+    "bandFee": 10000,
+    "event": "59bc074f3e98e809f6e807b2",
+    "from": 1510423200000,
+    "isAcceptedByBookingBoss": true,
+    "isAcceptedByBookingManager": true,
+    "participants": 12000,
+    "scene": "59i8ud7fhy3jhbjhabdfhhjabd",
+    "technicians": {
+      "Ibjsqw4uJxZJrCl0ClL5pneKhgv1": {
+        "isAttending": false
+      }
+    },
+    "ticketPrice": 0,
+    "to": 1510437600000
+  },
+  "59hsd7fih3kuwbkdbfkj4ws": {
+    "band": "cc197bad-dc9c-440d-a5b5-d52ba2e14234",
+    "bandFee": 10000,
+    "event": "59bc074f14b241f49427f5ec",
+    "from": 1501452000000,
+    "isAcceptedByBookingBoss": true,
+    "isAcceptedByBookingManager": true,
+    "participants": 8800,
+    "scene": "59u89s7difgi3ukbwkjbjkfdk",
+    "technicians": {
+      "Ym30wwBVThSF1X44Bzph7Ss8yds2": {
+        "isAttending": false
+      }
+    },
+    "ticketPrice": 1325,
+    "to": 1501466400000
+  },
+  "59i99osjdfjhsdbjkfdsjjs": {
+    "band": "b95ce3ff-3d05-4e87-9e01-c97b66af13d4",
+    "bandFee": 10000,
+    "event": "59bc074f396757632e2d709a",
+    "from": 1503165600000,
+    "isAcceptedByBookingBoss": true,
+    "isAcceptedByBookingManager": true,
+    "participants": 6300,
+    "scene": "59usd87y7i3kbjkbsjdkbfkj",
+    "technicians": {
+      "1xqNZEBOeTV5K6o86wXR4B3qvpJ3": {
+        "isAttending": false
+      }
+    },
+    "ticketPrice": 1950,
+    "to": 1503180000000
+  },
+  "59iodjiosidoioseiioioes": {
+    "band": "be389638-e74f-46a9-83d2-91ee3ce1fb0c",
+    "bandFee": 10000,
+    "event": "59bc074f3e98e809f6e807b2",
+    "from": 1510423200000,
+    "isAcceptedByBookingBoss": true,
+    "isAcceptedByBookingManager": true,
+    "participants": 7000,
+    "scene": "59uas7g3uyqhjgwbdyhjkbiakj",
+    "technicians": {
+      "twDpZNCedjgYAJKmkoTEiVdJEUv1": {
+        "isAttending": false
+      }
+    },
+    "ticketPrice": 0,
+    "to": 1510437600000
+  },
+  "59ioud7ys7dhfiukj4kbwkj3": {
+    "band": "2ddd167f-5b8a-4372-b350-6ad50493bac0",
+    "bandFee": 10000,
+    "event": "59bc074f3e98e809f6e807b2",
+    "from": 1510509600000,
+    "isAcceptedByBookingBoss": "unhandled",
+    "isAcceptedByBookingManager": true,
+    "participants": 7000,
+    "scene": "59u8ash78h3kb3q6g76duf673",
+    "technicians": {
+      "MnzmGlSX11PT8ZYeI1a5SwT0Fbg1": {
+        "isAttending": false
+      }
+    },
+    "ticketPrice": 0,
+    "to": 1510524000000
+  },
+  "59iousdiufiubkbkjabjkdfbjk": {
+    "band": "59iyurewbfu6756w4e45e5f",
+    "bandFee": 10000,
+    "event": "59bc074f3e98e809f6e807b2",
+    "from": 1510509600000,
+    "isAcceptedByBookingBoss": true,
+    "isAcceptedByBookingManager": true,
+    "participants": 13337,
+    "scene": "59uas7g3uyqhjgwbdyhjkbiakj",
+    "technicians": {
+      "twDpZNCedjgYAJKmkoTEiVdJEUv1": {
+        "isAttending": false
+      }
+    },
+    "ticketPrice": 0,
+    "to": 1510524000000
+  },
+  "59iuhsd78fy78787f877s8df": {
+    "band": "0ab49580-c84f-44d4-875f-d83760ea2cfe",
+    "bandFee": 10000,
+    "event": "59bc074fe0ba912c14c559b4",
+    "from": 1511647200000,
+    "isAcceptedByBookingBoss": "unhandled",
+    "isAcceptedByBookingManager": true,
+    "participants": 7000,
+    "scene": "59ua7syfguy3gjhbsjhdbhasbd",
+    "technicians": {
+      "nCXaOPJjIYe8v5Wes5jQEOeNMSz1": {
+        "isAttending": false
+      }
+    },
+    "ticketPrice": 0,
+    "to": 1511661600000
+  },
+  "59iuhsduygyebfhbjhshdsd": {
+    "band": "b0e4bc50-3062-4d31-afad-def6a6b7a8e9",
+    "bandFee": 10000,
+    "event": "59bc074fe0ba912c14c559b4",
+    "from": 1511560800000,
+    "isAcceptedByBookingBoss": true,
+    "isAcceptedByBookingManager": true,
+    "participants": 10000,
+    "scene": "5986gduyfbh3hkkb32yrbyjb",
+    "technicians": {
+      "kg08ojgicAgx23e0fPca33AVx8B3": {
+        "isAttending": false
+      }
+    },
+    "ticketPrice": 0,
+    "to": 1511575200000
+  },
+  "59jd89ys78ihukefbkusbdfk": {
+    "band": "012151a8-0f9a-44c9-997f-ebd68b5389f9",
+    "bandFee": 10000,
+    "event": "59bc074fe0ba912c14c559b4",
+    "from": 1511647200000,
+    "isAcceptedByBookingBoss": true,
+    "isAcceptedByBookingManager": true,
+    "participants": 10000,
+    "scene": "59u8ds7figiy3hbhabdfjjsbf",
+    "technicians": {
+      "AZOpCPsvtbWhk8ASWuwJbv2rts93": {
+        "isAttending": false
+      }
+    },
+    "ticketPrice": 0,
+    "to": 1511661600000
+  },
+  "59jdufuikbrfkuewbfjj": {
+    "band": "4753fcb7-9270-493a-974d-8daca4e49125",
+    "bandFee": 10000,
+    "event": "59bc074f3e98e809f6e807b2",
+    "from": 1510351200000,
+    "isAcceptedByBookingBoss": true,
+    "isAcceptedByBookingManager": true,
+    "participants": 10000,
+    "scene": "59uas7g3uyqhjgwbdyhjkbiakj",
+    "technicians": {
+      "twDpZNCedjgYAJKmkoTEiVdJEUv1": {
+        "isAttending": false
+      }
+    },
+    "ticketPrice": 0,
+    "to": 1510365600000
+  },
+  "59jkndfu8789d8v6sf6gt87": {
+    "band": "b7539c32-53e7-4908-bda3-81449c367da6",
+    "bandFee": 10000,
+    "event": "59bc074fe0ba912c14c559b4",
+    "from": 1511560800000,
+    "isAcceptedByBookingBoss": true,
+    "isAcceptedByBookingManager": true,
+    "participants": 11000,
+    "scene": "59y7dfygyj3hbhjbajhfjbdh",
+    "technicians": {
+      "pgZ9lsCC1OXwuDi2b7I83WBkswb2": {
+        "isAttending": false
+      }
+    },
+    "ticketPrice": 0,
+    "to": 1511575200000
+  },
+  "59jsodoi879sd7fiuksdukb": {
+    "band": "73e5e69d-3554-40d8-8516-00cb38737a1c",
+    "bandFee": 10000,
+    "event": "59bc074f396757632e2d709a",
+    "from": 1503165600000,
+    "isAcceptedByBookingBoss": true,
+    "isAcceptedByBookingManager": true,
+    "participants": 12500,
+    "scene": "5978dyaf873bkjbkbkufbkjd",
+    "technicians": {
+      "4xuhZNv3Ffh7jgnCedm3F63T1yU2": {
+        "isAttending": false
+      }
+    },
+    "ticketPrice": 990,
+    "to": 1503180000000
+  },
+  "59kipisocviosnlcknkdsl": {
+    "band": "f27ec8db-af05-4f36-916e-3d57f91ecf5e",
+    "bandFee": 10000,
+    "event": "59bc074fe0ba912c14c559b4",
+    "from": 1511560800000,
+    "isAcceptedByBookingBoss": true,
+    "isAcceptedByBookingManager": true,
+    "participants": 7500,
+    "scene": "59u8ds7figiy3hbhabdfjjsbf",
+    "technicians": {
+      "AZOpCPsvtbWhk8ASWuwJbv2rts93": {
+        "isAttending": false
+      }
+    },
+    "ticketPrice": 0,
+    "to": 1511575200000
+  },
+  "59kkwpf8h7sd787sihudfk4": {
+    "band": "be389638-e74f-46a9-83d2-91ee3ce1fb0c",
+    "bandFee": 10000,
+    "event": "59bc074fe0ba912c14c559b4",
+    "from": 1511632800000,
+    "isAcceptedByBookingBoss": "unhandled",
+    "isAcceptedByBookingManager": true,
+    "participants": 7500,
+    "scene": "59ua7syfguy3gjhbsjhdbhasbd",
+    "technicians": {
+      "nCXaOPJjIYe8v5Wes5jQEOeNMSz1": {
+        "isAttending": false
+      }
+    },
+    "ticketPrice": 0,
+    "to": 1511647200000
+  },
+  "59mmouefh7idsf7878sdids": {
+    "band": "73e5e69d-3554-40d8-8516-00cb38737a1c",
+    "bandFee": 10000,
+    "event": "59bc074fe0ba912c14c559b4",
+    "from": 1511632800000,
+    "isAcceptedByBookingBoss": true,
+    "isAcceptedByBookingManager": true,
+    "participants": 12000,
+    "scene": "59u8ds7figiy3hbhabdfjjsbf",
+    "technicians": {
+      "AZOpCPsvtbWhk8ASWuwJbv2rts93": {
+        "isAttending": false
+      }
+    },
+    "ticketPrice": 0,
+    "to": 1511647200000
+  },
+  "59nnefishfyi7sdy9f9dss": {
+    "band": "73e5e69d-3554-40d8-8516-00cb38737a1c",
+    "bandFee": 10000,
+    "event": "59bc074f3e98e809f6e807b2",
+    "from": 1510423200000,
+    "isAcceptedByBookingBoss": true,
+    "isAcceptedByBookingManager": true,
+    "participants": 15000,
+    "scene": "59u7ashuy3jvjahsbd3iaujssd",
+    "technicians": {
+      "xvKe4kdXR7OnQBrzSB5Rph8lGkK2": {
+        "isAttending": false
+      }
+    },
+    "ticketPrice": 0,
+    "to": 1510437600000
+  },
+  "59nsdin7s87h87dfh78sduihsd": {
+    "band": "65f4f0c5-ef9e-490c-aee3-909e7ae6b2ab",
+    "bandFee": 10000,
+    "event": "59bc074fe0ba912c14c559b4",
+    "from": 1511546400000,
+    "isAcceptedByBookingBoss": "unhandled",
+    "isAcceptedByBookingManager": true,
+    "participants": 7500,
+    "scene": "59ua7syfguy3gjhbsjhdbhasbd",
+    "technicians": {
+      "nCXaOPJjIYe8v5Wes5jQEOeNMSz1": {
+        "isAttending": false
+      }
+    },
+    "ticketPrice": 0,
+    "to": 1511560800000
+  },
+  "59o8sdifhuisdgfbksdbf7f": {
+    "band": "012151a8-0f9a-44c9-997f-ebd68b5389f9",
+    "bandFee": 10000,
+    "event": "59bc074f396757632e2d709a",
+    "from": 1503180000000,
+    "isAcceptedByBookingBoss": false,
+    "isAcceptedByBookingManager": true,
+    "participants": 6900,
+    "scene": "5978dyaf873bkjbkbkufbkjd",
+    "technicians": {
+      "4xuhZNv3Ffh7jgnCedm3F63T1yU2": {
+        "isAttending": false
+      }
+    },
+    "ticketPrice": 1000,
+    "to": 1503194400000
+  },
+  "59oidjfoiu89f9889ds8f89sd": {
+    "band": "0ab49580-c84f-44d4-875f-d83760ea2cfe",
+    "bandFee": 10000,
+    "event": "59bc074f396757632e2d709a",
+    "from": 1503180000000,
+    "isAcceptedByBookingBoss": false,
+    "isAcceptedByBookingManager": true,
+    "participants": 7000,
+    "scene": "59s78dibk4bksbmdfuygkb4k",
+    "technicians": {
+      "5sQyKeT0P4eAO21Nm33TybTut3E2": {
+        "isAttending": false
+      }
+    },
+    "ticketPrice": 1000,
+    "to": 1503194400000
+  },
+  "59oids98f9889sd89f89heukf": {
+    "band": "91a81925-92f9-4fc9-b897-93cf01226282",
+    "bandFee": 10000,
+    "event": "59bc074f14b241f49427f5ec",
+    "from": 1501351200000,
+    "isAcceptedByBookingBoss": true,
+    "isAcceptedByBookingManager": true,
+    "participants": 7000,
+    "scene": "59u89s7difgi3ukbwkjbjkfdk",
+    "technicians": {
+      "Ym30wwBVThSF1X44Bzph7Ss8yds2": {
+        "isAttending": false
+      }
+    },
+    "ticketPrice": 1700,
+    "to": 1501365600000
+  },
+  "59oiusd778sd87fy7shiudkfj": {
+    "band": "7808accb-6395-4b25-858c-678bbb73896b",
+    "bandFee": 10000,
+    "event": "59bc074f14b241f49427f5ec",
+    "from": 1501365600000,
+    "isAcceptedByBookingBoss": true,
+    "isAcceptedByBookingManager": true,
+    "participants": 5000,
+    "scene": "59u8s97dfiguk3bkjbdkbnfkd",
+    "technicians": {
+      "7uHaGKs8maNUXpI92zqGtroHRPv2": {
+        "isAttending": false
+      }
+    },
+    "ticketPrice": 500,
+    "to": 1501380000000
+  },
+  "59oj89dsifkuiuehfiui7s7idf": {
+    "band": "91a81925-92f9-4fc9-b897-93cf01226282",
+    "bandFee": 10000,
+    "event": "59bc074f396757632e2d709a",
+    "from": 1503165600000,
+    "isAcceptedByBookingBoss": true,
+    "isAcceptedByBookingManager": true,
+    "participants": 9900,
+    "scene": "59u787gibkkjskjbfkjkjbjs",
+    "technicians": {
+      "63b80PS1SxRAB95JvGZzEcQnrbU2": {
+        "isAttending": false
+      }
+    },
+    "ticketPrice": 1750,
+    "to": 1503180000000
+  },
+  "59oofspfisndvsjkejsfj": {
+    "band": "f27ec8db-af05-4f36-916e-3d57f91ecf5e",
+    "bandFee": 10000,
+    "event": "59bc074f14b241f49427f5ec",
+    "from": 1501264800000,
+    "isAcceptedByBookingBoss": false,
+    "isAcceptedByBookingManager": true,
+    "participants": 8890,
+    "scene": "59u98sdyv7iukj3bjkbsjkdbf",
+    "technicians": {
+      "FEV3ktwWIYfNQCecOEO1isAkrFZ2": {
+        "isAttending": false
+      }
+    },
+    "ticketPrice": 1200,
+    "to": 1501279200000
+  },
+  "59ookdfminwekfbsmbdfhk": {
+    "band": "4753fcb7-9270-493a-974d-8daca4e49125",
+    "bandFee": 10000,
+    "event": "59bc074f396757632e2d709a",
+    "from": 1503093600000,
+    "isAcceptedByBookingBoss": false,
+    "isAcceptedByBookingManager": true,
+    "participants": 9000,
+    "scene": "59s78dibk4bksbmdfuygkb4k",
+    "technicians": {
+      "5sQyKeT0P4eAO21Nm33TybTut3E2": {
+        "isAttending": false
+      }
+    },
+    "ticketPrice": 1000,
+    "to": 1503108000000
+  },
+  "59paofpisjifois78f8idds": {
+    "band": "b95ce3ff-3d05-4e87-9e01-c97b66af13d4",
+    "bandFee": 10000,
+    "event": "59bc074f14b241f49427f5ec",
+    "from": 1501351200000,
+    "isAcceptedByBookingBoss": true,
+    "isAcceptedByBookingManager": true,
+    "participants": 7800,
+    "scene": "59u8s97dfiguk3bkjbdkbnfkd",
+    "technicians": {
+      "7uHaGKs8maNUXpI92zqGtroHRPv2": {
+        "isAttending": false
+      }
+    },
+    "ticketPrice": 1900,
+    "to": 1501365600000
+  },
+  "59pdf089hisubkefb3iuwb33": {
+    "band": "c33c2065-b1c3-4406-b066-d33a9e2ea71a",
+    "bandFee": 10000,
+    "event": "59bc074f14b241f49427f5ec",
+    "from": 1501452000000,
+    "isAcceptedByBookingBoss": true,
+    "isAcceptedByBookingManager": true,
+    "participants": 8000,
+    "scene": "597ast76ugyjh3bkjhbdfjke",
+    "technicians": {
+      "gADgB4F4xzb8S1oOzyVYzCljDtJ2": {
+        "isAttending": false
+      }
+    },
+    "ticketPrice": 1700,
+    "to": 1501466400000
+  },
+  "59podsjfoijuosbkdfkhjbk": {
+    "band": "4753fcb7-9270-493a-974d-8daca4e49125",
+    "bandFee": 10000,
+    "event": "59bc074f14b241f49427f5ec",
+    "from": 1501279200000,
+    "isAcceptedByBookingBoss": false,
+    "isAcceptedByBookingManager": true,
+    "participants": 9500,
+    "scene": "597ast76ugyjh3bkjhbdfjke",
+    "technicians": {
+      "gADgB4F4xzb8S1oOzyVYzCljDtJ2": {
+        "isAttending": false
+      }
+    },
+    "ticketPrice": 970,
+    "to": 1501293600000
+  },
+  "59sad76asdv78aer7f8hdf78v7h87d": {
+    "band": "20104c4d-cba0-4371-ab77-2f9d544674be",
+    "bandFee": 10000,
+    "event": "59bc074f396757632e2d709a",
+    "from": 1503266400000,
+    "isAcceptedByBookingBoss": true,
+    "isAcceptedByBookingManager": true,
+    "participants": 12375,
+    "scene": "5978dyaf873bkjbkbkufbkjd",
+    "technicians": {
+      "4xuhZNv3Ffh7jgnCedm3F63T1yU2": {
+        "isAttending": false
+      }
+    },
+    "ticketPrice": 1340,
+    "to": 1503280800000
+  },
+  "59sd877isdhfuik4jwbbjkv": {
+    "band": "b7539c32-53e7-4908-bda3-81449c367da6",
+    "bandFee": 10000,
+    "event": "59bc074f396757632e2d709a",
+    "from": 1503079200000,
+    "isAcceptedByBookingBoss": "unhandled",
+    "isAcceptedByBookingManager": true,
+    "participants": 9999,
+    "scene": "59usd87y7i3kbjkbsjdkbfkj",
+    "technicians": {
+      "1xqNZEBOeTV5K6o86wXR4B3qvpJ3": {
+        "isAttending": false
+      }
+    },
+    "ticketPrice": 0,
+    "to": 1503093600000
+  },
+  "59sd87t8i4bkrjmmhrehke": {
+    "band": "0ab49580-c84f-44d4-875f-d83760ea2cfe",
+    "bandFee": 10000,
+    "event": "59bc074f3e98e809f6e807b2",
+    "from": 1510437600000,
+    "isAcceptedByBookingBoss": true,
+    "isAcceptedByBookingManager": true,
+    "participants": 7500,
+    "scene": "59uas7g3uyqhjgwbdyhjkbiakj",
+    "technicians": {
+      "twDpZNCedjgYAJKmkoTEiVdJEUv1": {
+        "isAttending": false
+      }
+    },
+    "ticketPrice": 0,
+    "to": 1510452000000
+  },
+  "59sd889f8cxvuihiudsfhisdi": {
+    "band": "b8a7c51f-362c-4dcb-a259-bc6e0095f0a6",
+    "bandFee": 10000,
+    "event": "59bc074f396757632e2d709a",
+    "from": 1503093600000,
+    "isAcceptedByBookingBoss": true,
+    "isAcceptedByBookingManager": true,
+    "participants": 12000,
+    "scene": "59usd87y7i3kbjkbsjdkbfkj",
+    "technicians": {
+      "1xqNZEBOeTV5K6o86wXR4B3qvpJ3": {
+        "isAttending": false
+      }
+    },
+    "ticketPrice": 950,
+    "to": 1503108000000
+  },
+  "59sd8u9u7s8dfsid7fukdhs": {
+    "band": "b7539c32-53e7-4908-bda3-81449c367da6",
+    "bandFee": 10000,
+    "event": "59bc074f3e98e809f6e807b2",
+    "from": 1510351200000,
+    "isAcceptedByBookingBoss": "unhandled",
+    "isAcceptedByBookingManager": true,
+    "participants": 9500,
+    "scene": "59i8ud7fhy3jhbjhabdfhhjabd",
+    "technicians": {
+      "Ibjsqw4uJxZJrCl0ClL5pneKhgv1": {
+        "isAttending": false
+      }
+    },
+    "ticketPrice": 0,
+    "to": 1510365600000
+  },
+  "59sdf877887sd87f78787d7d7": {
+    "band": "b8a7c51f-362c-4dcb-a259-bc6e0095f0a6",
+    "bandFee": 10000,
+    "event": "59bc074f14b241f49427f5ec",
+    "from": 1501279200000,
+    "isAcceptedByBookingBoss": false,
+    "isAcceptedByBookingManager": true,
+    "participants": 9800,
+    "scene": "59u8s97dfiguk3bkjbdkbnfkd",
+    "technicians": {
+      "7uHaGKs8maNUXpI92zqGtroHRPv2": {
+        "isAttending": false
+      }
+    },
+    "ticketPrice": 0,
+    "to": 1501293600000
+  },
+  "59sdi7vg65u3hbguy324iub4b2": {
+    "band": "3630fff3-52fc-4e97-ab01-d68fd88e4135",
+    "bandFee": 10000,
+    "event": "59bc074f396757632e2d709a",
+    "from": 1503252000000,
+    "isAcceptedByBookingBoss": true,
+    "isAcceptedByBookingManager": true,
+    "participants": 9748,
+    "scene": "5978dyaf873bkjbkbkufbkjd",
+    "technicians": {
+      "4xuhZNv3Ffh7jgnCedm3F63T1yU2": {
+        "isAttending": false
+      }
+    },
+    "ticketPrice": 800,
+    "to": 1503266400000
+  },
+  "59sdiufhisdfu7u7sd78fgyi": {
+    "band": "012151a8-0f9a-44c9-997f-ebd68b5389f9",
+    "bandFee": 10000,
+    "event": "59bc074f3e98e809f6e807b2",
+    "from": 1510437600000,
+    "isAcceptedByBookingBoss": true,
+    "isAcceptedByBookingManager": true,
+    "participants": 7000,
+    "scene": "59u7ashuy3jvjahsbd3iaujssd",
+    "technicians": {
+      "xvKe4kdXR7OnQBrzSB5Rph8lGkK2": {
+        "isAttending": false
+      }
+    },
+    "ticketPrice": 0,
+    "to": 1510452000000
+  },
+  "59sdofuhas7gf68asd8gvia87s": {
+    "band": "7808accb-6395-4b25-858c-678bbb73896b",
+    "bandFee": 10000,
+    "event": "59bc074fe0ba912c14c559b4",
+    "from": 1511719200000,
+    "isAcceptedByBookingBoss": true,
+    "isAcceptedByBookingManager": true,
+    "participants": 2454,
+    "scene": "59y7dfygyj3hbhjbajhfjbdh",
+    "technicians": {
+      "pgZ9lsCC1OXwuDi2b7I83WBkswb2": {
+        "isAttending": false
+      }
+    },
+    "ticketPrice": 0,
+    "to": 1511733600000
+  },
+  "59sdofuniuds5fc7qkj34bnth4j": {
+    "band": "0ab49580-c84f-44d4-875f-d83760ea2cfe",
+    "bandFee": 10000,
+    "event": "59bc074f14b241f49427f5ec",
+    "from": 1501365600000,
+    "isAcceptedByBookingBoss": false,
+    "isAcceptedByBookingManager": true,
+    "participants": 6732,
+    "scene": "597ast76ugyjh3bkjhbdfjke",
+    "technicians": {
+      "gADgB4F4xzb8S1oOzyVYzCljDtJ2": {
+        "isAttending": false
+      }
+    },
+    "ticketPrice": 999,
+    "to": 1501380000000
+  },
+  "59sdu98fhihu4bwukjbefu": {
+    "band": "cc197bad-dc9c-440d-a5b5-d52ba2e14234",
+    "bandFee": 10000,
+    "event": "59bc074f3e98e809f6e807b2",
+    "from": 1510524000000,
+    "isAcceptedByBookingBoss": true,
+    "isAcceptedByBookingManager": true,
+    "participants": 7000,
+    "scene": "59u8ash78h3kb3q6g76duf673",
+    "technicians": {
+      "MnzmGlSX11PT8ZYeI1a5SwT0Fbg1": {
+        "isAttending": false
+      }
+    },
+    "ticketPrice": 0,
+    "to": 1510538400000
+  },
+  "59sduiiusdjhbjhsdbhjkd": {
+    "band": "9fff2f8a-21e6-47de-a2b8-7f449929d43f",
+    "bandFee": 10000,
+    "event": "59bc074f3e98e809f6e807b2",
+    "from": 1510351200000,
+    "isAcceptedByBookingBoss": "unhandled",
+    "isAcceptedByBookingManager": true,
+    "participants": 12000,
+    "scene": "59u8ash78h3kb3q6g76duf673",
+    "technicians": {
+      "MnzmGlSX11PT8ZYeI1a5SwT0Fbg1": {
+        "isAttending": false
+      }
+    },
+    "ticketPrice": 0,
+    "to": 1510365600000
+  },
+  "59sjnu4jjkj3ejhbh4kjk34n": {
+    "band": "b0e4bc50-3062-4d31-afad-def6a6b7a8e9",
+    "bandFee": 10000,
+    "event": "59bc074f14b241f49427f5ec",
+    "from": 1501264800000,
+    "isAcceptedByBookingBoss": "unhandled",
+    "isAcceptedByBookingManager": true,
+    "participants": 7000,
+    "scene": "59u89s7difgi3ukbwkjbjkfdk",
+    "technicians": {
+      "Ym30wwBVThSF1X44Bzph7Ss8yds2": {
+        "isAttending": false
+      }
+    },
+    "ticketPrice": 0,
+    "to": 1501279200000
+  },
+  "59u7s8dhf76gbiukj3jkjks": {
+    "band": "a6c6897a-7415-4f8d-b5a5-3a5e05f3be67",
+    "bandFee": 10000,
+    "event": "59bc074f396757632e2d709a",
+    "from": 1503079200000,
+    "isAcceptedByBookingBoss": true,
+    "isAcceptedByBookingManager": true,
+    "participants": 11000,
+    "scene": "5978dyaf873bkjbkbkufbkjd",
+    "technicians": {
+      "4xuhZNv3Ffh7jgnCedm3F63T1yU2": {
+        "isAttending": false
+      }
+    },
+    "ticketPrice": 1200,
+    "to": 1503093600000
+  },
+  "59u7sdt6gu3ikwbksdfkbds": {
+    "band": "d87e52c5-bb8d-4da8-b941-9f4928627dc8",
+    "bandFee": 10000,
+    "event": "59bc074fe0ba912c14c559b4",
+    "from": 1511546400000,
+    "isAcceptedByBookingBoss": true,
+    "isAcceptedByBookingManager": true,
+    "participants": 9500,
+    "scene": "5986gduyfbh3hkkb32yrbyjb",
+    "technicians": {
+      "kg08ojgicAgx23e0fPca33AVx8B3": {
+        "isAttending": false
+      }
+    },
+    "ticketPrice": 0,
+    "to": 1511560800000
+  },
+  "59u7sdy67fguyksbkjdfnk": {
+    "band": "a6c6897a-7415-4f8d-b5a5-3a5e05f3be67",
+    "bandFee": 10000,
+    "event": "59bc074fe0ba912c14c559b4",
+    "from": 1511546400000,
+    "isAcceptedByBookingBoss": true,
+    "isAcceptedByBookingManager": true,
+    "participants": 7500,
+    "scene": "59u8ds7figiy3hbhabdfjjsbf",
+    "technicians": {
+      "AZOpCPsvtbWhk8ASWuwJbv2rts93": {
+        "isAttending": false
+      }
+    },
+    "ticketPrice": 0,
+    "to": 1511560800000
+  },
+  "59u8sd9yf87gib3jbwkjbkd": {
+    "band": "3630fff3-52fc-4e97-ab01-d68fd88e4135",
+    "bandFee": 10000,
+    "event": "59bc074f14b241f49427f5ec",
+    "from": 1501365600000,
+    "isAcceptedByBookingBoss": true,
+    "isAcceptedByBookingManager": true,
+    "participants": 8800,
+    "scene": "59u98sdyv7iukj3bjkbsjkdbf",
+    "technicians": {
+      "FEV3ktwWIYfNQCecOEO1isAkrFZ2": {
+        "isAttending": false
+      }
+    },
+    "ticketPrice": 1000,
+    "to": 1501380000000
+  },
+  "59u8sdhb4unkjsu7sdudhsuif": {
+    "band": "b0e4bc50-3062-4d31-afad-def6a6b7a8e9",
+    "bandFee": 10000,
+    "event": "59bc074f396757632e2d709a",
+    "from": 1503079200000,
+    "isAcceptedByBookingBoss": true,
+    "isAcceptedByBookingManager": true,
+    "participants": 5900,
+    "scene": "59u787gibkkjskjbfkjkjbjs",
+    "technicians": {
+      "63b80PS1SxRAB95JvGZzEcQnrbU2": {
+        "isAttending": false
+      }
+    },
+    "ticketPrice": 1400,
+    "to": 1503093600000
+  },
+  "59uajhbjhwefhjkbkhwefkj": {
+    "band": "9fff2f8a-21e6-47de-a2b8-7f449929d43f",
+    "bandFee": 10000,
+    "event": "59bc074fe0ba912c14c559b4",
+    "from": 1511632800000,
+    "isAcceptedByBookingBoss": true,
+    "isAcceptedByBookingManager": true,
+    "participants": 11000,
+    "scene": "5986gduyfbh3hkkb32yrbyjb",
+    "technicians": {
+      "kg08ojgicAgx23e0fPca33AVx8B3": {
+        "isAttending": false
+      }
+    },
+    "ticketPrice": 0,
+    "to": 1511647200000
+  },
+  "59udiufikwembfkjbkjfbkjds": {
+    "band": "59iyurewbfu6756w4e45e5f",
+    "bandFee": 10000,
+    "event": "59bc074f396757632e2d709a",
+    "from": 1503252000000,
+    "isAcceptedByBookingBoss": false,
+    "isAcceptedByBookingManager": true,
+    "participants": 13337,
+    "scene": "59s78dibk4bksbmdfuygkb4k",
+    "technicians": {
+      "5sQyKeT0P4eAO21Nm33TybTut3E2": {
+        "isAttending": false
+      }
+    },
+    "ticketPrice": 13337,
+    "to": 1503266400000
+  },
+  "59uef787dinsdiu89sdiff": {
+    "band": "65f4f0c5-ef9e-490c-aee3-909e7ae6b2ab",
+    "bandFee": 10000,
+    "event": "59bc074f396757632e2d709a",
+    "from": 1503079200000,
+    "isAcceptedByBookingBoss": true,
+    "isAcceptedByBookingManager": true,
+    "participants": 8000,
+    "scene": "59s78dibk4bksbmdfuygkb4k",
+    "technicians": {
+      "5sQyKeT0P4eAO21Nm33TybTut3E2": {
+        "isAttending": true
+      }
+    },
+    "ticketPrice": 2400,
+    "to": 1503093600000
+  },
+  "59uhiuas7878d7f7ihksdjkfbk": {
+    "band": "596ffa74-3d08-44ef-b113-765d43d12738",
+    "bandFee": 10000,
+    "event": "59bc074f3e98e809f6e807b2",
+    "from": 1510437600000,
+    "isAcceptedByBookingBoss": "unhandled",
+    "isAcceptedByBookingManager": true,
+    "participants": 10000,
+    "scene": "59u8ash78h3kb3q6g76duf673",
+    "technicians": {
+      "MnzmGlSX11PT8ZYeI1a5SwT0Fbg1": {
+        "isAttending": false
+      }
+    },
+    "ticketPrice": 0,
+    "to": 1510452000000
+  },
+  "59usd78fgiu3jkkjwbfkjsd": {
+    "band": "a6c6897a-7415-4f8d-b5a5-3a5e05f3be67",
+    "bandFee": 10000,
+    "event": "59bc074f3e98e809f6e807b2",
+    "from": 1510336800000,
+    "isAcceptedByBookingBoss": true,
+    "isAcceptedByBookingManager": true,
+    "participants": 13500,
+    "scene": "59u7ashuy3jvjahsbd3iaujssd",
+    "technicians": {
+      "xvKe4kdXR7OnQBrzSB5Rph8lGkK2": {
+        "isAttending": false
+      }
+    },
+    "ticketPrice": 0,
+    "to": 1510351200000
+  },
+  "59usd7hsd78hfh7f8e32irr": {
+    "band": "65f4f0c5-ef9e-490c-aee3-909e7ae6b2ab",
+    "bandFee": 10000,
+    "event": "59bc074f3e98e809f6e807b2",
+    "from": 1510336800000,
+    "isAcceptedByBookingBoss": true,
+    "isAcceptedByBookingManager": true,
+    "participants": 6000,
+    "scene": "59uas7g3uyqhjgwbdyhjkbiakj",
+    "technicians": {
+      "twDpZNCedjgYAJKmkoTEiVdJEUv1": {
+        "isAttending": false
+      }
+    },
+    "ticketPrice": 1000,
+    "to": 1510351200000
+  },
+  "59usdy78fgikbsudkbfkjds": {
+    "band": "d87e52c5-bb8d-4da8-b941-9f4928627dc8",
+    "bandFee": 10000,
+    "event": "59bc074f396757632e2d709a",
+    "from": 1503266400000,
+    "isAcceptedByBookingBoss": true,
+    "isAcceptedByBookingManager": true,
+    "participants": 11000,
+    "scene": "59usd87y7i3kbjkbsjdkbfkj",
+    "technicians": {
+      "1xqNZEBOeTV5K6o86wXR4B3qvpJ3": {
+        "isAttending": false
+      }
+    },
+    "ticketPrice": 850,
+    "to": 1503280800000
+  },
+  "59uudnjkerukfnu78sfhiu": {
+    "band": "f27ec8db-af05-4f36-916e-3d57f91ecf5e",
+    "bandFee": 10000,
+    "event": "59bc074f3e98e809f6e807b2",
+    "from": 1510351200000,
+    "isAcceptedByBookingBoss": true,
+    "isAcceptedByBookingManager": true,
+    "participants": 7000,
+    "scene": "59u7ashuy3jvjahsbd3iaujssd",
+    "technicians": {
+      "xvKe4kdXR7OnQBrzSB5Rph8lGkK2": {
+        "isAttending": false
+      }
+    },
+    "ticketPrice": 0,
+    "to": 1510365600000
+  },
+  "59vijkef78sdifhksujef7ds": {
+    "band": "b95ce3ff-3d05-4e87-9e01-c97b66af13d4",
+    "bandFee": 10000,
+    "event": "59bc074f3e98e809f6e807b2",
+    "from": 1510437600000,
+    "isAcceptedByBookingBoss": true,
+    "isAcceptedByBookingManager": true,
+    "participants": 5600,
+    "scene": "59i8ud7fhy3jhbjhabdfhhjabd",
+    "technicians": {
+      "Ibjsqw4uJxZJrCl0ClL5pneKhgv1": {
+        "isAttending": false
+      }
+    },
+    "ticketPrice": 0,
+    "to": 1510452000000
+  },
+  "59wudnkwebfubiuusfkujds": {
+    "band": "be389638-e74f-46a9-83d2-91ee3ce1fb0c",
+    "bandFee": 10000,
+    "event": "59bc074f396757632e2d709a",
+    "from": 1503165600000,
+    "isAcceptedByBookingBoss": true,
+    "isAcceptedByBookingManager": true,
+    "participants": 12000,
+    "scene": "59s78dibk4bksbmdfuygkb4k",
+    "technicians": {
+      "5sQyKeT0P4eAO21Nm33TybTut3E2": {
+        "isAttending": false
+      }
+    },
+    "ticketPrice": 1600,
+    "to": 1503180000000
+  },
+  "59wwunkdfbnkjbesfjbjkbsek": {
+    "band": "b8a7c51f-362c-4dcb-a259-bc6e0095f0a6",
+    "bandFee": 10000,
+    "event": "59bc074fe0ba912c14c559b4",
+    "from": 1511632800000,
+    "isAcceptedByBookingBoss": true,
+    "isAcceptedByBookingManager": true,
+    "participants": 10000,
+    "scene": "59y7dfygyj3hbhjbajhfjbdh",
+    "technicians": {
+      "pgZ9lsCC1OXwuDi2b7I83WBkswb2": {
+        "isAttending": false
+      }
+    },
+    "ticketPrice": 0,
+    "to": 1511647200000
+  },
+  "lkfsjdoidlkj38ir3983iki4": {
+    "band": "9fff2f8a-21e6-47de-a2b8-7f449929d43f",
+    "bandFee": 10000,
+    "event": "59bc074f14b241f49427f5ec",
+    "from": 1501279200000,
+    "isAcceptedByBookingBoss": false,
+    "isAcceptedByBookingManager": true,
+    "participants": 13433,
+    "scene": "59u89s7difgi3ukbwkjbjkfdk",
+    "technicians": {
+      "Ym30wwBVThSF1X44Bzph7Ss8yds2": {
+        "isAttending": false
+      }
+    },
+    "ticketPrice": 2221,
+    "to": 1501293600000
   }
 }

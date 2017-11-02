@@ -15,7 +15,8 @@
         "gADgB4F4xzb8S1oOzyVYzCljDtJ2",
         "7uHaGKs8maNUXpI92zqGtroHRPv2",
         "kg08ojgicAgx23e0fPca33AVx8B3"
-      ]
+      ],
+      "serviceManager" : [ "HOj2SCs7w7ZQrZOGYuCCAUjdXMO2" ]
     },
     "to" : 1503072000000
   },
@@ -36,7 +37,8 @@
         "4xuhZNv3Ffh7jgnCedm3F63T1yU2",
         "63b80PS1SxRAB95JvGZzEcQnrbU2",
         "kg08ojgicAgx23e0fPca33AVx8B3"
-      ]
+      ],
+      "serviceManager" : [ "q4OEbZnIdDNO7q0Q4LqFW9U19fH2" ]
     },
     "to" : 1503280800000
   },
@@ -56,7 +58,8 @@
         "twDpZNCedjgYAJKmkoTEiVdJEUv1",
         "MnzmGlSX11PT8ZYeI1a5SwT0Fbg1",
         "kg08ojgicAgx23e0fPca33AVx8B3"
-      ]
+      ],
+      "serviceManager" : [ "mXRBzTsVPLfOaWzGwPAvYvn7h3o1" ]
     },
     "to" : 1510538400000
   },
@@ -75,7 +78,8 @@
         "kg08ojgicAgx23e0fPca33AVx8B3",
         "AZOpCPsvtbWhk8ASWuwJbv2rts93",
         "nCXaOPJjIYe8v5Wes5jQEOeNMSz1"
-      ]
+      ],
+      "serviceManager" : [ "vH5HcWpWjyWWO8f2XVSp5XeIEin1" ]
     },
     "to" : 1511748000000
   }
