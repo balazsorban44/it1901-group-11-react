@@ -402,9 +402,6 @@
     "technicians": {
       "kg08ojgicAgx23e0fPca33AVx8B3": {
         "isAttending": false
-      },
-      "undefined": {
-        "isAttending": false
       }
     },
     "ticketPrice": 0,
@@ -540,9 +537,6 @@
     "scene": "5986gduyfbh3hkkb32yrbyjb",
     "technicians": {
       "kg08ojgicAgx23e0fPca33AVx8B3": {
-        "isAttending": false
-      },
-      "undefined": {
         "isAttending": false
       }
     },
