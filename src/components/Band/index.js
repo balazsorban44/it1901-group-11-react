@@ -36,12 +36,16 @@ export default class Band extends Component {
     .then(response => {
       if (response.ok) {
         response.json().then(({artist}) => {
-          let {bio: {summary}, image, stats:{listeners}} = artist
+          let {
+            bio: {summary},
+            // image, 
+            stats:{listeners}
+          } = artist
           bandKey && firebase.database().ref(`bands/${bandKey}/monthlyListeners`).set(parseInt(listeners,10))
           const lastFMLink = summary.split('href="')[1].split('">')[0]
           summary = summary.split('<a')[0]
-          const cover = image[4]["#text"].replace("300x300", "600x600")
-          cover !== "" && this.setState({cover})
+          // const cover = image[4]["#text"].replace("300x300", "600x600")
+          // cover !== "" && this.setState({cover})
           this.setState({summary, lastFMLink})
       })}
     })

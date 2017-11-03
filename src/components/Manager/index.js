@@ -28,9 +28,8 @@ export default class Manager extends Component {
         const concert = concerts[key]
         const {technicians} = concert
         const technician = Object.keys(technicians)[0]
-        profilesRef.child(technician).on('value', snap => {
-          console.log(snap.val());
-          concerts[key].contact = `${snap.val().img}@tech.com`
+        profilesRef.child(`${technician}/img`).on('value', snap => {
+          concerts[key].contact = `${snap.val()}@tech.com`
         })
       })
       this.setState({concerts})
