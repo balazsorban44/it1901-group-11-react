@@ -3,6 +3,7 @@ import MenuItem from 'material-ui/MenuItem'
 import TextField from 'material-ui/TextField'
 import {Icon} from '../../utils'
 import SelectField from 'material-ui/SelectField'
+import RaisedButton from 'material-ui/RaisedButton'
 import {Toolbar, ToolbarGroup, ToolbarTitle} from 'material-ui/Toolbar'
 import Band from '../Band'
 import {Loading, NoResult} from '../../utils'
@@ -43,8 +44,19 @@ export default class Search extends Component{
     else this.setState({bandsToOutput: null})
   }
 
-
+  resetFilters = () => {
+    this.setState({
+      query: "",
+      event: null,
+      scene: null,
+      genre: null
+    })
+    this.handleFilters("event", null)
+  }
   handleFilters = (filterBy, value) => {
+    if (filterBy === "event" && value === null) {
+      this.setState({scene: null})
+    }
     this.setState({[filterBy]: value}, () => {
       const {
         bands, concerts,
@@ -67,7 +79,7 @@ export default class Search extends Component{
         bands[bandKey].concerts.some(concertKey => concerts[concertKey] && concerts[concertKey].scene === scene) : bandKey
       ))
 
-      this.setState({bandsToOutput}, () => this.handleSorters("name", true))
+      this.setState({bandsToOutput})
     })
   }
 
@@ -87,6 +99,7 @@ export default class Search extends Component{
 
    render(){
     const {
+      query,
       isIncrease,
       bands, bandsToOutput,
       concerts, events, scenes,
@@ -102,6 +115,7 @@ export default class Search extends Component{
              <TextField
                fullWidth
                hintText="Search for band"
+               value={query}
                onChange={({target:{value}}) => this.handleFilters("query", value.toLowerCase())}
              />
              <Icon name="search" color="grey"/>
@@ -115,7 +129,7 @@ export default class Search extends Component{
                onChange={(event, index, value) => this.handleFilters("event", value)}
              >
                <MenuItem key="All events" value={null} primaryText="All events"/>
-               {Object.keys(events).map(eventKey => (
+               {events && Object.keys(events).map(eventKey => (
                  <MenuItem
                    key={eventKey}
                    value={eventKey}
@@ -146,6 +160,10 @@ export default class Search extends Component{
                <MenuItem value={"RnB"} primaryText="RnB" />
              </SelectField>
            </ToolbarGroup>
+           <ToolbarGroup>
+             <RaisedButton label="Reset filters" onClick={this.resetFilters} primary/>
+             {bandsToOutput && `${bandsToOutput.length} result(s)`}
+           </ToolbarGroup>
          </Toolbar>
          <Toolbar>
            <ToolbarGroup>
@@ -170,9 +188,8 @@ export default class Search extends Component{
          </Toolbar>
          <Masonry
            breakpointCols={{
-             default: 3,
-             1440: 2,
-             1024: 1
+             default: 2,
+             960: 1
            }}
            style={{
              margin: "0 auto",

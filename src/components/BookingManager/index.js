@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
 import firebase from 'firebase'
-import Drawer from 'material-ui/Drawer'
-import MenuItem from 'material-ui/MenuItem'
 import Search from './Search'
 import NewBooking from './NewBooking'
 // import PreviousConcerts from './PreviousConcerts'
@@ -11,10 +9,12 @@ export default class BookingManager extends Component {
   constructor() {
     super()
     this.state = {
-      events: {},
+      events: null,
       scenes: {},
       concerts: {},
+      technicians: {},
       bands: null,
+      bandKeys: [],
       openedMenuItem: "search"
     }
   }
@@ -34,24 +34,29 @@ componentDidMount(){
     Object.keys(events).forEach(eventKey => {
       const event = events[eventKey]
       if (event.staff.bookingManager.includes(this.props.user.uid)) {
-        this.setState(({events}) => ({
-          events: {
-            ...events,
-            [eventKey]: event
-          }
-        }))
-      } else {
-        delete events[eventKey]
+        if (Date.now() <= event.from) {
+          this.setState(({upcomingEvents}) => ({
+            upcomingEvents: {
+              ...upcomingEvents,
+              [eventKey]: event
+            }
+          }))
+        } else {
+          this.setState(({previousEvents}) => ({
+            previousEvents: {
+              ...previousEvents,
+              [eventKey]: event
+            }
+          }))
+        }
       }
     })
   })
 
-  bandsRef.on('value', snap => {
-    this.setState({bands: snap.val()})
-  })
-  scenesRef.on('value', snap => {
-    this.setState({scenes: snap.val()})
-  })
+  bandsRef.on('value', snap => this.setState({bands: snap.val()}))
+
+  scenesRef.on('value', snap => this.setState({scenes: snap.val()}))
+
   concertsRef.on('value', snap => {
     const concerts = snap.val()
     Object.keys(concerts).forEach(key => {
@@ -64,8 +69,18 @@ componentDidMount(){
       //   })
       // })
       //
-      profilesRef.child(Object.keys(technicians)[0]).on('value', snap => {
-        concerts[key].contact = `${snap.val().img}@tech.com`
+      Object.keys(technicians).forEach((technicianKey, i) => {
+        profilesRef.child(technicianKey).on('value', snap => {
+          if (i === 0) {
+            concerts[key].contact = `${snap.val().img}@tech.com`
+          }
+          this.setState(({technicians}) => ({
+            technicians: {
+              ...technicians,
+              [technicianKey]: snap.val()
+            }
+          }))
+        })
       })
     })
     this.setState({concerts})
@@ -91,25 +106,28 @@ handleMenuItemClick(openedMenuItem){
 }
 
   render() {
-
-    const {isDrawerOpened, user: {name}} = this.props
+    const {user: {name}} = this.props
     const {
-      // openedMenuItem,
-      bands, concerts, events, scenes
+      bands, concerts, upcomingEvents, previousEvents, scenes, technicians
     } = this.state
 
-    const upcomingEvents = {}
-    Object.keys(events)
-      .filter(eventkey => Date.now() <= events[eventkey].from)
-      .forEach(eventkey => upcomingEvents[eventkey] = events[eventkey])
+    const events = upcomingEvents && previousEvents && Object.assign({}, upcomingEvents, previousEvents)
 
+    const upcomingScenes = {}
+    Object.keys(scenes).forEach(sceneKey => {
+      Object.keys(upcomingEvents).forEach(upcomingEventKey => {
+        if (upcomingEvents[upcomingEventKey].scenes.includes(sceneKey)) {
+          upcomingScenes[sceneKey] = scenes[sceneKey]
+        }
+      })
+    })
     return (
         <div className="booking-manager role">
-          <Drawer open={isDrawerOpened}>
-            <MenuItem onClick={() => this.handleMenuItemClick("search")} primaryText="Search" />
-            <MenuItem onClick={() => this.handleMenuItemClick("previousConcerts")} primaryText="Previous concerts" />
-          </Drawer>
-          <NewBooking events={upcomingEvents} {...{bands, scenes}}/>
+          <NewBooking
+            events={upcomingEvents}
+            scenes={upcomingScenes}
+            {...{bands, technicians}}
+          />
           <Search {...{bands, concerts, name, scenes, events}}/>
         </div>
     )}
