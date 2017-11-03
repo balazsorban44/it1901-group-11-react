@@ -27,7 +27,7 @@
     "scene": "597ast76ugyjh3bkjhbdfjke",
     "technicians": {
       "gADgB4F4xzb8S1oOzyVYzCljDtJ2": {
-        "isAttending": false
+        "isAttending": true
       }
     },
     "ticketPrice": 2000,
@@ -129,7 +129,7 @@
     "scene": "597ast76ugyjh3bkjhbdfjke",
     "technicians": {
       "gADgB4F4xzb8S1oOzyVYzCljDtJ2": {
-        "isAttending": false
+        "isAttending": true
       }
     },
     "ticketPrice": 13337,
@@ -452,7 +452,7 @@
     "scene": "597ast76ugyjh3bkjhbdfjke",
     "technicians": {
       "gADgB4F4xzb8S1oOzyVYzCljDtJ2": {
-        "isAttending": false
+        "isAttending": true
       }
     },
     "ticketPrice": 1352,
@@ -1030,7 +1030,7 @@
     "scene": "597ast76ugyjh3bkjhbdfjke",
     "technicians": {
       "gADgB4F4xzb8S1oOzyVYzCljDtJ2": {
-        "isAttending": false
+        "isAttending": true
       }
     },
     "ticketPrice": 1700,
@@ -1047,7 +1047,7 @@
     "scene": "597ast76ugyjh3bkjhbdfjke",
     "technicians": {
       "gADgB4F4xzb8S1oOzyVYzCljDtJ2": {
-        "isAttending": false
+        "isAttending": true
       }
     },
     "ticketPrice": 970,
@@ -1183,7 +1183,7 @@
     "scene": "59u7ashuy3jvjahsbd3iaujssd",
     "technicians": {
       "xvKe4kdXR7OnQBrzSB5Rph8lGkK2": {
-        "isAttending": false
+        "isAttending": true
       }
     },
     "ticketPrice": 0,
@@ -1200,7 +1200,7 @@
     "scene": "59y7dfygyj3hbhjbajhfjbdh",
     "technicians": {
       "pgZ9lsCC1OXwuDi2b7I83WBkswb2": {
-        "isAttending": false
+        "isAttending": true
       }
     },
     "ticketPrice": 0,
@@ -1217,7 +1217,7 @@
     "scene": "597ast76ugyjh3bkjhbdfjke",
     "technicians": {
       "gADgB4F4xzb8S1oOzyVYzCljDtJ2": {
-        "isAttending": false
+        "isAttending": true
       }
     },
     "ticketPrice": 999,
@@ -1234,7 +1234,7 @@
     "scene": "59u8ash78h3kb3q6g76duf673",
     "technicians": {
       "MnzmGlSX11PT8ZYeI1a5SwT0Fbg1": {
-        "isAttending": false
+        "isAttending": true
       }
     },
     "ticketPrice": 0,
@@ -1251,7 +1251,7 @@
     "scene": "59u8ash78h3kb3q6g76duf673",
     "technicians": {
       "MnzmGlSX11PT8ZYeI1a5SwT0Fbg1": {
-        "isAttending": false
+        "isAttending": true
       }
     },
     "ticketPrice": 0,
@@ -1353,7 +1353,7 @@
     "scene": "59u787gibkkjskjbfkjkjbjs",
     "technicians": {
       "63b80PS1SxRAB95JvGZzEcQnrbU2": {
-        "isAttending": false
+        "isAttending": true
       }
     },
     "ticketPrice": 1400,
@@ -1370,7 +1370,7 @@
     "scene": "5986gduyfbh3hkkb32yrbyjb",
     "technicians": {
       "kg08ojgicAgx23e0fPca33AVx8B3": {
-        "isAttending": false
+        "isAttending": true
       }
     },
     "ticketPrice": 0,
@@ -1387,7 +1387,7 @@
     "scene": "59s78dibk4bksbmdfuygkb4k",
     "technicians": {
       "5sQyKeT0P4eAO21Nm33TybTut3E2": {
-        "isAttending": false
+        "isAttending": true
       }
     },
     "ticketPrice": 13337,
