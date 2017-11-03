@@ -53,9 +53,13 @@ export default class Organizer extends Component {
                 delete event.scenes[sceneKey].concerts
                 scene.bands = []
                 concertsRef.child(`${concertKey}`).on('value', snap => {
-                  const {band, from, to} = snap.val()
+                  const {band, from, to, technicians} = snap.val()
                   bandsRef.child(`${band}/name`).on('value', snap => {
-                    scene.bands.push({ name: snap.val(), from, to})
+                    scene.bands.push({
+                      name: snap.val(), from, to,
+                      technicians: {
+                        ...technicians
+                      }})
                     this.setState({events, value: Object.keys(events)[0]})
                   })
                 })

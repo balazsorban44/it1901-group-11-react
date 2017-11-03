@@ -18,6 +18,7 @@ const Scene = ({name, bands, eventStart}) => (
               <TableHeaderColumn>Band name</TableHeaderColumn>
               <TableHeaderColumn>Start time/day</TableHeaderColumn>
               <TableHeaderColumn>End time/day</TableHeaderColumn>
+              <TableHeaderColumn>Technician(attending)</TableHeaderColumn>
             </TableRow>
           </TableHeader>
           <TableBody
@@ -25,7 +26,7 @@ const Scene = ({name, bands, eventStart}) => (
             displayRowCheckbox={false}
           >
             {bands.map(band => {
-              const {name, from, to} = band
+              const {name, from, to, technicians} = band
               const startDay = 1 + new Date(from).getDate() - new Date(eventStart).getDate()
               const endDay = 1 +  new Date(to).getDate() - new Date(eventStart).getDate()
               return (
@@ -38,6 +39,9 @@ const Scene = ({name, bands, eventStart}) => (
                   </TableRowColumn>
                   <TableRowColumn>
                     <p title={parseDate(to)}>{`${parseTime(to)}/${endDay}`}</p>
+                  </TableRowColumn>
+                  <TableRowColumn>
+                    <p>{JSON.stringify(technicians)}</p>
                   </TableRowColumn>
                 </TableRow>
               )
@@ -55,7 +59,7 @@ const ScenesList = ({scenes, eventStart}) => (
       {Object.keys(scenes).map(key => {
         const scene = scenes[key]
         const {name, bands} = scene
-        return <Scene key={name} name={name} bands={bands} eventStart={eventStart}/>
+        return <Scene key={name} {...{name, bands, eventStart}}/>
       })}
     </ul>
   </div>
