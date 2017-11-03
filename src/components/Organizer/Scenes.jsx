@@ -29,6 +29,15 @@ const Scene = ({name, bands, eventStart}) => (
               const {name, from, to, technicians} = band
               const startDay = 1 + new Date(from).getDate() - new Date(eventStart).getDate()
               const endDay = 1 +  new Date(to).getDate() - new Date(eventStart).getDate()
+              const technician = technicians ? Object.keys(technicians).map(key => {
+
+                console.log(technicians[key]);
+                if (technicians[key].isAttending) {
+                  return technicians[key].name
+                } else {
+                  return null
+                }
+              })[0] : null
               return (
                 <TableRow key={name} className="band">
                   <TableRowColumn>
@@ -41,7 +50,7 @@ const Scene = ({name, bands, eventStart}) => (
                     <p title={parseDate(to)}>{`${parseTime(to)}/${endDay}`}</p>
                   </TableRowColumn>
                   <TableRowColumn>
-                    <p>{JSON.stringify(technicians)}</p>
+                    <p style={{color: technician ? "" : "red"}}>{technician ? technician : "Nobody"}</p>
                   </TableRowColumn>
                 </TableRow>
               )

@@ -28,16 +28,29 @@ export default EventInfo
 
 const StaffList = ({staff}) => {
   let staffList = []
+  let techniciansList = []
   Object.keys(staff).forEach(role =>  {
     const staffMembers = staff[role]
     staffMembers.forEach(staffMember => {
       const {name, img, role} = staffMember
-      staffList.push (
-        <ListItem key={name}
-          leftAvatar={<Avatar src={profiles(`./${img}.jpg`)} />}
-          primaryText={name}
-          secondaryText={capitalize(role)}
-        />)
+      if (role !== "technician") {
+        staffList.push (
+          <ListItem key={name}
+            leftAvatar={<Avatar src={profiles(`./${img}.jpg`)} />}
+            primaryText={name}
+            secondaryText={capitalize(role)}
+          />
+        )
+      } else {
+        techniciansList.push (
+          <ListItem
+            key={name}
+            leftAvatar={<Avatar src={profiles(`./${img}.jpg`)} />}
+            primaryText={name}
+            secondaryText={capitalize(role)}
+          />
+        )
+      }
     })
   })
   return (
@@ -45,6 +58,9 @@ const StaffList = ({staff}) => {
       {/* <h5><Icon title="Staff members" name="people"/></h5> */}
       <List className="staff-list">
         {staffList}
+      </List>
+      <List className="staff-list">
+        {techniciansList}
       </List>
     </div>)
 }

@@ -22,7 +22,7 @@ export default class Organizer extends Component {
     const scenesRef = db.child('scenes')
     const concertsRef = db.child('concerts')
     const bandsRef = db.child('bands')
-    const staffRef = db.child('staff/profiles')
+    const profilesRef = db.child('staff/profiles')
 
     eventsRef.on('value', snap => {
       const events = snap.val()
@@ -35,7 +35,7 @@ export default class Organizer extends Component {
             const roleMembers = staff[roleKey]
             staff[roleKey] = []
             roleMembers.forEach(roleMember => {
-              staffRef.child(`${roleMember}`).on('value', snap => {
+              profilesRef.child(`${roleMember}`).on('value', snap => {
                 staff[roleKey].push(snap.val())
               })
             })
@@ -52,8 +52,13 @@ export default class Organizer extends Component {
               concerts.forEach(concertKey => {
                 delete event.scenes[sceneKey].concerts
                 scene.bands = []
-                concertsRef.child(`${concertKey}`).on('value', snap => {
-                  const {band, from, to, technicians} = snap.val()
+                concertsRef.child(concertKey).on('value', snap => {
+                  let {band, from, to, technicians} = snap.val()            
+                  Object.keys(technicians).forEach(technicianKey => {
+                    profilesRef.child(technicianKey).on('value', snap => {
+                      technicians[technicianKey].name = snap.val().name
+                    })
+                  })
                   bandsRef.child(`${band}/name`).on('value', snap => {
                     scene.bands.push({
                       name: snap.val(), from, to,
