@@ -38,10 +38,10 @@ export default class Band extends Component {
         response.json().then(({artist}) => {
           let {
             bio: {summary},
-            // image, 
+            // image,
             stats:{listeners}
           } = artist
-          bandKey && firebase.database().ref(`bands/${bandKey}/monthlyListeners`).set(parseInt(listeners,10))
+          // bandKey && firebase.database().ref(`bands/${bandKey}/monthlyListeners`).set(parseInt(listeners,10))
           const lastFMLink = summary.split('href="')[1].split('">')[0]
           summary = summary.split('<a')[0]
           // const cover = image[4]["#text"].replace("300x300", "600x600")
