@@ -9,23 +9,29 @@ import {parseDate, parseNumber, parsePrice, InfoSnippet, muiTheme} from '../../u
 export default class Concerts extends Component {
   render() {
     const {concerts, showPreviousConcerts, showFutureConcerts} = this.props
-    const acceptedBookings = {}
+    const acceptedFutureBookings = {}
+    const acceptedPreviousBookings = {}
     const awaitingBookings = {}
     if (concerts) {
       Object.keys(concerts).forEach(key => {
         const concert = concerts[key]
         const {isAcceptedByBookingBoss, from} = concert
-        if (isAcceptedByBookingBoss === true && Date.now() <= from) {
-          acceptedBookings[key] = concert
+        if (isAcceptedByBookingBoss === true) {
+          if (Date.now() <= from) {
+            acceptedFutureBookings[key] = concert
+          } else {
+            acceptedPreviousBookings[key] = concert
+          }
         } else if (isAcceptedByBookingBoss === "unhandled") {
           awaitingBookings[key] = concert
         }
       })
     }
+    console.log(acceptedFutureBookings);
 
     return (
       <div>
-        {showPreviousConcerts &&
+        {showPreviousConcerts && Object.keys(acceptedPreviousBookings).length !== 0 &&
           <InfoSnippet
             icon="history"
             orientation="portrait"
@@ -34,32 +40,30 @@ export default class Concerts extends Component {
             alignSubText="center"
             subText="Previous concerts"
           >
-            {Object.keys(concerts)[0] ?
-              <Table>
-                <TableHeader adjustForCheckbox={false} displaySelectAll={false}>
-                  <TableRow>
-                    <TableHeaderColumn>Concert date</TableHeaderColumn>
-                    <TableHeaderColumn>Tickets sold</TableHeaderColumn>
-                    <TableHeaderColumn>Total income</TableHeaderColumn>
-                  </TableRow>
-                </TableHeader>
-                <TableBody displayRowCheckbox={false} showRowHover>
-                  {Object.keys(concerts).map(key => {
-                    const {from, participants, ticketPrice, bandFee} = concerts[key]
-                    return (
-                      from < Date.now() &&
-                        <TableRow key={key}>
-                          <TableRowColumn>{parseDate(from)}</TableRowColumn>
-                          <TableRowColumn>{parseNumber(participants)}</TableRowColumn>
-                          <TableRowColumn>{parsePrice(participants*ticketPrice-bandFee)}</TableRowColumn>
-                        </TableRow>
-                    )
-                  })}
-                </TableBody>
-              </Table> : "There is no concerts yet."}
+            <Table>
+              <TableHeader adjustForCheckbox={false} displaySelectAll={false}>
+                <TableRow>
+                  <TableHeaderColumn>Concert date</TableHeaderColumn>
+                  <TableHeaderColumn>Tickets sold</TableHeaderColumn>
+                  <TableHeaderColumn>Total income</TableHeaderColumn>
+                </TableRow>
+              </TableHeader>
+              <TableBody displayRowCheckbox={false} showRowHover>
+                {Object.keys(concerts).map(key => {
+                  const {from, participants, ticketPrice, bandFee} = concerts[key]
+                  return (
+                    <TableRow key={key}>
+                        <TableRowColumn>{parseDate(from)}</TableRowColumn>
+                        <TableRowColumn>{parseNumber(participants)}</TableRowColumn>
+                        <TableRowColumn>{parsePrice(participants*ticketPrice-bandFee)}</TableRowColumn>
+                      </TableRow>
+                  )
+                })}
+              </TableBody>
+            </Table>
           </InfoSnippet>
         }
-        {showFutureConcerts && Object.keys(acceptedBookings).length !== 0 &&
+        {showFutureConcerts && Object.keys(acceptedFutureBookings).length !== 0 &&
           <InfoSnippet
             icon="bookmark"
             orientation="portrait"
@@ -67,7 +71,7 @@ export default class Concerts extends Component {
             disableHover
             alignSubText="center"
             subText="Upcoming concerts"
-            content={<ConcertTable concerts={acceptedBookings}/>}
+            content={<ConcertTable concerts={acceptedFutureBookings}/>}
           />
         }
         {showFutureConcerts && Object.keys(awaitingBookings).length !== 0 &&

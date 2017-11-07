@@ -87,8 +87,6 @@ export default class Search extends Component{
   handleSorters = (sortBy, isIncrease) => {
     let {bands, bandsToOutput} = this.state
     let filtered = bandsToOutput.map(bandKey => [bandKey, bands[bandKey]])
-    // FIXME: toString() sorts (as should have been expected) strings, not integers.
-    // For example: 99 > 980
     filtered.sort((a, b) => ( isIncrease ?
       a[1][sortBy].toString().localeCompare(b[1][sortBy].toString()):
       b[1][sortBy].toString().localeCompare(a[1][sortBy].toString())
@@ -107,6 +105,16 @@ export default class Search extends Component{
       name: reviewerName
     } = this.state
 
+    const filteredConcerts = {}
+
+    if (scene) {
+      Object.keys(filteredConcerts).forEach(concertKey => {
+        const filteredConcert = concerts[concertKey]
+        if (scene && filteredConcert.scene === scene) {
+          filteredConcerts[concertKey] = filteredConcert
+        }
+      })
+    }
 
      return(
        <div>
@@ -176,14 +184,6 @@ export default class Search extends Component{
                <p>Genre</p>
                <Icon name="sort"/>
              </div>
-             <div style={{display: "flex", cursor: "pointer"}} onClick={() => this.handleSorters("monthlyListeners", !isIncrease)}>
-               <p>Monthly listeners</p>
-               <Icon name="sort"/>
-             </div>
-             <div style={{display: "flex", cursor: "pointer"}} onClick={() => this.handleSorters("albumSales", !isIncrease)}>
-               <p>Album sales</p>
-               <Icon name="sort"/>
-             </div>
            </ToolbarGroup>
          </Toolbar>
          <Masonry
@@ -213,6 +213,7 @@ export default class Search extends Component{
                    showPreviousConcerts showFutureConcerts
                    showRequirements
                    canAddReview
+                   concerts={filteredConcerts}
                    {...{bandKey, band, concerts, reviewerName}}
                  />
                )
