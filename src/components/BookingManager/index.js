@@ -62,13 +62,6 @@ componentDidMount(){
     Object.keys(concerts).forEach(key => {
       const concert = concerts[key]
       const {technicians} = concert
-      // TODO: Remove
-      // Object.keys(technicians).forEach(technicianKey => {
-      //   eventsRef.child(`${event}/staff/technician`).once('value', snap => {
-      //     eventsRef.child(`${event}/staff/technician`).set([technicianKey, ...snap.val()])
-      //   })
-      // })
-      //
       Object.keys(technicians).forEach((technicianKey, i) => {
         profilesRef.child(technicianKey).on('value', snap => {
           if (i === 0) {
@@ -91,18 +84,6 @@ componentDidMount(){
 handleMenuItemClick(openedMenuItem){
   this.props.toggleDrawer()
   this.setState({openedMenuItem})
-
-  /////////////////////////////////// TODO: eventuallly remove
-  // const {events, scenes, concerts} = this.state
-  // Object.keys(events).forEach(eventKey => {
-  //   events[eventKey].scenes.forEach(sceneKey => {
-  //     scenes[sceneKey].concerts.forEach(concertKey => {
-  //       firebase.database().ref(`concerts/${concertKey}/event`).set(eventKey)
-  //       firebase.database().ref(`concerts/${concertKey}/scene`).set(sceneKey)
-  //     })
-  //   })
-  // })
-  ///////////////////////////////////
 }
 
   render() {

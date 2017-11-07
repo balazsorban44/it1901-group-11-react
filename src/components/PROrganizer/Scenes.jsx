@@ -21,7 +21,6 @@ const Scene = ({name, bands, eventStart}) => (
               showManager
               subtitle={
                 <div>
-                  {/*FIXME: Fix scene sizes. */}
                   <p>Tickets sold/Available seats: {parseNumber(participants)}/{parseNumber(size)}</p>
                   <p>Start date: {`${parseDate(from)}`}</p>
                   <p>Start time/day: {`${parseTime(from)}/${startDay}`}</p>

@@ -4,7 +4,7 @@ import MenuItem from 'material-ui/MenuItem'
 import DropDownMenu from 'material-ui/DropDownMenu'
 import {Toolbar, ToolbarGroup} from 'material-ui/Toolbar'
 import {Loading} from '../../utils'
-import EventInfo from './EventInfo'
+import EventInfo from '../Organizer/EventInfo'
 import Scenes from './Scenes'
 
 export default class PROrganizer extends Component {
