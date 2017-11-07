@@ -54,7 +54,7 @@ export default class Search extends Component{
     this.handleFilters("event", null)
   }
   handleFilters = (filterBy, value) => {
-    if (filterBy === "event" && value === null) {
+    if (filterBy === "event") {
       this.setState({scene: null})
     }
     this.setState({[filterBy]: value}, () => {
@@ -100,18 +100,23 @@ export default class Search extends Component{
       query,
       isIncrease,
       bands, bandsToOutput,
-      concerts, events, scenes,
+      events, scenes,
       event, scene, genre,
       name: reviewerName
     } = this.state
 
-    const filteredConcerts = {}
+    let concerts = {...this.state.concerts}
 
-    if (scene) {
-      Object.keys(filteredConcerts).forEach(concertKey => {
+    if (event) {
+      Object.keys(concerts).forEach(concertKey => {
         const filteredConcert = concerts[concertKey]
-        if (scene && filteredConcert.scene === scene) {
-          filteredConcerts[concertKey] = filteredConcert
+        if (filteredConcert.event !== event) {
+          delete concerts[concertKey]
+        }
+        if (scene) {
+          if (filteredConcert.scene !== scene) {
+            delete concerts[concertKey]
+          }
         }
       })
     }
@@ -213,7 +218,6 @@ export default class Search extends Component{
                    showPreviousConcerts showFutureConcerts
                    showRequirements
                    canAddReview
-                   concerts={filteredConcerts}
                    {...{bandKey, band, concerts, reviewerName}}
                  />
                )

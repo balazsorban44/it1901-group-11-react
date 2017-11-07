@@ -9,6 +9,7 @@ import {parseDate, parseNumber, parsePrice, InfoSnippet, muiTheme} from '../../u
 export default class Concerts extends Component {
   render() {
     const {concerts, showPreviousConcerts, showFutureConcerts} = this.props
+    console.log(concerts);
     const acceptedFutureBookings = {}
     const acceptedPreviousBookings = {}
     const awaitingBookings = {}
@@ -27,7 +28,6 @@ export default class Concerts extends Component {
         }
       })
     }
-    console.log(acceptedFutureBookings);
 
     return (
       <div>
@@ -49,8 +49,8 @@ export default class Concerts extends Component {
                 </TableRow>
               </TableHeader>
               <TableBody displayRowCheckbox={false} showRowHover>
-                {Object.keys(concerts).map(key => {
-                  const {from, participants, ticketPrice, bandFee} = concerts[key]
+                {Object.keys(acceptedPreviousBookings).map(key => {
+                  const {from, participants, ticketPrice, bandFee} = acceptedPreviousBookings[key]
                   return (
                     <TableRow key={key}>
                         <TableRowColumn>{parseDate(from)}</TableRowColumn>
