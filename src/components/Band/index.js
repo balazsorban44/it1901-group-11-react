@@ -69,10 +69,13 @@ export default class Band extends Component {
 
     if (concerts) {
       concerts = Object.keys(concerts)
-      .filter(key => band.concerts.includes(key))
-      .reduce((obj, key) => {
-        obj[key] = concerts[key]
-        return obj
+      .filter(concertKey => {
+        const {band, isAcceptedByBookingBoss} = concerts[concertKey]
+        return  band === bandKey && isAcceptedByBookingBoss !== "unhandled"
+      } )
+      .reduce((filteredConcerts, concertKey) => {
+        filteredConcerts[concertKey] = concerts[concertKey]
+        return filteredConcerts
       }, {})
     }
 

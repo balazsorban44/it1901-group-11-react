@@ -21,38 +21,24 @@ export default class BookingBoss extends Component {
     const concertsRef = db.child('concerts')
     const bandsRef = db.child('bands')
     const eventsRef = db.child('events')
-    const scenesRef = db.child('scenes')
 
-    eventsRef.on('value', snap => {
-      const events = snap.val()
-      Object.keys(events).forEach(eventKey => {
-        const event = events[eventKey]
-        const {name} = event
-        if (event.staff.bookingBoss.includes(this.props.user.uid)) {
-          const {scenes} = event
-          scenes.forEach(sceneKey => {
-            scenesRef.child(sceneKey).on('value', snap => {
-              const {concerts} = snap.val()
-              concerts.forEach(concertKey => {
-                concertsRef.child(concertKey).on('value', snap => {
-                  const concert = snap.val()
-                  concert.eventName = name
 
-                  this.setState(prevState => ({
-                    concerts: {
-                      ...prevState.concerts,
-                      [concertKey]: concert
-                    }
-                  }))
-                })
-              })
-            })
-          })
-        } else {
-          delete events[eventKey]
-        }
+
+    let concerts = {}
+    concertsRef.on('value', snap => {
+      concerts = snap.val()
+      Object.keys(concerts).forEach(concertKey => {
+        const concert = concerts[concertKey]
+        const {event} = concert
+        eventsRef.child(event).on('value', snap => {
+          if (!snap.val().staff.bookingBoss.includes(this.props.user.uid)) {
+            delete concerts[concertKey]
+            this.setState({concerts})
+          }
+        })
       })
     })
+
 
     bandsRef.on('value', snap => {
       this.setState({

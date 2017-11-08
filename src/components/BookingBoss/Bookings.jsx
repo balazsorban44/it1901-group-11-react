@@ -15,7 +15,7 @@ export default class Bookings extends Component {
           {unhandledCounter !== 0 ?
             <BookingTab bookings={unhandledBookings}/>
           :
-            <Loading/>}
+          <Loading/>}
         </Tab>/>
         <Tab label={`Accepted(${acceptedCounter})`}>
           <BookingTab bookings={acceptedBookings}/>
@@ -40,9 +40,19 @@ const BookingTab = ({bookings}) => {
 
 export const Booking = ({eventName, bandName, from, bandFee, bookingState, concertKey}) => {
 
-  const handleBooking = (concert, isAccepted) => {
+  const handleBooking = (concert, isAcceptedByBookingBoss) => {
     const db = firebase.database().ref()
-    db.child(`concerts/${concert}/isAcceptedByBookingBoss`).set(isAccepted)
+    const concertRef = db.child(`concerts/${concert}`)
+    concertRef.once("value").then(snap => {
+      const {scene} = snap.val()
+      concertRef.child('isAcceptedByBookingBoss').set(isAcceptedByBookingBoss)
+      const sceneConcertsRef = db.child(`scenes/${scene}/concerts`)
+      sceneConcertsRef.once('value').then(snap => {
+        const concerts = snap.val()
+        concerts.push(concert)
+        sceneConcertsRef.set(concerts)
+      })
+    })
   }
 
   let bookingStateAction = <div>

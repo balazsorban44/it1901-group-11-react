@@ -9,7 +9,6 @@ import {parseDate, parseNumber, parsePrice, InfoSnippet, muiTheme} from '../../u
 export default class Concerts extends Component {
   render() {
     const {concerts, showPreviousConcerts, showFutureConcerts} = this.props
-    console.log(concerts);
     const acceptedFutureBookings = {}
     const acceptedPreviousBookings = {}
     const awaitingBookings = {}
