@@ -44,7 +44,13 @@ export const Booking = ({eventName, bandName, from, bandFee, bookingState, conce
     const db = firebase.database().ref()
     const concertRef = db.child(`concerts/${concert}`)
     concertRef.once("value").then(snap => {
-      const {scene} = snap.val()
+      const {scene, band} = snap.val()
+      const bandConcertsRef = db.child(`bands/${band}/concerts`)
+      bandConcertsRef.once('value').then(snap => {
+        const concerts = snap.val()
+        concerts.push(concert)
+        bandConcertsRef.set(concerts)
+      })
       concertRef.child('isAcceptedByBookingBoss').set(isAcceptedByBookingBoss)
       const sceneConcertsRef = db.child(`scenes/${scene}/concerts`)
       sceneConcertsRef.once('value').then(snap => {
