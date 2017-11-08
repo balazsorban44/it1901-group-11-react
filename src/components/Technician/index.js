@@ -63,7 +63,7 @@ export default class Technician extends Component {
 
   render(){
     const {concerts} = this.state
-    const {name, uid:{technicianId}} = this.props.user
+    const {name, uid: technicianId} = this.props.user
     return (
       <div className='technician role'>
         {concerts ?
