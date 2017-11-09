@@ -11,6 +11,10 @@ import SelectField from 'material-ui/SelectField'
 import {Step, StepLabel, Stepper, StepContent} from 'material-ui/Stepper'
 import {Icon, parsePrice} from '../../utils'
 
+import Moment from 'moment'
+import { extendMoment } from 'moment-range'
+const moment = extendMoment(Moment)
+
 export default class VerticalLinearStepper extends Component {
   constructor() {
     super()
@@ -76,10 +80,12 @@ export default class VerticalLinearStepper extends Component {
     this.handleStepChange(4)
   }
 
-  // FIXME: limitAcceptedDates disables the first day of the event.
   limitAcceptedDates = date => {
-    const {from, to} = this.state.currentEvent
-    return from > date.getTime() || date.getTime() > to || date < Date.now()
+    let {from, to} = this.state.currentEvent
+    const day = moment(date)
+    // Substract one day from 'from' to include the first day of the concert
+    const eventRange = moment.range(from-(60*60*1000*24), to)
+    return !day.within(eventRange)
   }
 
 
