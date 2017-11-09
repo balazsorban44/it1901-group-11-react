@@ -27,7 +27,7 @@ export default class Band extends Component {
   componentDidMount() {
     const db = firebase.database().ref()
     const profilesRef = db.child('staff/profiles')
-    const {bandKey, band: {name, manager}} = this.props
+    const {band: {name, manager}} = this.props
     profilesRef.child(manager).on('value', snap => {
       this.setState({manager: snap.val()})
     })
@@ -39,7 +39,7 @@ export default class Band extends Component {
           let {
             bio: {summary},
             // image,
-            stats:{listeners}
+            // stats:{listeners}
           } = artist
           // bandKey && firebase.database().ref(`bands/${bandKey}/monthlyListeners`).set(parseInt(listeners,10))
           const lastFMLink = summary.split('href="')[1].split('">')[0]
