@@ -5,6 +5,10 @@ import RaisedButton from 'material-ui/RaisedButton'
 import firebase from 'firebase'
 import {parseDate, parseTime, parsePrice, Loading} from '../../utils'
 
+import Moment from 'moment'
+import { extendMoment } from 'moment-range'
+const moment = extendMoment(Moment)
+
 export default class Bookings extends Component {
 
   render() {
@@ -40,23 +44,66 @@ const BookingTab = ({bookings}) => {
 
 export const Booking = ({eventName, bandName, from, bandFee, bookingState, concertKey}) => {
 
-  const handleBooking = (concert, isAcceptedByBookingBoss) => {
-    const db = firebase.database().ref()
-    const concertRef = db.child(`concerts/${concert}`)
-    concertRef.once("value").then(snap => {
-      const {scene, band} = snap.val()
-      const bandConcertsRef = db.child(`bands/${band}/concerts`)
-      bandConcertsRef.once('value').then(snap => {
-        const concerts = snap.val()
-        concerts.push(concert)
-        bandConcertsRef.set(concerts)
+  // Check if the booking time range does not crash with an existing concert.
+  const validateBooking = (scene, concertTimeRange) => {
+    const db = firebase.database()
+    const sceneRef = db.ref(`scenes/${scene}`)
+    let promises = []
+    return new Promise((resolve, reject) => {
+      sceneRef.once('value', snap => {
+        const {concerts} = snap.val()
+        concerts.forEach(concertKey => {
+          promises.push(db.ref(`concerts/${concertKey}`).once('value').then(snap => {
+            const {scene: currentScene} = snap.val()
+            if (currentScene === scene) {
+              const {from, to} = snap.val()
+              const existingConcertTimeRange = moment.range(new Date(from), new Date(to))
+              return concertTimeRange.overlaps(existingConcertTimeRange)
+            }
+            return false
+          }))
+        })
+      }).then(() => {
+        resolve(Promise.all(promises).then(result => result.some(e => e)))
       })
-      concertRef.child('isAcceptedByBookingBoss').set(isAcceptedByBookingBoss)
-      const sceneConcertsRef = db.child(`scenes/${scene}/concerts`)
-      sceneConcertsRef.once('value').then(snap => {
-        const concerts = snap.val()
-        concerts.push(concert)
-        sceneConcertsRef.set(concerts)
+    })
+  }
+
+
+
+  const handleBooking = (concert, isAcceptedByBookingBoss) => {
+    const db = firebase.database()
+    const concertRef = db.ref(`concerts/${concert}`)
+    concertRef.once("value").then(snap => {
+      const {scene, band, from, to} = snap.val()
+      const concertTimeRange = moment.range(new Date(from), new Date(to))
+
+      validateBooking(scene, concertTimeRange)
+        .then(isConcertCrash => {
+          if (!isConcertCrash || !isAcceptedByBookingBoss) {
+            if (isAcceptedByBookingBoss) {
+              // Update band.concerts list.
+              const bandConcertsRef = db.ref(`bands/${band}/concerts`)
+              bandConcertsRef.once('value').then(snap => {
+                const concerts = snap.val()
+                concerts.push(concert)
+                bandConcertsRef.set(concerts)
+              })
+              // Update scenes/concerts list.
+              const sceneConcertsRef = db.ref(`scenes/${scene}/concerts`)
+              sceneConcertsRef.once('value').then(snap => {
+                const concerts = snap.val()
+                concerts.push(concert)
+                sceneConcertsRef.set(concerts)
+              })
+
+            }
+            // Update isAcceptedByBookingBoss boolean.
+            concertRef.child('isAcceptedByBookingBoss').set(isAcceptedByBookingBoss)
+          } else {
+            // REVIEW: Better error handling
+            alert("This booking cannot be accepted, because it crashes with an existing concert. Please tell the booking manager.");
+          }
       })
     })
   }
