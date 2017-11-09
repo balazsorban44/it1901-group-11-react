@@ -9,14 +9,8 @@
       "bookingBoss" : [ "33gMwGSuFfUTMv9BWCAakNXF0re2" ],
       "bookingManager" : [ "ZCcD5DwBbzgXLAGRdR28cUCdQub2" ],
       "organizer" : [ "uN2sZVTwlsUwBBBHUWFzDLBikB42" ],
-      "technicians" : [
-        "Ym30wwBVThSF1X44Bzph7Ss8yds2",
-        "FEV3ktwWIYfNQCecOEO1isAkrFZ2",
-        "gADgB4F4xzb8S1oOzyVYzCljDtJ2",
-        "7uHaGKs8maNUXpI92zqGtroHRPv2",
-        "kg08ojgicAgx23e0fPca33AVx8B3"
-      ],
-      "serviceManager" : [ "HOj2SCs7w7ZQrZOGYuCCAUjdXMO2" ]
+      "serviceManager" : [ "HOj2SCs7w7ZQrZOGYuCCAUjdXMO2" ],
+      "technicians" : [ "Ym30wwBVThSF1X44Bzph7Ss8yds2", "FEV3ktwWIYfNQCecOEO1isAkrFZ2", "gADgB4F4xzb8S1oOzyVYzCljDtJ2", "7uHaGKs8maNUXpI92zqGtroHRPv2", "kg08ojgicAgx23e0fPca33AVx8B3" ]
     },
     "to" : 1503072000000
   },
@@ -30,14 +24,8 @@
       "bookingBoss" : [ "RluDhpq9gpPHWK5aRGHLu5PvTDA2" ],
       "bookingManager" : [ "ZCcD5DwBbzgXLAGRdR28cUCdQub2" ],
       "organizer" : [ "13pAdrh9t4Pt7qrdDJfpzjy8Vrh1" ],
-      "technicians" : [
-        "5sQyKeT0P4eAO21Nm33TybTut3E2",
-        "1xqNZEBOeTV5K6o86wXR4B3qvpJ3",
-        "4xuhZNv3Ffh7jgnCedm3F63T1yU2",
-        "63b80PS1SxRAB95JvGZzEcQnrbU2",
-        "kg08ojgicAgx23e0fPca33AVx8B3"
-      ],
-      "serviceManager" : [ "q4OEbZnIdDNO7q0Q4LqFW9U19fH2" ]
+      "serviceManager" : [ "q4OEbZnIdDNO7q0Q4LqFW9U19fH2" ],
+      "technicians" : [ "5sQyKeT0P4eAO21Nm33TybTut3E2", "1xqNZEBOeTV5K6o86wXR4B3qvpJ3", "4xuhZNv3Ffh7jgnCedm3F63T1yU2", "63b80PS1SxRAB95JvGZzEcQnrbU2", "kg08ojgicAgx23e0fPca33AVx8B3" ]
     },
     "to" : 1503280800000
   },
@@ -51,14 +39,8 @@
       "bookingBoss" : [ "RluDhpq9gpPHWK5aRGHLu5PvTDA2" ],
       "bookingManager" : [ "ZCcD5DwBbzgXLAGRdR28cUCdQub2" ],
       "organizer" : [ "uN2sZVTwlsUwBBBHUWFzDLBikB42" ],
-      "technicians" : [
-        "Ibjsqw4uJxZJrCl0ClL5pneKhgv1",
-        "xvKe4kdXR7OnQBrzSB5Rph8lGkK2",
-        "twDpZNCedjgYAJKmkoTEiVdJEUv1",
-        "MnzmGlSX11PT8ZYeI1a5SwT0Fbg1",
-        "kg08ojgicAgx23e0fPca33AVx8B3"
-      ],
-      "serviceManager" : [ "mXRBzTsVPLfOaWzGwPAvYvn7h3o1" ]
+      "serviceManager" : [ "mXRBzTsVPLfOaWzGwPAvYvn7h3o1" ],
+      "technicians" : [ "Ibjsqw4uJxZJrCl0ClL5pneKhgv1", "xvKe4kdXR7OnQBrzSB5Rph8lGkK2", "twDpZNCedjgYAJKmkoTEiVdJEUv1", "MnzmGlSX11PT8ZYeI1a5SwT0Fbg1", "kg08ojgicAgx23e0fPca33AVx8B3" ]
     },
     "to" : 1510538400000
   },
@@ -72,13 +54,8 @@
       "bookingBoss" : [ "33gMwGSuFfUTMv9BWCAakNXF0re2" ],
       "bookingManager" : [ "ZCcD5DwBbzgXLAGRdR28cUCdQub2" ],
       "organizer" : [ "13pAdrh9t4Pt7qrdDJfpzjy8Vrh1" ],
-      "technicians" : [
-        "pgZ9lsCC1OXwuDi2b7I83WBkswb2",
-        "kg08ojgicAgx23e0fPca33AVx8B3",
-        "AZOpCPsvtbWhk8ASWuwJbv2rts93",
-        "nCXaOPJjIYe8v5Wes5jQEOeNMSz1"
-      ],
-      "serviceManager" : [ "vH5HcWpWjyWWO8f2XVSp5XeIEin1" ]
+      "serviceManager" : [ "vH5HcWpWjyWWO8f2XVSp5XeIEin1" ],
+      "technicians" : [ "pgZ9lsCC1OXwuDi2b7I83WBkswb2", "kg08ojgicAgx23e0fPca33AVx8B3", "AZOpCPsvtbWhk8ASWuwJbv2rts93", "nCXaOPJjIYe8v5Wes5jQEOeNMSz1" ]
     },
     "to" : 1511748000000
   }

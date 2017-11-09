@@ -1,482 +1,482 @@
 {
-  "012151a8-0f9a-44c9-997f-ebd68b5389f9": {
-    "albumSales": 946645244,
-    "concerts": ["590erguniusdfvtg7af6a6s7d7", "59jd89ys78ihukefbkusbdfk", "59sdiufhisdfu7u7sd78fgyi", "59o8sdifhuisdgfbksdbf7f"],
-    "genre": "Rock",
-    "manager": "r52CRDQ5hDb1e7jTPHFYtNbNkbm2",
-    "members": ["LBhCZm6DxVaqJ3CcZGKd34DX3Lk2", "KyGxqYtSf8TDrTC0dZifcOqP2tH3", "7On6X24czxNKrmVz8lBVqzG11tx1", "RX5xs3zuNmeINnvYaVOttGLBzir1"],
-    "monthlyListeners": 1465472,
-    "name": "Imagine Dragons",
-    "reviews": {
-      "-Kxw67WY471bSSXR5Uip": {
-        "content": "bra",
-        "rating": 5,
-        "reviewerName": "Jessica",
-        "timestamp": 1509615766620
+  "012151a8-0f9a-44c9-997f-ebd68b5389f9" : {
+    "albumSales" : 946645244,
+    "concerts" : [ "590erguniusdfvtg7af6a6s7d7", "59jd89ys78ihukefbkusbdfk", "59sdiufhisdfu7u7sd78fgyi", "59o8sdifhuisdgfbksdbf7f", "-KyV0U-DMMbvjut8JHJ-" ],
+    "genre" : "Rock",
+    "manager" : "r52CRDQ5hDb1e7jTPHFYtNbNkbm2",
+    "members" : [ "LBhCZm6DxVaqJ3CcZGKd34DX3Lk2", "KyGxqYtSf8TDrTC0dZifcOqP2tH3", "7On6X24czxNKrmVz8lBVqzG11tx1", "RX5xs3zuNmeINnvYaVOttGLBzir1" ],
+    "monthlyListeners" : 1465472,
+    "name" : "Imagine Dragons",
+    "reviews" : {
+      "-Kxw67WY471bSSXR5Uip" : {
+        "content" : "bra",
+        "rating" : 5,
+        "reviewerName" : "Jessica",
+        "timestamp" : 1509615766620
       },
-      "ieskhf": {
-        "content": "Very good band",
-        "rating": 3,
-        "reviewerName": "Jessica",
-        "timestamp": 1508705015996
+      "ieskhf" : {
+        "content" : "Very good band",
+        "rating" : 3,
+        "reviewerName" : "Jessica",
+        "timestamp" : 1508705015996
       }
     },
-    "technicalRequirements": ["Guitars", "Microphone", "Drums", "Keyboard", "Bass"]
+    "technicalRequirements" : [ "Guitars", "Microphone", "Drums", "Keyboard", "Bass" ]
   },
-  "0ab49580-c84f-44d4-875f-d83760ea2cfe": {
-    "albumSales": 892657248,
-    "concerts": ["59sdofuniuds5fc7qkj34bnth4j", "59oidjfoiu89f9889ds8f89sd", "59sd87t8i4bkrjmmhrehke", "59iuhsd78fy78787f877s8df"],
-    "genre": "Rock",
-    "manager": "r52CRDQ5hDb1e7jTPHFYtNbNkbm2",
-    "members": ["j3AXr39008Z7auYiyKB0pCMfJsa2", "GiHANA7fTEMKgghwaIDTvwVkyLi1", "wa8UtXdCjGVWBuzIMH70zKdbuB13", "NGO8rtpG0caLSWBw0CHJlBp2hWC3", "RNK8vI4WrreSDC3TylKxLqZ8tmV2"],
-    "monthlyListeners": 3340483,
-    "name": "Maroon 5",
-    "reviews": {
-      "dsufeh": {
-        "content": "Very good band",
-        "rating": 3,
-        "reviewerName": "Jessica",
-        "timestamp": 1508705015996
+  "0ab49580-c84f-44d4-875f-d83760ea2cfe" : {
+    "albumSales" : 892657248,
+    "concerts" : [ "59sdofuniuds5fc7qkj34bnth4j", "59oidjfoiu89f9889ds8f89sd", "59sd87t8i4bkrjmmhrehke", "59iuhsd78fy78787f877s8df" ],
+    "genre" : "Rock",
+    "manager" : "r52CRDQ5hDb1e7jTPHFYtNbNkbm2",
+    "members" : [ "j3AXr39008Z7auYiyKB0pCMfJsa2", "GiHANA7fTEMKgghwaIDTvwVkyLi1", "wa8UtXdCjGVWBuzIMH70zKdbuB13", "NGO8rtpG0caLSWBw0CHJlBp2hWC3", "RNK8vI4WrreSDC3TylKxLqZ8tmV2" ],
+    "monthlyListeners" : 3340483,
+    "name" : "Maroon 5",
+    "reviews" : {
+      "dsufeh" : {
+        "content" : "Very good band",
+        "rating" : 3,
+        "reviewerName" : "Jessica",
+        "timestamp" : 1508705015996
       }
     },
-    "technicalRequirements": ["Microphone", "Guitars", "Keyboard", "Trumpet", "Drums"]
+    "technicalRequirements" : [ "Microphone", "Guitars", "Keyboard", "Trumpet", "Drums" ]
   },
-  "0b4ce616-79c3-471c-9792-1b8767eca03a": {
-    "albumSales": 192387465,
-    "concerts": [""],
-    "genre": "Rap",
-    "manager": "r52CRDQ5hDb1e7jTPHFYtNbNkbm2",
-    "members": ["AIyJlBrMSUhaBv8AqypxkbWJPPg2"],
-    "monthlyListeners": 13206,
-    "name": "Witt Lowry",
-    "reviews": {
-      "esklikjf": {
-        "content": "Very good band",
-        "rating": 3,
-        "reviewerName": "Jessica",
-        "timestamp": 1508705015996
+  "0b4ce616-79c3-471c-9792-1b8767eca03a" : {
+    "albumSales" : 192387465,
+    "concerts" : [ "" ],
+    "genre" : "Rap",
+    "manager" : "r52CRDQ5hDb1e7jTPHFYtNbNkbm2",
+    "members" : [ "AIyJlBrMSUhaBv8AqypxkbWJPPg2" ],
+    "monthlyListeners" : 13206,
+    "name" : "Witt Lowry",
+    "reviews" : {
+      "esklikjf" : {
+        "content" : "Very good band",
+        "rating" : 3,
+        "reviewerName" : "Jessica",
+        "timestamp" : 1508705015996
       }
     },
-    "technicalRequirements": ["Microphone"]
+    "technicalRequirements" : [ "Microphone" ]
   },
-  "20104c4d-cba0-4371-ab77-2f9d544674be": {
-    "albumSales": 817364572,
-    "concerts": ["59sad76asdv78aer7f8hdf78v7h87d", "5998duf78igy4bkwjbefis7dhf", "597sd68f6t6tdsf76uysdjf", "599sd7f8giy3kwbeiiy3jkh"],
-    "genre": "Rap",
-    "manager": "I90tBRUgsba4pT2c9DGiygGszhw1",
-    "members": ["r3mpnFLoMwRqTqKD20HtKsoNe8a2"],
-    "monthlyListeners": 250285,
-    "name": "Logic",
-    "reviews": {
-      "seikuf": {
-        "content": "Very good band",
-        "rating": 3,
-        "reviewerName": "Jessica",
-        "timestamp": 1508705015996
+  "20104c4d-cba0-4371-ab77-2f9d544674be" : {
+    "albumSales" : 817364572,
+    "concerts" : [ "59sad76asdv78aer7f8hdf78v7h87d", "5998duf78igy4bkwjbefis7dhf", "597sd68f6t6tdsf76uysdjf", "599sd7f8giy3kwbeiiy3jkh" ],
+    "genre" : "Rap",
+    "manager" : "I90tBRUgsba4pT2c9DGiygGszhw1",
+    "members" : [ "r3mpnFLoMwRqTqKD20HtKsoNe8a2" ],
+    "monthlyListeners" : 250285,
+    "name" : "Logic",
+    "reviews" : {
+      "seikuf" : {
+        "content" : "Very good band",
+        "rating" : 3,
+        "reviewerName" : "Jessica",
+        "timestamp" : 1508705015996
       }
     },
-    "technicalRequirements": ["Microphone"]
+    "technicalRequirements" : [ "Microphone" ]
   },
-  "2ddd167f-5b8a-4372-b350-6ad50493bac0": {
-    "albumSales": 8374657233,
-    "concerts": ["596asdfiuy86sdzv67asdf788ds", "59ioud7ys7dhfiukj4kbwkj3", "59d78fg8ugy4hbwhbhkjbfskdh", "59dsf7y7i3kwbkdbfkskjdbfjk"],
-    "genre": "Rock",
-    "manager": "r52CRDQ5hDb1e7jTPHFYtNbNkbm2",
-    "members": ["T9UsSMhIp1UWTR7aJpwO72C9wfe2", "vueaZSKAzAhtXcKAAbxk5019LuQ2", "CbsaHQX4jSSgFKegVcO2xUrq9883", "tVwntdtxKwfOx7FbOJVE4OnjNx53", "X42X9P84eAXTetKxGMWlsbW55uz2"],
-    "monthlyListeners": 2153780,
-    "name": "The Fray",
-    "reviews": {
-      "seofilj": {
-        "content": "Very good band",
-        "rating": 3,
-        "reviewerName": "Jessica",
-        "timestamp": 1508705015996
+  "2ddd167f-5b8a-4372-b350-6ad50493bac0" : {
+    "albumSales" : 8374657233,
+    "concerts" : [ "596asdfiuy86sdzv67asdf788ds", "59ioud7ys7dhfiukj4kbwkj3", "59d78fg8ugy4hbwhbhkjbfskdh", "59dsf7y7i3kwbkdbfkskjdbfjk" ],
+    "genre" : "Rock",
+    "manager" : "r52CRDQ5hDb1e7jTPHFYtNbNkbm2",
+    "members" : [ "T9UsSMhIp1UWTR7aJpwO72C9wfe2", "vueaZSKAzAhtXcKAAbxk5019LuQ2", "CbsaHQX4jSSgFKegVcO2xUrq9883", "tVwntdtxKwfOx7FbOJVE4OnjNx53", "X42X9P84eAXTetKxGMWlsbW55uz2" ],
+    "monthlyListeners" : 2153780,
+    "name" : "The Fray",
+    "reviews" : {
+      "seofilj" : {
+        "content" : "Very good band",
+        "rating" : 3,
+        "reviewerName" : "Jessica",
+        "timestamp" : 1508705015996
       }
     },
-    "technicalRequirements": ["Guitars", "Microphone", "Drums", "Bass", "Keyboard", "Violin"]
+    "technicalRequirements" : [ "Guitars", "Microphone", "Drums", "Bass", "Keyboard", "Violin" ]
   },
-  "3630fff3-52fc-4e97-ab01-d68fd88e4135": {
-    "albumSales": 6384638,
-    "concerts": ["59sdi7vg65u3hbguy324iub4b2", "5987dfikdbfkbkewbfkbkwkb", "59u8sd9yf87gib3jbwkjbkd"],
-    "genre": "Rock",
-    "manager": "r52CRDQ5hDb1e7jTPHFYtNbNkbm2",
-    "members": ["5OAhMtNmUOfDyheZVmuqGTZlfp32", "WdP2LtB9mYXqy6XljVelbDGljMH2", "ZSJeGxnnzfRvEAtRqY0LjI6Qvp93", "JZuieN2j80RXMM9frbwSlClJXMJ3"],
-    "monthlyListeners": 1449463,
-    "name": "Yellowcard",
-    "reviews": {
-      "skelkjf": {
-        "content": "Very good band",
-        "rating": 3,
-        "reviewerName": "Jessica",
-        "timestamp": 1508705015996
+  "3630fff3-52fc-4e97-ab01-d68fd88e4135" : {
+    "albumSales" : 6384638,
+    "concerts" : [ "59sdi7vg65u3hbguy324iub4b2", "5987dfikdbfkbkewbfkbkwkb", "59u8sd9yf87gib3jbwkjbkd" ],
+    "genre" : "Rock",
+    "manager" : "r52CRDQ5hDb1e7jTPHFYtNbNkbm2",
+    "members" : [ "5OAhMtNmUOfDyheZVmuqGTZlfp32", "WdP2LtB9mYXqy6XljVelbDGljMH2", "ZSJeGxnnzfRvEAtRqY0LjI6Qvp93", "JZuieN2j80RXMM9frbwSlClJXMJ3" ],
+    "monthlyListeners" : 1449463,
+    "name" : "Yellowcard",
+    "reviews" : {
+      "skelkjf" : {
+        "content" : "Very good band",
+        "rating" : 3,
+        "reviewerName" : "Jessica",
+        "timestamp" : 1508705015996
       }
     },
-    "technicalRequirements": ["Guitars", "Drums", "Microphone", "Violin", "Bass", "Keyboard"]
+    "technicalRequirements" : [ "Guitars", "Drums", "Microphone", "Violin", "Bass", "Keyboard" ]
   },
-  "4753fcb7-9270-493a-974d-8daca4e49125": {
-    "albumSales": 8176519,
-    "concerts": ["59bc04b2d4bb6d33232814d6", "59jdufuikbrfkuewbfjj", "59ookdfminwekfbsmbdfhk", "59podsjfoijuosbkdfkhjbk"],
-    "genre": "Rock",
-    "manager": "I90tBRUgsba4pT2c9DGiygGszhw1",
-    "members": ["yirpOKeR2NfgPUT0kW2ajWSGRM43", "Y7FBnJWda5buak3CsMCJYY0BTnd2", "1d81ImVafFfiM0TAsPOXD2n7Fs62", "tjpvkCu3LUclKnn8XKzE3ShSsoc2", "IzNodST8CaZzVB9s3j8DIEdUPp32"],
-    "monthlyListeners": 579047,
-    "name": "Volbeat",
-    "reviews": {
-      "osaeuhf": {
-        "content": "Very good band",
-        "rating": 3,
-        "reviewerName": "Jessica",
-        "timestamp": 1508705015996
+  "4753fcb7-9270-493a-974d-8daca4e49125" : {
+    "albumSales" : 8176519,
+    "concerts" : [ "59bc04b2d4bb6d33232814d6", "59jdufuikbrfkuewbfjj", "59ookdfminwekfbsmbdfhk", "59podsjfoijuosbkdfkhjbk", "-KyV-47Ju7nkRRaiTPt5" ],
+    "genre" : "Rock",
+    "manager" : "I90tBRUgsba4pT2c9DGiygGszhw1",
+    "members" : [ "yirpOKeR2NfgPUT0kW2ajWSGRM43", "Y7FBnJWda5buak3CsMCJYY0BTnd2", "1d81ImVafFfiM0TAsPOXD2n7Fs62", "tjpvkCu3LUclKnn8XKzE3ShSsoc2", "IzNodST8CaZzVB9s3j8DIEdUPp32" ],
+    "monthlyListeners" : 579047,
+    "name" : "Volbeat",
+    "reviews" : {
+      "osaeuhf" : {
+        "content" : "Very good band",
+        "rating" : 3,
+        "reviewerName" : "Jessica",
+        "timestamp" : 1508705015996
       }
     },
-    "technicalRequirements": ["dolor ullamco", "amet cillum", "fugiat duis", "deserunt esse"]
+    "technicalRequirements" : [ "dolor ullamco", "amet cillum", "fugiat duis", "deserunt esse" ]
   },
-  "596ffa74-3d08-44ef-b113-765d43d12738": {
-    "albumSales": 8927864257,
-    "concerts": ["59asiudbf7aw6efy4kiuwe78w4", "59uhiuas7878d7f7ihksdjkfbk", "599u8dsf6786ugyusdfgu6g6d"],
-    "genre": "Pop",
-    "manager": "r52CRDQ5hDb1e7jTPHFYtNbNkbm2",
-    "members": ["k7wy8miPhwdbmHFVyaplSoxmS9w1"],
-    "monthlyListeners": 2681382,
-    "name": "Justin Timberlake",
-    "reviews": {
-      "soelifjkd": {
-        "content": "Very good band",
-        "rating": 3,
-        "reviewerName": "Jessica",
-        "timestamp": 1508705015996
+  "596ffa74-3d08-44ef-b113-765d43d12738" : {
+    "albumSales" : 8927864257,
+    "concerts" : [ "59asiudbf7aw6efy4kiuwe78w4", "59uhiuas7878d7f7ihksdjkfbk", "599u8dsf6786ugyusdfgu6g6d", "-KyVHN3gT2sCt1ZnvAow" ],
+    "genre" : "Pop",
+    "manager" : "r52CRDQ5hDb1e7jTPHFYtNbNkbm2",
+    "members" : [ "k7wy8miPhwdbmHFVyaplSoxmS9w1" ],
+    "monthlyListeners" : 2681382,
+    "name" : "Justin Timberlake",
+    "reviews" : {
+      "soelifjkd" : {
+        "content" : "Very good band",
+        "rating" : 3,
+        "reviewerName" : "Jessica",
+        "timestamp" : 1508705015996
       }
     },
-    "technicalRequirements": ["Microphone", "Dancing Shoes"]
+    "technicalRequirements" : [ "Microphone", "Dancing Shoes" ]
   },
-  "5973hjfiueriufnksdjfn": {
-    "albumSales": 72836475,
-    "concerts": ["59us6d7fg8ibiukjbfiysdbf", "597s6dfgbksbfiuhsbdiyfbh"],
-    "genre": "Rock",
-    "manager": "ZThJHM8iAhcQxuo5MPDf6L952h13",
-    "members": ["QovBZRyNC4WyItXE40scxNOXehM2", "FngArgFX0sRIAITfeCluL9nMula2", "pNJbjM51c4gGIAC1tyvdXGbHFdC3", "5XjmcDoOfZaXUgAyoHzAf96FWfj1"],
-    "monthlyListeners": 1925665,
-    "name": "The All-American Rejects",
-    "reviews": {
-      "sfkdj": {
-        "content": "Very good band",
-        "rating": 3,
-        "reviewerName": "Jessica",
-        "timestamp": 1508705015996
+  "5973hjfiueriufnksdjfn" : {
+    "albumSales" : 72836475,
+    "concerts" : [ "59us6d7fg8ibiukjbfiysdbf", "597s6dfgbksbfiuhsbdiyfbh" ],
+    "genre" : "Rock",
+    "manager" : "ZThJHM8iAhcQxuo5MPDf6L952h13",
+    "members" : [ "QovBZRyNC4WyItXE40scxNOXehM2", "FngArgFX0sRIAITfeCluL9nMula2", "pNJbjM51c4gGIAC1tyvdXGbHFdC3", "5XjmcDoOfZaXUgAyoHzAf96FWfj1" ],
+    "monthlyListeners" : 1925665,
+    "name" : "The All-American Rejects",
+    "reviews" : {
+      "sfkdj" : {
+        "content" : "Very good band",
+        "rating" : 3,
+        "reviewerName" : "Jessica",
+        "timestamp" : 1508705015996
       }
     },
-    "technicalRequirements": ["Guitars", "Drums", "Bass", "Microphone"]
+    "technicalRequirements" : [ "Guitars", "Drums", "Bass", "Microphone" ]
   },
-  "59iyurewbfu6756w4e45e5f": {
-    "albumSales": 1337999991337,
-    "concerts": ["596adjhrf78sdfv87asdv78d6ae", "5978difubkj4jkwkjjkkwkdnkj", "59udiufikwembfkjbkjfbkjds", "59iousdiufiubkbkjabjkdfbjk"],
-    "genre": "Rock",
-    "manager": "r52CRDQ5hDb1e7jTPHFYtNbNkbm2",
-    "members": ["n16G0h3ZkDfXj19XP8ilAGkbSm33", "XJlaGUgUFcbNhapMiXJgjr8rTcK2", "CJViH0HVqQZ9EpBtuzb45gBGgUA3", "fDGEoDaMdPcv7nELKeubKXK1e5s2", "lmL5Sw8iqXhr894O03Zq6DBDxkU2"],
-    "monthlyListeners": 29,
-    "name": "Fantastic Five",
-    "reviews": {
-      "eskfj": {
-        "content": "Very good band",
-        "rating": 3,
-        "reviewerName": "Jessica",
-        "timestamp": 1508705015996
+  "59iyurewbfu6756w4e45e5f" : {
+    "albumSales" : 1337999991337,
+    "concerts" : [ "596adjhrf78sdfv87asdv78d6ae", "5978difubkj4jkwkjjkkwkdnkj", "59udiufikwembfkjbkjfbkjds", "59iousdiufiubkbkjabjkdfbjk" ],
+    "genre" : "Rock",
+    "manager" : "r52CRDQ5hDb1e7jTPHFYtNbNkbm2",
+    "members" : [ "n16G0h3ZkDfXj19XP8ilAGkbSm33", "XJlaGUgUFcbNhapMiXJgjr8rTcK2", "CJViH0HVqQZ9EpBtuzb45gBGgUA3", "fDGEoDaMdPcv7nELKeubKXK1e5s2", "lmL5Sw8iqXhr894O03Zq6DBDxkU2" ],
+    "monthlyListeners" : 29,
+    "name" : "Fantastic Five",
+    "reviews" : {
+      "eskfj" : {
+        "content" : "Very good band",
+        "rating" : 3,
+        "reviewerName" : "Jessica",
+        "timestamp" : 1508705015996
       }
     },
-    "technicalRequirements": ["Pc"]
+    "technicalRequirements" : [ "Pc" ]
   },
-  "65f4f0c5-ef9e-490c-aee3-909e7ae6b2ab": {
-    "albumSales": 1693215,
-    "concerts": ["59bc04b271b3c31a520daeae", "59uef787dinsdiu89sdiff", "59usd7hsd78hfh7f8e32irr"],
-    "genre": "Rock",
-    "manager": "YiBSLuDTjTMRfaJbtGsfkq9N7M12",
-    "members": ["zOkNChvPFiUFWxSl2V7paVecfHA2", "IPZakpzhNlRixtuMF2YsAlEli043", "Yvl69VS0S9eHRXTlaxbX07FhiTG2"],
-    "monthlyListeners": 2783497,
-    "name": "Metallica",
-    "reviews": {
-      "oesifufdoij": {
-        "content": "Bad band",
-        "rating": 2,
-        "reviewerName": "Jessica",
-        "timestamp": 1508705015996
+  "65f4f0c5-ef9e-490c-aee3-909e7ae6b2ab" : {
+    "albumSales" : 1693215,
+    "concerts" : [ "59bc04b271b3c31a520daeae", "59uef787dinsdiu89sdiff", "59usd7hsd78hfh7f8e32irr" ],
+    "genre" : "Rock",
+    "manager" : "YiBSLuDTjTMRfaJbtGsfkq9N7M12",
+    "members" : [ "zOkNChvPFiUFWxSl2V7paVecfHA2", "IPZakpzhNlRixtuMF2YsAlEli043", "Yvl69VS0S9eHRXTlaxbX07FhiTG2" ],
+    "monthlyListeners" : 2783497,
+    "name" : "Metallica",
+    "reviews" : {
+      "oesifufdoij" : {
+        "content" : "Bad band",
+        "rating" : 2,
+        "reviewerName" : "Jessica",
+        "timestamp" : 1508705015996
       },
-      "oesifufj": {
-        "content": "Very good band",
-        "rating": 4,
-        "reviewerName": "Jessica",
-        "timestamp": 1508705015996
+      "oesifufj" : {
+        "content" : "Very good band",
+        "rating" : 4,
+        "reviewerName" : "Jessica",
+        "timestamp" : 1508705015996
       }
     },
-    "technicalRequirements": ["Guitars", "Drums", "Amplifiers", "Lights", "Microphone", "y6ygtt7878"]
+    "technicalRequirements" : [ "Guitars", "Drums", "Amplifiers", "Lights", "Microphone", "Water" ]
   },
-  "73e5e69d-3554-40d8-8516-00cb38737a1c": {
-    "albumSales": 9099949,
-    "concerts": ["598dfunir7df76vr88sf7v", "59mmouefh7idsf7878sdids", "59nnefishfyi7sdy9f9dss", "59jsodoi879sd7fiuksdukb"],
-    "genre": "RnB",
-    "manager": "ZThJHM8iAhcQxuo5MPDf6L952h13",
-    "members": ["PJQUu2HnuOMovkmY0zxGC1bpyfE3"],
-    "monthlyListeners": 4383599,
-    "name": "Rihanna",
-    "reviews": {
-      "gdgdgr": {
-        "content": "Very good band",
-        "rating": 3,
-        "reviewerName": "Jessica",
-        "timestamp": 1508705015996
+  "73e5e69d-3554-40d8-8516-00cb38737a1c" : {
+    "albumSales" : 9099949,
+    "concerts" : [ "598dfunir7df76vr88sf7v", "59mmouefh7idsf7878sdids", "59nnefishfyi7sdy9f9dss", "59jsodoi879sd7fiuksdukb" ],
+    "genre" : "RnB",
+    "manager" : "ZThJHM8iAhcQxuo5MPDf6L952h13",
+    "members" : [ "PJQUu2HnuOMovkmY0zxGC1bpyfE3" ],
+    "monthlyListeners" : 4383599,
+    "name" : "Rihanna",
+    "reviews" : {
+      "gdgdgr" : {
+        "content" : "Very good band",
+        "rating" : 3,
+        "reviewerName" : "Jessica",
+        "timestamp" : 1508705015996
       }
     },
-    "technicalRequirements": ["Microphone"]
+    "technicalRequirements" : [ "Microphone" ]
   },
-  "7808accb-6395-4b25-858c-678bbb73896b": {
-    "albumSales": 78346,
-    "concerts": ["59sdofuhas7gf68asd8gvia87s", "59oiusd778sd87fy7shiudkfj", "59dfh78f8ihsdufkhkjdsfd", "59767d67fguyhb4kjbjkwkjk"],
-    "genre": "Pop",
-    "manager": "r52CRDQ5hDb1e7jTPHFYtNbNkbm2",
-    "members": ["a0xLTqQglRgSaUsCDAi3R2CIym02", "Cw31gQTRH8R3UNmQQUNoVKYzWpI2", "0HiWQdn0qtN3EN1ofXoqiyQZsQ82", "8QwsVLqtMKQF0HvdcOCL3COuru42"],
-    "monthlyListeners": 955732,
-    "name": "Bastille",
-    "reviews": {
-      "eslfkjdk": {
-        "content": "Very good band",
-        "rating": 3,
-        "reviewerName": "Jessica",
-        "timestamp": 1508705015996
+  "7808accb-6395-4b25-858c-678bbb73896b" : {
+    "albumSales" : 78346,
+    "concerts" : [ "59sdofuhas7gf68asd8gvia87s", "59oiusd778sd87fy7shiudkfj", "59dfh78f8ihsdufkhkjdsfd", "59767d67fguyhb4kjbjkwkjk" ],
+    "genre" : "Pop",
+    "manager" : "r52CRDQ5hDb1e7jTPHFYtNbNkbm2",
+    "members" : [ "a0xLTqQglRgSaUsCDAi3R2CIym02", "Cw31gQTRH8R3UNmQQUNoVKYzWpI2", "0HiWQdn0qtN3EN1ofXoqiyQZsQ82", "8QwsVLqtMKQF0HvdcOCL3COuru42" ],
+    "monthlyListeners" : 955732,
+    "name" : "Bastille",
+    "reviews" : {
+      "eslfkjdk" : {
+        "content" : "Very good band",
+        "rating" : 3,
+        "reviewerName" : "Jessica",
+        "timestamp" : 1508705015996
       }
     },
-    "technicalRequirements": ["Guitars", "Bass", "Keyboard", "Microphone"]
+    "technicalRequirements" : [ "Guitars", "Bass", "Keyboard", "Microphone" ]
   },
-  "91a81925-92f9-4fc9-b897-93cf01226282": {
-    "albumSales": 92775739,
-    "concerts": [ "59oj89dsifkuiuehfiui7s7idf", "59oids98f9889sd89f89heukf", "59d8989wef78787huk4knjnjkjds"],
-    "genre": "Electric",
-    "manager": "ZThJHM8iAhcQxuo5MPDf6L952h13",
-    "members": ["sDGM21QqklMYoETERWa28gWO6ir2", "VhFX61MLj7ck6TZMVV0zw1cdIZ03"],
-    "monthlyListeners": 3099,
-    "name": "Chainsmokers",
-    "reviews": {
-      "oewirl": {
-        "content": "Very good band",
-        "rating": 3,
-        "reviewerName": "Jessica",
-        "timestamp": 1508705015996
+  "91a81925-92f9-4fc9-b897-93cf01226282" : {
+    "albumSales" : 92775739,
+    "concerts" : [ "59oj89dsifkuiuehfiui7s7idf", "59oids98f9889sd89f89heukf", "59d8989wef78787huk4knjnjkjds" ],
+    "genre" : "Electric",
+    "manager" : "ZThJHM8iAhcQxuo5MPDf6L952h13",
+    "members" : [ "sDGM21QqklMYoETERWa28gWO6ir2", "VhFX61MLj7ck6TZMVV0zw1cdIZ03" ],
+    "monthlyListeners" : 3099,
+    "name" : "Chainsmokers",
+    "reviews" : {
+      "oewirl" : {
+        "content" : "Very good band",
+        "rating" : 3,
+        "reviewerName" : "Jessica",
+        "timestamp" : 1508705015996
       }
     },
-    "technicalRequirements": ["Pc"]
+    "technicalRequirements" : [ "Pc" ]
   },
-  "9fff2f8a-21e6-47de-a2b8-7f449929d43f": {
-    "albumSales": 43298429,
-    "concerts": ["lkfsjdoidlkj38ir3983iki4", "59uajhbjhwefhjkbkhwefkj", "59sduiiusdjhbjhsdbhjkd", "59897d78s6f67usd7f78"],
-    "genre": "Rap",
-    "manager": "I90tBRUgsba4pT2c9DGiygGszhw1",
-    "members": ["sC8t2OmHfPh6AibBcU5Tp04tiN52"],
-    "monthlyListeners": 3155250,
-    "name": "Drake",
-    "reviews": {
-      "feskl": {
-        "content": "Very good band",
-        "rating": 3,
-        "reviewerName": "Jessica",
-        "timestamp": 1508705015996
+  "9fff2f8a-21e6-47de-a2b8-7f449929d43f" : {
+    "albumSales" : 43298429,
+    "concerts" : [ "lkfsjdoidlkj38ir3983iki4", "59uajhbjhwefhjkbkhwefkj", "59sduiiusdjhbjhsdbhjkd", "59897d78s6f67usd7f78" ],
+    "genre" : "Rap",
+    "manager" : "I90tBRUgsba4pT2c9DGiygGszhw1",
+    "members" : [ "sC8t2OmHfPh6AibBcU5Tp04tiN52" ],
+    "monthlyListeners" : 3155250,
+    "name" : "Drake",
+    "reviews" : {
+      "feskl" : {
+        "content" : "Very good band",
+        "rating" : 3,
+        "reviewerName" : "Jessica",
+        "timestamp" : 1508705015996
       }
     },
-    "technicalRequirements": ["Microphone"]
+    "technicalRequirements" : [ "Microphone" ]
   },
-  "9r3iwhfeskuh3i": {
-    "albumSales": 0,
-    "concerts": [""],
-    "genre": "Pop",
-    "manager": "ZThJHM8iAhcQxuo5MPDf6L952h13",
-    "members": ["IoruqtEie1hlEV9ol0LIBecrfhg1", "3B142NVUlTYIoGBcEksm05vGRay2"],
-    "monthlyListeners": 4,
-    "name": "Bad band",
-    "reviews": {
-      "3w8r7iuz83iufs98e": {
-        "content": "",
-        "rating": 0,
-        "reviewerName": "Jessica",
-        "timestamp": 1508705015996
+  "9r3iwhfeskuh3i" : {
+    "albumSales" : 0,
+    "concerts" : [ "" ],
+    "genre" : "Pop",
+    "manager" : "ZThJHM8iAhcQxuo5MPDf6L952h13",
+    "members" : [ "IoruqtEie1hlEV9ol0LIBecrfhg1", "3B142NVUlTYIoGBcEksm05vGRay2" ],
+    "monthlyListeners" : 4,
+    "name" : "Bad band",
+    "reviews" : {
+      "3w8r7iuz83iufs98e" : {
+        "content" : "",
+        "rating" : 0,
+        "reviewerName" : "Jessica",
+        "timestamp" : 1508705015996
       }
     },
-    "technicalRequirements": ["Drums", "Microphone", "Pc"]
+    "technicalRequirements" : [ "Drums", "Microphone", "Pc" ]
   },
-  "a6c6897a-7415-4f8d-b5a5-3a5e05f3be67": {
-    "albumSales": 78236754,
-    "concerts": ["5976dgfuyhbsdkjnfljse", "59u7s8dhf76gbiukj3jkjks", "59u7sdy67fguyksbkjdfnk"],
-    "genre": "Pop",
-    "manager": "ZThJHM8iAhcQxuo5MPDf6L952h13",
-    "members": ["IoruqtEie1hlEV9ol0LIBecrfhg1", "3B142NVUlTYIoGBcEksm05vGRay2"],
-    "monthlyListeners": 585771,
-    "name": "Twenty One Pilots",
-    "reviews": {
-      "sff": {
-        "content": "Very good band",
-        "rating": 3,
-        "reviewerName": "Jessica",
-        "timestamp": 1508705015996
+  "a6c6897a-7415-4f8d-b5a5-3a5e05f3be67" : {
+    "albumSales" : 78236754,
+    "concerts" : [ "5976dgfuyhbsdkjnfljse", "59u7s8dhf76gbiukj3jkjks", "59u7sdy67fguyksbkjdfnk", "-KyV2QzrtV5d-fheouL1" ],
+    "genre" : "Pop",
+    "manager" : "ZThJHM8iAhcQxuo5MPDf6L952h13",
+    "members" : [ "IoruqtEie1hlEV9ol0LIBecrfhg1", "3B142NVUlTYIoGBcEksm05vGRay2" ],
+    "monthlyListeners" : 585771,
+    "name" : "Twenty One Pilots",
+    "reviews" : {
+      "sff" : {
+        "content" : "Very good band",
+        "rating" : 3,
+        "reviewerName" : "Jessica",
+        "timestamp" : 1508705015996
       }
     },
-    "technicalRequirements": ["Drums", "Microphone", "Pc"]
+    "technicalRequirements" : [ "Drums", "Microphone", "Pc" ]
   },
-  "b0e4bc50-3062-4d31-afad-def6a6b7a8e9": {
-    "albumSales": 4952763,
-    "concerts": ["59bc04b2b8e6f6f0dd55a2e7", "59u8sdhb4unkjsu7sdudhsuif", "59sjnu4jjkj3ejhbh4kjk34n"],
-    "genre": "Electric",
-    "manager": "YiBSLuDTjTMRfaJbtGsfkq9N7M12",
-    "members": ["oXg9fnCh3KT7lpDgR68BfKkVXZs2"],
-    "monthlyListeners": 290574,
-    "name": "Alan Walker",
-    "reviews": {
-      "esi": {
-        "content": "Very good band",
-        "rating": 3,
-        "reviewerName": "Jessica",
-        "timestamp": 1508705015996
+  "b0e4bc50-3062-4d31-afad-def6a6b7a8e9" : {
+    "albumSales" : 4952763,
+    "concerts" : [ "59bc04b2b8e6f6f0dd55a2e7", "59u8sdhb4unkjsu7sdudhsuif", "59sjnu4jjkj3ejhbh4kjk34n" ],
+    "genre" : "Electric",
+    "manager" : "YiBSLuDTjTMRfaJbtGsfkq9N7M12",
+    "members" : [ "oXg9fnCh3KT7lpDgR68BfKkVXZs2" ],
+    "monthlyListeners" : 290574,
+    "name" : "Alan Walker",
+    "reviews" : {
+      "esi" : {
+        "content" : "Very good band",
+        "rating" : 3,
+        "reviewerName" : "Jessica",
+        "timestamp" : 1508705015996
       }
     },
-    "technicalRequirements": ["DJ Pult", "Coffee", "Hoodie", "Lights"]
+    "technicalRequirements" : [ "DJ Pult", "Coffee", "Hoodie", "Lights" ]
   },
-  "b7539c32-53e7-4908-bda3-81449c367da6": {
-    "albumSales": 7657913,
-    "concerts": ["59bc04b2c6ee092945795f8e", "59jkndfu8789d8v6sf6gt87", "59sd8u9u7s8dfsid7fukdhs", "59sd877isdhfuik4jwbbjkv"],
-    "genre": "Rock",
-    "manager": "I90tBRUgsba4pT2c9DGiygGszhw1",
-    "members": ["wgCF4LHgKIaiFHe8opNKg8NYvJr1"],
-    "monthlyListeners": 1725408,
-    "name": "Lana Del Rey",
-    "reviews": {
-      "sfikhd": {
-        "content": "Very good band",
-        "rating": 3,
-        "reviewerName": "Jessica",
-        "timestamp": 1508705015996
+  "b7539c32-53e7-4908-bda3-81449c367da6" : {
+    "albumSales" : 7657913,
+    "concerts" : [ "59bc04b2c6ee092945795f8e", "59jkndfu8789d8v6sf6gt87", "59sd8u9u7s8dfsid7fukdhs", "59sd877isdhfuik4jwbbjkv" ],
+    "genre" : "Rock",
+    "manager" : "I90tBRUgsba4pT2c9DGiygGszhw1",
+    "members" : [ "wgCF4LHgKIaiFHe8opNKg8NYvJr1" ],
+    "monthlyListeners" : 1725408,
+    "name" : "Lana Del Rey",
+    "reviews" : {
+      "sfikhd" : {
+        "content" : "Very good band",
+        "rating" : 3,
+        "reviewerName" : "Jessica",
+        "timestamp" : 1508705015996
       }
     },
-    "technicalRequirements": ["Sunglasses", "Water"]
+    "technicalRequirements" : [ "Sunglasses", "Water" ]
   },
-  "b8a7c51f-362c-4dcb-a259-bc6e0095f0a6": {
-    "albumSales": 9837468397,
-    "concerts": ["59fvjn4379sfbdknfskj3nf3j", "59wwunkdfbnkjbesfjbjkbsek", "59sdf877887sd87f78787d7d7", "59sd889f8cxvuihiudsfhisdi"],
-    "genre": "Pop",
-    "manager": "ZThJHM8iAhcQxuo5MPDf6L952h13",
-    "members": ["cuy6BS0SUsSTZU3vUZz9DISLPip1"],
-    "monthlyListeners": 1434967,
-    "name": "Ed Sheeran",
-    "reviews": {
-      "idufkjfd": {
-        "content": "Very good band",
-        "rating": 3,
-        "reviewerName": "Jessica",
-        "timestamp": 1508705015996
+  "b8a7c51f-362c-4dcb-a259-bc6e0095f0a6" : {
+    "albumSales" : 9837468397,
+    "concerts" : [ "59fvjn4379sfbdknfskj3nf3j", "59wwunkdfbnkjbesfjbjkbsek", "59sdf877887sd87f78787d7d7", "59sd889f8cxvuihiudsfhisdi" ],
+    "genre" : "Pop",
+    "manager" : "ZThJHM8iAhcQxuo5MPDf6L952h13",
+    "members" : [ "cuy6BS0SUsSTZU3vUZz9DISLPip1" ],
+    "monthlyListeners" : 1434967,
+    "name" : "Ed Sheeran",
+    "reviews" : {
+      "idufkjfd" : {
+        "content" : "Very good band",
+        "rating" : 3,
+        "reviewerName" : "Jessica",
+        "timestamp" : 1508705015996
       }
     },
-    "technicalRequirements": ["Microphone", "Guitars"]
+    "technicalRequirements" : [ "Microphone", "Guitars" ]
   },
-  "b95ce3ff-3d05-4e87-9e01-c97b66af13d4": {
-    "albumSales": 123456,
-    "concerts": ["59alksndfu6sef78b8ees6dfee", "59paofpisjifois78f8idds", "59i99osjdfjhsdbjkfdsjjs"],
-    "genre": "Rap",
-    "manager": "ZThJHM8iAhcQxuo5MPDf6L952h13",
-    "members": ["C24x4OqZJLeDEdHumh7mMwinJSu2"],
-    "monthlyListeners": 4316053,
-    "name": "Eminem",
-    "reviews": {
-      "xsikujc": {
-        "content": "Very good band",
-        "rating": 3,
-        "reviewerName": "Jessica",
-        "timestamp": 1508705015996
+  "b95ce3ff-3d05-4e87-9e01-c97b66af13d4" : {
+    "albumSales" : 123456,
+    "concerts" : [ "59alksndfu6sef78b8ees6dfee", "59paofpisjifois78f8idds", "59i99osjdfjhsdbjkfdsjjs" ],
+    "genre" : "Rap",
+    "manager" : "ZThJHM8iAhcQxuo5MPDf6L952h13",
+    "members" : [ "C24x4OqZJLeDEdHumh7mMwinJSu2" ],
+    "monthlyListeners" : 4316053,
+    "name" : "Eminem",
+    "reviews" : {
+      "xsikujc" : {
+        "content" : "Very good band",
+        "rating" : 3,
+        "reviewerName" : "Jessica",
+        "timestamp" : 1508705015996
       }
     },
-    "technicalRequirements": ["Microphone"]
+    "technicalRequirements" : [ "Microphone" ]
   },
-  "be389638-e74f-46a9-83d2-91ee3ce1fb0c": {
-    "albumSales": 83974990,
-    "concerts": ["5927ergerg932b32nnj5n5j", "59wudnkwebfubiuusfkujds", "59iodjiosidoioseiioioes"],
-    "genre": "RnB",
-    "manager": "ZThJHM8iAhcQxuo5MPDf6L952h13",
-    "members": ["jMGYahxqiWexKrg9VlwDo8vEYv02"],
-    "monthlyListeners": 157714,
-    "name": "Astrid S",
-    "reviews": {
-      "esoifd": {
-        "content": "Very good band",
-        "rating": 3,
-        "reviewerName": "Jessica",
-        "timestamp": 1508705015996
+  "be389638-e74f-46a9-83d2-91ee3ce1fb0c" : {
+    "albumSales" : 83974990,
+    "concerts" : [ "5927ergerg932b32nnj5n5j", "59wudnkwebfubiuusfkujds", "59iodjiosidoioseiioioes" ],
+    "genre" : "RnB",
+    "manager" : "ZThJHM8iAhcQxuo5MPDf6L952h13",
+    "members" : [ "jMGYahxqiWexKrg9VlwDo8vEYv02" ],
+    "monthlyListeners" : 157714,
+    "name" : "Astrid S",
+    "reviews" : {
+      "esoifd" : {
+        "content" : "Very good band",
+        "rating" : 3,
+        "reviewerName" : "Jessica",
+        "timestamp" : 1508705015996
       }
     },
-    "technicalRequirements": ["Microphone"]
+    "technicalRequirements" : [ "Microphone" ]
   },
-  "c33c2065-b1c3-4406-b066-d33a9e2ea71a": {
-    "albumSales": 4673532,
-    "concerts": ["59bc0210df2d44289498573745", "59pdf089hisubkefb3iuwb33", "5987sdf8gy4bkhwbk3bjdbfkj"],
-    "genre": "Rock",
-    "manager": "I90tBRUgsba4pT2c9DGiygGszhw1",
-    "members": ["3mNn1aGAtDhjR2P1L3DFrUH8cS32", "DwFReHvA22Mr3UilIBQHN7kAe0f2", "LgBNXvgA2ASRpX87479nc7skgTE3", "FTm8hQMUFegIWHSXVX90Qz7Vn8j1", "0vXvBt9Y6CgG9JNzgdFJrEcVh3z2"],
-    "monthlyListeners": 2161102,
-    "name": "OneRepublic",
-    "reviews": {
-      "sk": {
-        "content": "Very good band",
-        "rating": 3,
-        "reviewerName": "Jessica",
-        "timestamp": 1508705015996
+  "c33c2065-b1c3-4406-b066-d33a9e2ea71a" : {
+    "albumSales" : 4673532,
+    "concerts" : [ "59bc0210df2d44289498573745", "59pdf089hisubkefb3iuwb33", "5987sdf8gy4bkhwbk3bjdbfkj" ],
+    "genre" : "Rock",
+    "manager" : "I90tBRUgsba4pT2c9DGiygGszhw1",
+    "members" : [ "3mNn1aGAtDhjR2P1L3DFrUH8cS32", "DwFReHvA22Mr3UilIBQHN7kAe0f2", "LgBNXvgA2ASRpX87479nc7skgTE3", "FTm8hQMUFegIWHSXVX90Qz7Vn8j1", "0vXvBt9Y6CgG9JNzgdFJrEcVh3z2" ],
+    "monthlyListeners" : 2161102,
+    "name" : "OneRepublic",
+    "reviews" : {
+      "sk" : {
+        "content" : "Very good band",
+        "rating" : 3,
+        "reviewerName" : "Jessica",
+        "timestamp" : 1508705015996
       }
     },
-    "technicalRequirements": ["Guitars", "Drums", "Microphone", "Bass", "Keyboard"]
+    "technicalRequirements" : [ "Guitars", "Drums", "Microphone", "Bass", "Keyboard" ]
   },
-  "cc197bad-dc9c-440d-a5b5-d52ba2e14234": {
-    "albumSales": 9837432,
-    "concerts": ["59897df78igy3iwkbkbsjfdb", "59sdu98fhihu4bwukjbefu", "59sud97fyh7i3ubwkjebfkj", "59hsd7fih3kuwbkdbfkj4ws"],
-    "genre": "Pop",
-    "manager": "YiBSLuDTjTMRfaJbtGsfkq9N7M12",
-    "members": ["3xkOMBk0uRgFBuA7vsOppPcLxo73", "BN90zMQ7pNbkbNyvwoCGW4dlQth2", "gmxVHUhjuXeTeHm7tuDa1tQ7rF73", "IZ5XQ9CvMKe5xgAZIB2X4bWeilu1"],
-    "monthlyListeners": 5230906,
-    "name": "Coldplay",
-    "reviews": {
-      "skfuh": {
-        "content": "Very good band",
-        "rating": 3,
-        "reviewerName": "Jessica",
-        "timestamp": 1508705015996
+  "cc197bad-dc9c-440d-a5b5-d52ba2e14234" : {
+    "albumSales" : 9837432,
+    "concerts" : [ "59897df78igy3iwkbkbsjfdb", "59sdu98fhihu4bwukjbefu", "59sud97fyh7i3ubwkjebfkj", "59hsd7fih3kuwbkdbfkj4ws" ],
+    "genre" : "Pop",
+    "manager" : "YiBSLuDTjTMRfaJbtGsfkq9N7M12",
+    "members" : [ "3xkOMBk0uRgFBuA7vsOppPcLxo73", "BN90zMQ7pNbkbNyvwoCGW4dlQth2", "gmxVHUhjuXeTeHm7tuDa1tQ7rF73", "IZ5XQ9CvMKe5xgAZIB2X4bWeilu1" ],
+    "monthlyListeners" : 5230906,
+    "name" : "Coldplay",
+    "reviews" : {
+      "skfuh" : {
+        "content" : "Very good band",
+        "rating" : 3,
+        "reviewerName" : "Jessica",
+        "timestamp" : 1508705015996
       }
     },
-    "technicalRequirements": ["Microphone", "Drums"]
+    "technicalRequirements" : [ "Microphone", "Drums" ]
   },
-  "d87e52c5-bb8d-4da8-b941-9f4928627dc8": {
-    "albumSales": 34234432,
-    "concerts": ["598u8sd7fy8iyg4ukbsukfb", "5987sdft8gi43kwjuifbkdjs", "59usdy78fgikbsudkbfkjds", "59u7sdt6gu3ikwbksdfkbds"],
-    "genre": "Pop",
-    "manager": "YiBSLuDTjTMRfaJbtGsfkq9N7M12",
-    "members": ["6XeD5iiWB9MexhHhSAkyrC2cAes2", "05vwEXLE5oVql9aaTmApjOb1fG62", "UZH5t2VsQ2fcevqSBX9Iw92FdC33", "EL8PXdNr7nRju23q10ubgw7YpyC2"],
-    "monthlyListeners": 1534494,
-    "name": "ABBA",
-    "reviews": {
-      "eskf": {
-        "content": "Very good band",
-        "rating": 3,
-        "reviewerName": "Jessica",
-        "timestamp": 1508705015996
+  "d87e52c5-bb8d-4da8-b941-9f4928627dc8" : {
+    "albumSales" : 34234432,
+    "concerts" : [ "598u8sd7fy8iyg4ukbsukfb", "5987sdft8gi43kwjuifbkdjs", "59usdy78fgikbsudkbfkjds", "59u7sdt6gu3ikwbksdfkbds", "-KyVHio4-9aIlhhP6wTx" ],
+    "genre" : "Pop",
+    "manager" : "YiBSLuDTjTMRfaJbtGsfkq9N7M12",
+    "members" : [ "6XeD5iiWB9MexhHhSAkyrC2cAes2", "05vwEXLE5oVql9aaTmApjOb1fG62", "UZH5t2VsQ2fcevqSBX9Iw92FdC33", "EL8PXdNr7nRju23q10ubgw7YpyC2" ],
+    "monthlyListeners" : 1534494,
+    "name" : "ABBA",
+    "reviews" : {
+      "eskf" : {
+        "content" : "Very good band",
+        "rating" : 3,
+        "reviewerName" : "Jessica",
+        "timestamp" : 1508705015996
       }
     },
-    "technicalRequirements": ["Clothes", "Lights"]
+    "technicalRequirements" : [ "Clothes", "Lights" ]
   },
-  "f27ec8db-af05-4f36-916e-3d57f91ecf5e": {
-    "albumSales": 10000000,
-    "concerts": ["59bc04b2c6ee09dwiukshei8", "59uudnjkerukfnu78sfhiu", "59oofspfisndvsjkejsfj"],
-    "genre": "Pop",
-    "manager": "I90tBRUgsba4pT2c9DGiygGszhw1",
-    "members": ["LjKm8RzTI9fqIOkqA9cw55q387j2"],
-    "monthlyListeners": 3382279,
-    "name": "Michael Jackson",
-    "reviews": {
-      "iskufe": {
-        "content": "Very good band",
-        "rating": 3,
-        "reviewerName": "Jessica",
-        "timestamp": 1508705015996
+  "f27ec8db-af05-4f36-916e-3d57f91ecf5e" : {
+    "albumSales" : 10000000,
+    "concerts" : [ "59bc04b2c6ee09dwiukshei8", "59uudnjkerukfnu78sfhiu", "59oofspfisndvsjkejsfj" ],
+    "genre" : "Pop",
+    "manager" : "I90tBRUgsba4pT2c9DGiygGszhw1",
+    "members" : [ "LjKm8RzTI9fqIOkqA9cw55q387j2" ],
+    "monthlyListeners" : 3382279,
+    "name" : "Michael Jackson",
+    "reviews" : {
+      "iskufe" : {
+        "content" : "Very good band",
+        "rating" : 3,
+        "reviewerName" : "Jessica",
+        "timestamp" : 1508705015996
       }
     },
-    "technicalRequirements": ["Sunglasses"]
+    "technicalRequirements" : [ "Sunglasses" ]
   }
 }
