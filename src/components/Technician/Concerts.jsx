@@ -13,9 +13,16 @@ class Concert extends Component {
     }
   }
 
-  handleClick = (concertId, isAttending) => {
-    this.setState({isAttending})
-    firebase.database().ref(`concerts/${concertId}/technicians/${this.props.technicianId}/isAttending`).set(isAttending)
+  componentDidMount() {
+    firebase.database().ref(`concerts/${this.props.concertKey}/technicians/${this.props.technicianId}/isAttending`).on('value', snap => this.setState({isAttending: snap.val()}))
+  }
+
+  handleClick = () => {
+    this.setState(({isAttending}) =>
+    ({isAttending: !isAttending}),
+    () => firebase.database()
+      .ref(`concerts/${this.props.concertKey}/technicians/${this.props.technicianId}/isAttending`)
+      .set(this.state.isAttending))
   }
 
   render() {
@@ -34,8 +41,8 @@ class Concert extends Component {
             <InfoSnippet icon="account_balance" subText="Scene">{sceneName}</InfoSnippet>
             <InfoSnippet icon="place" subText="Location">{location}</InfoSnippet>
             <div style={{display:"flex", justifyContent: "space-between"}}>
-              <RaisedButton disabled={isAttending} onClick={() => this.handleClick(concertKey, true)} label="Will attend" primary />
-              <RaisedButton disabled={!isAttending} onClick={() => this.handleClick(concertKey, false)} label="Will not attend" secondary />
+              <RaisedButton disabled={isAttending} onClick={this.handleClick} label="Will attend" primary />
+              <RaisedButton disabled={!isAttending} onClick={this.handleClick} label="Will not attend" secondary />
             </div>
           </List>
         </Paper>
