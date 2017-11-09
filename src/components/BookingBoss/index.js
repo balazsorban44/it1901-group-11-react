@@ -31,6 +31,7 @@ export default class BookingBoss extends Component {
         const concert = concerts[concertKey]
         const {event} = concert
         eventsRef.child(event).on('value', snap => {
+          concert.eventName = snap.val().name
           if (!snap.val().staff.bookingBoss.includes(this.props.user.uid)) {
             delete concerts[concertKey]
             this.setState({concerts})
