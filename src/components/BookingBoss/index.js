@@ -82,22 +82,7 @@ export default class BookingBoss extends Component {
     })
     return (
       <div className="booking-boss role">
-        <Drawer
-          docked={false}
-          open={isDrawerOpened}>
-          <MenuItem onClick={() => toggleDrawer()} primaryText={
-            <div>
-              Bookings Overview
-              <Badge
-                badgeContent={unhandledCounter}
-                secondary={true}
-                badgeStyle={{top: 18, right: 6}}
-              />
-            </div>
-          }>
 
-          </MenuItem>
-        </Drawer>
         <Bookings {...{unhandledCounter, unhandledBookings, acceptedCounter, acceptedBookings, rejectedCounter, rejectedBookings}}/>
       </div>
     )
