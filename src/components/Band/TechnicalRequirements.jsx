@@ -28,7 +28,7 @@ export default class TechnicalRequirements extends Component {
     const bandRef = db.child(`bands/${bandId}/technicalRequirements`)
     const {technicalRequirements} = this.props
     let {requirements} = this.state
-    requirements = requirements.filter(requirement => requirement !== '')
+    requirements = requirements.filter(requirement => requirement !== '' && requirement.length < 40)
     if (technicalRequirements === ['']) {
       bandRef.set(requirements)
     } else {
