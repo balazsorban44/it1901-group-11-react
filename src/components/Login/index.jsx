@@ -24,13 +24,14 @@ export default class Login extends Component {
             <h2 className="mdl-card__title-text">Please log in</h2>
           </div>
           <form action="">
-            <Menu
-            >
-              <MenuItem onClick={() => this.login("joe@org.com")} primaryText="joe@org.com" />
-              <MenuItem onClick={() => this.login("jane@boob.com")} primaryText="jane@boob.com" />
-              <MenuItem onClick={() => this.login("jack@tech.com")} primaryText="jack@tech.com" />
-              <MenuItem onClick={() => this.login("frank@pro.com")} primaryText="frank@pro.com" />
-              <MenuItem onClick={() => this.login("jessica@boom.com")} primaryText="jessica@boom.com" />
+            <Menu>
+              <MenuItem onClick={() => this.login("joe@org.com")} primaryText="joe@org.com"/>
+              <MenuItem onClick={() => this.login("jane@boob.com")} primaryText="jane@boob.com"/>
+              <MenuItem onClick={() => this.login("jessica@boom.com")} primaryText="jessica@boom.com"/>
+              <MenuItem onClick={() => this.login("james@man.com")} primaryText="james@man.com"/>
+              <MenuItem onClick={() => this.login("jack@tech.com")} primaryText="jack@tech.com"/>
+              <MenuItem onClick={() => this.login("jamie@ser.com")} primaryText="jamie@ser.com"/>
+              <MenuItem onClick={() => this.login("frank@pro.com")} primaryText="frank@pro.com"/>
             </Menu>
           </form>
           <div className="mdl-card__menu">
