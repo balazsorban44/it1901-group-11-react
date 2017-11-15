@@ -15,6 +15,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import AppBar from 'material-ui/AppBar'
 import SelectField from 'material-ui/SelectField'
 import MenuItem from 'material-ui/MenuItem'
+import TextField from 'material-ui/TextField'
 
 import RaisedButton from 'material-ui/RaisedButton'
 import Avatar from 'material-ui/Avatar'
@@ -29,7 +30,7 @@ export default class App extends Component {
     super()
     this.state = {
       user: null,
-      loggedin: "",
+      loggedin: "joe@org.com",
       isDrawerOpened: false
     }
   }
@@ -37,10 +38,9 @@ export default class App extends Component {
   toggleDrawer = () => this.setState(({isDrawerOpened}) => ({isDrawerOpened: !isDrawerOpened}))
 
   login = (event, index, value) => {
-    this.setState({loggedin: value}, ()=> {
-      this.logout()
-      firebase.auth().signInWithEmailAndPassword(value, "123456")
-    })
+    this.setState({loggedin: value})
+    this.logout()
+    firebase.auth().signInWithEmailAndPassword(value, "123456")
   }
 
   logout() {
@@ -73,13 +73,17 @@ export default class App extends Component {
             {!user ?
               <Login/>:
               <div>
+
                 <AppBar onLeftIconButtonTouchTap={() => this.toggleDrawer()}>
-                  <SelectField onChange={this.login}>
+                  <TextField value={loggedin}/>
+                  <SelectField value={loggedin} onChange={this.login}>
                     <MenuItem value="joe@org.com"><Profile name="Joe" img="joe"/></MenuItem>
                     <MenuItem value="jane@boob.com"><Profile name="Jane" img="jane"/></MenuItem>
-                    <MenuItem value="jack@tech.com"><Profile name="Jack" img="jack"/></MenuItem>
-                    <MenuItem value="frank@pro.com"><Profile name="Frank" img="frank"/></MenuItem>
                     <MenuItem value="jessica@boom.com"><Profile name="Jessica" img="jessica"/></MenuItem>
+                    <MenuItem value="james@man.com"><Profile name="James" img="james"/></MenuItem>
+                    <MenuItem value="jack@tech.com"><Profile name="Jack" img="jack"/></MenuItem>
+                    <MenuItem value="jamie@ser.com"><Profile name="Jamie" img="jamie"/></MenuItem>
+                    <MenuItem value="frank@pro.com"><Profile name="Frank" img="frank"/></MenuItem>
                     <MenuItem value=""><RaisedButton secondary label="Logout"/></MenuItem>
                   </SelectField>
                 </AppBar>
