@@ -13,6 +13,8 @@ import ServiceManager from './components/ServiceManager'
 
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import AppBar from 'material-ui/AppBar'
+import SelectField from 'material-ui/SelectField'
+import MenuItem from 'material-ui/MenuItem'
 
 import RaisedButton from 'material-ui/RaisedButton'
 import Avatar from 'material-ui/Avatar'
@@ -27,12 +29,19 @@ export default class App extends Component {
     super()
     this.state = {
       user: null,
+      loggedin: "",
       isDrawerOpened: false
     }
   }
 
   toggleDrawer = () => this.setState(({isDrawerOpened}) => ({isDrawerOpened: !isDrawerOpened}))
 
+  login = (event, index, value) => {
+    this.setState({loggedin: value}, ()=> {
+      this.logout()
+      firebase.auth().signInWithEmailAndPassword(value, "123456")
+    })
+  }
 
   logout() {
     firebase.auth().signOut()
@@ -55,7 +64,7 @@ export default class App extends Component {
 
 
   render() {
-    const {user, isDrawerOpened} = this.state
+    const {user, isDrawerOpened, loggedin} = this.state
     return (
 
       <div className="App">
@@ -65,12 +74,14 @@ export default class App extends Component {
               <Login/>:
               <div>
                 <AppBar onLeftIconButtonTouchTap={() => this.toggleDrawer()}>
-                  <div className="user-info">
-                    <h2>{user.name}</h2>
-                    <Avatar src={profiles(`./${user.img}.jpg`)}/>
-                    <RaisedButton onClick={() => this.logout()} label="Logout"/>
-                  </div>
-
+                  <SelectField onChange={this.login}>
+                    <MenuItem value="joe@org.com"><Profile name="Joe" img="joe"/></MenuItem>
+                    <MenuItem value="jane@boob.com"><Profile name="Jane" img="jane"/></MenuItem>
+                    <MenuItem value="jack@tech.com"><Profile name="Jack" img="jack"/></MenuItem>
+                    <MenuItem value="frank@pro.com"><Profile name="Frank" img="frank"/></MenuItem>
+                    <MenuItem value="jessica@boom.com"><Profile name="Jessica" img="jessica"/></MenuItem>
+                    <MenuItem value=""><RaisedButton secondary label="Logout"/></MenuItem>
+                  </SelectField>
                 </AppBar>
                 {{
                   "organizer":
@@ -149,4 +160,13 @@ const Footer = () => (
       </ul>
     </div>
   </footer>
+)
+
+
+
+const Profile = ({name, img}) => (
+  <div className="user-info">
+    <h2>{name}</h2>
+    <Avatar src={profiles(`./${img}.jpg`)}/>
+  </div>
 )

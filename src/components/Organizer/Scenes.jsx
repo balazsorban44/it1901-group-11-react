@@ -31,7 +31,6 @@ const Scene = ({name, bands, eventStart}) => (
               const endDay = 1 +  new Date(to).getDate() - new Date(eventStart).getDate()
               const technician = technicians ? Object.keys(technicians).map(key => {
 
-                console.log(technicians[key]);
                 if (technicians[key].isAttending) {
                   return technicians[key].name
                 } else {
