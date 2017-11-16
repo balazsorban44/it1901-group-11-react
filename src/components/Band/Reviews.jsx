@@ -90,13 +90,25 @@ export class AddReview extends Component {
 
 
   /**
-  * @param {String} index - Rating based on click
+  * Handle the changes in the rating's value
+  * @param {number} index - Rating value based on click
   * @return {undefined}
   */
   handleRatingChange = index => this.setState(({rating}) => ({rating: rating===index ? 0 : index}))
 
+
+  /**
+  * Handle the changes in the rating's content
+  * @param {String} content - Rating content
+  * @return {undefined}
+  */
   handleReviewChange = e => this.setState({content: e.target.value})
 
+
+  /**
+  * Validate and write the review to the databse on click
+  * @return {undefined}
+  */
   handleSendReviewClick = () => {
     const {content, rating} = this.state
     if (rating !== 0 && content !== "") {
@@ -119,6 +131,10 @@ export class AddReview extends Component {
     }
   }
 
+  /**
+  * Display a review InfoSnippet
+  * @return {JSX} Return a review InfoSnippet
+  */
   render() {
     const {content, rating, isSentReview} = this.state
     const {canAddReview, concerts} = this.props

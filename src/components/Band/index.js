@@ -11,11 +11,22 @@ import firebase from 'firebase'
 import {InfoSnippet, parseNumber, muiTheme, Icon} from '../../utils'
 import cover from '../../img/musician.jpg'
 
-//Card for every band in search results
+/**
+  * Band component
+  */
 export default class Band extends Component {
+  /**
+  * Band constructor
+  */
   constructor() {
     super()
 
+    /**
+    * @type {Object} state
+    * @property {Object} state.manager - The band's manager
+    * @property {String} state.summary - The band's summary
+    * @property {String} state.lastFMLink - Link to the band's lastFM profile
+    */
     this.state = {
       manager: {},
       summary: "",
@@ -24,6 +35,10 @@ export default class Band extends Component {
     }
   }
 
+  /**
+  * Fetch band information from the database, and lastFM
+  * @return {undefined}
+  */
   componentDidMount() {
     const db = firebase.database().ref()
     const profilesRef = db.child('staff/profiles')
@@ -51,6 +66,10 @@ export default class Band extends Component {
     })
   }
 
+  /**
+  * Display a Band card
+  * @return {JSX} Return a Band card
+  */
   render() {
     let {
       headerType, title, subtitle,
@@ -156,7 +175,14 @@ export default class Band extends Component {
   }
 }
 
-
+/**
+  * Display the band's manager
+  * @param {Object} props
+  * @param {Boolean} props.showManager - Should show the manager
+  * @param {String} props.managerName - The name of the band's manager
+  * @param {String} props.email - The e-mail address of the band's manager
+  * @return {JSX} Return the band's manager
+  */
 const BandManager = ({showManager, managerName, email}) => (
   <div>
     {showManager &&
