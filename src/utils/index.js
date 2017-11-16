@@ -20,6 +20,10 @@ export const muiTheme = getMuiTheme({
   },
 })
 
+
+/**
+* Dynamic fethcing of profile pictures.
+*/
 export const profiles = require.context('../img/profiles')
 
 
@@ -58,6 +62,10 @@ export const parsePrice = price => price.toLocaleString('no-NO', {style: "curren
 */
 export const capitalize = s => (s.charAt(0).toUpperCase() + s.slice(1)).replace(/([a-z])([A-Z][a-z])/g, "$1 $2")
 
+/**
+* Loading spinner
+* @return {JSX} Return a spinner centralized on the screen
+*/
 export const Loading = () => (
   <div style={{
     display: "flex",
@@ -89,10 +97,10 @@ export const Icon = ({name, title, color}) => (
 
 
 /**
-* Display something when there is no result of a search.
+* Display something when there is no result of a search
 * @param {Object} props
 * @param {String} props.text - The text to show
-* @return {JSX} Returns the text positioned to the center of the screen
+* @return {JSX} Return the text positioned to the center of the screen
 */
 export const NoResult = ({text}) => (
   <div style={{
@@ -120,7 +128,7 @@ export const NoResult = ({text}) => (
   * @param {Boolean} props.disableHover - Whether to display darkened background to highlight the information
   * @param {String} props.alignSubText - Flex position of the sub text
   * @param {String} props.orientation - Orientation of the snippet. Possible values: landscape | portrait
-  * @return {JSX} Returns an information snippet
+  * @return {JSX} Return an information snippet
   */
 export const InfoSnippet = ({icon, content, children, subText, disableTitle, disableHover, alignSubText, orientation}) => (
   <ListItem disabled={disableHover} title={disableTitle ? "" : subText}>
@@ -161,6 +169,13 @@ export const InfoSnippet = ({icon, content, children, subText, disableTitle, dis
   </ListItem>
 )
 
+
+/**
+  * Display a list of reviews.
+  * @param {Object} props
+  * @param {Object} props.reviews - List of reviews
+  * @return {JSX} Return an information snippet
+  */
 export const Review = ({reviews}) => (
   <List>
     {Object.keys(reviews).map(key => {
@@ -175,6 +190,14 @@ export const Review = ({reviews}) => (
   </List>
 )
 
+/**
+  * Display a rating of 1 to 5 with stars.
+  * @param {Object} props
+  * @param {number} props.rating - Number from 1 to 5 (5 is best)
+  * @param {Boolean} props.editable - Should the rating be editable
+  * @param {Function} props.handleRatingChange - Function passed from parent component to handle changes of the rating value.
+  * @return {JSX} Return an information snippet
+  */
 export const Rating = ({rating, editable, handleRatingChange}) =>  {
   let stars = []
   for(let i = 1; i < 6; i++) {
@@ -194,21 +217,3 @@ export const Rating = ({rating, editable, handleRatingChange}) =>  {
     </ul>
   )
 }
-
-
-// class FanartTV {
-//   constructor(apiKey) {
-//     this.apiKey = apiKey
-//   }
-//
-//   getImagesForArtist(bandId) {
-//     fetch(`http://webservice.fanart.tv/v3/music/${bandId}?api_key=${this.apiKey}`)
-//     .then( response => {
-//       if (response.status === 200) {
-//         return new Promise((resolve, reject) => resolve(response.json()))
-//       }
-//     })
-//   }
-// }
-//
-// export const fanarttv = new FanartTV("152d071f673f4e189fbe2a1e17606481")

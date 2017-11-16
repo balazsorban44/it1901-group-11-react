@@ -4,7 +4,9 @@ import './main.css'
 import App from './App'
 import * as firebase from 'firebase'
 
-// Initialize Firebase
+/**
+  * Initialize Firebase
+  */
 let config = {
   apiKey: "AIzaSyDFLUADdxmxOyCeZ6aS3Ofv3MDJh3upxmU",
   authDomain: "it1901-project.firebaseapp.com",
