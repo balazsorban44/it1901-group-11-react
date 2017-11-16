@@ -11,10 +11,26 @@ import firebase from 'firebase'
 import {InfoSnippet, parseNumber, muiTheme, Icon} from '../../utils'
 import cover from '../../img/musician.jpg'
 
-//Card for every band in search results
+/**
+* This is the Band Component
+*/
+
 export default class Band extends Component {
+
+  /**
+  * Band constructor
+  */
+
   constructor() {
     super()
+
+    /**
+    * Contain data that may change over time
+    * @type {Object} state
+    * @property {Object} state.manager
+    * @property {String} state.summary
+    * @property {String} state.lastFMLink
+    */
 
     this.state = {
       manager: {},
@@ -23,6 +39,10 @@ export default class Band extends Component {
       cover
     }
   }
+
+  /**
+  * Fetch and Validate data
+  */
 
   componentDidMount() {
     const db = firebase.database().ref()

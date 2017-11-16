@@ -4,16 +4,37 @@ import Band from '../Band'
 import {Loading} from '../../utils'
 import Masonry from 'react-masonry-css'
 
+/**
+* This is the Manager Component
+*/
+
 export default class Manager extends Component {
+
+  /**
+  * Manager constructor
+  */
 
   constructor(){
     super()
+
+    /**
+    * Contain data that may change over time
+    * @type {Object} state
+    * @property {Object} state.bands
+    * @property {String} state.openedMenuItem
+    * @property {Object} state.concerts
+    */
+
     this.state = {
       bands: {},
       openedMenuItem: "bandview",
       concerts: {}
     }
   }
+
+/**
+* Fetch and Validate data
+*/
 
   componentDidMount(){
     const db = firebase.database().ref()
