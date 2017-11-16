@@ -24,11 +24,21 @@ import {profiles, muiTheme} from './utils'
 
 
 /**
- * This is the main class.
+ * This is the main component
  */
 export default class App extends Component {
+
+  /**
+  * App constructor
+  */
   constructor() {
     super()
+    /**
+    * @type {Object} state
+    * @property {Object} state.user - The logged in user
+    * @property {String} state.loggedin - The logged in user's e-mail
+    * @property {Boolean} state.isDrawerOpened - Is the left menu opened
+    */
     this.state = {
       user: null,
       loggedin: "joe@org.com",
@@ -36,6 +46,10 @@ export default class App extends Component {
     }
   }
 
+  /**
+    * @deprecated Toggle the menu on the left side
+    * @return {undefined}
+    */
   toggleDrawer = () => this.setState(({isDrawerOpened}) => ({isDrawerOpened: !isDrawerOpened}))
 
   /**
@@ -43,7 +57,7 @@ export default class App extends Component {
   * @param {Object} event - event object of the clicked element
   * @param {number} index - the index of the clicked user
   * @param {String} value - the e-mail of the clicked user
-  * @return Nothing
+  * @return {undefined}
   */
   login = (event, index, value) => {
     this.setState({loggedin: value})
@@ -53,7 +67,7 @@ export default class App extends Component {
 
   /**
   * Log out the user
-  * @return Nothing
+  * @return {undefined}
   */
   logout() {
     firebase.auth().signOut()
@@ -64,7 +78,7 @@ export default class App extends Component {
 
   /**
   * Set up a listener to authentication changes.
-  * @return Nothing
+  * @return {undefined}
   */
   componentDidMount() {
     firebase.auth().onAuthStateChanged((user) => {
@@ -78,11 +92,13 @@ export default class App extends Component {
     })
   }
 
-
+  /**
+  * Display the logged in users subpage, and a top bar.
+  * @return {JSX} Return rendered App component
+  */
   render() {
     const {user, isDrawerOpened, loggedin} = this.state
     return (
-
       <div className="App">
         <MuiThemeProvider muiTheme={muiTheme}>
           <div>
@@ -129,7 +145,10 @@ export default class App extends Component {
   }
 }
 
-
+/**
+  * Display Footer component
+  * @return {JSX} Return a static footer
+  */
 const Footer = () => (
   <footer className="mdl-mega-footer">
     <div className="mdl-mega-footer__middle-section">
@@ -183,7 +202,12 @@ const Footer = () => (
 )
 
 
-
+/**
+  * A little snippet to show the logged in user's profile picture and name
+  * @param {Object} props
+  * @param {Object} props.name - Name of the user
+  * @param {Object} props.img - Image path of the user
+  */
 const Profile = ({name, img}) => (
   <div className="user-info">
     <h2>{name}</h2>
