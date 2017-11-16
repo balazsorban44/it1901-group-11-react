@@ -7,10 +7,23 @@ import {parseDate, parseTime, parsePrice, Loading} from '../../utils'
 
 import Moment from 'moment'
 import { extendMoment } from 'moment-range'
+
+
+/**
+  * Create an instance of Moment.js
+  */
 const moment = extendMoment(Moment)
 
+
+/**
+  * Bookings component
+  */
 export default class Bookings extends Component {
 
+  /**
+    * Display bookings divided into three category, awating, accepted, rejected
+    * @return {JSX} Return bookings divided into three category, awating, accepted, rejected
+    */
   render() {
     const {unhandledCounter, unhandledBookings, acceptedCounter, acceptedBookings, rejectedCounter, rejectedBookings} = this.props
     return (
@@ -33,7 +46,12 @@ export default class Bookings extends Component {
 }
 
 
-
+/**
+  * Display one tab of bookings
+  * @param {Object} props
+  * @param {Object} props.bookings - List of bookings
+  * @return {JSX} Return one tab of bookings
+  */
 const BookingTab = ({bookings}) => {
   return (
     <ul className="booking-list">
@@ -42,9 +60,26 @@ const BookingTab = ({bookings}) => {
   )
 }
 
+
+/**
+  * Display a booking
+  * @param {Object} props
+  * @param {String} props.eventName - Name of the event
+  * @param {String} props.bandName - Name of the band
+  * @param {Date} props.from - Start date of the event
+  * @param {number} props.bandFee - Cost of the band
+  * @param {Object} props.bookingState
+  * @param {String} props.concertKey - ID of the concert
+  * @return {JSX} Return a booking
+  */
 export const Booking = ({eventName, bandName, from, bandFee, bookingState, concertKey}) => {
 
-  // Check if the booking time range does not crash with an existing concert.
+  /**
+    * Check if the booking time range does not crash with an existing concert.
+    * @param {Object} scene - ID of the scene of the concert
+    * @param {Moment} concertTimeRange - The range of the concert
+    * @return {Boolean} Whether the concert overlaps with an existing concert or not
+    */
   const validateBooking = (scene, concertTimeRange) => {
     const db = firebase.database()
     const sceneRef = db.ref(`scenes/${scene}`)
@@ -70,7 +105,12 @@ export const Booking = ({eventName, bandName, from, bandFee, bookingState, conce
   }
 
 
-
+  /**
+    * Validate and write a booking to the database
+    * @param {Object} concert - ID of the concert
+    * @param {Boolean} isAcceptedByBookingBoss - Is the booking accepted or rejected by the booking boss
+    
+    */
   const handleBooking = (concert, isAcceptedByBookingBoss) => {
     const db = firebase.database()
     const concertRef = db.ref(`concerts/${concert}`)

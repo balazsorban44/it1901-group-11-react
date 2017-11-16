@@ -7,31 +7,55 @@ import ContentAdd from 'material-ui/svg-icons/content/add'
 import IconButton from 'material-ui/IconButton'
 import FontIcon from 'material-ui/FontIcon'
 import firebase from 'firebase'
-
 import BookingStepper from './BookingStepper'
 
 
-const initialState = {
-  open: false,
-  canSubmit: false,
-  newConcert: {}
-}
+/**
+  * NewBooking component
+  */
 export default class NewBooking extends Component {
+
+  /**
+    * NewBooking constructor
+    */
   constructor() {
     super()
-    this.state = initialState
+
+    /**
+      * Set this.state to initialState
+      * @type {Object} state
+      */
+    this.state = {
+      open: false,
+      canSubmit: false,
+      newConcert: {}
+    }
   }
 
-
-  // Update the state whenever new data is fetched from the database
-  // into the parent component.
-
-  // Handling if the New Booking component is visible or not.
+  /**
+    * Open new booking
+    */
   handleOpen = () => this.setState({open: true})
+
+  /**
+    * Close new booking
+    */
   handleClose = () => this.setState({open: false})
-  resetBooking = () => this.setState(initialState, () => this.handleClose())
+
+  /**
+    * Reset new booking
+    */
+  resetBooking = () => this.setState({
+    open: false,
+    canSubmit: false,
+    newConcert: {}
+  }, () => this.handleClose())
 
 
+  /**
+    * Save new concert to this.state
+    * @param {Object} newConcert - New concert to write to the database
+    */
   createBooking = newConcert => {
     this.setState({
       newConcert,
@@ -39,8 +63,9 @@ export default class NewBooking extends Component {
     })
   }
 
-  // When this.state.newConcert includes all the necessary info,
-  // submitBooking() will push it to the database.
+  /**
+    * Write new concert to the database
+    */
   submitBooking = () => {
     firebase.database().ref('concerts')
     .push(this.state.newConcert)
@@ -49,13 +74,18 @@ export default class NewBooking extends Component {
     })
   }
 
-
+  /**
+    * Display New booking
+    * @return {JSX} Return New booking
+    */
   render() {
     const {open, canSubmit} = this.state
     const {bands, events, scenes, technicians} = this.props
     const bandNames = bands ? Object.keys(bands).map(bandKey => bands[bandKey].name) : []
 
-    // The submit and cancel buttons for New Booking
+    /**
+      * The submit and cancel buttons for New Booking
+      */
     const actions = [
       <FlatButton
         label="Cancel"

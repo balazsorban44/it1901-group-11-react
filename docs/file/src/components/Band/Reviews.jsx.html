@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../../">
+  <title data-ice="title">src/components/Band/Reviews.jsx | it1901-group-11</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+</head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/App.js~App.html">App</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components-band">components/Band</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/Band/Concerts.jsx~Concerts.html">Concerts</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/Band/Reviews.jsx~AddReview.html">AddReview</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/Band/TechnicalRequirements.jsx~TechnicalRequirements.html">TechnicalRequirements</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/Band/index.js~Band.html">Band</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Reviews">Reviews</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components-bookingboss">components/BookingBoss</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/BookingBoss/Bookings.jsx~Bookings.html">Bookings</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/BookingBoss/index.js~BookingBoss.html">BookingBoss</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Booking">Booking</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components-bookingmanager">components/BookingManager</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/BookingManager/BookingStepper.jsx~VerticalLinearStepper.html">VerticalLinearStepper</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/BookingManager/NewBooking.jsx~NewBooking.html">NewBooking</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/BookingManager/Search.jsx~Search.html">Search</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/BookingManager/index.js~BookingManager.html">BookingManager</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components-login">components/Login</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/Login/index.jsx~Login.html">Login</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components-manager">components/Manager</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/Manager/index.js~Manager.html">Manager</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components-organizer">components/Organizer</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/Organizer/index.js~Organizer.html">Organizer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-EventInfo">EventInfo</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-ScenesList">ScenesList</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components-prorganizer">components/PROrganizer</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/PROrganizer/index.js~PROrganizer.html">PROrganizer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-ScenesList">ScenesList</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components-servicemanager">components/ServiceManager</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/ServiceManager/index.js~ServiceManager.html">ServiceManager</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Scenes">Scenes</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#components-technician">components/Technician</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/components/Technician/index.js~Technician.html">Technician</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Concerts">Concerts</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#utils">utils</a><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Icon">Icon</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-InfoSnippet">InfoSnippet</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Loading">Loading</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-NoResult">NoResult</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Rating">Rating</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Review">Review</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-capitalize">capitalize</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-parseDate">parseDate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-parseNumber">parseNumber</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-parsePrice">parsePrice</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-parseTime">parseTime</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-muiTheme">muiTheme</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-profiles">profiles</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">src/components/Band/Reviews.jsx</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import React, {Component} from &apos;react&apos;
+import RaisedButton from &apos;material-ui/RaisedButton&apos;
+import TextField from &apos;material-ui/TextField&apos;
+import Send from &apos;material-ui/svg-icons/content/send&apos;
+import firebase from &apos;firebase&apos;
+import {Rating, InfoSnippet, parseDate} from &apos;../../utils&apos;
+
+/**
+ * Display list of reviews
+ * @param {Object} props
+ * @param {Object} props.reviews - List of reviews
+ * @param {Boolean} props.showReviews - Should show review
+ * @return {JSX} Return list of reviews
+ */
+const Reviews = ({reviews, showReviews}) =&gt; {
+  let reviewList = []
+  let averageRating = []
+  Object.keys(reviews).forEach(key =&gt; {
+    const {content, rating, reviewerName, timestamp} = reviews[key]
+    averageRating.push(rating)
+    reviewList.push(
+      &lt;li
+        style={{display: &quot;flex&quot;}}
+        key={content}
+      &gt;
+        &lt;p style={{fontSize: &quot;1.1em&quot;}}&gt;{content} ({rating})&lt;/p&gt;
+        &lt;span style={{margin: &quot;0 .5em&quot;}}&gt;-&lt;/span&gt;
+        &lt;p style={{fontStyle: &quot;italic&quot;}}&gt;{reviewerName} ({parseDate(timestamp)})&lt;/p&gt;
+      &lt;/li&gt;
+    )
+  })
+  averageRating = averageRating.reduce((p, c) =&gt; p + c) / averageRating.length
+  return(
+    &lt;div&gt;
+      {showReviews &amp;&amp;
+        &lt;InfoSnippet
+          icon=&quot;thumbs_up_down&quot;
+          disableTitle
+          disableHover
+          orientation=&quot;portrait&quot;
+          alignSubText=&quot;center&quot;
+          subText=&quot;Band reviews&quot;
+        &gt;
+          {reviews[Object.keys(reviews)[0]].rating !== 0 ?
+            &lt;div&gt;
+              &lt;ul style={{marginBottom: 0}}&gt;
+                {reviewList}
+              &lt;/ul&gt;
+              &lt;div style={{
+                display: &quot;flex&quot;,
+                alignItems: &quot;center&quot;
+              }}&gt;
+                &lt;h6&gt;({averageRating.toFixed(2)})&lt;/h6&gt;
+                &lt;Rating rating={Math.ceil(averageRating)}/&gt;
+              &lt;/div&gt;
+            &lt;/div&gt; :
+          &quot;There is no reviews yet.&quot;}
+        &lt;/InfoSnippet&gt;
+      }
+    &lt;/div&gt;
+  )
+}
+
+export default Reviews
+
+
+/**
+ * Add review component
+ */
+export class AddReview extends Component {
+
+  /**
+  * Add review constructor
+  */
+  constructor() {
+    super()
+
+    /**
+    * @type {Object} state
+    * @property {String} state.content - Rating content
+    * @property {number} state.rating - Rating from 1 to 5
+    * @property {Boolean} state.isSentReview - Is the review sent yet
+    */
+    this.state = {
+      content: &quot;&quot;,
+      rating: 0,
+      isSentReview: false
+    }
+  }
+
+
+  /**
+  * Handle the changes in the rating&apos;s value
+  * @param {number} index - Rating value based on click
+
+  */
+  handleRatingChange = index =&gt; this.setState(({rating}) =&gt; ({rating: rating===index ? 0 : index}))
+
+
+  /**
+  * Handle the changes in the rating&apos;s content
+  * @param {String} content - Rating content
+
+  */
+  handleReviewChange = e =&gt; this.setState({content: e.target.value})
+
+
+  /**
+  * Validate and write the review to the databse on click
+
+  */
+  handleSendReviewClick = () =&gt; {
+    const {content, rating} = this.state
+    if (rating !== 0 &amp;&amp; content !== &quot;&quot;) {
+      const db = firebase.database().ref()
+      db.child(`bands/${this.props.bandKey}/reviews`)
+        .push().set({
+          content, rating,
+          timestamp: Date.now(),
+          reviewerName: this.props.reviewerName
+        }).then(
+          this.setState({
+            content: &quot;&quot;,
+            rating: 0,
+            isSentReview: true
+          })
+        )
+    } else {
+      alert(&quot;Please rate the band and give a review.&quot;)
+      // COMBAK: Add better error message to validation
+    }
+  }
+
+  /**
+  * Display a review InfoSnippet
+  * @return {JSX} Return a review InfoSnippet
+  */
+  render() {
+    const {content, rating, isSentReview} = this.state
+    const {canAddReview, concerts} = this.props
+    return (
+      &lt;div&gt;
+        {canAddReview &amp;&amp;
+          &lt;InfoSnippet
+            icon=&quot;rate_review&quot;
+            disableTitle
+            disableHover
+            orientation=&quot;portrait&quot;
+            alignSubText=&quot;center&quot;
+            subText=&quot;Review band&quot;
+          &gt;
+            {concerts[0] !== &quot;&quot; ?
+              &lt;div&gt;
+                {!isSentReview ?
+                  &lt;div&gt;
+                    &lt;div style={{
+                      display: &quot;flex&quot;,
+                      alignItems: &quot;flex-end&quot;
+                    }}&gt;
+                      &lt;TextField
+                        hintText=&quot;This band is amazing!&quot;
+                        floatingLabelText=&quot;Write a review about the band&quot;
+                        onChange={this.handleReviewChange}
+                        value={content}
+                      /&gt;
+                      &lt;RaisedButton
+                        onClick={this.handleSendReviewClick}
+                        label=&quot;Send&quot;
+                        labelPosition=&quot;before&quot;
+                        icon={&lt;Send/&gt;}
+                        style={{marginLeft: &quot;1em&quot;}}
+                        secondary
+                      /&gt;
+                    &lt;/div&gt;
+                    &lt;Rating {...{rating}} editable handleRatingChange={this.handleRatingChange}/&gt;
+                  &lt;/div&gt; : &lt;h4&gt;You just sent a review.&lt;/h4&gt;
+                }
+              &lt;/div&gt; :
+              &quot;You cannot review this band because they have not played on any concerts yet.&quot;
+            }
+          &lt;/InfoSnippet&gt;
+        }
+      &lt;/div&gt;
+    )
+  }
+}
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.0.4)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

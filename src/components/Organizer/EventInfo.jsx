@@ -4,8 +4,22 @@ import {List, ListItem} from 'material-ui/List'
 import Paper from 'material-ui/Paper'
 import {capitalize, parseDate, Icon, InfoSnippet} from '../../utils'
 
+
+/**
+  * Get profile picture dynamically
+  */
 const profiles = require.context('../../img/profiles')
 
+/**
+  * Display information about the event
+  * @param {Object} props
+  * @param {Object} props.event
+  * @param {Date} props.event.from - Event's start date
+  * @param {Date} props.event.to - Event's end date
+  * @param {String} props.event.location - Event's location
+  * @param {String} props.event.name - Event's name
+  * @return {JSX} Return information about the event
+  */
 const EventInfo = ({staff, event: {from, to, location, name}}) => {
   return (
     <div>
@@ -26,6 +40,13 @@ const EventInfo = ({staff, event: {from, to, location, name}}) => {
 
 export default EventInfo
 
+
+/**
+  * Display list of staff
+  * @param {Object} props
+  * @param {Object} props.staff - list of staff
+  * @return {JSX} Return list of staff
+  */
 const StaffList = ({staff}) => {
   let staffList = []
   let techniciansList = []

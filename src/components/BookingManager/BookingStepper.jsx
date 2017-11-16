@@ -13,11 +13,38 @@ import {Icon, parsePrice} from '../../utils'
 
 import Moment from 'moment'
 import { extendMoment } from 'moment-range'
+
+/**
+  * Create a Moment.js instance
+  */
 const moment = extendMoment(Moment)
 
+
+/**
+  * VerticalLinearStepper component
+  */
 export default class VerticalLinearStepper extends Component {
+
+  /**
+    * VerticalLinearStepper constructor
+    */
   constructor() {
     super()
+
+    /**
+      * @type {Object} state
+      * @property {number} state.stepIndex - Active step's index
+      * @property {String} state.bandName - Name of the band
+      * @property {Object} state.band - Band
+      * @property {number} state.bandFee - Cost of the band
+      * @property {Object} state.currentEvent - Current event
+      * @property {Object} state.event - Event
+      * @property {Object} state.scene - Scene
+      * @property {Date} state.from - Event's start date
+      * @property {Date} state.to - Event's end date
+      * @property {Object} state.technician - Technician for the booking
+      * @property {Array} state.stepDisabled - List of steps that are currently disabled
+      */
     this.state = {
       stepIndex: 0,
       bandName: "",
@@ -33,12 +60,23 @@ export default class VerticalLinearStepper extends Component {
     }
   }
 
+  /**
+    * Handle stepping
+    * @param {number} stepIndex - Index of the step
+
+    */
   handleStepChange = (stepIndex) => {
     let {stepDisabled} = this.state
     stepDisabled[stepIndex] = false
     this.setState({stepDisabled})
   }
 
+  /**
+    * Handle band change
+    * @param {Object} element - Element that was clicked
+    * @param {number} index - Index of the band
+
+    */
   handleBandChange = (element, index) => {
     const {bands, bandNames} = this.props
     Object.keys(bands).forEach(bandKey => {
@@ -49,17 +87,32 @@ export default class VerticalLinearStepper extends Component {
     this.handleStepChange(0)
   }
 
+  /**
+    * Handle band search input field change
+    * @param {String} index - Searched value
+
+    */
   handleBandSearchText = bandName => this.setState({bandName})
 
+  /**
+    * Handle band fee change
+    * @param {Object} e - Element that was clicked
+
+    */
   handleBandFeeChange = e => {
     const bandFee = Number(e.target.value)
     this.setState({bandFee})
     this.handleStepChange(1)
   }
 
-  // If an event is chosen from the dropdown,
-  // handleEventChange() will make an eventScenes
-  // Object, to narrow down the possible scenes options.
+
+  /**
+    * Select an event from the dropdown
+    * @param {Object} event - Element that was clicked
+    * @param {number} index - Index of the clicked event
+    * @param {String} value - ID of the clicked event
+
+    */
   handleEventChange = (event, index, value) => {
     this.setState({
       currentEvent: this.props.events[value],
@@ -68,18 +121,33 @@ export default class VerticalLinearStepper extends Component {
     this.handleStepChange(2)
   }
 
+  /**
+    * Select a scene from the dropdown
+    * @param {Object} event - Element that was clicked
+    * @param {number} index - Index of the clicked scene
+    * @param {String} value - ID of the clicked scene
+
+    */
   handleSceneChange = (event, index, value) => {
     this.setState({scene: value})
     this.handleStepChange(3)
   }
 
-  // Sets the date input as a UNIX timestamp
-  // to this.state.from.
+  /**
+    * Sets the date input as a UNIX timestamp to this.state.from.
+    * @param {Date} date - Start date
+
+    */
   handleStartDateChange = date => {
     this.setState({from: date.getTime()})
     this.handleStepChange(4)
   }
 
+  /**
+    * Limits the acceptable dates in date picker
+    * @param {Date} date - Date
+    * @return {Boolean} Whether a date can be chosen or not
+    */
   limitAcceptedDates = date => {
     let {from, to} = this.state.currentEvent
     const day = moment(date)
@@ -88,7 +156,11 @@ export default class VerticalLinearStepper extends Component {
     return !day.within(eventRange)
   }
 
+  /**
+    * Validate and handle concert length change
+    * @param {Object} e - Element that was clicked
 
+    */
   handleConcertLengthChange = e => {
     const hours = Number(e.target.value)*60*60*1000
     const {from} = this.state
@@ -99,12 +171,21 @@ export default class VerticalLinearStepper extends Component {
     }
   }
 
+  /**
+    * Select a technician from the dropdown
+    * @param {Object} event - Element that was clicked
+    * @param {number} index - Index of the clicked technician
+    * @param {String} value - ID of the clicked technician
 
+    */
   handleTechnicianChange = (event, index, value) => {
     this.setState({technician: value})
     this.handleStepChange(6)
   }
 
+  /**
+    * Go to the next step
+    */
   handleNext = () => {
     const {stepIndex,
       band, bandFee,
@@ -133,6 +214,9 @@ export default class VerticalLinearStepper extends Component {
     }
   }
 
+  /**
+    * Go to the previous step
+    */
   handlePrev = () => {
     const {stepIndex} = this.state
     if (stepIndex > 0) {
@@ -140,6 +224,10 @@ export default class VerticalLinearStepper extends Component {
     }
   }
 
+  /**
+    * Display step actions
+    * @return {JSX} Return step actions
+    */
   renderStepActions(step) {
     const {stepIndex, stepDisabled} = this.state
     return (
@@ -168,6 +256,10 @@ export default class VerticalLinearStepper extends Component {
     )
   }
 
+  /**
+    * Display VerticalLinearStepper
+    * @return {JSX} Return VerticalLinearStepper
+    */
   render() {
     const {
       stepIndex, stepDisabled,

@@ -85,6 +85,10 @@ export default class Technician extends Component {
     })
   }
 
+  /**
+    * Display Technician
+    * @return {JSX} Return Technician
+    */
   render(){
     const {concerts} = this.state
     const {name, uid: technicianId} = this.props.user

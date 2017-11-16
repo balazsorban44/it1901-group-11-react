@@ -9,10 +9,33 @@ import Band from '../Band'
 import {Loading, NoResult} from '../../utils'
 import Masonry from 'react-masonry-css'
 
+
+/**
+  * Search component
+  */
 export default class Search extends Component{
+  /**
+    * Search constructor
+    * @param {Object} props
+    */
   constructor(props) {
     super(props)
     const {bands, concerts, events, scenes} = props
+
+    /**
+      * @type {Object} state
+      * @property {String} state.query - Search query
+      * @property {String} state.genre - Genre of the band
+      * @property {String} state.event - ID of the event the band plays on
+      * @property {String} state.scene - ID of the scene the band plays on
+      * @property {String} state.sortBy - Sorting criteria
+      * @property {Boolean} state.isIncrease - Whether sort increasing or decreasing
+      * @property {Object} state.bands - List of bands
+      * @property {Object} state.concerts - List of concerts
+      * @property {Object} state.events - List of events
+      * @property {Object} state.scenes - List of scenes
+      * @property {Array} state.bandsToOutput - List of bands to render
+      */
     this.state = {
       query: "",
       genre: null,
@@ -30,6 +53,15 @@ export default class Search extends Component{
 
   }
 
+  /**
+    * When the component recieves new props, update the state
+    * @param {Object} props
+    * @param {Object} props.bands - List of bands
+    * @param {Object} props.concerts - List of concerts
+    * @param {Object} props.events - List of events
+    * @param {Object} props.scenes - List of scenes
+    * @param {String} props.name - Name of the reviewer
+    */
   componentWillReceiveProps({bands, concerts, events, scenes, name}) {
     if (bands && concerts && name) {
       this.setState({
@@ -44,6 +76,9 @@ export default class Search extends Component{
     else this.setState({bandsToOutput: null})
   }
 
+  /**
+    * Reset all the filters
+    */
   resetFilters = () => {
     this.setState({
       query: "",
@@ -53,6 +88,12 @@ export default class Search extends Component{
     })
     this.handleFilters("event", null)
   }
+
+  /**
+    * Handle filters
+    * @param {String} filterBy - Filtering criteria
+    * @param {String} value - Filtering ID
+    */
   handleFilters = (filterBy, value) => {
     if (filterBy === "event") {
       this.setState({scene: null})
@@ -83,7 +124,11 @@ export default class Search extends Component{
     })
   }
 
-
+  /**
+    * Handle sorting
+    * @param {String} sortBy - Sorting criteria
+    * @param {Boolean} value - Whether sort increasing or decreasing
+    */
   handleSorters = (sortBy, isIncrease) => {
     let {bands, bandsToOutput} = this.state
     let filtered = bandsToOutput.map(bandKey => [bandKey, bands[bandKey]])
@@ -95,6 +140,11 @@ export default class Search extends Component{
     this.setState({bandsToOutput, isIncrease})
   }
 
+
+  /**
+    * Display Search
+    * @return {JSX} Return Search
+    */
    render(){
     const {
       query,

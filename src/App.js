@@ -48,7 +48,7 @@ export default class App extends Component {
 
   /**
     * @deprecated Toggle the menu on the left side
-    * @return {undefined}
+    
     */
   toggleDrawer = () => this.setState(({isDrawerOpened}) => ({isDrawerOpened: !isDrawerOpened}))
 
@@ -57,7 +57,7 @@ export default class App extends Component {
   * @param {Object} event - event object of the clicked element
   * @param {number} index - the index of the clicked user
   * @param {String} value - the e-mail of the clicked user
-  * @return {undefined}
+  
   */
   login = (event, index, value) => {
     this.setState({loggedin: value})
@@ -67,7 +67,7 @@ export default class App extends Component {
 
   /**
   * Log out the user
-  * @return {undefined}
+  
   */
   logout() {
     firebase.auth().signOut()
@@ -78,7 +78,7 @@ export default class App extends Component {
 
   /**
   * Set up a listener to authentication changes.
-  * @return {undefined}
+  
   */
   componentDidMount() {
     firebase.auth().onAuthStateChanged((user) => {

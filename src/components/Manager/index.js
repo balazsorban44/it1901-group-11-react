@@ -79,6 +79,10 @@ export default class Manager extends Component {
     })
   }
 
+  /**
+    * Display Manager
+    * @return {JSX} Return Manager
+    */
   render() {
     const {bands, concerts} = this.state
     return (

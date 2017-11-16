@@ -1,21 +1,31 @@
 import React, {Component} from 'react'
 import concert from '../../img/concert.jpg'
 import firebase from 'firebase'
-import TextField from 'material-ui/TextField'
-import RaisedButton from 'material-ui/RaisedButton'
 import Menu from 'material-ui/Menu'
 import MenuItem from 'material-ui/MenuItem'
 
 import {Icon} from '../../utils'
 
+
+/**
+  * Login component
+  */
 export default class Login extends Component {
+
+  /**
+  * Log the user in
+  * @param {String} email - The user's email address
+
+  */
   login = email => {
     firebase.auth().signInWithEmailAndPassword(email, "123456")
       .catch(error => console.log(error))
   }
 
-
-
+  /**
+    * Display a login form
+    * @return {JSX} Return a login form
+    */
   render() {
     return (
       <div id="login">

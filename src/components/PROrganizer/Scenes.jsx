@@ -4,6 +4,14 @@ import Band from '../Band'
 import {parseDate, parseTime, parseNumber, Icon} from '../../utils'
 
 
+/**
+  * Display a scene
+  * @param {Object} props
+  * @param {Object} props.name - Name of the scene
+  * @param {Array} props.bands - List of bands on the scene
+  * @param {Date} props.eventStart - Event's start date
+  * @return {JSX} Return a scene
+  */
 const Scene = ({name, bands, eventStart}) => (
     <div className="scene">
       <h6>Scene {name}</h6>
@@ -35,6 +43,13 @@ const Scene = ({name, bands, eventStart}) => (
     </div>
 )
 
+/**
+  * Display list of scenes
+  * @param {Object} props
+  * @param {Object} props.scenes - list of scenes
+  * @param {Date} props.eventStart - Event's start date
+  * @return {JSX} Return list of scenes
+  */
 const ScenesList = ({scenes, eventStart}) => (
   <div>
     <h4><Icon title="Scenes" name="account_balance" color="grey"/></h4>

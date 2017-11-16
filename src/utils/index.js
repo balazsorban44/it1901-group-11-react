@@ -29,35 +29,35 @@ export const profiles = require.context('../img/profiles')
 
 /**
  * Parse a date object into a date string
- * @param {Date} date - Takes in a Date object
+ * @param {Date} date - a Date object
  * @return {String} 01. Jan 1970
  */
 export const parseDate = (...date) => new Date(...date).toString('dd. MMM yyyy')
 
 /**
   * Parse a date object into a time string
-  * @param {Date} date - Takes in a Date object
+  * @param {Date} date - a Date object
   * @return {String} 00:00
   */
 export const parseTime = (...date) => new Date(...date).toString('HH:mm')
 
 /**
 * Prettify a long number
-* @param {number} num - Takes in an integer
+* @param {number} num - an integer
 * @return {number} 1,000,000
 */
 export const parseNumber = num => num.toLocaleString()
 
 /**
 * Turn a number into Norwegian Kroner price
-* @param {number} price - Takes in an integer
+* @param {number} price - an integer
 * @return {String} NOK1,000.00
 */
 export const parsePrice = price => price.toLocaleString('no-NO', {style: "currency", currency: "NOK"})
 
 /**
 * Capitalize a camelCase string
-* @param {String} s - Takes in a camelCase string
+* @param {String} s - a camelCase string
 * @return {String} Camel case
 */
 export const capitalize = s => (s.charAt(0).toUpperCase() + s.slice(1)).replace(/([a-z])([A-Z][a-z])/g, "$1 $2")

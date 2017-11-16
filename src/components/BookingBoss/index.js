@@ -1,7 +1,4 @@
 import React, { Component } from 'react'
-import Drawer from 'material-ui/Drawer'
-import Badge from 'material-ui/Badge'
-import MenuItem from 'material-ui/MenuItem'
 import Bookings, {Booking} from './Bookings'
 import firebase from 'firebase'
 
@@ -67,8 +64,11 @@ export default class BookingBoss extends Component {
     })
   }
 
+  /**
+    * Display the Booking Boss
+    * @return {JSX} Return the Booking Boss
+    */
   render() {
-    const {isDrawerOpened, toggleDrawer} = this.props
     const {bands, concerts} = this.state
     const unhandledBookings = []
     let unhandledCounter = 0

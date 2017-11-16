@@ -104,12 +104,20 @@ componentDidMount(){
   })
 }
 
-//change page to display after item in left menui is clicked
+/**
+  * @deprecated Change page to display after item in left menui is clicked
+  * @param {number} openedMenuItem - ID of the opened menu item
+  
+  */
 handleMenuItemClick(openedMenuItem){
   this.props.toggleDrawer()
   this.setState({openedMenuItem})
 }
 
+  /**
+    * Display Booking Manager
+    * @return {JSX} Return Booking Manager
+    */
   render() {
     const {user: {name}} = this.props
     const {

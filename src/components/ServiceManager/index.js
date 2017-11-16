@@ -35,7 +35,7 @@ export default class ServiceManager extends Component {
 
   /**
   * Fetch and validate data
-  * @return {undefined}
+
   */
 
   componentDidMount() {
@@ -88,6 +88,10 @@ export default class ServiceManager extends Component {
   * @return {JSX} return Scenes
   */
 
+  /**
+    * Display Service Manager
+    * @return {JSX} Return Service Manager
+    */
   render() {
     const {events, value} = this.state
     return(

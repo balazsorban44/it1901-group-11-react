@@ -23,9 +23,9 @@ export default class Band extends Component {
 
     /**
     * @type {Object} state
-    * @property {Object} state.manager - The band's manager
-    * @property {String} state.summary - The band's summary
-    * @property {String} state.lastFMLink - Link to the band's lastFM profile
+    * @property {Object} state.manager - Band's manager
+    * @property {String} state.summary - Band's summary
+    * @property {String} state.lastFMLink - Link to the band's LastFM profile
     */
     this.state = {
       manager: {},
@@ -37,7 +37,7 @@ export default class Band extends Component {
 
   /**
   * Fetch band information from the database, and lastFM
-  * @return {undefined}
+
   */
   componentDidMount() {
     const db = firebase.database().ref()
@@ -179,8 +179,8 @@ export default class Band extends Component {
   * Display the band's manager
   * @param {Object} props
   * @param {Boolean} props.showManager - Should show the manager
-  * @param {String} props.managerName - The name of the band's manager
-  * @param {String} props.email - The e-mail address of the band's manager
+  * @param {String} props.managerName - Name of the band's manager
+  * @param {String} props.email - E-mail address of the band's manager
   * @return {JSX} Return the band's manager
   */
 const BandManager = ({showManager, managerName, email}) => (
@@ -203,6 +203,13 @@ const BandManager = ({showManager, managerName, email}) => (
   </div>
 )
 
+/**
+  * Display the band's summary
+  * @param {Object} props
+  * @param {String} props.summary - Summary of the band
+  * @param {String} props.lastFM - Link to the band's LastFM profile
+  * @return {JSX} Return the band's summary
+  */
 const Summary = ({summary, lastFMLink}) => (
   <InfoSnippet
     orientation="portrait"
@@ -218,6 +225,14 @@ const Summary = ({summary, lastFMLink}) => (
   />
 )
 
+
+/**
+  * Display the band's album sales
+  * @param {Object} props
+  * @param {Boolean} props.showAlbumSales - Should show the album sales
+  * @param {number} props.albumSales - Albums sold by the band
+  * @return {JSX} Return the band's album sales
+  */
 const AlbumSales = ({showAlbumSales, albumSales}) => (
   <div>
     {showAlbumSales &&
@@ -230,6 +245,13 @@ const AlbumSales = ({showAlbumSales, albumSales}) => (
 )
 
 
+/**
+  * Display the band's genre
+  * @param {Object} props
+  * @param {Boolean} props.showGenre - Should show the genre
+  * @param {String} props.genre - Genre of the band
+  * @return {JSX} Return the band's genre
+  */
 const Genre = ({showGenre, genre}) => (
   <div>
     {showGenre &&
@@ -242,6 +264,13 @@ const Genre = ({showGenre, genre}) => (
 )
 
 
+/**
+  * Display the band's monthly listeners
+  * @param {Object} props
+  * @param {Boolean} props.showMonthlyListeners - Should show the monthly listeners
+  * @param {number} props.monthlyListeners - Monthly listeners of the band
+  * @return {JSX} Return the band's monthly listeners
+  */
 const MonthlyListeners = ({showMonthlyListeners, monthlyListeners}) => (
   <div>
     {showMonthlyListeners &&
@@ -254,6 +283,13 @@ const MonthlyListeners = ({showMonthlyListeners, monthlyListeners}) => (
 )
 
 
+/**
+  * Display the band's members as a list
+  * @param {Object} props
+  * @param {Boolean} props.showBandMembers - Should show the band members
+  * @param {Array} props.members - List of the members
+  * @return {JSX} Return the band's members as a list
+  */
 const BandMembers = ({showBandMembers, members}) => (
   <div>
     {showBandMembers &&

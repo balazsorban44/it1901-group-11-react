@@ -6,10 +6,24 @@ import TextField from 'material-ui/TextField'
 import firebase from 'firebase'
 import {InfoSnippet} from '../../utils'
 
+
+/**
+  * TechnicalRequirements component
+  */
 export default class TechnicalRequirements extends Component {
+  /**
+  * TechnicalRequirements constructor
+  * @param {Object} props
+  */
   constructor(props) {
     super(props)
     const {showRequirements, canEditRequirements} = props
+
+    /**
+    * @type {Object} state
+    * @property {Boolean} state.showRequirements - Should show technical requirements
+    * @property {Boolean} state.canEditRequirements - Can edit the technical requirements
+    */
     this.state = {
       requirements: [""],
       editMode: false,
@@ -18,11 +32,25 @@ export default class TechnicalRequirements extends Component {
     }
   }
 
+  /**
+    * Handle changes of the technical requirements input field
+    * @param {Object} e - Object containing the requirements
 
+    */
   handleInput = e => this.setState({requirements: e.target.value.split(', ')})
 
+  /**
+  * Toggle edit mode
+
+  */
   toggleEdit = () => this.setState(({editMode}) => ({editMode: !editMode}))
 
+
+  /**
+  * Send technical requirements to the database and save it for the given band
+  * @param {number} bandId - The ID of the band
+
+  */
   addTechicalRequirement = bandId => {
     const db = firebase.database().ref()
     const bandRef = db.child(`bands/${bandId}/technicalRequirements`)
@@ -37,6 +65,12 @@ export default class TechnicalRequirements extends Component {
     this.setState({requirements: []})
   }
 
+  /**
+  * Remove a technical requirement from the database of the given band
+  * @param {number} bandId - The ID of the band
+  * @param {number} reqId - The ID of the requirement to remove
+
+  */
   removeTechnicalRequirement = (bandId, reqId) => {
     let {technicalRequirements} = this.props
     const db = firebase.database().ref()
@@ -44,6 +78,13 @@ export default class TechnicalRequirements extends Component {
     db.child(`bands/${bandId}/technicalRequirements`).set(technicalRequirements)
   }
 
+
+  /**
+  * Display a list of technical requirements
+  * @param {number} bandId - The ID of the band
+  * @param {number} reqId - The ID of the requirement to remove
+  * @return {JSX} Return a list of technical requirement list
+  */
   render() {
     const {requirements, editMode, showRequirements, canEditRequirements} = this.state
     const {technicalRequirements, bandKey} = this.props

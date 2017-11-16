@@ -89,8 +89,20 @@ export default class PROrganizer extends Component {
     })
   }
 
+
+  /**
+    * Handle click of event dropdown
+    * @param {Object} Clicked element
+    * @param {number} Clicked Event's index
+    * @param {String} Clicked Event's ID
+    */
   handleChange = (event, index, value) => this.setState({value})
 
+
+  /**
+    * Display PR Organizer
+    * @return {JSX} Return PR Organizer
+    */
   render() {
     const {events, value} = this.state
     return (
@@ -116,6 +128,14 @@ export default class PROrganizer extends Component {
   }
 }
 
+
+
+/**
+  * Display an event
+  * @param {Object} props
+  * @param {Object} props.event - Event
+  * @return {JSX} Return an event
+  */
 const EventView = ({event}) =>  {
   const {scenes, staff, from} = event
   return (

@@ -92,7 +92,7 @@ export class AddReview extends Component {
   /**
   * Handle the changes in the rating's value
   * @param {number} index - Rating value based on click
-  * @return {undefined}
+
   */
   handleRatingChange = index => this.setState(({rating}) => ({rating: rating===index ? 0 : index}))
 
@@ -100,14 +100,14 @@ export class AddReview extends Component {
   /**
   * Handle the changes in the rating's content
   * @param {String} content - Rating content
-  * @return {undefined}
+
   */
   handleReviewChange = e => this.setState({content: e.target.value})
 
 
   /**
   * Validate and write the review to the databse on click
-  * @return {undefined}
+
   */
   handleSendReviewClick = () => {
     const {content, rating} = this.state
