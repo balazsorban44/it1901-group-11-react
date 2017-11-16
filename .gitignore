@@ -1,6 +1,6 @@
 # Logs
 build
-*.css
+src/*.css
 logs
 *.log
 npm-debug.log*
