@@ -23,8 +23,9 @@ import Avatar from 'material-ui/Avatar'
 import {profiles, muiTheme} from './utils'
 
 
-
-
+/**
+ * This is the main class.
+ */
 export default class App extends Component {
   constructor() {
     super()
@@ -37,12 +38,23 @@ export default class App extends Component {
 
   toggleDrawer = () => this.setState(({isDrawerOpened}) => ({isDrawerOpened: !isDrawerOpened}))
 
+  /**
+  * Log the clicked user in.
+  * @param {Object} event - event object of the clicked element
+  * @param {number} index - the index of the clicked user
+  * @param {String} value - the e-mail of the clicked user
+  * @return Nothing
+  */
   login = (event, index, value) => {
     this.setState({loggedin: value})
     this.logout()
     firebase.auth().signInWithEmailAndPassword(value, "123456")
   }
 
+  /**
+  * Log out the user
+  * @return Nothing
+  */
   logout() {
     firebase.auth().signOut()
       .then(() => {
@@ -50,6 +62,10 @@ export default class App extends Component {
       })
   }
 
+  /**
+  * Set up a listener to authentication changes.
+  * @return Nothing
+  */
   componentDidMount() {
     firebase.auth().onAuthStateChanged((user) => {
       if (user) {

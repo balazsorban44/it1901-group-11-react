@@ -5,7 +5,12 @@ import Send from 'material-ui/svg-icons/content/send'
 import firebase from 'firebase'
 import {Rating, InfoSnippet, parseDate} from '../../utils'
 
-
+/**
+ * Create a list of reviews
+ * @param      {Array}   review list
+ * @param      {Boolean}   should show review
+ * @return     {JSX} Generated HTML
+ */
 const Reviews = ({reviews, showReviews}) => {
   let reviewList = []
   let averageRating = []
@@ -34,7 +39,6 @@ const Reviews = ({reviews, showReviews}) => {
           orientation="portrait"
           alignSubText="center"
           subText="Band reviews"
-
         >
           {reviews[Object.keys(reviews)[0]].rating !== 0 ?
             <div>
