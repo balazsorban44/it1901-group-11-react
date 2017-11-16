@@ -3,8 +3,15 @@ import Band from '../Band'
 
 import {parseDate, parseTime, parseNumber, Icon} from '../../utils'
 
+/**
+* Return a scene with information about band and concert start / end
+* @param {Object} props
+* @param {String} props.name - name
+* @param {Object} props.bands - bands containing band and concert information
+* @return {JSX} Return a scene with information 
+*/
 
-const Scene = ({name, bands, eventStart}) => (
+const Scene = ({name, bands}) => (
     <div className='scene'>
       <h6>Scene {name}</h6>
       <div className="band-list">
@@ -32,6 +39,13 @@ const Scene = ({name, bands, eventStart}) => (
     </div>
 )
 
+/**
+* Display a scene containing concerts
+* @param {Object} props
+* @param {Object} scenes - scenes containing information
+* @param {number} eventStart
+* @return {JSX} Return a scene containing concerts with information
+*/
 
 const Scenes = ({scenes, eventStart}) => (
   <div>

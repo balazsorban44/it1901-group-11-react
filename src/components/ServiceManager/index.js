@@ -3,9 +3,28 @@ import firebase from 'firebase'
 import Scenes from './Scenes'
 import {Loading} from '../../utils'
 
+
+/**
+* This is the Service Manager Class
+*/
+
 export default class ServiceManager extends Component {
+
+  /**
+  * ServiceManager constructor
+  */
   constructor() {
     super()
+
+    /**
+    * Contains data that may change over time
+    * @type {Object} state
+    * @property {Object} state.events - contains events from database
+    * @property {Object} state.concerts - contains concerts from database
+    * @property {Object} state.scenes - contains scenes from database
+    * @property {Object} state.bands - contains bands from database
+    */
+
     this.state = {
       events: {},
       concerts: {},
@@ -13,6 +32,11 @@ export default class ServiceManager extends Component {
       bands: {}
     }
   }
+
+  /**
+  * Fetching and validating of data
+  * @return {undefined} 
+  */
 
   componentDidMount() {
     const db = firebase.database().ref()
@@ -59,6 +83,10 @@ export default class ServiceManager extends Component {
     })
   }
 
+  /**
+  *
+  */
+
   render() {
     const {events, value} = this.state
     return(
@@ -79,7 +107,3 @@ const SceneView = ({event}) =>  {
     </div>
   )
 }
-
-// ID16	Som ansvarlig for servering ønsker
-// jeg å kunne beregne innkjøp av varer
-// til barer på en scene for en gitt konsert.
