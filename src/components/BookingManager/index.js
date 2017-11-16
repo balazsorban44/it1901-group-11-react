@@ -4,10 +4,31 @@ import Search from './Search'
 import NewBooking from './NewBooking'
 // import PreviousConcerts from './PreviousConcerts'
 
+/**
+* This is the BookingManager Component
+*/
 
 export default class BookingManager extends Component {
+
+  /**
+  * BookingManager constructor
+  */
+
   constructor() {
     super()
+
+    /**
+    * Contain data that may change over time
+    * @type {Object} state
+    * @property {Object} state.events
+    * @property {Object} state.scenes
+    * @property {Object} state.concerts
+    * @property {Object} state.technicians
+    * @property {Object} state.bands
+    * @property {Array} state.bandKeys
+    * @property {String} state.openedMenuItem
+    */
+
     this.state = {
       events: null,
       scenes: {},
@@ -19,7 +40,10 @@ export default class BookingManager extends Component {
     }
   }
 
-// Fetching content from firebase
+/**
+* Fetch and Validate Data
+*/
+
 componentDidMount(){
 
   const db = firebase.database().ref()

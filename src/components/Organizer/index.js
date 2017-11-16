@@ -7,6 +7,10 @@ import {Loading} from '../../utils'
 import EventInfo from './EventInfo'
 import Scenes from './Scenes'
 
+/**
+* This is the Organizer Component
+*/
+
 export default class Organizer extends Component {
   constructor() {
     super()
@@ -53,7 +57,7 @@ export default class Organizer extends Component {
                 delete event.scenes[sceneKey].concerts
                 scene.bands = []
                 concertsRef.child(concertKey).on('value', snap => {
-                  let {band, from, to, technicians} = snap.val()            
+                  let {band, from, to, technicians} = snap.val()
                   Object.keys(technicians).forEach(technicianKey => {
                     profilesRef.child(technicianKey).on('value', snap => {
                       technicians[technicianKey].name = snap.val().name

@@ -5,16 +5,35 @@ import MenuItem from 'material-ui/MenuItem'
 import Bookings, {Booking} from './Bookings'
 import firebase from 'firebase'
 
+/**
+* This is the BookingBoss Component
+*/
 
 export default class BookingBoss extends Component {
+
+  /**
+  * BookingBoss constructor
+  */
+
   constructor() {
     super()
+
+    /**
+    * Contain data that may change over time
+    * @type {Object} state
+    * @property {Object} state.concerts
+    * @property {Object} state.bands
+    */
+
     this.state = {
       concerts: {},
       bands: {}
     }
   }
 
+/**
+* Fetch and Validate data
+*/
 
   componentDidMount() {
     const db = firebase.database().ref()

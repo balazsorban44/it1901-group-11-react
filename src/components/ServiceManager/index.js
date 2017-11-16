@@ -5,7 +5,7 @@ import {Loading} from '../../utils'
 
 
 /**
-* This is the Service Manager Class
+* This is the Service Manager Component
 */
 
 export default class ServiceManager extends Component {
@@ -17,7 +17,7 @@ export default class ServiceManager extends Component {
     super()
 
     /**
-    * Contains data that may change over time
+    * Contain data that may change over time
     * @type {Object} state
     * @property {Object} state.events - contains events from database
     * @property {Object} state.concerts - contains concerts from database
@@ -34,8 +34,8 @@ export default class ServiceManager extends Component {
   }
 
   /**
-  * Fetching and validating of data
-  * @return {undefined} 
+  * Fetch and validate data
+  * @return {undefined}
   */
 
   componentDidMount() {
@@ -85,6 +85,7 @@ export default class ServiceManager extends Component {
 
   /**
   *
+  * @return {JSX} return Scenes
   */
 
   render() {
@@ -98,6 +99,13 @@ export default class ServiceManager extends Component {
     )
   }
 }
+
+/**
+* Connect Scenes to the main ServiceManager component
+* @param {Object} props
+* @param {Object} props.event - event information
+* @return {JSX} Div containing Scenes from Scenes.jsx
+*/
 
 const SceneView = ({event}) =>  {
   const {scenes, from} = event
