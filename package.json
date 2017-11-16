@@ -4,6 +4,8 @@
   "private": true,
   "dependencies": {
     "datejs": "^1.0.0-rc3",
+    "esdoc-jsx-plugin": "^1.0.0",
+    "esdoc-lint-plugin": "^1.0.1",
     "firebase": "^4.6.1",
     "material-ui": "^0.19.4",
     "material-ui-datetimepicker": "^1.0.2",
@@ -25,5 +27,9 @@
     "build": "npm run build-css && react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "esdoc": "^1.0.4",
+    "esdoc-standard-plugin": "^1.0.0"
   }
 }
