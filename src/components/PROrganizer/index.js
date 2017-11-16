@@ -7,14 +7,35 @@ import {Loading} from '../../utils'
 import EventInfo from '../Organizer/EventInfo'
 import Scenes from './Scenes'
 
+/**
+* This is the PROrganizer Component
+*/
+
 export default class PROrganizer extends Component {
+
+  /**
+  * PROrganizer constructor
+  */
+
   constructor() {
     super()
+
+    /**
+    * Contain data that may change over time
+    * @type {Object} state
+    * @property {Object} state.events
+    * @property {number} state.value
+    */
+
     this.state = {
       events: {},
       value: 1
     }
   }
+
+  /**
+  * Fetch and Validate data
+  */
 
   componentDidMount() {
     const db = firebase.database().ref()

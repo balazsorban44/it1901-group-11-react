@@ -3,9 +3,29 @@ import firebase from 'firebase'
 import Concerts from './Concerts'
 import {NoResult} from '../../utils'
 
+/**
+* This is the Technician Component
+*/
+
 export default class Technician extends Component {
+
+  /**
+  * Technician constructor
+  */
+
   constructor() {
     super()
+
+    /**
+    * Contain data that may change over time
+    * @type {Object} state
+    * @property {Object} state.concerts
+    * @property {Object} state.bands
+    * @property {Object} state.scenes
+    * @property {Object} state.events
+    * @property {String} state.openedMenuItem
+    */
+
     this.state = {
       concerts: null,
       bands: null,
@@ -14,6 +34,10 @@ export default class Technician extends Component {
       openedMenuItem: "concertsOverview"
     }
   }
+
+  /**
+  * Fetch and Validate data
+  */
 
   componentDidMount() {
 

@@ -12,13 +12,30 @@ import Scenes from './Scenes'
 */
 
 export default class Organizer extends Component {
+
+  /**
+  * Organizer constructor
+  */
+
   constructor() {
     super()
+
+    /**
+    * Contain data that may change over time
+    * @type {Object} state
+    * @property {Object} state.events
+    * @property {number} state.value
+    */
+
     this.state = {
       events: {},
       value: 1
     }
   }
+
+/**
+Fetch and Validate data
+*/
 
   componentDidMount() {
     const db = firebase.database().ref()
