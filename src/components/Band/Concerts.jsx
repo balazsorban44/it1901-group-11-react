@@ -6,7 +6,14 @@ import { Table, TableBody, TableHeader,
 } from 'material-ui/Table'
 import {parseDate, parseNumber, parsePrice, InfoSnippet, muiTheme} from '../../utils'
 
+
+/**
+  * Concert component
+  */
 export default class Concerts extends Component {
+  /**
+  * @return {JSX} Return a List of concerts divided into three sections, previous concerts and future accepted/awating approval concerts
+  */
   render() {
     const {concerts, showPreviousConcerts, showFutureConcerts} = this.props
     const acceptedFutureBookings = {}
@@ -89,7 +96,12 @@ export default class Concerts extends Component {
   }
 }
 
-
+/**
+  * Display a list of concerts in a table
+  * @param {Object} props
+  * @param {Object} props.concerts - List of concerts
+  * @return {JSX} Return a list of concerts
+*/
 const ConcertTable = ({concerts}) => (
   <Table>
     <TableHeader adjustForCheckbox={false} displaySelectAll={false}>

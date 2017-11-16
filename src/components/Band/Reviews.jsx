@@ -6,10 +6,11 @@ import firebase from 'firebase'
 import {Rating, InfoSnippet, parseDate} from '../../utils'
 
 /**
- * Create a list of reviews
- * @param      {Array}   review list
- * @param      {Boolean}   should show review
- * @return     {JSX} Generated HTML
+ * Display list of reviews
+ * @param {Object} props
+ * @param {Object} props.reviews - List of reviews
+ * @param {Boolean} props.showReviews - Should show review
+ * @return {JSX} Return list of reviews
  */
 const Reviews = ({reviews, showReviews}) => {
   let reviewList = []
@@ -62,9 +63,24 @@ const Reviews = ({reviews, showReviews}) => {
 
 export default Reviews
 
+
+/**
+ * Add review component
+ */
 export class AddReview extends Component {
+
+  /**
+  * Add review constructor
+  */
   constructor() {
     super()
+
+    /**
+    * @type {Object} state
+    * @property {String} state.content - Rating content
+    * @property {number} state.rating - Rating from 1 to 5
+    * @property {Boolean} state.isSentReview - Is the review sent yet
+    */
     this.state = {
       content: "",
       rating: 0,
@@ -72,6 +88,11 @@ export class AddReview extends Component {
     }
   }
 
+
+  /**
+  * @param {String} index - Rating based on click
+  * @return {undefined}
+  */
   handleRatingChange = index => this.setState(({rating}) => ({rating: rating===index ? 0 : index}))
 
   handleReviewChange = e => this.setState({content: e.target.value})
